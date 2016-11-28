@@ -1,0 +1,3 @@
+lucie_desaint_homepage:
+    path:     /
+    defaults: { _controller: LucieDesaintBundle:Default:index }

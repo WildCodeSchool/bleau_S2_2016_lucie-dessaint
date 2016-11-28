@@ -1,0 +1,5 @@
+lucie_desaint:
+    resource: "@LucieDesaintBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
