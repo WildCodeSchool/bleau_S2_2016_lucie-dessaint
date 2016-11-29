@@ -1,0 +1,648 @@
+/**************************************************
+*********** Media query 990px and more ***********
+**************************************************/
+@media (min-width: 990px) {
+    .wrapper{
+        background-color: red;
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        /*background: url(img/news-bg2.png);*/
+        background: url('../images/news-fond-ecrant.png');
+        background-size: cover;
+    }
+
+    .logo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .golf-cadre{
+        width: 950px;
+        top: 12px;
+        height: 520px;
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .party{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        top: 70px;
+        position: relative;
+    }
+
+@import url(http://fonts.googleapis.com/css?family=Ropa+Sans);
+    * {
+        margin:0;
+        padding:0;
+        font-family: 'Ropa Sans', sans-serif;
+        font-weight:normal;
+        color:rgba(0,0,0,0.9);
+    }
+
+    #mainmenu {
+        height: 30px;
+        text-align: center;
+        margin-top: 35px;
+        z-index: 45;
+    }
+
+    .menu li {
+        display:inline-block;
+        padding:0 15px;
+    }
+
+    .menu li a {
+        position:relative;
+        font-size:1.7rem;
+        letter-spacing:1px;
+        text-decoration:none;
+        color: #ffffff;
+        font-family: 'Marck Script', cursive;
+    }
+    .menu li a:after {
+        content:'';
+        left:50%;
+        bottom:-10px;
+        display:block;
+        width:0%;
+        height:2px;
+        background-color: rgb(2, 54, 65);
+        -webkit-transition:width 0.1s, left 0.1s;;
+        -moz-transition:   width 0.1s, left 0.1s;;
+        -o-transition:     width 0.1s, left 0.1s;;
+        transition:        width 0.1s, left 0.1s;;
+    }
+    .menu li a:hover::after {
+        left:-15%;
+        width:130%;
+    }
+    .trait{
+        width: 60%;
+        height: 3px;
+        background-color: #ffffff;
+        position: relative;
+        top: 41px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #footer{
+        background-color:black;
+        width: 100%;
+        height: 52px;
+        bottom: 0;
+        position: fixed;
+    }
+
+    .Copyright{
+        text-align: center;
+        position: relative;
+        top: 18px;
+        color: #ffffff;
+    }
+
+    .fa {
+        color: #ffffff;
+        width: 100%;
+        font-size: 35px;
+        bottom: 20px;
+        position: relative;
+    }
+
+    .fa:hover {
+        color: #84ffff;
+    }
+
+    .fa-twitter-square{
+        color: #ffffff;
+        width: 100%;
+        font-size: 35px;
+        bottom: 54px;
+        left: 50px;
+        position: relative;
+    }
+
+    .fa-linkedin-square{
+        color: #ffffff;
+        width: 100%;
+        font-size: 35px;
+        bottom: 89px;
+        left: 100px;
+        position: relative;
+    }
+
+    .fa-instagram{
+        color: #ffffff;
+        width: 100%;
+        font-size: 35px;
+        bottom: 123px;
+        left: 150px;
+        position: relative;
+    }
+
+    .social_network{
+        float: right;
+    }
+
+    .btn-outline-default{
+        bottom: 27px;
+        height: 35px;
+        width: 18% ;
+        position: relative;
+    }
+
+    /* Defillement */
+    .marquee {
+        width: 450px;
+        margin: 0 auto;
+        overflow: hidden;
+        white-space: nowrap;
+        box-sizing: border-box;
+        animation: marquee 50s linear infinite;
+        color:#ffffff;
+        position: relative;
+        top: 15px;
+        font-weight: bolder;
+    }
+
+    .marquee:hover {
+        animation-play-state: paused
+    }
+
+    /* Make it move */
+    @keyframes marquee {
+        0%   { text-indent: 30em }
+        100% { text-indent: -105em }
+    }
+
+    .logo-made-in-france{
+        width:35px;
+    }
+
+    .wild{
+        color: #84ffff ;
+        font-weight: bolder;
+    }
+
+    .button1{
+        border-top: 2px solid #ffffff;
+        border-bottom:  2px solid #ffffff;
+        border-left:   2px solid #ffffff;
+        border-right:   2px solid #ffffff;
+        width: 145px;
+        height: 40px;
+        position: relative;
+        bottom: 23px;
+    }
+
+    .Mentions{
+        font-family: 'Marck Script', cursive;
+        font-weight: bolder;
+        line-height: 45px;
+        position: relative;
+        left:  15px;
+        bottom: 3px;
+    }
+
+    /* Debut slider*/
+    #slider-wrapper{
+        width: 892px;
+        height: 466px;
+        margin: 50px auto;
+        position: relative;
+        margin-bottom: 0;
+        background: rgba(0,0,0,0.5);
+        overflow: hidden;
+    }
+
+    #s1{
+        padding: 6px;
+        background: #FFFFFF;
+        position: absolute;
+        left: 50%;
+        bottom: 25px;
+        margin-left: -36px;
+        border-radius: 20px;
+        opacity: 0.3;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    #s2{
+        padding: 6px;
+        background: #FFFFFF;
+        position: absolute;
+        left: 50%;
+        bottom: 25px;
+        margin-left: -12px;
+        border-radius: 20px;
+        opacity: 0.3;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    #s3{
+        padding: 6px;
+        background: #FFFFFF;
+        position: absolute;
+        left: 50%;
+        bottom: 25px;
+        margin-left: 12px;
+        border-radius: 20px;
+        opacity: 0.3;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    #s4{
+        padding: 6px;
+        background: #FFFFFF;
+        position: absolute;
+        left: 50%;
+        bottom: 25px;
+        margin-left: 36px;
+        border-radius: 20px;
+        opacity: 0.3;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    #s1:hover, #s2:hover, #s3:hover, #s4:hover{ opacity: 1;}
+
+    .inner-wrapper{
+        width: 940px;
+        height: 470px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-bottom: 0px;
+        overflow: hidden;
+    }
+    .control{ display: none;}
+
+    #Slide1:checked ~ .overflow-wrapper{ margin-left: 0%; }
+    #Slide2:checked ~ .overflow-wrapper{ margin-left: -100%; }
+    #Slide3:checked ~ .overflow-wrapper{ margin-left: -200%; }
+    #Slide4:checked ~ .overflow-wrapper{ margin-left: -300%; }
+
+    #Slide1:checked + #s1 { opacity: 1; }
+    #Slide2:checked + #s2 { opacity: 1; }
+    #Slide3:checked + #s3 { opacity: 1; }
+    #Slide4:checked + #s4 { opacity: 1; }
+
+    .overflow-wrapper{
+        width: 400%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow-y: hidden;
+        z-index: 1;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .slide img{
+        width: 25%;
+        float: left;
+    }
+    /* fin slider */
+}
+
+/**************************************************
+*********** Media query 1200px and more ***********
+**************************************************/
+@media (max-width: 1200px) {
+
+    .wrapper{
+        background-color: red;
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        /*background: url(img/news-bg2.png);*/
+        background: url('../images/news-fond-ecrant.png');
+        background-size: cover;
+    }
+
+    .logo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .golf-cadre{
+        width: 950px;
+        top: 12px;
+        height: 520px;
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .party{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        top: 70px;
+        position: relative;
+    }
+
+@import url(http://fonts.googleapis.com/css?family=Ropa+Sans);
+    * {
+        margin:0px;
+        padding:0px;
+        font-family: 'Ropa Sans', sans-serif;
+        font-weight:normal;
+        color:rgba(0,0,0,0.9);
+    }
+
+    #mainmenu {
+        height: 30px;
+        text-align: center;
+        margin-top: 35px;
+        z-index: 45;
+    }
+
+    .menu li {
+        display:inline-block;
+        padding:0px 15px;
+    }
+
+    .menu li a {
+        position:relative;
+        font-size:1.7rem;
+        letter-spacing:1px;
+        text-decoration:none;
+        color: #ffffff;
+        font-family: 'Marck Script', cursive;
+    }
+    .menu li a:after {
+        content:'';
+        left:50%;
+        bottom:-10px;
+        display:block;
+        width:0%;
+        height:2px;
+        background-color: rgb(2, 54, 65);
+        -webkit-transition:width 0.1s, left 0.1s;;
+        -moz-transition:   width 0.1s, left 0.1s;;
+        -o-transition:     width 0.1s, left 0.1s;;
+        transition:        width 0.1s, left 0.1s;;
+    }
+    .menu li a:hover::after {
+        left:-15%;
+        width:130%;
+    }
+    .trait{
+        width: 60%;
+        height: 3px;
+        background-color: #ffffff;
+        position: relative;
+        top: 41px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #footer{
+        background-color:black;
+        width: 100%;
+        height: 52px;
+        bottom: 0;
+        position: fixed;
+    }
+
+    .Copyright{
+        text-align: center;
+        position: relative;
+        top: 18px;
+        color: #ffffff;
+    }
+
+    .fa {
+        color: #ffffff;
+        width: 100%;
+        font-size: 35px;
+        bottom: 20px;
+        position: relative;
+    }
+
+    .fa:hover {
+        color: #84ffff;
+    }
+
+    .fa-twitter-square{
+        color: #ffffff;
+        width: 100%;
+        font-size: 35px;
+        bottom: 54px;
+        left: 50px;
+        position: relative;
+    }
+
+    .fa-linkedin-square{
+        color: #ffffff;
+        width: 100%;
+        font-size: 35px;
+        bottom: 89px;
+        left: 100px;
+        position: relative;
+    }
+
+    .fa-instagram{
+        color: #ffffff;
+        width: 100%;
+        font-size: 35px;
+        bottom: 123px;
+        left: 150px;
+        position: relative;
+    }
+
+    .social_network{
+        float: right;
+    }
+
+    .btn-outline-default{
+        bottom: 27px;
+        height: 35px;
+        width: 18% ;
+        position: relative;
+    }
+
+    /* Defillement */
+    .marquee {
+        width: 450px;
+        margin: 0 auto;
+        overflow: hidden;
+        white-space: nowrap;
+        box-sizing: border-box;
+        animation: marquee 50s linear infinite;
+        color:#ffffff;
+        position: relative;
+        top: 15px;
+        font-weight: bolder;
+    }
+
+    .marquee:hover {
+        animation-play-state: paused
+    }
+
+    /* Make it move */
+    @keyframes marquee {
+        0%   { text-indent: 30em }
+        100% { text-indent: -105em }
+    }
+
+    .logo-made-in-france{
+        width:35px;
+    }
+
+    .wild{
+        color: #84ffff ;
+        font-weight: bolder;
+    }
+
+    .button1{
+        border-top: 2px solid #ffffff;
+        border-bottom:  2px solid #ffffff;
+        border-left:   2px solid #ffffff;
+        border-right:   2px solid #ffffff;
+        width: 145px;
+        height: 40px;
+        position: relative;
+        bottom: 23px;
+    }
+
+    .Mentions{
+        font-family: 'Marck Script', cursive;
+        font-weight: bolder;
+        line-height: 45px;
+        position: relative;
+        left:  15px;
+        bottom: 3px;
+    }
+
+    /* Debut slider*/
+    #slider-wrapper{
+        width: 892px;
+        height: 466px;
+        margin: 50px auto;
+        position: relative;
+        margin-bottom: 0px;
+        background: rgba(0,0,0,0.5);
+        overflow: hidden;
+    }
+
+    #s1{
+        padding: 6px;
+        background: #FFFFFF;
+        position: absolute;
+        left: 50%;
+        bottom: 25px;
+        margin-left: -36px;
+        border-radius: 20px;
+        opacity: 0.3;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    #s2{
+        padding: 6px;
+        background: #FFFFFF;
+        position: absolute;
+        left: 50%;
+        bottom: 25px;
+        margin-left: -12px;
+        border-radius: 20px;
+        opacity: 0.3;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    #s3{
+        padding: 6px;
+        background: #FFFFFF;
+        position: absolute;
+        left: 50%;
+        bottom: 25px;
+        margin-left: 12px;
+        border-radius: 20px;
+        opacity: 0.3;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    #s4{
+        padding: 6px;
+        background: #FFFFFF;
+        position: absolute;
+        left: 50%;
+        bottom: 25px;
+        margin-left: 36px;
+        border-radius: 20px;
+        opacity: 0.3;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    #s1:hover, #s2:hover, #s3:hover, #s4:hover{ opacity: 1;}
+
+    .inner-wrapper{
+        width: 940px;
+        height: 470px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-bottom: 0px;
+        overflow: hidden;
+    }
+    .control{ display: none;}
+
+    #Slide1:checked ~ .overflow-wrapper{ margin-left: 0%; }
+    #Slide2:checked ~ .overflow-wrapper{ margin-left: -100%; }
+    #Slide3:checked ~ .overflow-wrapper{ margin-left: -200%; }
+    #Slide4:checked ~ .overflow-wrapper{ margin-left: -300%; }
+
+    #Slide1:checked + #s1 { opacity: 1; }
+    #Slide2:checked + #s2 { opacity: 1; }
+    #Slide3:checked + #s3 { opacity: 1; }
+    #Slide4:checked + #s4 { opacity: 1; }
+
+    .overflow-wrapper{
+        width: 400%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow-y: hidden;
+        z-index: 1;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .slide img{
+        width: 25%;
+        float: left;
+    }
+    /* fin slider */
+}
+
+
+
+
+
+
+
+

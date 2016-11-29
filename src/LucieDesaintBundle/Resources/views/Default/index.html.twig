@@ -8,7 +8,7 @@
     <div class="wrapper">
         <header>
             <div class="container-fluid">
-                <img src="{{ asset('bundles/LucieDesaint/Images/logo-lucie2.png" class="logo" alt="image logo" ') }}">
+                <img src="{{ asset('bundles/luciedesaint/images/logo-lucie2.png') }}" class="logo" alt="image logo">
                 <div id="mainmenu" class="visible-md visible-lg">
                     <ul class="menu">
                         <div class="trait"></div>
@@ -30,22 +30,23 @@
                             <input type="radio" name="slide" class="control" id="Slide4"/>
                             <label for="Slide4" id="s4"></label>
                             <div class="overflow-wrapper">
-                                <a class="slide" href=""><img src="http://i.imgur.com/hKju1EC.jpg"/></a>
-                                <a class="slide" href=""><img src="http://i.imgur.com/hKju1EC.jpg"/></a>
-                                <a class="slide" href=""><img src="img/portrait.jpg"/></a>
-                                <a class="slide" href=""><img src="http://www.wallpaperbetter.com/wallpaper/67/484/875/the-simpsons-rv-flanders-bart-breaking-bad-hd-720P-wallpaper-middle-size.jpg"/></a>
+                                <a class="slide" href=""><img src="{{ asset('bundles/luciedesaint/images/portrait.jpg') }}"/></a>
+                                <a class="slide" href=""><img src="{{ asset('bundles/luciedesaint/images/simpson.jpg') }}"/></a>
                             </div>
                         </div>
                     </div> <!-- fin slider -->
                 </div>
                 <div class="party center">
-                    <img src="img/cadre-blanc.png" class="golf-cadre"  alt="cadre or">
+                    <img src="{{ asset('bundles/luciedesaint/images/cadre-blanc.png') }}" class="golf-cadre" alt="cadre blanc">
                 </div>
             </div>
         </header>
         <div id="footer">
             <div class="container">
-                <p class="Copyright">© Copyright all rights reserved - design by <a href="http://www.wildcodeschool.fr/" target="_blank"><span class="wild">Wild Code School<span></a></p>
+                <p class="Copyright">
+                    © Copyright all rights reserved - design by
+                    <a class="wild" href="http://www.wildcodeschool.fr/" target="_blank">Wild Code School</a>
+                </p>
                 <!-- <button type="button" class="btn btn-outline-default waves-effect"> <a href="#" class="mentions"> Mentions Légales </a> </button> -->
                 <div class="social_network">
                     <a href="#" target="_blank"><i class="fa fa-facebook-official"></i></a>
