@@ -6,21 +6,23 @@
 
 {% block body %}
     <div class="wrapper">
-        <header>
+        <div class="globale">
             <div class="container-fluid">
                 <img src="{{ asset('bundles/luciedesaint/images/logo-lucie2.png') }}" class="logo" alt="image logo">
-                <div id="mainmenu" class="visible-md visible-lg">
+                <div id="mainmenu">
                     <ul class="menu">
                         <div class="trait"></div>
+                       <div class="menu3" class=" visible-lg visible-md">
                         <li class=""><a href="#">Artiste</a></li>
                         <li class=""><a href="#">Oeuvres</a></li>
                         <li class=""><a href="#">Bijoux</a></li>
                         <li class=""><a href="#">Actualités</a></li>
                         <li class=""><a href="#">Contact</a></li>
+                           </div>
                     </ul>
-                    <p class="marquee">Bienvenue sur mon site, je suis artiste plasticienne et professeur d'art à Paris. Mes créations sont made in France <img src="img/logo-made-in-france.png" alt="image made in france" class="logo-made-in-france"></p>
+                    <p class="marquee">Bienvenue sur mon site, je suis artiste plasticienne et professeur d'art à Paris. Mes créations sont made in France <img src="{{ asset('bundles/luciedesaint/images/logo-made-in-france.png') }}" alt="image made in france" class="logo-made-in-france"></p>
                     <div id="slider-wrapper"> <!-- Debut slider -->
-                        <div class="inner-wrapper">
+                        <div class="inner-wrapper" class="visible-xs visible-sm visible-lg visible-md">
                             <input checked type="radio" name="slide" class="control" id="Slide1"/>
                             <label for="Slide1" id="s1"></label>
                             <input type="radio" name="slide" class="control" id="Slide2"/>
@@ -37,10 +39,10 @@
                     </div> <!-- fin slider -->
                 </div>
                 <div class="party center">
-                    <img src="{{ asset('bundles/luciedesaint/images/cadre-blanc.png') }}" class="golf-cadre" alt="cadre blanc">
+                    <img src="{{ asset('bundles/luciedesaint/images/cadre-blanc.png') }}" class="cadre-blanc" alt="cadre blanc">
                 </div>
             </div>
-        </header>
+        </div>
         <div id="footer">
             <div class="container">
                 <p class="Copyright">

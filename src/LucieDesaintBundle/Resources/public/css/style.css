@@ -1,321 +1,346 @@
+/*----- INDEX  ------
+     background: url('../images/news-fond-ecrant.png');
+    1. Class globale = Englobe tout le site sauf le footer
+    2. MENU
+//  3. CARDS HORIZONTALES
+-------------------*/
+
+
 /**************************************************
-*********** Media query 990px and more ***********
+******************** 1. globale ********************
 **************************************************/
-@media (min-width: 990px) {
-    .wrapper{
-        background-color: red;
-        width: 100%;
-        height: 100vh;
-        background-repeat: no-repeat;
-        /*background: url(img/news-bg2.png);*/
-        background: url('../images/news-fond-ecrant.png');
-        background-size: cover;
-    }
 
-    .logo{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+.wrapper{
+    background-color: red;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    /*background: url(img/news-bg2.png);*/
+    background: url('../images/news-fond-ecrant.png');
+    background-size: cover;
+}
 
-    .golf-cadre{
-        width: 950px;
-        top: 12px;
-        height: 520px;
-        display: block;
-        position: relative;
-        margin-left: auto;
-        margin-right: auto;
-    }
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    .party{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        top: 70px;
-        position: relative;
-    }
+.cadre-blanc{
+    width: 950px;
+    top: 12px;
+    height: 520px;
+    display: block;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Englobe la le cadre blanc */
+.party{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 70px;
+    position: relative;
+}
 
 @import url(http://fonts.googleapis.com/css?family=Ropa+Sans);
-    * {
-        margin:0;
-        padding:0;
-        font-family: 'Ropa Sans', sans-serif;
-        font-weight:normal;
-        color:rgba(0,0,0,0.9);
-    }
+* {
+    margin:0px;
+    padding:0px;
+    font-family: 'Ropa Sans', sans-serif;
+    font-weight:normal;
+    color:rgba(0,0,0,0.9);
+}
 
-    #mainmenu {
-        height: 30px;
-        text-align: center;
-        margin-top: 35px;
-        z-index: 45;
-    }
+/**************************************************
+*********** 2. Style MENU ***********
+**************************************************/
 
-    .menu li {
-        display:inline-block;
-        padding:0 15px;
-    }
+#mainmenu {
+    height: 30px;
+    text-align: center;
+    margin-top: 35px;
+    z-index: 45;
+}
 
-    .menu li a {
-        position:relative;
-        font-size:1.7rem;
-        letter-spacing:1px;
-        text-decoration:none;
-        color: #ffffff;
-        font-family: 'Marck Script', cursive;
-    }
-    .menu li a:after {
-        content:'';
-        left:50%;
-        bottom:-10px;
-        display:block;
-        width:0%;
-        height:2px;
-        background-color: rgb(2, 54, 65);
-        -webkit-transition:width 0.1s, left 0.1s;;
-        -moz-transition:   width 0.1s, left 0.1s;;
-        -o-transition:     width 0.1s, left 0.1s;;
-        transition:        width 0.1s, left 0.1s;;
-    }
-    .menu li a:hover::after {
-        left:-15%;
-        width:130%;
-    }
-    .trait{
-        width: 60%;
-        height: 3px;
-        background-color: #ffffff;
-        position: relative;
-        top: 41px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+.menu li {
+    display:inline-block;
+    padding:0px 15px;
+}
 
-    #footer{
-        background-color:black;
-        width: 100%;
-        height: 52px;
-        bottom: 0;
-        position: fixed;
-    }
+.menu li a {
+    position:relative;
+    font-size:1.7rem;
+    letter-spacing:1px;
+    text-decoration:none;
+    color: #ffffff;
+    font-family: 'Marck Script', cursive;
+}
+.menu li a:after {
+    content:'';
+    left:50%;
+    bottom:-10px;
+    display:block;
+    width:0%;
+    height:2px;
+    background-color: rgb(2, 54, 65);
+    -webkit-transition:width 0.1s, left 0.1s;;
+    -moz-transition:   width 0.1s, left 0.1s;;
+    -o-transition:     width 0.1s, left 0.1s;;
+    transition:        width 0.1s, left 0.1s;;
+}
 
-    .Copyright{
-        text-align: center;
-        position: relative;
-        top: 18px;
-        color: #ffffff;
-    }
+.menu li a:hover::after {
+    left:-15%;
+    width:130%;
+}
 
-    .fa {
-        color: #ffffff;
-        width: 100%;
-        font-size: 35px;
-        bottom: 20px;
-        position: relative;
-    }
+/*trait sous le menu*/
+.trait {
+    width: 60%;
+    height: 3px;
+    background-color: #ffffff;
+    position: relative;
+    top: 41px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    .fa:hover {
-        color: #84ffff;
-    }
+/* Defillement texte en haut*/
+.marquee {
+    width: 450px;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: marquee 50s linear infinite;
+    color:#ffffff;
+    position: relative;
+    top: 15px;
+    font-weight: bolder;
+}
 
-    .fa-twitter-square{
-        color: #ffffff;
-        width: 100%;
-        font-size: 35px;
-        bottom: 54px;
-        left: 50px;
-        position: relative;
-    }
+.marquee:hover {
+    animation-play-state: paused
+}
 
-    .fa-linkedin-square{
-        color: #ffffff;
-        width: 100%;
-        font-size: 35px;
-        bottom: 89px;
-        left: 100px;
-        position: relative;
-    }
+/* Make it move */
+@keyframes marquee {
+    0%   { text-indent: 30em }
+    100% { text-indent: -105em }
+}
 
-    .fa-instagram{
-        color: #ffffff;
-        width: 100%;
-        font-size: 35px;
-        bottom: 123px;
-        left: 150px;
-        position: relative;
-    }
+.logo-made-in-france{
+    width:35px;
+}
 
-    .social_network{
-        float: right;
-    }
+/* Debut slider*/
+#slider-wrapper{
+    width: 892px;
+    height: 466px;
+    margin: 50px auto;
+    position: relative;
+    margin-bottom: 0px;
+    background: rgba(0,0,0,0.5);
+    overflow: hidden;
+}
 
-    .btn-outline-default{
-        bottom: 27px;
-        height: 35px;
-        width: 18% ;
-        position: relative;
-    }
+/* Cercle de déplacement pour changer de photo */
+#s1{
+    padding: 6px;
+    background: #FFFFFF;
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    margin-left: -36px;
+    border-radius: 20px;
+    opacity: 0.3;
+    cursor: pointer;
+    z-index: 999;
+}
 
-    /* Defillement */
-    .marquee {
-        width: 450px;
-        margin: 0 auto;
-        overflow: hidden;
-        white-space: nowrap;
-        box-sizing: border-box;
-        animation: marquee 50s linear infinite;
-        color:#ffffff;
-        position: relative;
-        top: 15px;
-        font-weight: bolder;
-    }
+#s2{
+    padding: 6px;
+    background: #FFFFFF;
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    margin-left: -12px;
+    border-radius: 20px;
+    opacity: 0.3;
+    cursor: pointer;
+    z-index: 999;
+}
 
-    .marquee:hover {
-        animation-play-state: paused
-    }
+#s3{
+    padding: 6px;
+    background: #FFFFFF;
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    margin-left: 12px;
+    border-radius: 20px;
+    opacity: 0.3;
+    cursor: pointer;
+    z-index: 999;
+}
 
-    /* Make it move */
-    @keyframes marquee {
-        0%   { text-indent: 30em }
-        100% { text-indent: -105em }
-    }
+#s4{
+    padding: 6px;
+    background: #FFFFFF;
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    margin-left: 36px;
+    border-radius: 20px;
+    opacity: 0.3;
+    cursor: pointer;
+    z-index: 999;
+}
+/* Fin Cercle deplacement pour changer de photo */
 
-    .logo-made-in-france{
-        width:35px;
-    }
+#s1:hover, #s2:hover, #s3:hover, #s4:hover{ opacity: 1;}
 
-    .wild{
-        color: #84ffff ;
-        font-weight: bolder;
-    }
+.inner-wrapper{
+    width: 940px;
+    height: 470px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-bottom: 0px;
+    overflow: hidden;
+}
+.control{ display: none;}
 
-    .button1{
-        border-top: 2px solid #ffffff;
-        border-bottom:  2px solid #ffffff;
-        border-left:   2px solid #ffffff;
-        border-right:   2px solid #ffffff;
-        width: 145px;
-        height: 40px;
-        position: relative;
-        bottom: 23px;
-    }
+#Slide1:checked ~ .overflow-wrapper{ margin-left: 0%; }
+#Slide2:checked ~ .overflow-wrapper{ margin-left: -100%; }
+#Slide3:checked ~ .overflow-wrapper{ margin-left: -200%; }
+#Slide4:checked ~ .overflow-wrapper{ margin-left: -300%; }
 
-    .Mentions{
-        font-family: 'Marck Script', cursive;
-        font-weight: bolder;
-        line-height: 45px;
-        position: relative;
-        left:  15px;
-        bottom: 3px;
-    }
+#Slide1:checked + #s1 { opacity: 1; }
+#Slide2:checked + #s2 { opacity: 1; }
+#Slide3:checked + #s3 { opacity: 1; }
+#Slide4:checked + #s4 { opacity: 1; }
 
-    /* Debut slider*/
-    #slider-wrapper{
-        width: 892px;
-        height: 466px;
-        margin: 50px auto;
-        position: relative;
-        margin-bottom: 0;
-        background: rgba(0,0,0,0.5);
-        overflow: hidden;
-    }
+/* Permet de faire défiler les images les un à la suite des autres*/
+.overflow-wrapper{
+    width: 400%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    z-index: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
 
-    #s1{
-        padding: 6px;
-        background: #FFFFFF;
-        position: absolute;
-        left: 50%;
-        bottom: 25px;
-        margin-left: -36px;
-        border-radius: 20px;
-        opacity: 0.3;
-        cursor: pointer;
-        z-index: 999;
-    }
+/* Taille des images dans le slider*/
+.slide img{
+    width: 25%;
+    float: left;
+}
+/* fin slider */
 
-    #s2{
-        padding: 6px;
-        background: #FFFFFF;
-        position: absolute;
-        left: 50%;
-        bottom: 25px;
-        margin-left: -12px;
-        border-radius: 20px;
-        opacity: 0.3;
-        cursor: pointer;
-        z-index: 999;
-    }
 
-    #s3{
-        padding: 6px;
-        background: #FFFFFF;
-        position: absolute;
-        left: 50%;
-        bottom: 25px;
-        margin-left: 12px;
-        border-radius: 20px;
-        opacity: 0.3;
-        cursor: pointer;
-        z-index: 999;
-    }
+/**************************************************
+******************** fin globale ********************
+**************************************************/
 
-    #s4{
-        padding: 6px;
-        background: #FFFFFF;
-        position: absolute;
-        left: 50%;
-        bottom: 25px;
-        margin-left: 36px;
-        border-radius: 20px;
-        opacity: 0.3;
-        cursor: pointer;
-        z-index: 999;
-    }
+/**************************************************
+******************** 1. Footer ********************
+**************************************************/
 
-    #s1:hover, #s2:hover, #s3:hover, #s4:hover{ opacity: 1;}
+#footer{
+    background-color:black;
+    width: 100%;
+    height: 52px;
+    bottom: 0;
+    position: fixed;
+}
 
-    .inner-wrapper{
-        width: 940px;
-        height: 470px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-bottom: 0px;
-        overflow: hidden;
-    }
-    .control{ display: none;}
+.Copyright{
+    text-align: center;
+    position: relative;
+    top: 18px;
+    color: #ffffff;
+}
 
-    #Slide1:checked ~ .overflow-wrapper{ margin-left: 0%; }
-    #Slide2:checked ~ .overflow-wrapper{ margin-left: -100%; }
-    #Slide3:checked ~ .overflow-wrapper{ margin-left: -200%; }
-    #Slide4:checked ~ .overflow-wrapper{ margin-left: -300%; }
+/* bouton des reseaux sociaux */
+.fa {
+    color: #ffffff;
+    width: 100%;
+    font-size: 35px;
+    bottom: 20px;
+    position: relative;
+}
 
-    #Slide1:checked + #s1 { opacity: 1; }
-    #Slide2:checked + #s2 { opacity: 1; }
-    #Slide3:checked + #s3 { opacity: 1; }
-    #Slide4:checked + #s4 { opacity: 1; }
+.fa:hover {
+    color: #84ffff;
+}
 
-    .overflow-wrapper{
-        width: 400%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        overflow-y: hidden;
-        z-index: 1;
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-    }
+.fa-twitter-square{
+    color: #ffffff;
+    width: 100%;
+    font-size: 35px;
+    bottom: 54px;
+    left: 50px;
+    position: relative;
+}
 
-    .slide img{
-        width: 25%;
-        float: left;
-    }
-    /* fin slider */
+.fa-linkedin-square{
+    color: #ffffff;
+    width: 100%;
+    font-size: 35px;
+    bottom: 89px;
+    left: 100px;
+    position: relative;
+}
+
+.fa-instagram{
+    color: #ffffff;
+    width: 100%;
+    font-size: 35px;
+    bottom: 123px;
+    left: 150px;
+    position: relative;
+}
+
+.social_network{
+    float: right;
+}
+
+/*Class qui englobe la wild code school*/
+.wild{
+    color: #84ffff ;
+    font-weight: bolder;
+}
+
+/*Contour du bouton mentions*/
+.button1{
+    border-top: 2px solid #ffffff;
+    border-bottom:  2px solid #ffffff;
+    border-left:   2px solid #ffffff;
+    border-right:   2px solid #ffffff;
+    width: 145px;
+    height: 40px;
+    position: relative;
+    bottom: 23px;
+}
+
+.Mentions{
+    font-family: 'Marck Script', cursive;
+    font-weight: bolder;
+    line-height: 45px;
+    position: relative;
+    left:  15px;
+    bottom: 3px;
 }
 
 /**************************************************
@@ -339,17 +364,18 @@
         margin-right: auto;
     }
 
-    .golf-cadre{
+    .cadre-blanc{
         width: 950px;
         top: 12px;
         height: 520px;
         display: block;
         position: relative;
+        display: block;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .party{
+    .party{ /* Englobe la le cadre blanc */
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -365,6 +391,10 @@
         font-weight:normal;
         color:rgba(0,0,0,0.9);
     }
+
+    /**************************************************
+    *********** 2. Style MENU ***********
+    **************************************************/
 
     #mainmenu {
         height: 30px;
@@ -399,11 +429,14 @@
         -o-transition:     width 0.1s, left 0.1s;;
         transition:        width 0.1s, left 0.1s;;
     }
+
     .menu li a:hover::after {
         left:-15%;
         width:130%;
     }
-    .trait{
+
+    /*trait sous le menu*/
+    .trait {
         width: 60%;
         height: 3px;
         background-color: #ffffff;
@@ -414,72 +447,7 @@
         margin-right: auto;
     }
 
-    #footer{
-        background-color:black;
-        width: 100%;
-        height: 52px;
-        bottom: 0;
-        position: fixed;
-    }
-
-    .Copyright{
-        text-align: center;
-        position: relative;
-        top: 18px;
-        color: #ffffff;
-    }
-
-    .fa {
-        color: #ffffff;
-        width: 100%;
-        font-size: 35px;
-        bottom: 20px;
-        position: relative;
-    }
-
-    .fa:hover {
-        color: #84ffff;
-    }
-
-    .fa-twitter-square{
-        color: #ffffff;
-        width: 100%;
-        font-size: 35px;
-        bottom: 54px;
-        left: 50px;
-        position: relative;
-    }
-
-    .fa-linkedin-square{
-        color: #ffffff;
-        width: 100%;
-        font-size: 35px;
-        bottom: 89px;
-        left: 100px;
-        position: relative;
-    }
-
-    .fa-instagram{
-        color: #ffffff;
-        width: 100%;
-        font-size: 35px;
-        bottom: 123px;
-        left: 150px;
-        position: relative;
-    }
-
-    .social_network{
-        float: right;
-    }
-
-    .btn-outline-default{
-        bottom: 27px;
-        height: 35px;
-        width: 18% ;
-        position: relative;
-    }
-
-    /* Defillement */
+    /* Defillement texte en haut*/
     .marquee {
         width: 450px;
         margin: 0 auto;
@@ -507,31 +475,6 @@
         width:35px;
     }
 
-    .wild{
-        color: #84ffff ;
-        font-weight: bolder;
-    }
-
-    .button1{
-        border-top: 2px solid #ffffff;
-        border-bottom:  2px solid #ffffff;
-        border-left:   2px solid #ffffff;
-        border-right:   2px solid #ffffff;
-        width: 145px;
-        height: 40px;
-        position: relative;
-        bottom: 23px;
-    }
-
-    .Mentions{
-        font-family: 'Marck Script', cursive;
-        font-weight: bolder;
-        line-height: 45px;
-        position: relative;
-        left:  15px;
-        bottom: 3px;
-    }
-
     /* Debut slider*/
     #slider-wrapper{
         width: 892px;
@@ -543,6 +486,7 @@
         overflow: hidden;
     }
 
+    /* Cercle de deplacement pour changer de photo */
     #s1{
         padding: 6px;
         background: #FFFFFF;
@@ -594,6 +538,7 @@
         cursor: pointer;
         z-index: 999;
     }
+    /* Fin Cercle deplacement pour changer de photo */
 
     #s1:hover, #s2:hover, #s3:hover, #s4:hover{ opacity: 1;}
 
@@ -618,6 +563,7 @@
     #Slide3:checked + #s3 { opacity: 1; }
     #Slide4:checked + #s4 { opacity: 1; }
 
+    /* Permet de faire défiler les images les un à la suite des autres*/
     .overflow-wrapper{
         width: 400%;
         height: 100%;
@@ -632,12 +578,158 @@
         transition: all 0.3s ease-in-out;
     }
 
+    /* Taille des images dans le slider*/
     .slide img{
         width: 25%;
         float: left;
     }
     /* fin slider */
+
+
+    /**************************************************
+    ******************** fin globale ********************
+    **************************************************/
+
+    /**************************************************
+    ******************** 1. Footer ********************
+    **************************************************/
+
+    #footer{
+        background-color:black;
+        width: 100%;
+        height: 52px;
+        bottom: 0;
+        position: fixed;
+    }
+
+    .Copyright{
+        text-align: center;
+        position: relative;
+        top: 18px;
+        color: #ffffff;
+    }
+
+    /* bouton des reseaux sociaux */
+    .fa {
+        color: #ffffff;
+        width: 100%;
+        font-size: 35px;
+        bottom: 20px;
+        position: relative;
+    }
+
+    .fa:hover {
+        color: #84ffff;
+    }
+
+    .fa-twitter-square{
+        color: #ffffff;
+        width: 100%;
+        font-size: 35px;
+        bottom: 54px;
+        left: 50px;
+        position: relative;
+    }
+
+    .fa-linkedin-square{
+        color: #ffffff;
+        width: 100%;
+        font-size: 35px;
+        bottom: 89px;
+        left: 100px;
+        position: relative;
+    }
+
+    .fa-instagram{
+        color: #ffffff;
+        width: 100%;
+        font-size: 35px;
+        bottom: 123px;
+        left: 150px;
+        position: relative;
+    }
+
+    .social_network{
+        float: right;
+    }
+
+    /*Class qui englobe la wild code school*/
+    .wild{
+        color: #84ffff ;
+        font-weight: bolder;
+    }
+
+    /*Contour du bouton mentions*/
+    .button1{
+        border-top: 2px solid #ffffff;
+        border-bottom:  2px solid #ffffff;
+        border-left:   2px solid #ffffff;
+        border-right:   2px solid #ffffff;
+        width: 145px;
+        height: 40px;
+        position: relative;
+        bottom: 23px;
+    }
+
+    .Mentions{
+        font-family: 'Marck Script', cursive;
+        font-weight: bolder;
+        line-height: 45px;
+        position: relative;
+        left:  15px;
+        bottom: 3px;
+    }
 }
+
+
+    @media (max-width: 990px) {
+        .cadre-blanc{
+            width: 90%;
+        }
+
+        #slider-wrapper{
+            width: 84%;
+            position: relative;
+            top: 3px;
+            right: 1px;
+        }
+
+        #footer{
+            background-color:red;
+        }
+
+    }
+
+@media (max-width: 627px) {
+    .cadre-blanc{
+        width: 90%;
+    }
+
+    #slider-wrapper{
+        width: 80%;
+        position: absolute;
+        top: 316px;
+        left: 1px;
+    }
+
+    @media (max-width: 468px) {
+        .cadre-blanc{
+            width: 90%;
+        }
+
+        #slider-wrapper{
+            width: 80%;
+            position: absolute;
+            top: 316px;
+            left: 1px;
+        }
+
+        #footer{
+            background-color:blueviolet;
+        }
+}
+
+
 
 
 
