@@ -1,734 +1,219 @@
 /*----- INDEX  ------
-     background: url('../images/news-fond-ecrant.png');
-    1. Class globale = Englobe tout le site sauf le footer
-    2. MENU
-//  3. CARDS HORIZONTALES
+
 -------------------*/
 
 
 /**************************************************
-******************** 1. globale ********************
+******************** 1. Navigation ****************
 **************************************************/
 
-.wrapper{
-    background-color: red;
+.container-fluid{
+    height: 65px;
     width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    /*background: url(img/news-bg2.png);*/
-    background: url('../images/news-fond-ecrant.png');
-    background-size: cover;
+    background-color: black;
 }
 
-.logo{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.cadre-blanc{
-    width: 950px;
-    top: 12px;
-    height: 520px;
-    display: block;
-    position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Englobe la le cadre blanc */
-.party{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    top: 70px;
-    position: relative;
-}
-
-@import url(http://fonts.googleapis.com/css?family=Ropa+Sans);
-* {
-    margin:0px;
-    padding:0px;
-    font-family: 'Ropa Sans', sans-serif;
-    font-weight:normal;
-    color:rgba(0,0,0,0.9);
-}
-
-/**************************************************
-*********** 2. Style MENU ***********
-**************************************************/
-
-#mainmenu {
-    height: 30px;
-    text-align: center;
-    margin-top: 35px;
-    z-index: 45;
-}
-
-.menu li {
-    display:inline-block;
-    padding:0px 15px;
-}
-
-.menu li a {
+.Accueil{
+    top: 22px;
     position:relative;
-    font-size:1.7rem;
-    letter-spacing:1px;
-    text-decoration:none;
-    color: #ffffff;
-    font-family: 'Marck Script', cursive;
-}
-.menu li a:after {
-    content:'';
-    left:50%;
-    bottom:-10px;
-    display:block;
-    width:0%;
-    height:2px;
-    background-color: rgb(2, 54, 65);
-    -webkit-transition:width 0.1s, left 0.1s;;
-    -moz-transition:   width 0.1s, left 0.1s;;
-    -o-transition:     width 0.1s, left 0.1s;;
-    transition:        width 0.1s, left 0.1s;;
+    font-size: 1.3em;
 }
 
-.menu li a:hover::after {
-    left:-15%;
-    width:130%;
-}
-
-/*trait sous le menu*/
-.trait {
-    width: 60%;
-    height: 3px;
-    background-color: #ffffff;
+.lien-menu{
+    top: 22px;
     position: relative;
-    top: 41px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Defillement texte en haut*/
-.marquee {
-    width: 450px;
-    margin: 0 auto;
-    overflow: hidden;
-    white-space: nowrap;
-    box-sizing: border-box;
-    animation: marquee 50s linear infinite;
-    color:#ffffff;
-    position: relative;
-    top: 15px;
-    font-weight: bolder;
-}
-
-.marquee:hover {
-    animation-play-state: paused
-}
-
-/* Make it move */
-@keyframes marquee {
-    0%   { text-indent: 30em }
-    100% { text-indent: -105em }
-}
-
-.logo-made-in-france{
-    width:35px;
-}
-
-/* Debut slider*/
-#slider-wrapper{
-    width: 892px;
-    height: 466px;
-    margin: 50px auto;
-    position: relative;
-    margin-bottom: 0px;
-    background: rgba(0,0,0,0.5);
-    overflow: hidden;
-}
-
-/* Cercle de déplacement pour changer de photo */
-#s1{
-    padding: 6px;
-    background: #FFFFFF;
-    position: absolute;
-    left: 50%;
-    bottom: 25px;
-    margin-left: -36px;
-    border-radius: 20px;
-    opacity: 0.3;
-    cursor: pointer;
-    z-index: 999;
-}
-
-#s2{
-    padding: 6px;
-    background: #FFFFFF;
-    position: absolute;
-    left: 50%;
-    bottom: 25px;
-    margin-left: -12px;
-    border-radius: 20px;
-    opacity: 0.3;
-    cursor: pointer;
-    z-index: 999;
-}
-
-#s3{
-    padding: 6px;
-    background: #FFFFFF;
-    position: absolute;
-    left: 50%;
-    bottom: 25px;
-    margin-left: 12px;
-    border-radius: 20px;
-    opacity: 0.3;
-    cursor: pointer;
-    z-index: 999;
-}
-
-#s4{
-    padding: 6px;
-    background: #FFFFFF;
-    position: absolute;
-    left: 50%;
-    bottom: 25px;
-    margin-left: 36px;
-    border-radius: 20px;
-    opacity: 0.3;
-    cursor: pointer;
-    z-index: 999;
-}
-/* Fin Cercle deplacement pour changer de photo */
-
-#s1:hover, #s2:hover, #s3:hover, #s4:hover{ opacity: 1;}
-
-.inner-wrapper{
-    width: 940px;
-    height: 470px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-bottom: 0px;
-    overflow: hidden;
-}
-.control{ display: none;}
-
-#Slide1:checked ~ .overflow-wrapper{ margin-left: 0%; }
-#Slide2:checked ~ .overflow-wrapper{ margin-left: -100%; }
-#Slide3:checked ~ .overflow-wrapper{ margin-left: -200%; }
-#Slide4:checked ~ .overflow-wrapper{ margin-left: -300%; }
-
-#Slide1:checked + #s1 { opacity: 1; }
-#Slide2:checked + #s2 { opacity: 1; }
-#Slide3:checked + #s3 { opacity: 1; }
-#Slide4:checked + #s4 { opacity: 1; }
-
-/* Permet de faire défiler les images les un à la suite des autres*/
-.overflow-wrapper{
-    width: 400%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow-y: hidden;
-    z-index: 1;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
-
-/* Taille des images dans le slider*/
-.slide img{
-    width: 25%;
-    float: left;
-}
-/* fin slider */
-
-
-/**************************************************
-******************** fin globale ********************
-**************************************************/
-
-/**************************************************
-******************** 1. Footer ********************
-**************************************************/
-
-#footer{
-    background-color:black;
-    width: 100%;
-    height: 52px;
-    bottom: 0;
-    position: fixed;
-}
-
-.Copyright{
-    text-align: center;
-    position: relative;
-    top: 18px;
-    color: #ffffff;
-}
-
-/* bouton des reseaux sociaux */
-.fa {
-    color: #ffffff;
-    width: 100%;
-    font-size: 35px;
-    bottom: 20px;
-    position: relative;
-}
-
-.fa:hover {
-    color: #84ffff;
-}
-
-.fa-twitter-square{
-    color: #ffffff;
-    width: 100%;
-    font-size: 35px;
-    bottom: 54px;
-    left: 50px;
-    position: relative;
-}
-
-.fa-linkedin-square{
-    color: #ffffff;
-    width: 100%;
-    font-size: 35px;
-    bottom: 89px;
-    left: 100px;
-    position: relative;
-}
-
-.fa-instagram{
-    color: #ffffff;
-    width: 100%;
-    font-size: 35px;
-    bottom: 123px;
-    left: 150px;
-    position: relative;
-}
-
-.social_network{
     float: right;
+    font-size: 1.3em;
+    padding-right: 44px;
 }
 
-/*Class qui englobe la wild code school*/
-.wild{
-    color: #84ffff ;
-    font-weight: bolder;
+a{
+    color: #FFFFFF;
 }
 
-/*Contour du bouton mentions*/
-.button1{
-    border-top: 2px solid #ffffff;
-    border-bottom:  2px solid #ffffff;
-    border-left:   2px solid #ffffff;
-    border-right:   2px solid #ffffff;
-    width: 145px;
-    height: 40px;
-    position: relative;
-    bottom: 23px;
-}
-
-.Mentions{
-    font-family: 'Marck Script', cursive;
-    font-weight: bolder;
-    line-height: 45px;
-    position: relative;
-    left:  15px;
-    bottom: 3px;
+a:hover{
+    color: #B3CC57;
 }
 
 /**************************************************
-*********** Media query 1200px and more ***********
+******************** 1. fin Navigation ************
 **************************************************/
-@media (max-width: 1200px) {
 
-    .wrapper{
-        background-color: red;
-        width: 100%;
-        height: 100vh;
-        background-repeat: no-repeat;
-        /*background: url(img/news-bg2.png);*/
-        background: url('../images/news-fond-ecrant.png');
-        background-size: cover;
-    }
+/**************************************************
+******************** 1. Bandeau2 ******************
+**************************************************/
 
-    .logo{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .cadre-blanc{
-        width: 950px;
-        top: 12px;
-        height: 520px;
-        display: block;
-        position: relative;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .party{ /* Englobe la le cadre blanc */
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        top: 70px;
-        position: relative;
-    }
-
-@import url(http://fonts.googleapis.com/css?family=Ropa+Sans);
-    * {
-        margin:0px;
-        padding:0px;
-        font-family: 'Ropa Sans', sans-serif;
-        font-weight:normal;
-        color:rgba(0,0,0,0.9);
-    }
-
-    /**************************************************
-    *********** 2. Style MENU ***********
-    **************************************************/
-
-    #mainmenu {
-        height: 30px;
-        text-align: center;
-        margin-top: 35px;
-        z-index: 45;
-    }
-
-    .menu li {
-        display:inline-block;
-        padding:0px 15px;
-    }
-
-    .menu li a {
-        position:relative;
-        font-size:1.7rem;
-        letter-spacing:1px;
-        text-decoration:none;
-        color: #ffffff;
-        font-family: 'Marck Script', cursive;
-    }
-    .menu li a:after {
-        content:'';
-        left:50%;
-        bottom:-10px;
-        display:block;
-        width:0%;
-        height:2px;
-        background-color: rgb(2, 54, 65);
-        -webkit-transition:width 0.1s, left 0.1s;;
-        -moz-transition:   width 0.1s, left 0.1s;;
-        -o-transition:     width 0.1s, left 0.1s;;
-        transition:        width 0.1s, left 0.1s;;
-    }
-
-    .menu li a:hover::after {
-        left:-15%;
-        width:130%;
-    }
-
-    /*trait sous le menu*/
-    .trait {
-        width: 60%;
-        height: 3px;
-        background-color: #ffffff;
-        position: relative;
-        top: 41px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* Defillement texte en haut*/
-    .marquee {
-        width: 450px;
-        margin: 0 auto;
-        overflow: hidden;
-        white-space: nowrap;
-        box-sizing: border-box;
-        animation: marquee 50s linear infinite;
-        color:#ffffff;
-        position: relative;
-        top: 15px;
-        font-weight: bolder;
-    }
-
-    .marquee:hover {
-        animation-play-state: paused
-    }
-
-    /* Make it move */
-    @keyframes marquee {
-        0%   { text-indent: 30em }
-        100% { text-indent: -105em }
-    }
-
-    .logo-made-in-france{
-        width:35px;
-    }
-
-    /* Debut slider*/
-    #slider-wrapper{
-        width: 892px;
-        height: 466px;
-        margin: 50px auto;
-        position: relative;
-        margin-bottom: 0px;
-        background: rgba(0,0,0,0.5);
-        overflow: hidden;
-    }
-
-    /* Cercle de deplacement pour changer de photo */
-    #s1{
-        padding: 6px;
-        background: #FFFFFF;
-        position: absolute;
-        left: 50%;
-        bottom: 25px;
-        margin-left: -36px;
-        border-radius: 20px;
-        opacity: 0.3;
-        cursor: pointer;
-        z-index: 999;
-    }
-
-    #s2{
-        padding: 6px;
-        background: #FFFFFF;
-        position: absolute;
-        left: 50%;
-        bottom: 25px;
-        margin-left: -12px;
-        border-radius: 20px;
-        opacity: 0.3;
-        cursor: pointer;
-        z-index: 999;
-    }
-
-    #s3{
-        padding: 6px;
-        background: #FFFFFF;
-        position: absolute;
-        left: 50%;
-        bottom: 25px;
-        margin-left: 12px;
-        border-radius: 20px;
-        opacity: 0.3;
-        cursor: pointer;
-        z-index: 999;
-    }
-
-    #s4{
-        padding: 6px;
-        background: #FFFFFF;
-        position: absolute;
-        left: 50%;
-        bottom: 25px;
-        margin-left: 36px;
-        border-radius: 20px;
-        opacity: 0.3;
-        cursor: pointer;
-        z-index: 999;
-    }
-    /* Fin Cercle deplacement pour changer de photo */
-
-    #s1:hover, #s2:hover, #s3:hover, #s4:hover{ opacity: 1;}
-
-    .inner-wrapper{
-        width: 940px;
-        height: 470px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-bottom: 0px;
-        overflow: hidden;
-    }
-    .control{ display: none;}
-
-    #Slide1:checked ~ .overflow-wrapper{ margin-left: 0%; }
-    #Slide2:checked ~ .overflow-wrapper{ margin-left: -100%; }
-    #Slide3:checked ~ .overflow-wrapper{ margin-left: -200%; }
-    #Slide4:checked ~ .overflow-wrapper{ margin-left: -300%; }
-
-    #Slide1:checked + #s1 { opacity: 1; }
-    #Slide2:checked + #s2 { opacity: 1; }
-    #Slide3:checked + #s3 { opacity: 1; }
-    #Slide4:checked + #s4 { opacity: 1; }
-
-    /* Permet de faire défiler les images les un à la suite des autres*/
-    .overflow-wrapper{
-        width: 400%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        overflow-y: hidden;
-        z-index: 1;
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-    }
-
-    /* Taille des images dans le slider*/
-    .slide img{
-        width: 25%;
-        float: left;
-    }
-    /* fin slider */
-
-
-    /**************************************************
-    ******************** fin globale ********************
-    **************************************************/
-
-    /**************************************************
-    ******************** 1. Footer ********************
-    **************************************************/
-
-    #footer{
-        background-color:black;
-        width: 100%;
-        height: 52px;
-        bottom: 0;
-        position: fixed;
-    }
-
-    .Copyright{
-        text-align: center;
-        position: relative;
-        top: 18px;
-        color: #ffffff;
-    }
-
-    /* bouton des reseaux sociaux */
-    .fa {
-        color: #ffffff;
-        width: 100%;
-        font-size: 35px;
-        bottom: 20px;
-        position: relative;
-    }
-
-    .fa:hover {
-        color: #84ffff;
-    }
-
-    .fa-twitter-square{
-        color: #ffffff;
-        width: 100%;
-        font-size: 35px;
-        bottom: 54px;
-        left: 50px;
-        position: relative;
-    }
-
-    .fa-linkedin-square{
-        color: #ffffff;
-        width: 100%;
-        font-size: 35px;
-        bottom: 89px;
-        left: 100px;
-        position: relative;
-    }
-
-    .fa-instagram{
-        color: #ffffff;
-        width: 100%;
-        font-size: 35px;
-        bottom: 123px;
-        left: 150px;
-        position: relative;
-    }
-
-    .social_network{
-        float: right;
-    }
-
-    /*Class qui englobe la wild code school*/
-    .wild{
-        color: #84ffff ;
-        font-weight: bolder;
-    }
-
-    /*Contour du bouton mentions*/
-    .button1{
-        border-top: 2px solid #ffffff;
-        border-bottom:  2px solid #ffffff;
-        border-left:   2px solid #ffffff;
-        border-right:   2px solid #ffffff;
-        width: 145px;
-        height: 40px;
-        position: relative;
-        bottom: 23px;
-    }
-
-    .Mentions{
-        font-family: 'Marck Script', cursive;
-        font-weight: bolder;
-        line-height: 45px;
-        position: relative;
-        left:  15px;
-        bottom: 3px;
-    }
+.bandeau2 {
+    height: 175px;
+    width: 100%;
+    background-color:#3b3939;
+    position: relative;
+    bottom: 20px;
 }
 
-
-    @media (max-width: 990px) {
-        .cadre-blanc{
-            width: 90%;
-        }
-
-        #slider-wrapper{
-            width: 84%;
-            position: relative;
-            top: 3px;
-            right: 1px;
-        }
-
-        #footer{
-            background-color:red;
-        }
-
-    }
-
-@media (max-width: 627px) {
-    .cadre-blanc{
-        width: 90%;
-    }
-
-    #slider-wrapper{
-        width: 80%;
-        position: absolute;
-        top: 316px;
-        left: 1px;
-    }
-
-    @media (max-width: 468px) {
-        .cadre-blanc{
-            width: 90%;
-        }
-
-        #slider-wrapper{
-            width: 80%;
-            position: absolute;
-            top: 316px;
-            left: 1px;
-        }
-
-        #footer{
-            background-color:blueviolet;
-        }
+#lucie {
+    text-align: center;
+    top: 30px;
+    position:relative;
+    color:#FFFFFF;
 }
 
+#plasticienne{
+    text-align: center;
+    top: 30px;
+    position:relative;
+    color:#FFFFFF;
+}
+
+/**************************************************
+******************** fin du Bandeau2 **************
+**************************************************/
+
+/**************************************************
+*********************** main **********************
+**************************************************/
+
+.cadre-photo1 {
+    width: 425px;
+    height: 300px;
+    background-color: red;
+}
+
+/**************************************************
+********************** fin du main ****************
+**************************************************/
+
+/**************************************************
+********************** footer *********************
+**************************************************/
+
+footer{
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    bottom: 0;
+    position: absolute;
+}
+
+.abonner{
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.condition{
+    padding-left: 15px;
+    color: #FFFFFF;
+}
+
+/*newsletter*/
+
+button{
+    background-color:#B3CC57;
+    border:0;
+    padding:10px 0px;
+    width:90px;
+    color:white;
+    cursor:pointer;
+    position:relative;
+    transition:0.4s all;
+}
+
+input{
+    border:0;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.4);
+    padding:10px 20px;
+    width:165px;
+    transition: 0.3s width cubic-bezier(0.40, 0, 0.50, 1.30);
+
+}
+
+input + button{
+    margin-left:5px;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.4);
+}
+
+button:after{
+    content:'';
+    width: 100%;
+    height: 0;
+    position:absolute;
+    top:50%;
+    left:0;
+    background: rgba(255,255,255,0.3);
+    opacity: 0;
+    transition:0.2s all;
+}
+
+button:hover:after{
+    line-height:36px;
+    top:0;
+    height: 100%;
+    opacity: 1;
+}
+
+button.iconize:hover:after{
+    opacity: 0;
+}
+
+label{
+    border:0;
+    padding:10px 13px 7px;
+    vertical-align:middle;
+    margin-right:-5px;
+    background:white;
+    height: 33px;
+    margin-bottom: 15px;
+}
+
+input:focus{
+    width:250px;
+}
+
+.green{
+    color:#B3CC57 !important;
+}
+
+.newsletter-globale{
+    width:100%;
+    text-align:Center;
+}
+
+.x1p4{
+    zoom:1.4;
+}
+
+@-moz-keyframes spin { 0% { -moz-transform: rotate(0deg); }
+    100% { -moz-transform: rotate(359deg); } }
+@-webkit-keyframes spin { 0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(359deg); } }
+@-o-keyframes spin { 0% { -o-transform: rotate(0deg); }
+    100% { -o-transform: rotate(359deg); } }
+@-ms-keyframes spin { 0% { -ms-transform: rotate(0deg); }
+    100% { -ms-transform: rotate(359deg); } }
+@keyframes spin { 0% { transform: rotate(0deg); }
+    100% { transform: rotate(359deg); } }
+.ion-loading-a { -webkit-animation-timing-function: steps(8, start); -moz-animation-timing-function: steps(8, start); animation-timing-function: steps(8, start); }
+
+
+.spin{
+    animation: spin 1s infinite linear;
+}
+
+.iconize{
+    width:40px;
+}
+
+h1{
+    width:100%;
+    text-align:center;
+    color:white;
+}
+
+/* fin newsletter*/
+
+/**************************************************
+********************** fin footer *****************
+**************************************************/
 
 
 

@@ -5,68 +5,35 @@
 {% endblock%}
 
 {% block body %}
-    <div class="wrapper">
-        <div class="globale">
-            <div class="container-fluid">
-                <img src="{{ asset('bundles/luciedesaint/images/logo-lucie2.png') }}" class="logo" alt="image logo">
-                <div id="mainmenu">
-                    <ul class="menu">
-                        <div class="trait"></div>
-                       <div class="menu3" class=" visible-lg visible-md">
-                        <li class=""><a href="#">Artiste</a></li>
-                        <li class=""><a href="#">Oeuvres</a></li>
-                        <li class=""><a href="#">Bijoux</a></li>
-                        <li class=""><a href="#">Actualités</a></li>
-                        <li class=""><a href="#">Contact</a></li>
-                           </div>
-                    </ul>
-                    <p class="marquee">Bienvenue sur mon site, je suis artiste plasticienne et professeur d'art à Paris. Mes créations sont made in France <img src="{{ asset('bundles/luciedesaint/images/logo-made-in-france.png') }}" alt="image made in france" class="logo-made-in-france"></p>
-                    <div id="slider-wrapper"> <!-- Debut slider -->
-                        <div class="inner-wrapper" class="visible-xs visible-sm visible-lg visible-md">
-                            <input checked type="radio" name="slide" class="control" id="Slide1"/>
-                            <label for="Slide1" id="s1"></label>
-                            <input type="radio" name="slide" class="control" id="Slide2"/>
-                            <label for="Slide2" id="s2"></label>
-                            <input type="radio" name="slide" class="control" id="Slide3"/>
-                            <label for="Slide3" id="s3"></label>
-                            <input type="radio" name="slide" class="control" id="Slide4"/>
-                            <label for="Slide4" id="s4"></label>
-                            <div class="overflow-wrapper">
-                                <a class="slide" href=""><img src="{{ asset('bundles/luciedesaint/images/portrait.jpg') }}"/></a>
-                                <a class="slide" href=""><img src="{{ asset('bundles/luciedesaint/images/simpson.jpg') }}"/></a>
-                            </div>
-                        </div>
-                    </div> <!-- fin slider -->
-                </div>
-                <div class="party center">
-                    <img src="{{ asset('bundles/luciedesaint/images/cadre-blanc.png') }}" class="cadre-blanc" alt="cadre blanc">
-                </div>
-            </div>
-        </div>
-        <div id="footer">
-            <div class="container">
-                <p class="Copyright">
-                    © Copyright all rights reserved - design by
-                    <a class="wild" href="http://www.wildcodeschool.fr/" target="_blank">Wild Code School</a>
-                </p>
-                <!-- <button type="button" class="btn btn-outline-default waves-effect"> <a href="#" class="mentions"> Mentions Légales </a> </button> -->
-                <div class="social_network">
-                    <a href="#" target="_blank"><i class="fa fa-facebook-official"></i></a>
-                    <a href="#" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true" ></i></a>
-                    <a href="#" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-                    <a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                </div>
-                <div class="button1"><span class="Mentions"><a href="#" style="color: #ffffff;">Mentions Legales</a></span></div>
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript">
+   <div class="container-fluid">
+       <nav>
+           <a href="#" class="Accueil">Accueil</a>
+         <div class="lien-menu" style="color: red;">
+           <a href="#">Art &nbsp</a>
+           <a href="#">Bijoux KIFA &nbsp</a>
+           <a href="#">Artiste &nbsp</a>
+           <a href="#">Contact</a>
+         </div>
+       </nav>
+   </div>
+   <div class="bandeau2">
+       <h1 id="lucie">Lucie DE SAINT</h1>
+       <h3 id="plasticienne">Artiste Plasticienne, Créatrice de Bijoux</h3>
+   </div>
+   <div class="main">
+        <img src="{{ asset('bundles/luciedesaint/images/simpson.jpg') }}" class="cadre-photo1">
+        <img src="{{ asset('bundles/luciedesaint/images/portrait.jpgg') }}" class="cadre-photo1">
 
-        $(".toggle").on("click", function () {
-            $(".marquee").toggleClass("microsoft");
-        });
-
-    </script>
+   </div>
+   <footer>
+       <h5 class="condition">Conditions générale de vente</h5>
+       <div class="newsletter-globale">
+           <h5 class="abonner">S'abonner aux newsletters</h5>
+           <label><i class="green x1p4 ionicons ion-ios-email-outline"></i></label>
+           <input placeholder="youremail@domain.com"/>
+           <button>Subscribe</button>
+       </div>
+   </footer>
 {% endblock  %}
 
 {% block footer %}
