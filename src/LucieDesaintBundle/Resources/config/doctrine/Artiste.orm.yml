@@ -1,0 +1,18 @@
+LucieDesaintBundle\Entity\Artiste:
+    type: entity
+    table: null
+    repositoryClass: LucieDesaintBundle\Repository\ArtisteRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        textepresentation:
+            type: text
+        textback:
+            type: text
+        textback2:
+            type: text
+    lifecycleCallbacks: {  }

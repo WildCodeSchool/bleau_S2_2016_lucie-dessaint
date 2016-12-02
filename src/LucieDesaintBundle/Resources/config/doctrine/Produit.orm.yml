@@ -1,0 +1,17 @@
+LucieDesaintBundle\Entity\Produit:
+    type: entity
+    table: null
+    repositoryClass: LucieDesaintBundle\Repository\ProduitRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titre:
+            type: string
+            length: 255
+        textedescriptif:
+            type: text
+    lifecycleCallbacks: {  }
