@@ -6,20 +6,60 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/x-icon" href="{{ asset('bundles/luciedesaint/images/favicon.ico') }}">
+
         {% block stylesheets %}
-        <!-- Compiled and minified CSS and js and fontawsome boostrap-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.2.0/css/mdb.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
-        <link rel="stylesheet" href="{{ asset('bundles/luciedesaint/css/style.css') }}">
+            <!-- Compiled and minified CSS and js and fontawsome boostrap-->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.2.0/css/mdb.min.css">
+            <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+            <link rel="stylesheet" href="{{ asset('bundles/luciedesaint/css/hover-min.css') }}" media="all">
+            <link rel="stylesheet" href="{{ asset('bundles/luciedesaint/css/style.css') }}">
         {% endblock %}
+
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
     </head>
     <body>
-        {% block header %}{% endblock %}
+
+        {% block header %}
+            <div class="container-fluid">
+                <nav>
+                    <a href="#" class="accueil hvr-underline-from-left">Accueil</a>
+                    <div class="lien-menu">
+                        <a href="#" class="hvr-underline-from-left">Art &nbsp</a>
+                        <a href="#" class="hvr-underline-from-left">Bijoux KIFA &nbsp</a>
+                        <a href="#" class="hvr-underline-from-left">Artiste &nbsp</a>
+                        <a href="#" class="hvr-underline-from-left">Contact</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="bandeau2">
+                <h1 id="lucie">Lucie DE SAINT</h1>
+                <h3 id="plasticienne">Artiste Plasticienne, Créatrice de Bijoux</h3>
+            </div>
+
+        {% endblock %}
+
         {% block body %}{% endblock %}
-        {% block footer %}{% endblock %}
+
+        {% block footer %}
+            <footer>
+                <div class="icon">
+                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </div>
+                <h5 class="condition">
+                    <span id="condition">Conditions générales de vente</span>
+                </h5>
+                <div class="newsletter-globale">
+                    <h5 class="abonner">S'abonner aux newsletters</h5>
+                    <label><i class="green x1p4 ionicons ion-ios-email-outline"></i></label>
+                    <input placeholder="youremail@domain.com"/>
+                    <button class="envoyer">Envoyer</button>
+                </div>
+            </footer>
+        {% endblock %}
+
         {% block javascripts %}
             <script type="text/javascript" src=" {{ asset ('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')}}"></script>
         {% endblock %}

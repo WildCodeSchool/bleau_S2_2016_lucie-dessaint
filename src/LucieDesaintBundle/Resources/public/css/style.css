@@ -1,11 +1,25 @@
-/*----- INDEX  ------
-
+/*----- PAGE INDEX  ------
+    1. General
+       - Navigation
+       - Bandeau2
+       - footer
+    2. Main
+       - images
 -------------------*/
 
+/****************************************************************************************************
+****************************************** 1. General  ******************************************
+****************************************************************************************************/
 
-/**************************************************
-******************** 1. Navigation ****************
-**************************************************/
+/***************** 2. Navigation ****************/
+
+a{
+    color: #FFFFFF;
+}
+
+a:hover {
+    color: #FFFFFF;
+}
 
 .container-fluid{
     height: 65px;
@@ -13,10 +27,11 @@
     background-color: black;
 }
 
-.Accueil{
+.accueil{
     top: 22px;
     position:relative;
     font-size: 1.3em;
+    left: 25px;
 }
 
 .lien-menu{
@@ -27,21 +42,7 @@
     padding-right: 44px;
 }
 
-a{
-    color: #FFFFFF;
-}
-
-a:hover{
-    color: #B3CC57;
-}
-
-/**************************************************
-******************** 1. fin Navigation ************
-**************************************************/
-
-/**************************************************
-******************** 1. Bandeau2 ******************
-**************************************************/
+/******************** 3. Bandeau2 ****************/
 
 .bandeau2 {
     height: 175px;
@@ -65,27 +66,28 @@ a:hover{
     color:#FFFFFF;
 }
 
-/**************************************************
-******************** fin du Bandeau2 **************
-**************************************************/
+/***************** 5. footer *******************/
 
-/**************************************************
-*********************** main **********************
-**************************************************/
-
-.cadre-photo1 {
-    width: 425px;
-    height: 300px;
-    background-color: red;
+.icon{
+    left: 1682px;
+    position: absolute;
+    top: 48px;
 }
 
-/**************************************************
-********************** fin du main ****************
-**************************************************/
+.fa-facebook-square{
+    color: #FFFFFF;
+    font-size: 3em;
+    position: absolute;
+}
 
-/**************************************************
-********************** footer *********************
-**************************************************/
+.fa-linkedin-square{
+    color: #FFFFFF;
+    font-size: 3em;
+    position: absolute;
+    position: absolute;
+    left: 55px;
+
+}
 
 footer{
     width: 100%;
@@ -93,22 +95,39 @@ footer{
     background-color: black;
     bottom: 0;
     position: absolute;
+    position: fixed;
 }
 
 .abonner{
     text-align: center;
     color: #FFFFFF;
+    font-size: 1.2em;
+}
+
+#condition{
+    position: relative;
+    top: 12px;
 }
 
 .condition{
     padding-left: 15px;
     color: #FFFFFF;
+    font-size: 1.2em;
+    width: 258px;
+    border-right: 2px solid;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    position: absolute;
+    left: 45px;
+    height: 48px;
+    top: 38px;
 }
 
 /*newsletter*/
 
 button{
-    background-color:#B3CC57;
+    background-color:#FFFFFF;
     border:0;
     padding:10px 0px;
     width:90px;
@@ -124,7 +143,6 @@ input{
     padding:10px 20px;
     width:165px;
     transition: 0.3s width cubic-bezier(0.40, 0, 0.50, 1.30);
-
 }
 
 input + button{
@@ -176,6 +194,10 @@ input:focus{
 .newsletter-globale{
     width:100%;
     text-align:Center;
+    width: 100%;
+    text-align: Center;
+    top: 20px;
+    position: relative;
 }
 
 .x1p4{
@@ -209,11 +231,51 @@ h1{
     color:white;
 }
 
+.envoyer{
+    color: black;
+}
 /* fin newsletter*/
 
-/**************************************************
-********************** fin footer *****************
-**************************************************/
+/****************************************************************************************************
+****************************************** fin General  ******************************************
+****************************************************************************************************/
+
+/****************************************************************************************************
+************************ 2. Main ( Cette partie evolue sur chaque page) *******************
+****************************************************************************************************/
+
+/* images */
+.images_index{
+    text-align: center;
+    padding-top:120px ;
+}
+
+.cadre-photo1 {
+    width: 425px;
+    height: 300px;
+    background-color: red;
+}
+
+.cadre-photo2 {
+    width: 425px;
+    height: 300px;
+    background-color: red;
+}
+
+/*.effet{*/
+    /*width: 425px;*/
+    /*height: 300px;*/
+    /*background-color: red;*/
+    /*position:relative;*/
+    /*bottom: 300px;*/
+/*}*/
+
+/****************************************************************************************************
+****************************************** fin Main  ******************************************
+****************************************************************************************************/
+
+
+
 
 
 

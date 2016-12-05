@@ -1,41 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block header %}
-
-{% endblock%}
-
 {% block body %}
-   <div class="container-fluid">
-       <nav>
-           <a href="#" class="Accueil">Accueil</a>
-         <div class="lien-menu" style="color: red;">
-           <a href="#">Art &nbsp</a>
-           <a href="#">Bijoux KIFA &nbsp</a>
-           <a href="#">Artiste &nbsp</a>
-           <a href="#">Contact</a>
-         </div>
-       </nav>
-   </div>
-   <div class="bandeau2">
-       <h1 id="lucie">Lucie DE SAINT</h1>
-       <h3 id="plasticienne">Artiste Plasticienne, Créatrice de Bijoux</h3>
-   </div>
+
    <div class="main">
-        <img src="{{ asset('bundles/luciedesaint/images/simpson.jpg') }}" class="cadre-photo1">
-        <img src="{{ asset('bundles/luciedesaint/images/portrait.jpgg') }}" class="cadre-photo1">
-
+     <div class="images_index">
+        <img src="{{ asset('bundles/luciedesaint/images/portrait-double.png') }}" class="cadre-photo2">
+        <img src="{{ asset('bundles/luciedesaint/images/portrait-double2.png') }}" class="cadre-photo1">
+     </div>
    </div>
-   <footer>
-       <h5 class="condition">Conditions générale de vente</h5>
-       <div class="newsletter-globale">
-           <h5 class="abonner">S'abonner aux newsletters</h5>
-           <label><i class="green x1p4 ionicons ion-ios-email-outline"></i></label>
-           <input placeholder="youremail@domain.com"/>
-           <button>Subscribe</button>
-       </div>
-   </footer>
+
 {% endblock  %}
-
-{% block footer %}
-
-{% endblock%}
