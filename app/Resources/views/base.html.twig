@@ -14,6 +14,7 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.2.0/css/mdb.min.css">
             <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
             <link rel="stylesheet" href="{{ asset('bundles/luciedesaint/css/hover-min.css') }}" media="all">
+            <link rel="stylesheet" href="{{ asset('bundles/luciedesaint/css/animate.min.css') }}" media="all">
             <link rel="stylesheet" href="{{ asset('bundles/luciedesaint/css/style.css') }}">
         {% endblock %}
 
@@ -34,8 +35,9 @@
                 </nav>
             </div>
             <div class="bandeau2">
-                <h1 id="lucie">Lucie DE SAINT</h1>
-                <h3 id="plasticienne">Artiste Plasticienne, Créatrice de Bijoux</h3>
+                {#<h1 id="lucie">Lucie DE SAINT</h1>#}
+                {#<h3 id="plasticienne">Artiste Plasticienne, Créatrice de Bijoux</h3>#}
+                <img src=" {{ asset ('bundles/luciedesaint/images/news-logo-lucie.png')}}" class="logo-lucie">
             </div>
 
         {% endblock %}
@@ -48,14 +50,19 @@
                     <i class="fa fa-facebook-square" aria-hidden="true"></i>
                     <i class="fa fa-linkedin-square" aria-hidden="true"></i>
                 </div>
-                <h5 class="condition">
-                    <span id="condition">Conditions générales de vente</span>
-                </h5>
+                <div class="globale_condition">
+                    <h5 class="condition">
+                        <div id="condition">Conditions générales de vente</div>
+                    </h5>
+                    <div class="cadre1 hvr-bounce-to-left">
+
+                    </div>
+                </div>
                 <div class="newsletter-globale">
                     <h5 class="abonner">S'abonner aux newsletters</h5>
                     <label><i class="green x1p4 ionicons ion-ios-email-outline"></i></label>
                     <input placeholder="youremail@domain.com"/>
-                    <button class="envoyer">Envoyer</button>
+                    <button id="envoyer">Envoyer</button>
                 </div>
             </footer>
         {% endblock %}

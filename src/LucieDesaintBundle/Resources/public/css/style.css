@@ -42,14 +42,21 @@ a:hover {
     padding-right: 44px;
 }
 
-/******************** 3. Bandeau2 ****************/
+/******************** 3. Bandeau2 background-color:#3b3939;****************/
 
 .bandeau2 {
     height: 175px;
     width: 100%;
-    background-color:#3b3939;
-    position: relative;
+    background-image: url("../images/bandeau2.png");
     bottom: 20px;
+}
+
+.logo-lucie{
+    width: 500px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 25px;
 }
 
 #lucie {
@@ -92,7 +99,7 @@ a:hover {
 footer{
     width: 100%;
     height: 150px;
-    background-color: black;
+    background-color: #464343;
     bottom: 0;
     position: absolute;
     position: fixed;
@@ -127,7 +134,7 @@ footer{
 /*newsletter*/
 
 button{
-    background-color:#FFFFFF;
+    background-color:#ad9797;
     border:0;
     padding:10px 0px;
     width:90px;
@@ -197,7 +204,7 @@ input:focus{
     width: 100%;
     text-align: Center;
     top: 20px;
-    position: relative;
+    position: absolute;
 }
 
 .x1p4{
@@ -231,8 +238,9 @@ h1{
     color:white;
 }
 
-.envoyer{
+#envoyer{
     color: black;
+
 }
 /* fin newsletter*/
 
@@ -254,13 +262,32 @@ h1{
     width: 425px;
     height: 300px;
     background-color: red;
+    border-top: 2px solid #beacac;
+    border-bottom: 2px solid #beacac;
+    border-left: 2px solid #beacac;
+    border-right: 2px solid #beacac;
 }
 
 .cadre-photo2 {
     width: 425px;
     height: 300px;
     background-color: red;
+    border-top: 2px solid #beacac;
+    border-bottom: 2px solid #beacac;
+    border-left: 2px solid #beacac;
+    border-right: 2px solid #beacac;
 }
+
+.cadre-photo3 {
+    width: 220px;
+    height: 300px;
+    background-color: red;
+    border-top: 2px solid #beacac;
+    border-bottom: 2px solid #beacac;
+    border-left: 2px solid #beacac;
+    border-right: 2px solid #beacac;
+}
+
 
 /*.effet{*/
     /*width: 425px;*/
@@ -273,6 +300,24 @@ h1{
 /****************************************************************************************************
 ****************************************** fin Main  ******************************************
 ****************************************************************************************************/
+
+@media (max-width: 963px) {
+
+    footer{
+        background-color: red;
+        height: 195px;
+    }
+
+    .globale_condition{
+        position: relative;
+        left: 300px;
+        top: 85px;
+    }
+
+
+
+
+}
 
 
 
