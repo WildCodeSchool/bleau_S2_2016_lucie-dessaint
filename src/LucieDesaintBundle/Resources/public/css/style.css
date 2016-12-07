@@ -75,10 +75,37 @@ a:hover {
 
 /***************** 5. footer *******************/
 
+/*.row {*/
+    /*margin-right: -15px;*/
+    /*margin-left: -15px;*/
+    /*background-color: #43424e;*/
+/*}*/
+
+/*.border-red{*/
+    /*background-color:red ;*/
+    /*height: 90px;*/
+/*}*/
+
+/*.border-green {*/
+    /*background-color:green ;*/
+    /*height: 90px;*/
+
+/*}*/
+
+.border-orange{
+    background-color:orange ;
+    height: 40px;
+}
+
+.border-yellow{
+    background-color:yellow ;
+    height: 40px;
+
+}
+
 .icon{
-    left: 1682px;
-    position: absolute;
-    top: 48px;
+    /* left: 1682px; */
+    margin-top: 55px;
 }
 
 .fa-facebook-square{
@@ -105,6 +132,17 @@ footer{
     position: fixed;
 }
 
+.copyright {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 125px;
+}
+
+.wild{
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+
 .abonner{
     text-align: center;
     color: #FFFFFF;
@@ -126,7 +164,7 @@ footer{
     border-bottom: 2px solid;
     border-left: 2px solid;
     position: absolute;
-    left: 45px;
+    /*left: 45px;*/
     height: 48px;
     top: 38px;
 }
@@ -301,23 +339,14 @@ h1{
 ****************************************** fin Main  ******************************************
 ****************************************************************************************************/
 
-@media (max-width: 963px) {
-
-    footer{
-        background-color: red;
-        height: 195px;
-    }
-
-    .globale_condition{
-        position: relative;
-        left: 300px;
-        top: 85px;
-    }
-
-
-
+/* @media (min-width: 515px) /*{ and (max-width: 767px)*/
+/* .icon{
+     left: 180px!important;
+     position: relative!important;
+ }
 
 }
+
 
 
 

@@ -25,8 +25,8 @@
         {% block header %}
             <div class="container-fluid">
                 <nav>
-                    <a href="#" class="accueil hvr-underline-from-left">Accueil</a>
-                    <div class="lien-menu">
+                    <a href="#" class="accueil hvr-underline-from-left hidden-xs">Accueil</a>
+                    <div class="lien-menu hidden-xs">
                         <a href="#" class="hvr-underline-from-left">Art &nbsp</a>
                         <a href="#" class="hvr-underline-from-left">Bijoux KIFA &nbsp</a>
                         <a href="#" class="hvr-underline-from-left">Artiste &nbsp</a>
@@ -46,23 +46,32 @@
 
         {% block footer %}
             <footer>
-                <div class="icon">
-                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
-                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                </div>
-                <div class="globale_condition">
-                    <h5 class="condition">
-                        <div id="condition">Conditions générales de vente</div>
-                    </h5>
-                    <div class="cadre1 hvr-bounce-to-left">
-
+                <div class="row">
+                    <div class="col-lg-2 col-md-6 border-green col-md-3 col-sm-3 border-green" >
+                        <div class="globale_condition">
+                            <h5 class="condition">
+                                <div id="condition">Conditions générales de vente</div>
+                            </h5>
+                        </div>
                     </div>
-                </div>
-                <div class="newsletter-globale">
-                    <h5 class="abonner">S'abonner aux newsletters</h5>
-                    <label><i class="green x1p4 ionicons ion-ios-email-outline"></i></label>
-                    <input placeholder="youremail@domain.com"/>
-                    <button id="envoyer">Envoyer</button>
+                    <div class="col-lg-offset-9 col-lg-1 col-md-2 col-md-offset-7 col-sm-2 col-sm-offset-10 border-red " >
+                        <div class="icon">
+                           <div class="row">
+                                      <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                   </div>
+                                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                                   </div>
+                           </div>
+                        </div>
+                    </div>
+                        <div class="newsletter-globale">
+                            <h5 class="abonner">S'abonner aux newsletters</h5>
+                            <label><i class="green x1p4 ionicons ion-ios-email-outline"></i></label>
+                            <input placeholder="youremail@domain.com"/>
+                            <button id="envoyer">Envoyer</button>
+                        </div>
+
+                    <h5 class="copyright"> © Copyright all rights reserved - design by  <span class="wild"> Wild Code School<span>.<h5>
                 </div>
             </footer>
         {% endblock %}
