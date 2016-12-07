@@ -33,13 +33,21 @@
                         <a href="#" class="hvr-underline-from-left">Contact</a>
                     </div>
                 </nav>
+                {#menu-mobile#}
+                {#<nav>#}
+                    {#<a href="#" class="accueil hidden-lg-md">Accueil</a>#}
+                    {#<div class="lien-menu hidden-lg hidden-md ">#}
+                        {#<a href="#" class="">Art &nbsp</a>#}
+                        {#<a href="#" class="">Bijoux KIFA &nbsp</a>#}
+                        {#<a href="#" class="">Artiste &nbsp</a>#}
+                        {#<a href="#" class="">Contact</a>#}
+                    {#</div>#}
+                {#</nav>#}
+                {# fin-menu-mobile#}
             </div>
             <div class="bandeau2">
-                {#<h1 id="lucie">Lucie DE SAINT</h1>#}
-                {#<h3 id="plasticienne">Artiste Plasticienne, Créatrice de Bijoux</h3>#}
                 <img src=" {{ asset ('bundles/luciedesaint/images/news-logo-lucie.png')}}" class="logo-lucie">
             </div>
-
         {% endblock %}
 
         {% block body %}{% endblock %}
@@ -47,31 +55,25 @@
         {% block footer %}
             <footer>
                 <div class="row">
-                    <div class="col-lg-2 col-md-6 border-green col-md-3 col-sm-3 border-green" >
-                        <div class="globale_condition">
-                            <h5 class="condition">
-                                <div id="condition">Conditions générales de vente</div>
-                            </h5>
-                        </div>
+                    <div class="col-md-4 col-xs-12 condition">
+                        <h5 class="btn">Conditions générales de vente</h5>
                     </div>
-                    <div class="col-lg-offset-9 col-lg-1 col-md-2 col-md-offset-7 col-sm-2 col-sm-offset-10 border-red " >
-                        <div class="icon">
-                           <div class="row">
-                                      <i class="fa fa-facebook-square" aria-hidden="true"></i>
-                                   </div>
-                                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                                   </div>
-                           </div>
-                        </div>
-                    </div>
+                    <div class="col-md-4 col-xs-12 ">
                         <div class="newsletter-globale">
                             <h5 class="abonner">S'abonner aux newsletters</h5>
-                            <label><i class="green x1p4 ionicons ion-ios-email-outline"></i></label>
                             <input placeholder="youremail@domain.com"/>
                             <button id="envoyer">Envoyer</button>
                         </div>
-
-                    <h5 class="copyright"> © Copyright all rights reserved - design by  <span class="wild"> Wild Code School<span>.<h5>
+                        <h5 class="copyright"> © Copyright all rights reserved - design by
+                            <a href="http://wildcodeschool.fr" class="wild"> Wild Code School</a>
+                        </h5>
+                    </div>
+                    <div class="col-md-4 col-xs-12 center" >
+                        <div class="icon">
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                        </div>
+                    </div>
                 </div>
             </footer>
         {% endblock %}
