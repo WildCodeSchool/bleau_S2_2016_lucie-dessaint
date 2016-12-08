@@ -5,6 +5,7 @@
        - footer
     2. Main
        - images
+    3. Média queries
 -------------------*/
 
 /****************************************************************************************************
@@ -41,6 +42,68 @@ a:hover {
     font-size: 1.3em;
     padding-right: 44px;
 }
+
+/***************** 2.1 Navigation mobile ****************/
+
+section {
+    position: fixed;
+    left: -16em;
+    top: 0;
+    /*bottom: 0;*/
+    background-color: #FC2D0D;
+    border-right: 40px solid #FC2D0D;
+    box-shadow: 4px 0 5px rgba(0,0,0,0.2);
+    z-index: 1;
+    cursor: pointer;
+    animation: change_color 10s 10;
+}
+
+section ul {
+    width: 14em;
+    list-style-type: none;
+    margin: 0;
+    padding: 1em;
+}
+
+section a:link, section a:visited {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    line-height: 3em;
+    text-indent: 20px;
+    text-decoration: none;
+    color: #ffc;
+    outline: 0 none;
+}
+
+section a:hover, section a:focus {
+    color: #fff;
+    background-color: #002;
+    box-shadow: inset 0 2px 2px rgba(0,0,0,0.2);
+}
+
+section:hover {
+    left: 0;
+}
+
+@keyframes change_color {
+    0% {
+        border-color : #FC2D0D;
+    }
+
+    25% {
+        border-color : #05EB23
+    }
+
+    50% {
+        border-color : #FF7112;
+    }
+
+    100% {
+        border-color : #FC2D0D;
+    }
+}
+
 
 /******************** 3. Bandeau2 background-color:#3b3939;****************/
 
@@ -81,9 +144,9 @@ a:hover {
     margin-top: 5%;
     padding-left: 12px;
 }
+
 .icon {
     text-align: center;
-
 }
 
 footer{
@@ -272,29 +335,114 @@ h1{
     border-right: 2px solid #beacac;
 }
 
+/* Defillement texte en haut*/
+.marquee {
+    width: 450px;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: marquee 35s linear infinite;
+    color:black;
+    position: relative;
+    top: 59px;
+    font-weight: bolder;
+}
 
-/*.effet{*/
-    /*width: 425px;*/
-    /*height: 300px;*/
+.marquee:hover {
+    animation-play-state: paused
+}
+
+/* Make it move */
+@keyframes marquee {
+    0%   { text-indent: 30em }
+    100% { text-indent: -105em }
+}
+
+/*.hello{*/
+    /*height: 25px;*/
     /*background-color: red;*/
-    /*position:relative;*/
-    /*bottom: 300px;*/
+    /*opacity: 0;*/
+    /*position: absolute;*/
+    /*bottom: 45px;*/
+    /*right: 78px;*/
+/*}*/
+
+/*.hello:hover{*/
+    /*height: 25px;*/
+    /*background-color: red;*/
+    /*opacity: 0.45;*/
 /*}*/
 
 /****************************************************************************************************
 ****************************************** fin Main  ******************************************
 ****************************************************************************************************/
 
+/****************************************************************************************************
+****************************************** Media queries page index  ********************************
+****************************************************************************************************/
+
 @media screen and (max-width: 991px) {
  .icon {
-     bottom: 25px;
+     bottom: 10px;
      position: relative;
  }
- }
-
 }
 
+@media screen and (max-width: 1091px) {
+    /* images */
+    .images_index{
+        text-align: center;
+        padding-top:100px ;
+    }
+}
 
+@media screen and (max-width: 990px) {
+    .images_index{
+        text-align: center;
+        padding-top:50px ;
+    }
+
+    footer{
+        height: 165px;
+    }
+
+    .row{
+        bottom: 35px;
+        position: relative;
+    }
+
+    .marquee {
+        top: 30px;
+        position: relative;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 914px) {
+    .icon{
+        top: 5px;
+    }
+}
+
+@media screen and (max-width: 572px) {
+    .row{
+        bottom: 15px;
+    }
+
+    .logo-lucie {
+        width: 350px;
+        padding-top: 45px;
+    }
+
+    .marquee {
+        width: 400px;
+    }
+}
+
+/****************************************************************************************************
+****************************************** fin Media queries page index  ****************************
+****************************************************************************************************/
 
 
 

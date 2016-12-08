@@ -3,11 +3,14 @@
 {% block body %}
 
    <div class="main">
+       <p class="marquee">Bienvenue sur mon site, je suis artiste plasticienne et professeur d'art à Paris.
+       </p>
      <div class="images_index">
-        <img src="{{ asset('bundles/luciedesaint/images/portrait-double.png') }}" class="cadre-photo2">
-        <img src="{{ asset('bundles/luciedesaint/images/portrait-double2.png') }}" class="cadre-photo1">
-         <img src="{{ asset('bundles/luciedesaint/images/photo-lucie.png') }}" class="cadre-photo3">
+         <a href="#"><img src="{{ asset('bundles/luciedesaint/images/portrait-double.png') }}" class="cadre-photo2 hvr-grow"></a>
+         <a href="#"><img src="{{ asset('bundles/luciedesaint/images/portrait-double2.png') }}" class="cadre-photo1 hvr-grow"></a>
+         <a href="#"><img src="{{ asset('bundles/luciedesaint/images/photo-lucie.png') }}" class="cadre-photo3 hvr-grow"></a>
      </div>
+
    </div>
 
 {% endblock  %}

@@ -24,26 +24,24 @@
 
         {% block header %}
             <div class="container-fluid">
-                <nav>
+                <nav class="visible-lg" >
                     <a href="#" class="accueil hvr-underline-from-left hidden-xs">Accueil</a>
                     <div class="lien-menu hidden-xs">
-                        <a href="#" class="hvr-underline-from-left">Art &nbsp</a>
-                        <a href="#" class="hvr-underline-from-left">Bijoux KIFA &nbsp</a>
+                        <a href="#" class="hvr-underline-from-left ">Art &nbsp</a>
+                        <a href="#" class="hvr-underline-from-left ">Bijoux KIFA &nbsp</a>
                         <a href="#" class="hvr-underline-from-left">Artiste &nbsp</a>
-                        <a href="#" class="hvr-underline-from-left">Contact</a>
+                        <a href="#" class="hvr-underline-from-left ">Contact</a>
                     </div>
                 </nav>
-                {#menu-mobile#}
-                {#<nav>#}
-                    {#<a href="#" class="accueil hidden-lg-md">Accueil</a>#}
-                    {#<div class="lien-menu hidden-lg hidden-md ">#}
-                        {#<a href="#" class="">Art &nbsp</a>#}
-                        {#<a href="#" class="">Bijoux KIFA &nbsp</a>#}
-                        {#<a href="#" class="">Artiste &nbsp</a>#}
-                        {#<a href="#" class="">Contact</a>#}
-                    {#</div>#}
-                {#</nav>#}
-                {# fin-menu-mobile#}
+                <section class="hidden-lg">
+                    <ul>
+                        <li><a href="http://www.muhack.org/">Accueil</a>             </li>
+                        <li><a href="http://www.muhack.org/">Art</a>           </li>
+                        <li><a href="http://www.muhack.org/">Bijoux KIFA</a>             </li>
+                        <li><a href="http://www.muhack.org/">Artiste</a>           </li>
+                        <li><a href="http://www.muhack.org/">Contact</a>             </li>
+                    </ul>
+                </section>
             </div>
             <div class="bandeau2">
                 <img src=" {{ asset ('bundles/luciedesaint/images/news-logo-lucie.png')}}" class="logo-lucie">
@@ -55,8 +53,14 @@
         {% block footer %}
             <footer>
                 <div class="row">
-                    <div class="col-md-4 col-xs-12 condition">
-                        <h5 class="btn">Conditions générales de vente</h5>
+                    {#<div class="col-md-4 col-xs-12 condition">#}
+                        {#<h5 class="btn">Conditions générales de vente</h5>#}
+                    {#</div>#}
+                    <div class="col-md-4 col-xs-12 center" >
+                        <div class="icon">
+                            <a href=#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                        </div>
                     </div>
                     <div class="col-md-4 col-xs-12 ">
                         <div class="newsletter-globale">
@@ -67,12 +71,6 @@
                         <h5 class="copyright"> © Copyright all rights reserved - design by
                             <a href="http://wildcodeschool.fr" class="wild"> Wild Code School</a>
                         </h5>
-                    </div>
-                    <div class="col-md-4 col-xs-12 center" >
-                        <div class="icon">
-                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </div>
                     </div>
                 </div>
             </footer>
