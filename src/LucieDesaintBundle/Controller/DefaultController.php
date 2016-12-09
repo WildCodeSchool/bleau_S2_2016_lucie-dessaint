@@ -10,4 +10,9 @@ class DefaultController extends Controller
     {
         return $this->render('LucieDesaintBundle:Default:index.html.twig');
     }
+
+    public function artAction()
+    {
+        return $this->render('@LucieDesaint/Default/art.html.twig');
+    }
 }

@@ -13,6 +13,18 @@
 ****************************************************************************************************/
 
 /***************** 2. Navigation ****************/
+.language-logo{
+float: right;
+}
+
+.english-coeur, .french-coeur{
+    width: 50px;
+    float: right;
+    position: relative;
+    /* margin-right: auto; */
+    bottom: 230px;
+    margin-right: 15px;
+}
 
 a{
     color: #FFFFFF;
@@ -40,7 +52,7 @@ a:hover {
     position: relative;
     float: right;
     font-size: 1.3em;
-    padding-right: 44px;
+    padding-right: 150px;
 }
 
 /***************** 2.1 Navigation mobile ****************/
@@ -149,11 +161,11 @@ section:hover {
     text-align: center;
 }
 
-footer{
+.container1{
     background-color: #464343;
-    bottom: 0;
-    position: fixed;
     width: 100%;
+    height: 110px;
+
 }
 
 .copyright {
@@ -302,7 +314,7 @@ h1{
 /* images */
 .images_index{
     text-align: center;
-    padding-top:120px ;
+    padding-top:140px ;
 }
 
 .cadre-photo1 {
@@ -403,7 +415,7 @@ h1{
         padding-top:50px ;
     }
 
-    footer{
+    .container1{
         height: 165px;
     }
 
@@ -437,6 +449,13 @@ h1{
 
     .marquee {
         width: 400px;
+    }
+}
+
+@media screen and (max-width: 411px) {
+
+    .marquee {
+        width: 350px;
     }
 }
 

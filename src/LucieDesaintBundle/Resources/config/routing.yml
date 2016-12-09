@@ -1,3 +1,9 @@
 lucie_desaint_homepage:
     path:     /
     defaults: { _controller: LucieDesaintBundle:Default:index }
+
+lucie_desaint_art:
+      path:     /art
+      defaults: { _controller: LucieDesaintBundle:Default:art }
+
+

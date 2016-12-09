@@ -17,8 +17,6 @@
             <link rel="stylesheet" href="{{ asset('bundles/luciedesaint/css/animate.min.css') }}" media="all">
             <link rel="stylesheet" href="{{ asset('bundles/luciedesaint/css/style.css') }}">
         {% endblock %}
-
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
     </head>
     <body>
 
@@ -35,16 +33,20 @@
                 </nav>
                 <section class="hidden-lg">
                     <ul>
-                        <li><a href="http://www.muhack.org/">Accueil</a>             </li>
-                        <li><a href="http://www.muhack.org/">Art</a>           </li>
-                        <li><a href="http://www.muhack.org/">Bijoux KIFA</a>             </li>
-                        <li><a href="http://www.muhack.org/">Artiste</a>           </li>
-                        <li><a href="http://www.muhack.org/">Contact</a>             </li>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Art</a></li>
+                        <li><a href="#">Bijoux KIFA</a></li>
+                        <li><a href="#">Artiste</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </section>
             </div>
             <div class="bandeau2">
-                <img src=" {{ asset ('bundles/luciedesaint/images/news-logo-lucie.png')}}" class="logo-lucie">
+                      <img src=" {{ asset ('bundles/luciedesaint/images/logo2-lucie.png')}}" class="logo-lucie lucie-border">
+            </div>
+            <div class="language-logo">
+                <a href="#" class="hvr-bob"><img src="{{ asset('bundles/luciedesaint/images/english-coeur.png') }} " class="english-coeur"></a>
+                <a href="#" class="hvr-bob"><img src="{{ asset('bundles/luciedesaint/images/french-coeur.png') }}" class="french-coeur hvr-bubble-top"></a>
             </div>
         {% endblock %}
 
@@ -52,25 +54,27 @@
 
         {% block footer %}
             <footer>
-                <div class="row">
-                    {#<div class="col-md-4 col-xs-12 condition">#}
-                        {#<h5 class="btn">Conditions générales de vente</h5>#}
-                    {#</div>#}
-                    <div class="col-md-4 col-xs-12 center" >
-                        <div class="icon">
-                            <a href=#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                <div class="container-fluid container1" >
+                    <div class="row">
+                        {#<div class="col-md-4 col-xs-12 condition">#}
+                            {#<h5 class="btn">Conditions générales de vente</h5>#}
+                        {#</div>#}
+                        <div class="col-md-4 col-xs-12 center" >
+                            <div class="icon">
+                                <a href=#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-xs-12 ">
-                        <div class="newsletter-globale">
-                            <h5 class="abonner">S'abonner aux newsletters</h5>
-                            <input placeholder="youremail@domain.com"/>
-                            <button id="envoyer">Envoyer</button>
+                        <div class="col-md-4 col-xs-12 ">
+                            <div class="newsletter-globale">
+                                <h5 class="abonner">S'abonner aux newsletters</h5>
+                                <input placeholder="youremail@domain.com"/>
+                                <button id="envoyer">Envoyer</button>
+                            </div>
+                            <h5 class="copyright"> © Copyright all rights reserved - design by
+                                <a href="http://wildcodeschool.fr" class="wild"> Wild Code School</a>
+                            </h5>
                         </div>
-                        <h5 class="copyright"> © Copyright all rights reserved - design by
-                            <a href="http://wildcodeschool.fr" class="wild"> Wild Code School</a>
-                        </h5>
                     </div>
                 </div>
             </footer>
