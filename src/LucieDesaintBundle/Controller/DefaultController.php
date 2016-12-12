@@ -15,4 +15,19 @@ class DefaultController extends Controller
     {
         return $this->render('@LucieDesaint/Default/art.html.twig');
     }
+
+    public function bijouxAction()
+    {
+        return $this->render('@LucieDesaint/Default/bijoux.html.twig');
+    }
+
+    public function artisteAction()
+    {
+        return $this->render('@LucieDesaint/Default/artiste.html.twig');
+    }
+
+    public function contactAction()
+    {
+        return $this->render('@LucieDesaint/Default/contact.html.twig');
+    }
 }

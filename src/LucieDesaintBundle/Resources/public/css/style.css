@@ -21,8 +21,6 @@ body{
 main{
     flex:1 0 auto;
 }
-.language-logo{
-}
 
 .english-coeur, .french-coeur{
     width: 50px;
@@ -319,7 +317,7 @@ h1{
 /* images */
 .images_index{
     text-align: center;
-    padding-top:120px ;
+    padding-top:75px ;
 }
 
 .cadre-photo1 {
@@ -362,7 +360,7 @@ h1{
     animation: marquee 35s linear infinite;
     color:black;
     position: relative;
-    top: 59px;
+    top: 9px;
     font-weight: bolder;
 }
 
@@ -404,6 +402,13 @@ h1{
      bottom: 10px;
      position: relative;
  }
+}
+
+@media screen and (max-width: 986px) {
+
+    .marquee {
+        top:45px;
+    }
 }
 
 @media screen and (max-width: 1091px) {
