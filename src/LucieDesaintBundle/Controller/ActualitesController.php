@@ -33,7 +33,7 @@ class ActualitesController extends Controller
      */
     public function newAction(Request $request)
     {
-        $actualite = new Actualite();
+        $actualite = new Actualites();
         $form = $this->createForm('LucieDesaintBundle\Form\ActualitesType', $actualite);
         $form->handleRequest($request);
 

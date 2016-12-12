@@ -18,7 +18,7 @@ lucie_desaint_contact:
         path:     /contact
         defaults: { _controller: LucieDesaintBundle:Default:contact }
 
-lucie_desaint_artiste:
+lucie_desaint_artistes:
         path:     /artiste
         defaults: { _controller: LucieDesaintBundle:Default:artiste }
 
