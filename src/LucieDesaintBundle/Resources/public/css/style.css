@@ -22,12 +22,11 @@ main{
     flex:1 0 auto;
 }
 .language-logo{
-float: right;
 }
 
 .english-coeur, .french-coeur{
     width: 50px;
-    float: right;
+
     position: relative;
     /* margin-right: auto; */
     bottom: 230px;
@@ -60,7 +59,7 @@ a:hover {
     position: relative;
     float: right;
     font-size: 1.3em;
-    padding-right: 150px;
+    padding-right: 130px;
 }
 
 /***************** 2.1 Navigation mobile ****************/
