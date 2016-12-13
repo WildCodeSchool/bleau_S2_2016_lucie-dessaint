@@ -22,7 +22,7 @@ class CategoriesController extends Controller
 
         $categories = $em->getRepository('LucieDesaintBundle:Categories')->findAll();
 
-        return $this->render('categories/index.html.twig', array(
+        return $this->render('@LucieDesaint/admin/categories/index.html.twig', array(
             'categories' => $categories,
         ));
     }
@@ -45,7 +45,7 @@ class CategoriesController extends Controller
             return $this->redirectToRoute('categories_show', array('id' => $category->getId()));
         }
 
-        return $this->render('categories/new.html.twig', array(
+        return $this->render('@LucieDesaint/admin/categories/new.html.twig', array(
             'category' => $category,
             'form' => $form->createView(),
         ));
@@ -81,7 +81,7 @@ class CategoriesController extends Controller
             return $this->redirectToRoute('categories_edit', array('id' => $category->getId()));
         }
 
-        return $this->render('categories/edit.html.twig', array(
+        return $this->render('@LucieDesaint/admin/categories/edit.html.twig', array(
             'category' => $category,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

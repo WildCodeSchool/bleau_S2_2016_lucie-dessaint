@@ -22,7 +22,7 @@ class ArtisteController extends Controller
 
         $artistes = $em->getRepository('LucieDesaintBundle:Artiste')->findAll();
 
-        return $this->render('artiste/index.html.twig', array(
+        return $this->render('@LucieDesaint/admin/artiste/index.html.twig', array(
             'artistes' => $artistes,
         ));
     }
@@ -45,7 +45,7 @@ class ArtisteController extends Controller
             return $this->redirectToRoute('artiste_show', array('id' => $artiste->getId()));
         }
 
-        return $this->render('artiste/new.html.twig', array(
+        return $this->render('@LucieDesaint/admin/artiste/new.html.twig', array(
             'artiste' => $artiste,
             'form' => $form->createView(),
         ));
@@ -59,7 +59,7 @@ class ArtisteController extends Controller
     {
         $deleteForm = $this->createDeleteForm($artiste);
 
-        return $this->render('artiste/show.html.twig', array(
+        return $this->render('@LucieDesaint/admin/artiste/show.html.twig', array(
             'artiste' => $artiste,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -81,7 +81,7 @@ class ArtisteController extends Controller
             return $this->redirectToRoute('artiste_edit', array('id' => $artiste->getId()));
         }
 
-        return $this->render('artiste/edit.html.twig', array(
+        return $this->render('@LucieDesaint/admin/artiste/edit.html.twig', array(
             'artiste' => $artiste,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

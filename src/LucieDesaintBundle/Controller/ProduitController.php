@@ -22,7 +22,7 @@ class ProduitController extends Controller
 
         $produits = $em->getRepository('LucieDesaintBundle:Produit')->findAll();
 
-        return $this->render('produit/index.html.twig', array(
+        return $this->render('@LucieDesaint/admin/produit/index.html.twig', array(
             'produits' => $produits,
         ));
     }
@@ -45,7 +45,7 @@ class ProduitController extends Controller
             return $this->redirectToRoute('produit_show', array('id' => $produit->getId()));
         }
 
-        return $this->render('produit/new.html.twig', array(
+        return $this->render('@LucieDesaint/admin/produit/new.html.twig', array(
             'produit' => $produit,
             'form' => $form->createView(),
         ));
@@ -59,7 +59,7 @@ class ProduitController extends Controller
     {
         $deleteForm = $this->createDeleteForm($produit);
 
-        return $this->render('produit/show.html.twig', array(
+        return $this->render('@LucieDesaint/admin/produit/show.html.twig', array(
             'produit' => $produit,
             'delete_form' => $deleteForm->createView(),
         ));

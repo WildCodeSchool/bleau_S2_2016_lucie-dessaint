@@ -3,8 +3,8 @@
 namespace LucieDesaintBundle\Controller;
 
 use LucieDesaintBundle\Entity\Images;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 /**
  * Image controller.
@@ -22,7 +22,7 @@ class ImagesController extends Controller
 
         $images = $em->getRepository('LucieDesaintBundle:Images')->findAll();
 
-        return $this->render('images/index.html.twig', array(
+        return $this->render('@LucieDesaint/admin/images/index.html.twig', array(
             'images' => $images,
         ));
     }
@@ -33,7 +33,7 @@ class ImagesController extends Controller
      */
     public function newAction(Request $request)
     {
-        $image = new Image();
+        $image = new Images();
         $form = $this->createForm('LucieDesaintBundle\Form\ImagesType', $image);
         $form->handleRequest($request);
 
@@ -45,7 +45,7 @@ class ImagesController extends Controller
             return $this->redirectToRoute('images_show', array('id' => $image->getId()));
         }
 
-        return $this->render('images/new.html.twig', array(
+        return $this->render('@LucieDesaint/admin/images/new.html.twig', array(
             'image' => $image,
             'form' => $form->createView(),
         ));
@@ -59,7 +59,7 @@ class ImagesController extends Controller
     {
         $deleteForm = $this->createDeleteForm($image);
 
-        return $this->render('images/show.html.twig', array(
+        return $this->render('@LucieDesaint/admin/images/show.html.twig', array(
             'image' => $image,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -81,7 +81,7 @@ class ImagesController extends Controller
             return $this->redirectToRoute('images_edit', array('id' => $image->getId()));
         }
 
-        return $this->render('images/edit.html.twig', array(
+        return $this->render('@LucieDesaint/admin/images/edit.html.twig', array(
             'image' => $image,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

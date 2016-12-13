@@ -13,7 +13,9 @@ class ProduitType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('titre')->add('textedescriptif')        ;
+        $builder
+            ->add('titre')
+            ->add('textedescriptif')        ;
     }
     
     /**
@@ -33,6 +35,5 @@ class ProduitType extends AbstractType
     {
         return 'luciedesaintbundle_produit';
     }
-
 
 }

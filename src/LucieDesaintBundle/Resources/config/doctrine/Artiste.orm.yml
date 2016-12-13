@@ -12,7 +12,9 @@ LucieDesaintBundle\Entity\Artiste:
         textepresentation:
             type: text
         textback:
-            type: text
+            type: string
+            length: 255
         textback2:
-            type: text
+            type: string
+            length: 255
     lifecycleCallbacks: {  }

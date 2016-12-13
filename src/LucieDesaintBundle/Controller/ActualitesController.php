@@ -22,7 +22,7 @@ class ActualitesController extends Controller
 
         $actualites = $em->getRepository('LucieDesaintBundle:Actualites')->findAll();
 
-        return $this->render('actualites/index.html.twig', array(
+        return $this->render('@LucieDesaint/admin/actualites/index.html.twig', array(
             'actualites' => $actualites,
         ));
     }
@@ -45,7 +45,7 @@ class ActualitesController extends Controller
             return $this->redirectToRoute('actualites_show', array('id' => $actualite->getId()));
         }
 
-        return $this->render('actualites/new.html.twig', array(
+        return $this->render('@LucieDesaint/admin/actualites/new.html.twig', array(
             'actualite' => $actualite,
             'form' => $form->createView(),
         ));
@@ -59,7 +59,7 @@ class ActualitesController extends Controller
     {
         $deleteForm = $this->createDeleteForm($actualite);
 
-        return $this->render('actualites/show.html.twig', array(
+        return $this->render('@LucieDesaint/admin/actualites/show.html.twig', array(
             'actualite' => $actualite,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -81,7 +81,7 @@ class ActualitesController extends Controller
             return $this->redirectToRoute('actualites_edit', array('id' => $actualite->getId()));
         }
 
-        return $this->render('actualites/edit.html.twig', array(
+        return $this->render('@LucieDesaint/admin/categories/edit.html.twig', array(
             'actualite' => $actualite,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

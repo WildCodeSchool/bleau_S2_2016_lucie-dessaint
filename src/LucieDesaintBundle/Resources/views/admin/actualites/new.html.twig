@@ -1,7 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Artiste creation</h1>
+  <div class="container">
+    <h1>Actualite creation</h1>
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
@@ -10,7 +11,8 @@
 
     <ul>
         <li>
-            <a href="{{ path('artiste_index') }}">Back to the list</a>
+            <a href="{{ path('actualites_index') }}">Back to the list</a>
         </li>
     </ul>
+  </div>
 {% endblock %}

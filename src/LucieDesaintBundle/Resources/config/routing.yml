@@ -1,7 +1,3 @@
-lucie_desaint_images:
-    resource: "@LucieDesaintBundle/Resources/config/routing/images.yml"
-    prefix:   /images
-
 lucie_desaint_homepage:
     path:     /
     defaults: { _controller: LucieDesaintBundle:Default:index }
@@ -19,8 +15,15 @@ lucie_desaint_contact:
         defaults: { _controller: LucieDesaintBundle:Default:contact }
 
 lucie_desaint_artistes:
-        path:     /artiste
+        path:     /artistes
         defaults: { _controller: LucieDesaintBundle:Default:artiste }
+
+#----------------------------route admin
+
+lucie_desaint_admin:
+    resource: "@LucieDesaintBundle/Resources/config/routing/admin.yml"
+    prefix:   /
+
 
 lucie_desaint_artiste:
     resource: "@LucieDesaintBundle/Resources/config/routing/artiste.yml"
@@ -37,6 +40,11 @@ lucie_desaint_categories:
 lucie_desaint_actualites:
     resource: "@LucieDesaintBundle/Resources/config/routing/actualites.yml"
     prefix:   /actualites
+
+lucie_desaint_images:
+    resource: "@LucieDesaintBundle/Resources/config/routing/images.yml"
+    prefix:   /images
+
 
 
 
