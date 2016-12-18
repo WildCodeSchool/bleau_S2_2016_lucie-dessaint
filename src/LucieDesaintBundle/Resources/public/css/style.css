@@ -18,13 +18,13 @@ body{
     min-height: 100vh;
     flex-direction: column ;
 }
+
 main{
     flex:1 0 auto;
 }
 
 .english-coeur, .french-coeur{
     width: 50px;
-
     position: relative;
     /* margin-right: auto; */
     bottom: 230px;
@@ -507,6 +507,232 @@ h1{
     }
 }
 
+
+
+/****************************************************************************************************
+****************************************** fin Media queries page index  ****************************
+****************************************************************************************************/
+
+
+/*----- PAGE Art  ------
+    1. Main
+    2. Média queries
+-------------------*/
+
+/****************************************************************************************************
+************************ 2. Main ( Cette partie evolue sur chaque page) *******************
+****************************************************************************************************/
+
+.rectangle{
+    width: 400px;
+    background-color: black;
+    position: relative;
+    bottom: 46px;
+    height: 60px;
+}
+
+.bienvenue{
+    color: white;
+    text-align: center;
+    bottom: 8px;
+    position: relative;
+}
+
+.art{
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+.images_art{
+    text-align: center;
+}
+
+.cadre_prix{
+    right: 205px;
+    position: relative;
+    right: 205px;
+    position: relative;
+    font-weight: bold;
+    /*opacity: 0;*/
+}
+
+.cadre_prix:hover{
+    right: 205px;
+    position: relative;
+    right: 205px;
+    position: relative;
+    font-weight: bold;
+    opacity: 45;
+}
+
+.prix-effet{
+    height: 445px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.55);
+    z-index: 45;
+}
+
+figure {
+    display: inline;
+}
+
+
+/****************************************************************************************************
+****************************************** fin Main  ******************************************
+****************************************************************************************************/
+
+/****************************************************************************************************
+****************************************** Media queries page index  ********************************
+****************************************************************************************************/
+
+@media screen and (max-width: 991px) {
+
+
+}
+
+/****************************************************************************************************
+****************************************** fin Media queries page index  ****************************
+****************************************************************************************************/
+
+/*----- PAGE contact  ------
+    1. General
+       - Navigation
+       - Bandeau2
+       - footer
+    2. Main
+       - images
+    3. Média queries
+-------------------*/
+
+/****************************************************************************************************
+************************ 2. Main ( Cette partie evolue sur chaque page) *******************
+****************************************************************************************************/
+
+.cadre5{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 800px;
+}
+
+#box {
+    /* border: 1px solid rgb(200, 200, 200); */
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px; */
+    /* background: rgba(200, 200, 200, 0.1); */
+    /* border-radius: 4px; */
+    /* top: 50px; */
+    position: absolute;
+    bottom: 200px;
+}
+
+h2{
+    text-align:center;
+    color:#fff;
+}
+
+.input-group{
+    color: red;
+}
+
+.btn-danger {
+    background: #535050;
+    border: 2px solid;
+    width: 203px;
+}
+
+.danger:hover {
+    background-color: #2da8a8!important;
+}
+
+.form-control{
+    color: #ffffff;
+}
+
+.cadre-gris{
+    width: 100%;
+    height:405px;
+    background-color: #464343;
+}
+
+    /*base-font-family: "Avenir Next", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+
+/*@mixin animated(*/
+/*$time: 300ms,*/
+/*$fillmode: both,*/
+/*$count: 1) {*/
+    /*animation-duration: $time;*/
+    /*animation-fill-mode: $fillmode;*/
+    /*animation-iteration-count: $count;*/
+/*}*/
+
+
+/*.globale-form {*/
+    /*max-width: 320px;*/
+    /*margin: 0 auto;*/
+    /*padding: 20px 16px 40px 16px;*/
+    /*position: absolute;*/
+    /*bottom: 328px;*/
+/*}*/
+
+/*.Username{*/
+    /*position: relative;*/
+    /*bottom: 80px;*/
+    /*margin-left: 100px;*/
+/*}*/
+/*.ui-input input {*/
+    /*border: 1px;*/
+    /*background: none;*/
+    /*padding: 16px 0 16px 0;*/
+    /*!* font-size: 24px; *!*/
+    /*outline: 0;*/
+    /*width: 100%;*/
+    /*tap-highlight-color: rgba(0,0,0,0);*/
+    /*touch-callout: none;*/
+/*}*/
+
+/*.ui-input input + label {*/
+    /*position: relative;*/
+    /*display: block;*/
+    /*padding: 8px 0 8px 0;*/
+    /*text-transform: uppercase;*/
+    /*font-size: 14px;*/
+    /*letter-spacing: .0875em;*/
+    /*font-weight: 500;*/
+    /*text-align: left;*/
+
+/*&::before, &::after {*/
+                /*position: absolute;*/
+                /*top: 0;*/
+                /*left: 0;*/
+                /*content: "";*/
+                /*width: 100%;*/
+                /*height: 1px;*/
+/*}*/
+
+/****************************************************************************************************
+****************************************** fin Main  ******************************************
+****************************************************************************************************/
+
+/****************************************************************************************************
+****************************************** Media queries page index  ********************************
+****************************************************************************************************/
+
+
+@media screen and (max-width: 991px){
+    #box{
+
+        margin-bottom: 80px;
+    }
+
+    footer{
+        background-color: #464343;
+        bottom: 0px;
+        position: absolute;
+    }
+
+
+}
 
 
 /****************************************************************************************************

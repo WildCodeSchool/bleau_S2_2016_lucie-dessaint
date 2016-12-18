@@ -2,8 +2,93 @@
 
 {% block body %}
 
-        <div>
-            <img src>
-        </div>
+            <div class="globale-cadre5">
+                <img src="{{ asset('bundles/luciedesaint/images/cadre-contact.png') }}" class="cadre5 hidden-xs hidden-sm">
+                <div class="cadre-gris hidden-md hidden-lg"></div>
+                <div class="sextion">
+                    <div class="row-fluid" >
 
+
+                        <div class="col-md-offset-4 col-md-4" id="box">
+                            <h2>Contact</h2>
+
+                            <hr>
+
+
+                            <form class="form-horizontal" action=" " method="" id="contact_form">
+                                <fieldset>
+                                    <!-- Form Name -->
+
+                                    <!-- Text input-->
+                                    <div class="form-group">
+
+                                        <div class="col-md-12 ">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+                                                <input name="first_name" placeholder="Nom" class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Text input-->
+                                    <div class="form-group">
+
+                                        <div class="col-md-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                                                <input name="email" placeholder="E-mail" class="form-control" type="text" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Text input-->
+                                    <div class="form-group">
+
+                                        <div class="col-md-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                                                <input name="email" placeholder="Message" class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <div class="col-md-10">
+                                            <button type="submit" class="btn btn-md btn-danger pull-right">Envoyer</button>
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+
+                {#<div class="row">#}
+                    {#<div class="col-md-offset-4">#}
+                        {#<div class="globale-form">#}
+                            {#<form class="form" action="#">#}
+                                {#<fieldset class="form-fieldset ui-input __first">#}
+                                    {#<input type="text" id="username" tabindex="0" />#}
+                                    {#<label for="username" style="background-color: #464343">#}
+                                        {#<span data-text="Username" class="Username">Nom</span>#}
+                                    {#</label>#}
+                                {#</fieldset>#}
+                            {#</form>#}
+                        {#</div>#}
+                        {#<div class="col-md-offset-3">#}
+                            {#<div class="globale-form">#}
+                                {#<form class="form" action="#">#}
+                                    {#<fieldset class="form-fieldset ui-input __first">#}
+                                        {#<input type="text" id="username" tabindex="0" />#}
+                                        {#<label for="username" style="background-color: #464343">#}
+                                            {#<span data-text="Username" class="Username">Prenom</span>#}
+                                        {#</label>#}
+                                    {#</fieldset>#}
+                                {#</form>#}
+                            {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+            </div>
 {% endblock  %}
+
+
+
