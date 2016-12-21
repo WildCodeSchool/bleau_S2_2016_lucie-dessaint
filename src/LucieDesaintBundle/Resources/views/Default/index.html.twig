@@ -5,10 +5,41 @@
    <main role="main">
        <p class="marquee">Bienvenue sur mon site, je suis artiste plasticienne et professeur d'art à Paris.
        </p>
+
      <div class="images_index">
-         <a href="{{ path('lucie_desaint_art') }}"><img src="{{ asset('bundles/luciedesaint/images/portrait-double.png') }}" class="cadre-photo2 hvr-grow"></a>
-         <a href="{{ path('lucie_desaint_bijoux') }}"><img src="{{ asset('bundles/luciedesaint/images/portrait-double2.png') }}" class="cadre-photo1 hvr-grow"></a>
-         <a href="{{ path('lucie_desaint_artistes') }}"><img src="{{ asset('bundles/luciedesaint/images/photo-lucie.png') }}" class="cadre-photo3 hvr-grow"></a>
+         <div class="hvr-grow">
+             <figure class="snip1305">
+                 <img src="{{ asset('bundles/luciedesaint/images/portrait-double.png') }}"/>
+                 <figcaption class="hvr-grow">
+                     <h2>Entrez dans l'univers de la peinture</h2>
+                 </figcaption>
+                 <a href="{{ path('lucie_desaint_art') }}" ></a>
+             </figure>
+         </div>
+
+         <div class="hvr-grow">
+             <figure class="snip1305">
+                 <img src="{{ asset('bundles/luciedesaint/images/portrait-double2.png') }}" class=" hvr-grow"/>
+                 <figcaption>
+                     <h2>Bienvenue dans l'univers des bijoux</h2>
+                 </figcaption>
+                 <a href="{{ path('lucie_desaint_bijoux') }}"></a>
+             </figure>
+         </div>
+
+         <div class="hvr-grow">
+             <figure class="snip1305">
+                 <img src="{{ asset('bundles/luciedesaint/images/photo-lucie.png') }}" class=" hvr-grow" style="width: 185px"/>
+                 <figcaption>
+                     <h2>Bienvenue dans l'univers des bijoux</h2>
+                 </figcaption>
+                 <a href="{{ path('lucie_desaint_artistes') }}"></a>
+             </figure>
+         </div>
+
+         {#<a href="{{ path('lucie_desaint_art') }}"><img src="{{ asset('bundles/luciedesaint/images/portrait-double.png') }}" class="cadre-photo2 hvr-grow"></a>#}
+         {#<a href="{{ path('lucie_desaint_bijoux') }}"><img src="{{ asset('bundles/luciedesaint/images/portrait-double2.png') }}" class="cadre-photo1 hvr-grow"></a>#}
+         {#<a href="{{ path('lucie_desaint_artistes') }}"><img src="{{ asset('bundles/luciedesaint/images/photo-lucie.png') }}" class="cadre-photo3 hvr-grow"></a>#}
      </div>
 
    </main>

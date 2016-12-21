@@ -317,51 +317,156 @@ h1{
 ****************************************************************************************************/
 
 /* images */
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+.snip1305 {
+    font-family: 'Raleway', Arial, sans-serif;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    /* min-width: 230px; */
+    max-width: 515px;
+    max-height: 320px;
+    width: 100%;
+    color: #000000;
+}
+.snip1305 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+.snip1305 img {
+    opacity: 1;
+    width: 100%;
+}
+.snip1305:after,
+.snip1305:before {
+    background: #464343;;
+    width: 0;
+    height: 0;
+    position: absolute;
+    content: '';
+    opacity: 0.5;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    z-index: 1;
+}
+.snip1305:after {
+    top: 0;
+    left: 0;
+}
+.snip1305:before {
+    right: 0;
+    bottom: 0;
+}
+.snip1305 figcaption {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 2;
+}
+.snip1305 h2,
+.snip1305 p {
+    margin: 0;
+    width: 100%;
+    opacity: 0;
+}
+.snip1305 h2 {
+    padding: 0 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.snip1305 p {
+    padding: 0 50px;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+.snip1305 a {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 2;
+}
+.snip1305:hover img,
+.snip1305.hover img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.snip1305:hover:after,
+.snip1305.hover:after,
+.snip1305:hover:before,
+.snip1305.hover:before {
+    width: 100%;
+    height: 100%;
+}
+.snip1305:hover figcaption h2,
+.snip1305.hover figcaption h2,
+.snip1305:hover figcaption p,
+.snip1305.hover figcaption p {
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+.snip1305:hover figcaption h2,
+.snip1305.hover figcaption h2 {
+    opacity: 1;
+}
+.snip1305:hover figcaption p,
+.snip1305.hover figcaption p {
+    opacity: 0.7;
+}
+
 .images_index{
     text-align: center;
     padding-top:75px ;
 }
 
-.cadre-photo9{
-    width: 425px;
-    height: 300px;
-    background-color: red;
-    border-top: 2px solid red;
-    border-bottom: 2px solid red;
-    border-left: 2px solid red;
-    border-right: 2px solid red;
-}
+/*.cadre-photo9{*/
+    /*width: 425px;*/
+    /*height: 300px;*/
+    /*background-color: red;*/
+    /*border-top: 2px solid red;*/
+    /*border-bottom: 2px solid red;*/
+    /*border-left: 2px solid red;*/
+    /*border-right: 2px solid red;*/
+/*}*/
 
-}
-.cadre-photo1 {
-    width: 425px;
-    height: 300px;
-    background-color: red;
-    border-top: 2px solid #beacac;
-    border-bottom: 2px solid #beacac;
-    border-left: 2px solid #beacac;
-    border-right: 2px solid #beacac;
-}
+/*}*/
+/*.cadre-photo1 {*/
+    /*width: 425px;*/
+    /*height: 300px;*/
+    /*background-color: red;*/
+    /*border-top: 2px solid #beacac;*/
+    /*border-bottom: 2px solid #beacac;*/
+    /*border-left: 2px solid #beacac;*/
+    /*border-right: 2px solid #beacac;*/
+/*}*/
 
-.cadre-photo2 {
-    width: 425px;
-    height: 300px;
-    background-color: red;
-    border-top: 2px solid #beacac;
-    border-bottom: 2px solid #beacac;
-    border-left: 2px solid #beacac;
-    border-right: 2px solid #beacac;
-}
+/*.cadre-photo2 {*/
+    /*width: 425px;*/
+    /*height: 300px;*/
+    /*background-color: red;*/
+    /*border-top: 2px solid #beacac;*/
+    /*border-bottom: 2px solid #beacac;*/
+    /*border-left: 2px solid #beacac;*/
+    /*border-right: 2px solid #beacac;*/
+/*}*/
 
-.cadre-photo3 {
-    width: 220px;
-    height: 300px;
-    background-color: red;
-    border-top: 2px solid #beacac;
-    border-bottom: 2px solid #beacac;
-    border-left: 2px solid #beacac;
-    border-right: 2px solid #beacac;
-}
+/*.cadre-photo3 {*/
+    /*width: 220px;*/
+    /*height: 300px;*/
+    /*background-color: red;*/
+    /*border-top: 2px solid #beacac;*/
+    /*border-bottom: 2px solid #beacac;*/
+    /*border-left: 2px solid #beacac;*/
+    /*border-right: 2px solid #beacac;*/
+/*}*/
 
 /* Defillement texte en haut*/
 .marquee {
@@ -625,8 +730,9 @@ h2{
 .bienvenue{
     color: white;
     text-align: center;
-    bottom: 8px;
+    bottom: 2px;
     position: relative;
+    font-weight: bold;
 }
 
 .art{
@@ -684,6 +790,178 @@ figure {
 /****************************************************************************************************
 ****************************************** fin Media queries page index  ****************************
 ****************************************************************************************************/
+
+
+/*----- PAGE bijoux  ------
+    1. Main
+    2. Média queries
+-------------------*/
+
+/****************************************************************************************************
+************************ 2. Main ( Cette partie evolue sur chaque page) *******************
+****************************************************************************************************/
+
+.globale-produit{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 240px;
+    margin-top: 25px;
+}
+
+.rectangle{
+    width: 400px;
+    background-color: black;
+    position: relative;
+    bottom: 46px;
+    height: 60px;
+}
+
+.bienvenue{
+    color: white;
+    text-align: center;
+    bottom: 2px;
+    position: relative;
+    font-weight: bold;
+}
+
+/*-------------- effet hover 1---------------*/
+
+.produit{
+    top: 55px;
+    position: relative;
+    font-size: 1.5em;
+}
+
+.prix{
+    top: 90px;
+    position: relative;
+    font-size: 1.5em;
+}
+
+figure.snip0015 {
+    font-family: 'Raleway', Arial, sans-serif;
+    color: #fff;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 300px;
+    max-width: 310px;
+    max-height: 400px;
+    width: 100%;
+    background: #000000;
+    text-align: center;
+    border-radius: 18px;
+}
+
+figure.snip0015 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+figure.snip0015 img {
+    opacity: 1;
+    width: 100%;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+figure.snip0015 figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 3em 3em;
+    width: 100%;
+    height: 100%;
+}
+figure.snip0015 figcaption::before {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    bottom: 50%;
+    left: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    content: '';
+    opacity: 0;
+    background-color: #ffffff;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+figure.snip0015 h2,
+figure.snip0015 p {
+    margin: 0 0 5px;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s,-webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+}
+figure.snip0015 h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+    text-transform: uppercase;
+    -webkit-transform: translate3d(0%, 50%, 0);
+    transform: translate3d(0%, 50%, 0);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+figure.snip0015 h2 span {
+    font-weight: 800;
+}
+figure.snip0015 p {
+    font-weight: 200  ;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+figure.snip0015 a {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    color: #ffffff;
+}
+figure.snip0015:hover img {
+    opacity: 0.35;
+}
+figure.snip0015:hover figcaption h2 {
+    opacity: 1;
+    -webkit-transform: translate3d(0%, 0%, 0);
+    transform: translate3d(0%, 0%, 0);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+figure.snip0015:hover figcaption p {
+    opacity: 0.9;
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+figure.snip0015:hover figcaption::before {
+    background: rgba(255, 255, 255, 0);
+    top: 30px;
+    bottom: 30px;
+    opacity: 1;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+
+
+/****************************************************************************************************
+****************************************** fin Main  ******************************************
+****************************************************************************************************/
+
+/****************************************************************************************************
+****************************************** Media queries page index  ********************************
+****************************************************************************************************/
+
+@media screen and (max-width: 500px) {
+
+}
+
+/****************************************************************************************************
+****************************************** fin Media queries page index  ****************************
+****************************************************************************************************/
+
 
 /*----- PAGE Artiste  ------
     1. Main
