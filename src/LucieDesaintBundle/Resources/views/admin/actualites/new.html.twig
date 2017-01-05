@@ -6,12 +6,12 @@
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+        <input type="submit" value="Create" class="btn btn-primary btn-info" />
     {{ form_end(form) }}
 
-    <ul>
+    <ul style="background-color: rgba(113, 102, 102, 0.04);">
         <li>
-            <a href="{{ path('actualites_index') }}">Back to the list</a>
+            <a href="{{ path('actualites_index') }}" class="btn btn-primary btn-info" >Back to the list</a>
         </li>
     </ul>
   </div>

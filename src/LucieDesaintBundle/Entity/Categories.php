@@ -7,26 +7,26 @@ namespace LucieDesaintBundle\Entity;
  */
 class Categories
 {
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
+        return $this->label;
+    }
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
     /**
      * @var string
      */
-    private $src;
-
-    /**
-     * @var string
-     */
-    private $alt;
+    private $label;
 
 
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -34,50 +34,26 @@ class Categories
     }
 
     /**
-     * Set src
+     * Set label
      *
-     * @param string $src
+     * @param string $label
      *
      * @return Categories
      */
-    public function setSrc($src)
+    public function setLabel($label)
     {
-        $this->src = $src;
+        $this->label = $label;
 
         return $this;
     }
 
     /**
-     * Get src
+     * Get label
      *
      * @return string
      */
-    public function getSrc()
+    public function getLabel()
     {
-        return $this->src;
-    }
-
-    /**
-     * Set alt
-     *
-     * @param string $alt
-     *
-     * @return Categories
-     */
-    public function setAlt($alt)
-    {
-        $this->alt = $alt;
-
-        return $this;
-    }
-
-    /**
-     * Get alt
-     *
-     * @return string
-     */
-    public function getAlt()
-    {
-        return $this->alt;
+        return $this->label;
     }
 }

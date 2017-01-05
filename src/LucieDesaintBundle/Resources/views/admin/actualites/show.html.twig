@@ -1,34 +1,74 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div class="container">
-    <h1>Actualite</h1>
 
-    <table>
-        <tbody>
+    <div class="container">
+        <h2>Aperçu</h2>
+        <table class="table">
+            <thead>
             <tr>
-                <th>Id</th>
-                <td>{{ actualite.id }}</td>
+                <th>Texte</th>
             </tr>
+            </thead>
+            <tbody>
+
             <tr>
-                <th>Text</th>
+
                 <td>{{ actualite.text }}</td>
-            </tr>
-        </tbody>
-    </table>
+                <td>
+                    <ul style="background-color: rgba(113, 102, 102, 0);" >
+                        <li>
+                            <a href="{{ path('actualites_edit', { 'id': actualite.id }) }}" class="btn btn-primary btn-info">Edit</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('actualites_index') }}" class="btn btn-primary btn-info">Back to the list </a>
+                        </li>
+                        <li>
+                            {{ form_start(delete_form) }}
+                            <input type="submit" value="Delete" class="btn btn-primary btn-info">
+                            {{ form_end(delete_form) }}
+                        </li>
+                        <li class="btn btn-primary btn-info" >
+                            <a href="{{ path('actualites_new') }}">Create a new actualite</a>
+                        </li>
 
-    <ul>
-        <li>
-            <a href="{{ path('actualites_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('actualites_edit', { 'id': actualite.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
-</div>
+                    </ul>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+    {#<div class="container">#}
+    {#<h1>Actualite</h1>#}
+
+    {#<table>#}
+        {#<tbody>#}
+            {#<tr>#}
+                {#<th>Id</th>#}
+                {#<td>{{ actualite.id }}</td>#}
+            {#</tr>#}
+            {#<tr>#}
+                {#<th>Text</th>#}
+                {#<td>{{ actualite.text }}</td>#}
+            {#</tr>#}
+        {#</tbody>#}
+    {#</table>#}
+
+    {#<ul>#}
+        {#<li>#}
+            {#<a href="{{ path('actualites_index') }}">Back to the list</a>#}
+        {#</li>#}
+        {#<li>#}
+            {#<a href="{{ path('actualites_edit', { 'id': actualite.id }) }}">Edit</a>#}
+        {#</li>#}
+        {#<li>#}
+            {#{{ form_start(delete_form) }}#}
+                {#<input type="submit" value="Delete">#}
+            {#{{ form_end(delete_form) }}#}
+        {#</li>#}
+    {#</ul>#}
+{#</div>#}
 {% endblock %}

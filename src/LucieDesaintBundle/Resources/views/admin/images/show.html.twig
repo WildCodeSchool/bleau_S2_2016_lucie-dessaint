@@ -1,36 +1,73 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Image</h1>
 
-    <table>
+    <table class="table table-striped table-condensed voc_list ">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Src</th>
+            <th>Alt</th>
+        </tr>
+        </thead>
+        <tbody>
         <tbody>
             <tr>
-                <th>Id</th>
                 <td>{{ image.id }}</td>
-            </tr>
-            <tr>
-                <th>Src</th>
                 <td>{{ image.src }}</td>
-            </tr>
-            <tr>
-                <th>Alt</th>
                 <td>{{ image.alt }}</td>
+                <td style="width: 100px; ">
+                    <ul style="background-color: rgba(113, 102, 102, 0);">
+                        <li>
+                            <a href="{{ path('images_edit', { 'id': image.id }) }}" class="btn btn-primary btn-default">Edit</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('images_index') }}" class="btn btn-primary btn-default">Back to the list</a>
+                        </li>
+                        <li>
+                            {{ form_start(delete_form) }}
+                           <input type="submit" value="Supprimer" class="btn btn-primary btn-default">
+                            {{ form_end(delete_form) }}
+                        </li>
+                    </ul>
+
+                </td>
             </tr>
+        <tbody>
+        </tr>
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('images_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('images_edit', { 'id': image.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+    {#<h1>Image</h1>#}
+
+    {#<table>#}
+        {#<tbody>#}
+            {#<tr>#}
+                {#<th>Id</th>#}
+                {#<td>{{ image.id }}</td>#}
+            {#</tr>#}
+            {#<tr>#}
+                {#<th>Src</th>#}
+                {#<td>{{ image.src }}</td>#}
+            {#</tr>#}
+            {#<tr>#}
+                {#<th>Alt</th>#}
+                {#<td>{{ image.alt }}</td>#}
+            {#</tr>#}
+        {#</tbody>#}
+    {#</table>#}
+
+    {#<ul>#}
+        {#<li>#}
+            {#<a href="{{ path('images_index') }}">Back to the list</a>#}
+        {#</li>#}
+        {#<li>#}
+            {#<a href="{{ path('images_edit', { 'id': image.id }) }}">Edit</a>#}
+        {#</li>#}
+        {#<li>#}
+            {#{{ form_start(delete_form) }}#}
+                {#<input type="submit" value="Delete">#}
+            {#{{ form_end(delete_form) }}#}
+        {#</li>#}
+    {#</ul>#}
 {% endblock %}

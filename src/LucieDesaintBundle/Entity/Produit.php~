@@ -7,6 +7,12 @@ namespace LucieDesaintBundle\Entity;
  */
 class Produit
 {
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
+        return $this->categories;
+    }
+
     /**
      * @var int
      */
@@ -79,5 +85,121 @@ class Produit
     public function getTextedescriptif()
     {
         return $this->textedescriptif;
+    }
+    /**
+     * @var \LucieDesaintBundle\Entity\Categories
+     */
+    private $categories;
+
+
+    /**
+     * Set categories
+     *
+     * @param \LucieDesaintBundle\Entity\Categories $categories
+     *
+     * @return Produit
+     */
+    public function setCategories(\LucieDesaintBundle\Entity\Categories $categories = null)
+    {
+        $this->categories = $categories;
+
+        return $this;
+    }
+
+    /**
+     * Get categories
+     *
+     * @return \LucieDesaintBundle\Entity\Categories
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+    /**
+     * @var string
+     */
+    private $info;
+
+    /**
+     * @var string
+     */
+    private $Prix;
+
+
+    /**
+     * Set info
+     *
+     * @param string $info
+     *
+     * @return Produit
+     */
+    public function setInfo($info)
+    {
+        $this->info = $info;
+
+        return $this;
+    }
+
+    /**
+     * Get info
+     *
+     * @return string
+     */
+    public function getInfo()
+    {
+        return $this->info;
+    }
+
+    /**
+     * Set prix
+     *
+     * @param string $prix
+     *
+     * @return Produit
+     */
+    public function setPrix($prix)
+    {
+        $this->Prix = $prix;
+
+        return $this;
+    }
+
+    /**
+     * Get prix
+     *
+     * @return string
+     */
+    public function getPrix()
+    {
+        return $this->Prix;
+    }
+    /**
+     * @var string
+     */
+    private $Image;
+
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     *
+     * @return Produit
+     */
+    public function setImage($image)
+    {
+        $this->Image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->Image;
     }
 }

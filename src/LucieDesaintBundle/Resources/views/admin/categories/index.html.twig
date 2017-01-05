@@ -16,8 +16,6 @@
         {% for category in categories %}
             <tr>
                 <td><a href="{{ path('categories_show', { 'id': category.id }) }}">{{ category.id }}</a></td>
-                <td>{{ category.src }}</td>
-                <td>{{ category.alt }}</td>
                 <td>
                     <ul>
                         <li>

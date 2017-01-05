@@ -9,10 +9,9 @@ LucieDesaintBundle\Entity\Categories:
             generator:
                 strategy: AUTO
     fields:
-        src:
+
+        label:
             type: string
             length: 255
-        alt:
-            type: string
-            length: 255
+
     lifecycleCallbacks: {  }

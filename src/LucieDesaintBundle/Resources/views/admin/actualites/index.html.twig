@@ -1,39 +1,78 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Actualites list</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Text</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for actualite in actualites %}
-            <tr>
-                <td><a href="{{ path('actualites_show', { 'id': actualite.id }) }}">{{ actualite.id }}</a></td>
-                <td>{{ actualite.text }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('actualites_show', { 'id': actualite.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('actualites_edit', { 'id': actualite.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    <div class="container">
+        <h2>Basic Table</h2>
+        <table class="table">
+                <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Texte</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+            <tbody>
+            {% for actualite in actualites %}
+                <tr>
+                    <td><a href="{{ path('actualites_show', { 'id': actualite.id }) }}">{{ actualite.id }}</a></td>
+                    <td>{{ actualite.text }}</td>
+                    <td>
+                        <ul style="background-color: rgba(113, 102, 102, 0);">
+                            <li>
+                                <a href="{{ path('actualites_show', { 'id': actualite.id }) }}" class="btn btn-primary btn-info" >show</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('actualites_edit', { 'id': actualite.id }) }}" class="btn btn-primary btn-info" >edit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('actualites_new') }}">Create a new actualite</a>
-        </li>
-    </ul>
+        <ul style="background-color: rgba(113, 102, 102, 0.07);">
+            <li class="btn btn-primary btn-info" >
+                <a href="{{ path('actualites_new') }}">Create a new actualite</a>
+            </li>
+        </ul>
+
+    </div>
+
+    {#<h1>Actualites list</h1>#}
+
+    {#<table>#}
+        {#<thead>#}
+            {#<tr>#}
+                {#<th>Id</th>#}
+                {#<th>Text</th>#}
+                {#<th>Actions</th>#}
+            {#</tr>#}
+        {#</thead>#}
+        {#<tbody>#}
+        {#{% for actualite in actualites %}#}
+            {#<tr>#}
+                {#<td><a href="{{ path('actualites_show', { 'id': actualite.id }) }}">{{ actualite.id }}</a></td>#}
+                {#<td>{{ actualite.text }}</td>#}
+                {#<td>#}
+                    {#<ul>#}
+                        {#<li>#}
+                            {#<a href="{{ path('actualites_show', { 'id': actualite.id }) }}">show</a>#}
+                        {#</li>#}
+                        {#<li>#}
+                            {#<a href="{{ path('actualites_edit', { 'id': actualite.id }) }}">edit</a>#}
+                        {#</li>#}
+                    {#</ul>#}
+                {#</td>#}
+            {#</tr>#}
+        {#{% endfor %}#}
+        {#</tbody>#}
+    {#</table>#}
+
+    {#<ul>#}
+        {#<li>#}
+            {#<a href="{{ path('actualites_new') }}">Create a new actualite</a>#}
+        {#</li>#}
+    {#</ul>#}
 {% endblock %}

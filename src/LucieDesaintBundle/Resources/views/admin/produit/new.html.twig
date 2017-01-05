@@ -1,16 +1,114 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <style>
+        h1{
+            color: black;
+        }
+    </style>
+    
+<div class="container">
     <h1>Produit creation</h1>
 
     {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+    <div>
+        <label for="">Categorie</label>
+        {{ form_widget(form.categories) }}
+        {{ form_errors(form.categories) }}
+    </div>
+    <div>
+        <label for="">Titre</label>
+        {{ form_widget(form.titre) }}
+        {{ form_errors(form.titre) }}
+    </div>
+    <div>
+        <label for="">Description</label>
+        {{ form_widget(form.textedescriptif) }}
+        {{ form_errors(form.textedescriptif) }}
+    </div>
+    <div>
+        <label for="">Prix</label>
+        {{ form_widget(form.prix) }}
+        {{ form_errors(form.prix) }}
+    </div>
+    <div>
+        <label for="">Image</label>
+        {{ form_widget(form.file) }}
+        {{ form_errors(form.file) }}
+    </div>
+    {#{{ form_widget(form) }}#}
+    <input type="submit" value="Create" class="btn btn-primary btn-info"/>
+
     {{ form_end(form) }}
 
-    <ul>
+    <ul style="background-color: rgba(113, 102, 102, 0.07);">
         <li>
-            <a href="{{ path('produit_index') }}">Back to the list</a>
+            <a href="{{ path('produit_index') }}" class="btn btn-primary btn-info">Back to the list</a>
         </li>
     </ul>
+</div>
+
+
+    {#<div class="panel-body">#}
+        {#<div class="tab-content">#}
+            {#<div role="tabpanel" class="tab-pane active" id="list">#}
+                {#<table class="table table-striped table-bordered table-list">#}
+                    {#<thead>#}
+                    {#<tr>#}
+                        {#<th style="padding-right: 95px;">Image</th>#}
+                        {#<th><div>#}
+
+                            {#</div>#}
+                        {#</th>#}
+                        {#<th >Titre</th>#}
+                        {#<th>Texte descriptif</th>#}
+                    {#</tr>#}
+                    {#</thead>#}
+                    {#<tr class="new">#}
+
+                        {#<td align="center">#}
+                            {#<li>#}
+
+                            {#</li>#}
+                        {#</td>#}
+                    {#</tr>#}
+                    {#</tbody>#}
+                {#</table>#}
+            {#</div>#}
+        {#</div><!-- END id="list" -->#}
+    {#</div>#}
+
+
+    {#<div class="panel-body">#}
+        {#<div class="tab-content">#}
+            {#<div role="tabpanel" class="tab-pane active" id="list">#}
+                {#<table class="table table-striped table-bordered table-list">#}
+                    {#<thead>#}
+                    {#<tr>#}
+                        {#<th class="avatar">photo</th>#}
+                        {#<th>name</th>#}
+                        {#<th>country</th>#}
+                        {#<th>email</th>#}
+                        {#<th><em class="fa fa-cog"></em></th>#}
+                    {#</tr>#}
+                    {#</thead>#}
+                    {#<tr class="new">#}
+                        {#<td class="avatar"><img src=""></td>#}
+                        {#<td>Dia ElHak  </td>#}
+                        {#<td>Tunisia </td>#}
+                        {#<td>email@gmail.com </td>#}
+                        {#<td align="center">#}
+                            {#<a href="#" class="btn btn-primary" title="Edit"    ><i class="fa fa-pencil"	  >		</i></a>#}
+                            {#<a href="#" class="btn btn-success" title="validate"><i class="fa fa-check-square">validate</i></a>#}
+                            {#<a href="#" class="btn btn-warning" title="ban"	 ><i class="fa fa-ban"		 >		</i></a>#}
+                            {#<a href="#" class="btn btn-danger"  title="delete"  ><i class="fa fa-trash"	   >		</i></a>#}
+                        {#</td>#}
+                    {#</tr>#}
+                    {#</tbody>#}
+                {#</table>#}
+            {#</div><!-- END id="list" -->#}
+        {#</div>#}
+    {#</div>#}
+
+
 {% endblock %}

@@ -12,6 +12,25 @@ LucieDesaintBundle\Entity\Produit:
         titre:
             type: string
             length: 255
-        textedescriptif:
-            type: text
+        info:
+            type: string
+            length: 255
+            nullable: true
+        Prix:
+            type: string
+            length: 255
+            nullable: true
+        Image:
+            type: string
+            length: 255
+            nullable: true
+        Alt:
+            type: string
+            length: 255
+            nullable: true
+
+    manyToOne:
+        categories:
+            targetEntity: Categories
+
     lifecycleCallbacks: {  }

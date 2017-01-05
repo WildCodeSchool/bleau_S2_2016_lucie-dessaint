@@ -1,41 +1,129 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Images list</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Src</th>
-                <th>Alt</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for image in images %}
-            <tr>
-                <td><a href="{{ path('images_show', { 'id': image.id }) }}">{{ image.id }}</a></td>
-                <td>{{ image.src }}</td>
-                <td>{{ image.alt }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('images_show', { 'id': image.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('images_edit', { 'id': image.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    <div class="panel-body">
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="list">
+                <table class="table table-striped table-bordered table-list">
+                    <thead>
+                    <tr>
+                        <th style="padding-right: 95px;">Image</th>
+                        <th><div>
+                                {{ form_widget(edit_form.categories) }}
+                                {{ form_errors(edit_form.categories) }}
+                            </div>
+                        </th>
+                        <th >Titre
+                        </th>
+                        <th>Texte descriptif</th>
+                    </tr>
+                    </thead>
+                    <tr class="new">
+                        <td><img src=""><div>
+                                {{ form_widget(edit_form.file) }}
+                                {{ form_errors(edit_form.file) }}
+                            </div> </td>
+                        <td></td>
+                        <th><div style="position: relative;
 
-    <ul>
-        <li>
-            <a href="{{ path('images_new') }}">Create a new image</a>
-        </li>
-    </ul>
+                                        width: 100px;">
+                                {{ form_widget(edit_form.titre) }}
+                                {{ form_errors(edit_form.titre) }}
+                            </div></th>
+                        <td><div style="width: 240px; position: absolute;">
+                                {{ form_widget(edit_form.textedescriptif) }}
+                                {{ form_errors(edit_form.textedescriptif) }}
+                            </div></td>
+                        <td align="center">
+                            <li>
+                                {{ form_start(delete_form) }}
+                                <input type="submit" value="Delete"  class="btn btn-primary btn-default">
+                                {{ form_end(delete_form) }}
+                            </li>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div><!-- END id="list" -->
+    </div>
+    </div>
+
+
+    {#<table class="table table-striped table-condensed voc_list ">#}
+        {#<thead>#}
+        {#<tr>#}
+            {#<th>Id</th>#}
+            {#<th>Src</th>#}
+            {#<th>Alt</th>#}
+        {#</tr>#}
+        {#</thead>#}
+        {#<tbody>#}
+        {#<tbody>#}
+        {#{% for image in images %}#}
+            {#<tr>#}
+                {#<td><a href="{{ path('images_show', { 'id': image.id }) }}">{{ image.id }}</a></td>#}
+                {#<td>{{ image.src }}</td>#}
+                {#<td>{{ image.alt }}</td>#}
+                {#<td style="width: 100px; background-color: rgba(113, 102, 102, 0);">#}
+                    {#<ul>#}
+                        {#<li>#}
+                            {#<a href="{{ path('images_show', { 'id': image.id }) }}" class="btn btn-primary btn-default">Show</a>#}
+                        {#</li>#}
+                        {#<li>#}
+                            {#<a href="{{ path('images_edit', { 'id': image.id }) }}" class="btn btn-primary btn-default">edit</a>#}
+                        {#</li>#}
+                    {#</ul>#}
+                {#</td>#}
+            {#</tr>#}
+        {#{% endfor %}#}
+        {#<tbody>#}
+        {#</tr>#}
+        {#</tbody>#}
+    {#</table>#}
+    {#<ul style="width: 100px; background-color: rgba(113, 102, 102, 0);">#}
+        {#<li>#}
+            {#<a href="{{ path('images_new') }}" class="btn btn-primary btn-info"  style="width: 190px;">Create a new image</a>#}
+        {#</li>#}
+    {#</ul>#}
+
+
+    {#<h1>Images list</h1>#}
+
+    {#<table>#}
+        {#<thead>#}
+            {#<tr>#}
+                {#<th>Id</th>#}
+                {#<th>Src</th>#}
+                {#<th>Alt</th>#}
+                {#<th>Actions</th>#}
+            {#</tr>#}
+        {#</thead>#}
+        {#<tbody>#}
+        {#{% for image in images %}#}
+            {#<tr>#}
+                {#<td><a href="{{ path('images_show', { 'id': image.id }) }}">{{ image.id }}</a></td>#}
+                {#<td>{{ image.src }}</td>#}
+                {#<td>{{ image.alt }}</td>#}
+                {#<td>#}
+                    {#<ul>#}
+                        {#<li>#}
+                            {#<a href="{{ path('images_show', { 'id': image.id }) }}">show</a>#}
+                        {#</li>#}
+                        {#<li>#}
+                            {#<a href="{{ path('images_edit', { 'id': image.id }) }}">edit</a>#}
+                        {#</li>#}
+                    {#</ul>#}
+                {#</td>#}
+            {#</tr>#}
+        {#{% endfor %}#}
+        {#</tbody>#}
+    {#</table>#}
+
+    {#<ul>#}
+        {#<li>#}
+            {#<a href="{{ path('images_new') }}">Create a new image</a>#}
+        {#</li>#}
+    {#</ul>#}
 {% endblock %}
