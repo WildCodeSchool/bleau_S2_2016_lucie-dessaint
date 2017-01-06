@@ -13,12 +13,7 @@ class DefaultController extends Controller
 
     public function artAction()
     {
-        $em = $this->getDoctrine()->getManager();
-        $tableaux = $em->getRepository('LucieDesaintBundle:Produit')->findByCategories(1);
-
-        return $this->render('@LucieDesaint/Default/art.html.twig', array(
-            'tableaux' => $tableaux
-        ));
+        return $this->render('@LucieDesaint/Default/art.html.twig');
     }
 
     public function bijouxAction()

@@ -9,12 +9,12 @@
     
 <div class="container">
     <h1>Produit creation</h1>
-
+    {#------------------------------------- champs -------------------------------------#}
     {{ form_start(form) }}
     <div>
         <label for="">Categorie</label>
-        {{ form_widget(form.categories) }}
-        {{ form_errors(form.categories) }}
+        {{ form_widget(form.categorie) }}
+        {{ form_errors(form.categorie) }}
     </div>
     <div>
         <label for="">Titre</label>
@@ -23,19 +23,20 @@
     </div>
     <div>
         <label for="">Description</label>
-        {{ form_widget(form.textedescriptif) }}
-        {{ form_errors(form.textedescriptif) }}
+        {{ form_widget(form.info) }}
+        {{ form_errors(form.info) }}
     </div>
     <div>
         <label for="">Prix</label>
         {{ form_widget(form.prix) }}
         {{ form_errors(form.prix) }}
     </div>
-    <div>
+
         <label for="">Image</label>
-        {{ form_widget(form.file) }}
-        {{ form_errors(form.file) }}
-    </div>
+        {{ form_widget(form.image) }}
+        {{ form_errors(form.image) }}
+
+    {#------------------------------------- boutton -------------------------------------#}
     {#{{ form_widget(form) }}#}
     <input type="submit" value="Create" class="btn btn-primary btn-info"/>
 

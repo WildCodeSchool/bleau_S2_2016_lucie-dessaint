@@ -16,21 +16,16 @@ LucieDesaintBundle\Entity\Produit:
             type: string
             length: 255
             nullable: true
-        Prix:
-            type: string
-            length: 255
-            nullable: true
-        Image:
-            type: string
-            length: 255
-            nullable: true
-        Alt:
+        prix:
             type: string
             length: 255
             nullable: true
 
     manyToOne:
-        categories:
+        categorie:
             targetEntity: Categories
+        image:
+            targetEntity: Images
+            cascade: ["persist", "remove"]
 
     lifecycleCallbacks: {  }

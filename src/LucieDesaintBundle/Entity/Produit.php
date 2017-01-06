@@ -18,70 +18,9 @@ class Produit
 //        return $this->categories;
 //    }
 
-//  FONCTION DE METHOD UPLOAD
-    public $file;
 
     /**
-     * @ORM\PrePersist
-     */
-    public function preUpload()
-    {
-        if (null !== $this->file) {
-            // do whatever you want to generate a unique name
-            $this->image = uniqid().'.'.$this->file->guessExtension();
-        }
-    }
-
-    /**
-     * @ORM\PostPersist
-     */
-    public function upload()
-    {
-        if (null === $this->file) {
-            return;
-        }
-
-        // if there is an error when moving the file, an exception will
-        // be automatically thrown by move(). This will properly prevent
-        // the entity from being persisted to the database on error
-        $this->file->move($this->getUploadRootDir(), $this->image);
-
-        unset($this->file);
-    }
-
-    /**
-     * @ORM\PostRemove
-     */
-    public function removeUpload()
-    {
-        if ($file = $this->getAbsolutePath()) {
-            unlink($file);
-        }
-    }
-
-//  FONCTION DE TEST DU DOSSIER UPLOAD
-    protected function getUploadDir()
-    {
-        return 'uploads/pictures';
-    }
-
-    protected function getUploadRootDir()
-    {
-        return __DIR__.'/../../../web/'.$this->getUploadDir();
-    }
-
-    public function getWebPath()
-    {
-        return null === $this->image ? null : $this->getUploadDir().'/'.$this->image;
-    }
-
-    public function getAbsolutePath()
-    {
-        return null === $this->image ? null : $this->getUploadRootDir().'/'.$this->image;
-    }
-
-    /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -93,13 +32,28 @@ class Produit
     /**
      * @var string
      */
-    private $textedescriptif;
+    private $info;
+
+    /**
+     * @var string
+     */
+    private $prix;
+
+    /**
+     * @var \LucieDesaintBundle\Entity\Categories
+     */
+    private $categorie;
+
+    /**
+     * @var \LucieDesaintBundle\Entity\Images
+     */
+    private $image;
 
 
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -129,69 +83,6 @@ class Produit
     {
         return $this->titre;
     }
-
-    /**
-     * Set textedescriptif
-     *
-     * @param string $textedescriptif
-     *
-     * @return Produit
-     */
-    public function setTextedescriptif($textedescriptif)
-    {
-        $this->textedescriptif = $textedescriptif;
-
-        return $this;
-    }
-
-    /**
-     * Get textedescriptif
-     *
-     * @return string
-     */
-    public function getTextedescriptif()
-    {
-        return $this->textedescriptif;
-    }
-    /**
-     * @var \LucieDesaintBundle\Entity\Categories
-     */
-    private $categories;
-
-
-    /**
-     * Set categories
-     *
-     * @param \LucieDesaintBundle\Entity\Categories $categories
-     *
-     * @return Produit
-     */
-    public function setCategories(\LucieDesaintBundle\Entity\Categories $categories = null)
-    {
-        $this->categories = $categories;
-
-        return $this;
-    }
-
-    /**
-     * Get categories
-     *
-     * @return \LucieDesaintBundle\Entity\Categories
-     */
-    public function getCategories()
-    {
-        return $this->categories;
-    }
-    /**
-     * @var string
-     */
-    private $info;
-
-    /**
-     * @var string
-     */
-    private $Prix;
-
 
     /**
      * Set info
@@ -226,7 +117,7 @@ class Produit
      */
     public function setPrix($prix)
     {
-        $this->Prix = $prix;
+        $this->prix = $prix;
 
         return $this;
     }
@@ -238,24 +129,43 @@ class Produit
      */
     public function getPrix()
     {
-        return $this->Prix;
+        return $this->prix;
     }
-    /**
-     * @var string
-     */
-    private $Image;
 
+    /**
+     * Set categorie
+     *
+     * @param \LucieDesaintBundle\Entity\Categories $categorie
+     *
+     * @return Produit
+     */
+    public function setCategorie(\LucieDesaintBundle\Entity\Categories $categorie = null)
+    {
+        $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    /**
+     * Get categorie
+     *
+     * @return \LucieDesaintBundle\Entity\Categories
+     */
+    public function getCategorie()
+    {
+        return $this->categorie;
+    }
 
     /**
      * Set image
      *
-     * @param string $image
+     * @param \LucieDesaintBundle\Entity\Images $image
      *
      * @return Produit
      */
-    public function setImage($image)
+    public function setImage(\LucieDesaintBundle\Entity\Images $image = null)
     {
-        $this->Image = $image;
+        $this->image = $image;
 
         return $this;
     }
@@ -263,39 +173,10 @@ class Produit
     /**
      * Get image
      *
-     * @return string
+     * @return \LucieDesaintBundle\Entity\Images
      */
     public function getImage()
     {
-        return $this->Image;
-    }
-    /**
-     * @var string
-     */
-    private $Alt;
-
-
-    /**
-     * Set alt
-     *
-     * @param string $alt
-     *
-     * @return Produit
-     */
-    public function setAlt($alt)
-    {
-        $this->Alt = $alt;
-
-        return $this;
-    }
-
-    /**
-     * Get alt
-     *
-     * @return string
-     */
-    public function getAlt()
-    {
-        return $this->Alt;
+        return $this->image;
     }
 }

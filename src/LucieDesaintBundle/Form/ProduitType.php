@@ -15,11 +15,10 @@ class ProduitType extends AbstractType
     {
         $builder
             ->add('titre')
-            ->add('textedescriptif')
+            ->add('info')
             ->add('prix')
-            ->add('categories')
-            ->add('file', 'file', array('label' => 'Image (fichier JPEG)', 'data_class' => null, 'required' => false))
-            ->add('alt')
+            ->add('categorie')
+            ->add('image', ImagesType::class)
         ;
     }
     
