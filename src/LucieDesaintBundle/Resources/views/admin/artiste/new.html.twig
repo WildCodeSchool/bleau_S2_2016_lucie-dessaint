@@ -5,14 +5,22 @@
     <div class="container">
         <h1>Artiste creation</h1>
 
-        {{ form_start(form) }}
-            {{ form_widget(form) }}
-            <input type="submit" value="Create" />
-        {{ form_end(form) }}
+        <label for="luciedesaintbundle_artiste_textback">image (fichier JPG)</label>
+        <input type="file" id="luciedesaintbundle_artiste_textback" name="luciedesaintbundle_artiste[textback]" style="width: 250px;">
 
-        <ul>
+        {#{{ form_start(form) }}#}
+            {#{{ form_widget(form) }}#}
+        {#{{ form_end(form) }}#}
+
+        <div><label for="luciedesaintbundle_artiste_textepresentation" class="required">Textepresentation</label>
+            <textarea id="luciedesaintbundle_artiste_textepresentation" name="luciedesaintbundle_artiste[textepresentation]"
+                      required="required"></textarea></div>
+
+        <input type="submit" value="Create" class="btn btn-primary btn-info"/>
+
+        <ul style="background-color: rgba(113, 102, 102, 0);">
             <li>
-                <a href="{{ path('artiste_index') }}">Back to the list</a>
+                <a href="{{ path('artiste_index') }}" class="btn btn-primary btn-info">Back to the list</a>
             </li>
         </ul>
     </div>

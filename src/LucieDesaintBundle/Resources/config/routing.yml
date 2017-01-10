@@ -18,6 +18,10 @@ lucie_desaint_artistes:
         path:     /artistes
         defaults: { _controller: LucieDesaintBundle:Default:artiste }
 
+#lucie_desaint_layout:
+#        path:     /admin
+#        defaults: { _controller: LucieDesaintBundle:Default:layout }
+
 #----------------------------route admin
 
 lucie_desaint_admin:

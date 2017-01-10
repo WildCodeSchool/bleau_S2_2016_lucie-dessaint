@@ -2,6 +2,8 @@
 
 {% block body %}
 
+
+
     <div class="rectangle">
         <h3 class="bienvenue">Entrez dans l'univers des bijoux</h3>
     </div>
@@ -46,5 +48,22 @@
             </figcaption>
         </figure>
 </div>
+
+    <style>
+        footer{
+            background-color: #464343;
+            width: 100%;
+            bottom: 0;
+            position: absolute;
+        }
+
+        @media screen and (max-width: 1347px) {
+
+            footer{
+                bottom: 0;
+                position: relative;
+            }
+        }
+    </style>
 
 {% endblock  %}

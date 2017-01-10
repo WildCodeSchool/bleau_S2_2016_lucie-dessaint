@@ -167,8 +167,8 @@ section:hover {
 footer{
     background-color: #464343;
     width: 100%;
-    bottom: 0;
-    position: absolute;
+    /*bottom: 0;*/
+    position: relative;
 }
 
 .copyright {
@@ -179,23 +179,6 @@ footer{
 .wild{
     font-weight: bolder;
     font-size: 1.1em;
-}
-
-.abonner{
-    text-align: center;
-    color: #FFFFFF;
-    font-size: 1.2em;
-}
-.condition{
-    text-align: center;
-}
-.condition h5{
-    padding: 15px;
-    color: #FFFFFF;
-    font-size: 0.90em;
-    border: 2px solid;
-    margin-top: 5%;
-    border-radius: 20px;
 }
 
 /*newsletter*/
@@ -302,7 +285,12 @@ h1{
 
 #envoyer{
     color: black;
+}
 
+.abonner{
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 /* fin newsletter*/
 
@@ -505,6 +493,8 @@ h1{
     /*opacity: 0.45;*/
 /*}*/
 
+
+
 /****************************************************************************************************
 ****************************************** fin Main  ******************************************
 ****************************************************************************************************/
@@ -517,7 +507,7 @@ h1{
 
     footer {
         background-color: #464343;
-        bottom: 0px;
+        /*bottom: 0px;*/
         position: relative;
     }
 }
@@ -529,7 +519,7 @@ h1{
     }
     footer {
         background-color: #464343;
-        bottom: 0px!important;
+        /*bottom: 0px!important;*/
         position: relative!important;
         height: 210px!important;
     }
@@ -580,6 +570,26 @@ h1{
     }
 }
 
+@media screen and (max-width:767px) {
+
+    .text-lucie{
+        width: 220px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 35px;
+    }
+
+    .bandeau2{
+        height: 270px;
+    }
+
+    .language-logo{
+        position: relative;
+        bottom: 95px;
+    }
+}
+
 @media screen and (max-width: 572px) {
     .row{
         bottom: 15px;
@@ -603,7 +613,7 @@ h1{
 
     .footer{
 
-        bottom: 0px;
+        /*bottom: 0px;*/
         position: relative;
     }
 }
@@ -616,7 +626,7 @@ h1{
 
     .footer{
 
-        bottom: 0px;
+        /*bottom: 0px;*/
         position: relative;
     }
 
@@ -711,7 +721,7 @@ h2{
 
     footer{
         background-color: #464343;
-        bottom: 0px;
+        /*bottom: 0px;*/
         position: absolute;
         margin-top: 20px!important;
         top: 45px!important;
@@ -720,8 +730,14 @@ h2{
     .globale-cadre5{
         margin-top: 25px!important;
     }
+}
 
+@media screen and (max-width: 767px){
+    #box{
+        position: absolute;
+        bottom: 75px;
 
+    }
 }
 
 
@@ -746,7 +762,7 @@ h2{
     flex-wrap: wrap;
 }
 
-.rectangle{
+.rectangle {
     width: 400px;
     background-color: black;
     position: relative;
@@ -819,8 +835,6 @@ figure {
         margin-left: auto!important;
         margin-right: auto!important;
     }
-
-
 }
 
 /****************************************************************************************************
@@ -891,7 +905,7 @@ figure.snip0015 {
     max-height: 400px;
     width: 100%;
     text-align: center;
-    border-radius: 18px;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.53);
 }
 
 figure.snip0015 * {
@@ -1014,11 +1028,11 @@ figure.snip0015:hover figcaption::before {
 
 
 
-.footer2{
-    width: 100%;
-    background-color: #ffffff;
-    height: 30px;
-}
+/*.footer{*/
+    /*width: 100%;*/
+    /*background-color: #ffffff;*/
+    /*height: 30px;*/
+/*}*/
 
 .circle {
     width: 190px;
@@ -1365,10 +1379,58 @@ figure.snip1085.hover .reverse {
 
 }
 
+@media screen and (max-width: 967px) {
+
+    .snip1085{
+        width: 97% !important;
+    }
+}
+
 /****************************************************************************************************
 ****************************************** fin Media queries page index  ****************************
 ****************************************************************************************************/
 
+/*----- PAGE Layout  ------
+
+-------------------*/
+
+/****************************************************************************************************
+************************ 2. Main ( Cette partie evolue sur chaque page) *******************
+****************************************************************************************************/
+
+.admin-index{
+    width: 100%;
+    margin: 0;
+    margin-right: 5em;
+    /*background-color: #13dcf1;*/
+    border: 2px solid #ffffff;
+    border-radius: 45px;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+    margin-top: 18px;
+}
+
+.navbar{
+    background-color: #13dcf1;
+    height: 85px;
+}
+
+/****************************************************************************************************
+****************************************** fin Main  ******************************************
+****************************************************************************************************/
+
+/****************************************************************************************************
+****************************************** Media queries page index  ********************************
+****************************************************************************************************/
+
+@media screen and (max-width: 415px) {
+
+}
+
+/****************************************************************************************************
+****************************************** fin Media queries page index  ****************************
+****************************************************************************************************/
 
 
 
