@@ -24,19 +24,31 @@
 
 {% block header %}
     <nav class="navbar navbar-default" role="navigation">
-        <div class="container">
+        <div class="container" class="visible-xs">
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="navbar-brand-centered">
-                <ul class="">
+            <div class="collapse navbar-collapse" id="navbar-brand-centered" >
+                <ul class="admin-index">
                     <a href="{{ path('artiste_index') }}" style="padding-right: 45px;">Artiste</a>
                     <a href="{{ path('produit_index') }}" style="padding-right: 45px;">Produits</a>
                     <a href="{{ path('categories_index') }}" style="padding-right: 45px;">Catégories</a>
                     <a href="{{ path('actualites_index') }}">Actualités</a>
                 </ul>
-
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
+
+    <section class="hidden-lg hidden-sm" class="visible-xs visible-sm">
+        <div class="logo-home">
+            <i class="fa fa-bars" aria-hidden="true" style="width: 40px; font-size: 40px; color: #ffffff"></i>
+        </div>
+        <ul>
+            <li><a href="{{ path('artiste_index') }}"">Artiste</a></li>
+            <li><a href="{{ path('produit_index') }}">Produits</a></li>
+            <li><a href="{{ path('categories_index') }}">Catégories</a></li>
+            <li><a href="{{ path('actualites_index') }}">Actualités</a></li>
+        </ul>
+    </section>
+
 {% endblock %}
 
 {% block body %}

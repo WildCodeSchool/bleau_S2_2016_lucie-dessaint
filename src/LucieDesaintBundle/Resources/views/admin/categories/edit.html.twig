@@ -1,21 +1,11 @@
-{% extends 'base.html.twig' %}
+{% extends '@LucieDesaint/admin/index.html.twig' %}
 
 {% block body %}
-    <h1>Category edit</h1>
 
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('categories_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+    </table>
+    <div style="width: 200px; border-radius: 45px;">
+        <a href="{{ path('produit_new') }}"class="btn btn-primary btn-info" style="
+                                       border-radius: 45px;">Nouveau produit
+        </a>
+    </div>
 {% endblock %}

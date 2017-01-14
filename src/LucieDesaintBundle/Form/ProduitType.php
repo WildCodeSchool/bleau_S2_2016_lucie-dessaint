@@ -21,7 +21,7 @@ class ProduitType extends AbstractType
             ->add('image', ImagesType::class)
         ;
     }
-    
+
     /**
      * {@inheritdoc}
      */

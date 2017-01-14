@@ -15,9 +15,6 @@ class ArtisteType extends AbstractType
     {
         $builder
             ->add('textepresentation', 'textarea')  //texte de presentation
-            ->add('textback', 'file', array('label' => 'image (fichier JPG)', 'data_class' => null, 'required' => null))           //insertion d'image
-            ->add('textback2')          //nom de l'image à inserer
-
         ;
     }
     

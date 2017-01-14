@@ -1,5 +1,4 @@
-{% extends 'base.html.twig' %}
-
+{% extends '@LucieDesaint/admin/index.html.twig' %}
 {% block body %}
 
     <div class="container">
@@ -8,20 +7,20 @@
         <label for="luciedesaintbundle_artiste_textback">image (fichier JPG)</label>
         <input type="file" id="luciedesaintbundle_artiste_textback" name="luciedesaintbundle_artiste[textback]" style="width: 250px;">
 
-        {#{{ form_start(form) }}#}
-            {#{{ form_widget(form) }}#}
-        {#{{ form_end(form) }}#}
-
-        <div><label for="luciedesaintbundle_artiste_textepresentation" class="required">Textepresentation</label>
-            <textarea id="luciedesaintbundle_artiste_textepresentation" name="luciedesaintbundle_artiste[textepresentation]"
-                      required="required"></textarea></div>
-
+        {{ form_start(form) }}
+                {#{{ form_widget(form) }}#}
         <input type="submit" value="Create" class="btn btn-primary btn-info"/>
 
+        {{ form_end(form) }}
+
+        {#<div><label for="luciedesaintbundle_artiste_textepresentation" class="required">Textepresentation</label>#}
+            {#<textarea id="luciedesaintbundle_artiste_textepresentation" name="luciedesaintbundle_artiste[textepresentation]"#}
+                      {#required="required"></textarea></div>#}
         <ul style="background-color: rgba(113, 102, 102, 0);">
             <li>
                 <a href="{{ path('artiste_index') }}" class="btn btn-primary btn-info">Back to the list</a>
             </li>
         </ul>
+
     </div>
 {% endblock %}

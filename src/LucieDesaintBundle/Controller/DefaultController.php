@@ -16,14 +16,24 @@ class DefaultController extends Controller
         return $this->render('@LucieDesaint/Default/art.html.twig');
     }
 
-    public function bijouxAction()
-    {
-        return $this->render('@LucieDesaint/Default/bijoux.html.twig');
+    public function bijouxAction() {
+
+        $em = $this->getDoctrine()->getManager();
+        $produits = $em->getRepository('LucieDesaintBundle:Produit')->findAll();
+
+        return $this->render('@LucieDesaint/Default/bijoux.html.twig', array(
+            'produits' => $produits,
+        ));
     }
 
-    public function artisteAction()
-    {
-        return $this->render('@LucieDesaint/Default/artiste.html.twig');
+    public function artisteAction(){
+
+        $em = $this->getDoctrine()->getManager();
+        $artistes = $em->getRepository('LucieDesaintBundle:Artiste')->findAll();
+
+        return $this->render('@LucieDesaint/Default/artiste.html.twig', array(
+            'artistes' => $artistes,
+        ));
     }
 
     public function contactAction()

@@ -59,7 +59,7 @@ class CategoriesController extends Controller
     {
         $deleteForm = $this->createDeleteForm($category);
 
-        return $this->render('categories/show.html.twig', array(
+        return $this->render('@LucieDesaint/admin/categories/show.html.twig', array(
             'category' => $category,
             'delete_form' => $deleteForm->createView(),
         ));

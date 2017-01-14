@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends '@LucieDesaint/admin/index.html.twig' %}
 
 
 
@@ -107,11 +107,11 @@
                 </div>
 
             <th style="text-align: center">
-                <div><input type="file" id="luciedesaintbundle_produit_image_file"
-                            name="luciedesaintbundle_produit[image][file]" style="display: block;
-                            margin-right: auto;margin-left: auto; width: 299px;">
-                    {#{{ form_widget(edit_form.image) }}#}
-                {#{{ form_errors(edit_form.image) }}#}
+                {#<div><input type="file" id="luciedesaintbundle_produit_image_file"#}
+                            {#name="luciedesaintbundle_produit[image][file]" style="display: block;#}
+                            {#margin-right: auto;margin-left: auto; width: 299px;">#}
+                    {{ form_widget(edit_form.image) }}
+                {{ form_errors(edit_form.image) }}
                 </div>
             </th>
         </tr>
@@ -164,9 +164,8 @@
             <input type="text" id="luciedesaintbundle_produit_prix" name="luciedesaintbundle_produit[prix]" maxlength="255"
                    value="fzefzef" style="width: 90%;">
         </td>
-
          {#{{ form_widget(edit_form.prix) }}#}
-            {#{{ form_errors(edit_form.prix) }}#}
+         {#{{ form_errors(edit_form.prix) }}#}
         </tbody>
     </table>
     <div style="width: 200px; border-radius: 45px;">
@@ -248,6 +247,13 @@
     {#</div>#}
 
     {#<h1>Produit edit</h1>#}
+<div class="container">
+    {{ form_start(edit_form) }}
+    {{ form_start(edit_form) }}
+    <input type="submit" value="Edit" />
+    {{ form_end(edit_form) }}
+</div>
+
 
     {#{{ form_start(edit_form) }}#}
         {#{{ form_widget(edit_form) }}#}

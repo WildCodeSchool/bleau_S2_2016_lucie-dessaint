@@ -14,8 +14,8 @@ class CategoriesType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('src')
-            ->add('alt')        ;
+            ->add('label')
+                 ;
     }
     
     /**

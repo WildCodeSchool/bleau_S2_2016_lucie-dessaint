@@ -81,7 +81,7 @@ class ActualitesController extends Controller
             return $this->redirectToRoute('actualites_edit', array('id' => $actualite->getId()));
         }
 
-        return $this->render('@LucieDesaint/admin/categories/edit.html.twig', array(
+        return $this->render('@LucieDesaint/admin/actualites/edit.html.twig', array(
             'actualite' => $actualite,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

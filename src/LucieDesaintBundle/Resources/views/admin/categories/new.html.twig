@@ -1,17 +1,17 @@
-{% extends 'base.html.twig' %}
+{% extends '@LucieDesaint/admin/index.html.twig' %}
 
 {% block body %}
     <div class="container">
-        <h1>Category creation</h1>
+        <h1 style="color: #33b5e5; font-weight:bolder ">Categorie creation</h1>
 
         {{ form_start(form) }}
             {{ form_widget(form) }}
-            <input type="submit" value="Create" />
+            <input type="submit" value="Create" class="btn btn-primary btn-info"/>
         {{ form_end(form) }}
 
-        <ul>
+        <ul style="background-color: rgba(113, 102, 102, 0);">
             <li>
-                <a href="{{ path('categories_index') }}">Back to the list</a>
+                <a href="{{ path('categories_index') }}" class="btn btn-primary btn-info">Back to the list</a>
             </li>
         </ul>
     </div>
