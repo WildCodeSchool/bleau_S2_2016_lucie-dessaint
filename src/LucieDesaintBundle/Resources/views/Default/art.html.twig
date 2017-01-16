@@ -3,69 +3,74 @@
 {% block body %}
 
 {#{{ dump(tableaux) }}#}
+
     <div class="rectangle">
         <h3 class="bienvenue">Entrez dans l'univers de la peinture</h3>
     </div>
     <div class="globale-produit">
-        <figure class="snip0015">
-            <img src="{{ asset('bundles/luciedesaint/images/tableau.png') }}" alt="sample38"/>
-            <figcaption>
-                <h2>Tableau n°1</h2>
-                <p class="produit">Jolie bague torsadée en or massif .</p>
-                <p class="prix">100 €</p>
-                <a href="#"></a>
-            </figcaption>
-        </figure>
-
-        <figure class="snip0015">
-            <img src="{{ asset('bundles/luciedesaint/images/tableau2.png') }}" alt="sample38"/>
-            <figcaption>
-                <h2>Tableau n°1</h2>
-                <p class="produit">Jolie bague torsadée en or massif .</p>
-                <p class="prix">100 €</p>
-                <a href="#"></a>
-            </figcaption>
-        </figure>
-
-        <figure class="snip0015">
-            <img src="{{ asset('bundles/luciedesaint/images/tableau3.png') }}" alt="sample38"/>
-            <figcaption>
-                <h2>Tableau n°1</h2>
-                <p class="produit">Jolie bague torsadée en or massif .</p>
-                <p class="prix">100 €</p>
-                <a href="#"></a>
-            </figcaption>
-        </figure>
+        {% for produit in produits %}
+            <figure class="snip0015">
+                <img class="art-image" src="{{ asset(produit.image.src) }}" alt="{{ produit.image.alt }}"/>
+                <figcaption>
+                    <h2 class="art-titre">{{ produit.titre }}</h2>
+                    <p class="produit">{{ produit.info }}</p>
+                    <p class="prix">{{ produit.prix }}</p>
+                    <a href="#"></a>
+                </figcaption>
+            </figure>
+        {% endfor %}
 
 
-        <figure class="snip0015">
-            <img src="{{ asset('bundles/luciedesaint/images/red-tableau.jpg') }}" alt="sample38"/>
-            <figcaption>
-                <h2>Tableau n°1</h2>
-                <p class="produit">Jolie bague torsadée en or massif .</p>
-                <p class="prix">100 €</p>
-                <a href="#"></a>
-            </figcaption>
-        </figure>
+        {#<figure class="snip0015">#}
+            {#<img src="{{ asset('bundles/luciedesaint/images/tableau2.png') }}" alt="sample38"/>#}
+            {#<figcaption>#}
+                {#<h2>Tableau n°1</h2>#}
+                {#<p class="produit">Jolie bague torsadée en or massif .</p>#}
+                {#<p class="prix">100 €</p>#}
+                {#<a href="#"></a>#}
+            {#</figcaption>#}
+        {#</figure>#}
 
-    </div>
+        {#<figure class="snip0015">#}
+            {#<img src="{{ asset('bundles/luciedesaint/images/tableau3.png') }}" alt="sample38"/>#}
+            {#<figcaption>#}
+                {#<h2>Tableau n°1</h2>#}
+                {#<p class="produit">Jolie bague torsadée en or massif .</p>#}
+                {#<p class="prix">100 €</p>#}
+                {#<a href="#"></a>#}
+            {#</figcaption>#}
+        {#</figure>#}
 
-    <style>
-        footer{
-            background-color: #464343;
-            width: 100%;
-            bottom: 0;
-            position: absolute;
-        }
 
-        @media screen and (max-width: 1347px) {
+        {#<figure class="snip0015">#}
+            {#<img src="{{ asset('bundles/luciedesaint/images/red-tableau.jpg') }}" alt="sample38"/>#}
+            {#<figcaption>#}
+                {#<h2>Tableau n°1</h2>#}
+                {#<p class="produit">Jolie bague torsadée en or massif .</p>#}
+                {#<p class="prix">100 €</p>#}
+                {#<a href="#"></a>#}
+            {#</figcaption>#}
+        {#</figure>#}
 
-            footer{
-                bottom: 0;
-                position: relative;
-            }
-        }
-    </style>
+
+</div>
+
+    {#<style>#}
+        {#footer{#}
+            {#background-color: #464343;#}
+            {#width: 100%;#}
+            {#bottom: 0;#}
+            {#position: absolute;#}
+        {#}#}
+
+        {#@media screen and (max-width: 1347px) {#}
+
+            {#footer{#}
+                {#bottom: 0;#}
+                {#position: relative;#}
+            {#}#}
+        {#}#}
+    {#</style>#}
 
 
         {#<div class="item">#}

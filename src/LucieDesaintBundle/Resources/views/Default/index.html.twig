@@ -4,7 +4,9 @@
 
    <main role="main">
        <div class="marquee">
-           <span style="font-size: 20px">Bienvenue sur mon site, je suis artiste plasticienne et professeur d'art à Paris.</span>
+           {% for actualite in actualites %}
+           <span style="font-size: 20px">{{ actualite.text }}</span>
+           {% endfor %}
        </div>
 
      <div class="images_index">
@@ -37,10 +39,6 @@
                  <a href="{{ path('lucie_desaint_artistes') }}"></a>
              </figure>
          </div>
-
-         {#<a href="{{ path('lucie_desaint_art') }}"><img src="{{ asset('bundles/luciedesaint/images/portrait-double.png') }}" class="cadre-photo2 hvr-grow"></a>#}
-         {#<a href="{{ path('lucie_desaint_bijoux') }}"><img src="{{ asset('bundles/luciedesaint/images/portrait-double2.png') }}" class="cadre-photo1 hvr-grow"></a>#}
-         {#<a href="{{ path('lucie_desaint_artistes') }}"><img src="{{ asset('bundles/luciedesaint/images/photo-lucie.png') }}" class="cadre-photo3 hvr-grow"></a>#}
      </div>
 
    </main>

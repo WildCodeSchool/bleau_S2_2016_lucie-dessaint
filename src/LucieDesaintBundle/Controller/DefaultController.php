@@ -6,20 +6,32 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-    public function indexAction()
-    {
-        return $this->render('LucieDesaintBundle:Default:index.html.twig');
+    public function indexAction() {
+
+        $em = $this->getDoctrine()->getManager();
+        $actualites = $em->getRepository('LucieDesaintBundle:Actualites')->findAll();
+
+        return $this->render('LucieDesaintBundle:Default:index.html.twig', array(
+            'actualites' => $actualites,
+        ));
     }
 
-    public function artAction()
-    {
-        return $this->render('@LucieDesaint/Default/art.html.twig');
+    public function artAction() {
+
+        $em = $this->getDoctrine()->getManager();
+        $categorie = $em->getRepository('LucieDesaintBundle:Categories')->findOneByLabel('tableau');
+        $produits = $em->getRepository('LucieDesaintBundle:Produit')->findByCategorie($categorie);
+
+        return $this->render('@LucieDesaint/Default/art.html.twig', array(
+            'produits' => $produits,
+        ));
     }
 
     public function bijouxAction() {
 
         $em = $this->getDoctrine()->getManager();
-        $produits = $em->getRepository('LucieDesaintBundle:Produit')->findAll();
+        $categorie = $em->getRepository('LucieDesaintBundle:Categories')->findOneByLabel('bijoux');
+        $produits = $em->getRepository('LucieDesaintBundle:Produit')->findByCategorie($categorie);
 
         return $this->render('@LucieDesaint/Default/bijoux.html.twig', array(
             'produits' => $produits,

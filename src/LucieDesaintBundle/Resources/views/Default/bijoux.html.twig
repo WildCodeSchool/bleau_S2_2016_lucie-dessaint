@@ -2,55 +2,54 @@
 
 {% block body %}
 
-
-
-    <div class="rectangle">
-        <h3 class="bienvenue">Entrez dans l'univers des bijoux</h3>
-    </div>
-    <div class="globale-bijoux" class="fadeInDown">
-    {% for produit in produits %}
-        <figure class="snip0015">
-            {#<img src="{{ asset('bundles/luciedesaint/images/bague2.png') }}" alt="sample38"/>#}
-            <img src="{{ asset('{{ form_widget(edit_form.image) }}') }}" alt="sample38"/>
-            <figcaption>
-                <h2 class="titre-produit">{{ produit.titre }}</h2>
-                <p class="produit">{{ produit.info }}</p>
-                <p class="prix"></p>
-                <a href="#"></a>
-            </figcaption>
-        </figure>
+        <div class="rectangle">
+            <h3 class="bienvenue">Entrez dans l'univers des bijoux</h3>
+        </div>
+        <div class="globale-bijoux" class="fadeInDown">
+        {% for produit in produits %}
+            <figure class="snip0015">
+                <img src="{{ asset(produit.image.src) }}" alt="{{ produit.image.alt }}"/>
+                <figcaption>
+                    <h2 class="titre-produit">{{ produit.titre }}</h2>
+                    <p class="produit">{{ produit.info }}</p>
+                    <p class="prix"> {{ produit.prix }}</p>
+                </figcaption>
+            </figure>
     {% endfor %}
+            </div>
 
-        <figure class="snip0015">
-            <img src="{{ asset('bundles/luciedesaint/images/bague2.png') }}" alt="sample38"/>
-            <figcaption>
-                <h2 class="titre-produit">Bague n°1</h2>
-                <p class="produit">Jolie bague torsadée en or massif .</p>
-                <p class="prix">100 €</p>
-                <a href="#"></a>
-            </figcaption>
-        </figure>
+        {#<figure class="snip0015">#}
+            {#<img src="{{ asset('bundles/luciedesaint/images/bague2.png') }}" alt="sample38"/>#}
+            {#<figcaption>#}
+                {#<h2 class="titre-produit">Bague n°1</h2>#}
+                {#<p class="produit">Jolie bague torsadée en or massif .</p>#}
+                {#<p class="prix">100 €</p>#}
+                {#<a href="#"></a>#}
+            {#</figcaption>#}
+        {#</figure>#}
 
-        <figure class="snip0015">
-            <img src="{{ asset('bundles/luciedesaint/images/bague2.png') }}" alt="sample38"/>
-            <figcaption>
-                <h2 class="titre-produit">Bague n°1</h2>
-                <p class="produit">Jolie bague torsadée en or massif .</p>
-                <p class="prix">100 €</p>
-                <a href="#"></a>
-            </figcaption>
-        </figure>
+        {#<figure class="snip0015">#}
+            {#<img src="{{ asset('bundles/luciedesaint/images/bague2.png') }}" alt="sample38"/>#}
+            {#<figcaption>#}
+                {#<h2 class="titre-produit">Bague n°1</h2>#}
+                {#<p class="produit">Jolie bague torsadée en or massif .</p>#}
+                {#<p class="prix">100 €</p>#}
+                {#<a href="#"></a>#}
+            {#</figcaption>#}
+        {#</figure>#}
 
-        <figure class="snip0015">
-            <img src="{{ asset('bundles/luciedesaint/images/bague2.png') }}" alt="sample38"/>
-            <figcaption>
-                <h2 class="titre-produit">Bague n°1</h2>
-                <p class="produit">Jolie bague torsadée en or massif .</p>
-                <p class="prix">100 €</p>
-                <a href="#"></a>
-            </figcaption>
-        </figure>
-</div>
+        {#<figure class="snip0015">#}
+            {#<img src="{{ asset('bundles/luciedesaint/images/bague2.png') }}" alt="sample38"/>#}
+            {#<figcaption>#}
+                {#<h2 class="titre-produit">Bague n°1</h2>#}
+                {#<p class="produit">Jolie bague torsadée en or massif .</p>#}
+                {#<p class="prix">100 €</p>#}
+                {#<a href="#"></a>#}
+            {#</figcaption>#}
+        {#</figure>#}
+{#</div>#}
+
+
 
     <style>
         footer{

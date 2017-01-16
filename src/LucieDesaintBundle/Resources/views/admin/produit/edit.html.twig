@@ -65,119 +65,119 @@
 
     {#----------------------------------------------------- Section Categorie -----------------------------------------------------#}
 
-    <table class="table table-striped table-bordered ">
+    {#<table class="table table-striped table-bordered ">#}
         {#------------------------------------- champs 2 -------------------------------------#}
 
-        <div style="text-align: center;
-            font-size: 25px; font-weight: bold; padding-top: 45px;">Categorie</div>
+        {#<div style="text-align: center;#}
+            {#font-size: 25px; font-weight: bold; padding-top: 45px;">Categorie</div>#}
         {#------------------------------------- champs 2 -------------------------------------#}
-        <tbody>
+        {#<tbody>#}
         {#----- correspond au Categorie-----#}
 
-        <td style="text-align: center; ">
+        {#<td style="text-align: center; ">#}
 
-            <select id="luciedesaintbundle_produit_categorie" name="luciedesaintbundle_produit[categorie]" style="width: 100%;
-        padding-bottom: 20px;
-        color: black;
-        font-size: 20px;
-        font-weight: bold;">
-                <option value=""></option><option value="1" selected="selected">tableau</option><option value="2">bijoux</option>
-            </select>
+            {#<select id="luciedesaintbundle_produit_categorie" name="luciedesaintbundle_produit[categorie]" style="width: 100%;#}
+        {#padding-bottom: 20px;#}
+        {#color: black;#}
+        {#font-size: 20px;#}
+        {#font-weight: bold;">#}
+                {#<option value=""></option><option value="1" selected="selected">tableau</option><option value="2">bijoux</option>#}
+            {#</select>#}
 
 
-        </td>
+        {#</td>#}
         {#{{ form_widget(edit_form.categorie) }}#}
         {#{{ form_errors(edit_form.categorie) }}#}
-        </tbody>
-    </table>
+        {#</tbody>#}
+    {#</table>#}
 
     {#----------------------------------------------------- Section Images -----------------------------------------------------#}
 
-    <table class="table table-striped table-bordered ">
+    {#<table class="table table-striped table-bordered ">#}
         {#------------------------------------- champs 2 -------------------------------------#}
 
-            <div style="text-align: center;
-            font-size: 25px; font-weight: bold; padding-top: 45px;">Image</div>
+            {#<div style="text-align: center;#}
+            {#font-size: 25px; font-weight: bold; padding-top: 45px;">Image</div>#}
         {#------------------------------------- champs 2 -------------------------------------#}
-        <tbody>
+        {#<tbody>#}
 
         {#----- correspond à l'image -----#}
-        <tr>
-            <th style="text-align: center">
-                </div>
+        {#<tr>#}
+            {#<th style="text-align: center">#}
+                {#</div>#}
 
-            <th style="text-align: center">
+            {#<th style="text-align: center">#}
                 {#<div><input type="file" id="luciedesaintbundle_produit_image_file"#}
                             {#name="luciedesaintbundle_produit[image][file]" style="display: block;#}
                             {#margin-right: auto;margin-left: auto; width: 299px;">#}
-                    {{ form_widget(edit_form.image) }}
-                {{ form_errors(edit_form.image) }}
-                </div>
-            </th>
-        </tr>
-        </tbody>
-    </table>
+                    {#{{ form_widget(edit_form.image) }}#}
+                {#{{ form_errors(edit_form.image) }}#}
+                {#</div>#}
+            {#</th>#}
+        {#</tr>#}
+        {#</tbody>#}
+    {#</table>#}
     {#----------------------------------------------------- Section Titre -----------------------------------------------------#}
 
-    <table class="table table-striped table-bordered ">
+    {#<table class="table table-striped table-bordered ">#}
         {#------------------------------------- champs 2 -------------------------------------#}
 
-        <div style="text-align: center;
-            font-size: 25px; font-weight: bold; padding-top: 45px;">Titre</div>
+        {#<div style="text-align: center;#}
+            {#font-size: 25px; font-weight: bold; padding-top: 45px;">Titre</div>#}
         {#------------------------------------- champs 2 -------------------------------------#}
-        <tbody>
-        <tr>
-            <th style="text-align: center">
+        {#<tbody>#}
+        {#<tr>#}
+            {#<th style="text-align: center">#}
                 {#----- correspond à l'titre -----#}
-                <td style="text-align: center">{{ produit.titre }}</td>
-            </th>
-        </tr>
-        </tbody>
-    </table>
+                {#<td style="text-align: center">{{ produit.titre }}</td>#}
+            {#</th>#}
+        {#</tr>#}
+        {#</tbody>#}
+    {#</table>#}
     {#----------------------------------------------------- Section Description -----------------------------------------------------#}
 
-    <table class="table table-striped table-bordered ">
+    {#<table class="table table-striped table-bordered ">#}
         {#------------------------------------- champs 2 -------------------------------------#}
 
-        <div style="text-align: center;
-            font-size: 25px; font-weight: bold; padding-top: 45px;">Description</div>
+        {#<div style="text-align: center;#}
+            {#font-size: 25px; font-weight: bold; padding-top: 45px;">Description</div>#}
         {#------------------------------------- champs 2 -------------------------------------#}
-        <tbody>
+        {#<tbody>#}
         {#----- correspond au descriptif -----#}
-        <td style="text-align: center"> {#{{ form_widget(edit_form.info) }} {{ form_errors(edit_form.info) }}#}
-        <input type="text" id="luciedesaintbundle_produit_info" name="luciedesaintbundle_produit[info]"
-        maxlength="255" style="width: 90%;">
-        </tbody>
-    </table>
+        {#<td style="text-align: center"> #}{#{{ form_widget(edit_form.info) }} {{ form_errors(edit_form.info) }}#}
+        {#<input type="text" id="luciedesaintbundle_produit_info" name="luciedesaintbundle_produit[info]"#}
+        {#maxlength="255" style="width: 90%;">#}
+        {#</tbody>#}
+    {#</table>#}
     {#----------------------------------------------------- Section Prix -----------------------------------------------------#}
 
-    <table class="table table-striped table-bordered ">
+    {#<table class="table table-striped table-bordered ">#}
         {#------------------------------------- champs 2 -------------------------------------#}
 
-        <div style="text-align: center;
-            font-size: 25px; font-weight: bold; padding-top: 45px;">Prix</div>
+        {#<div style="text-align: center;#}
+            {#font-size: 25px; font-weight: bold; padding-top: 45px;">Prix</div>#}
         {#------------------------------------- champs 2 -------------------------------------#}
-        <tbody>
+        {#<tbody>#}
         {#----- correspond au Prix -----#}
 
-        <td style="text-align: center; ">
-            <input type="text" id="luciedesaintbundle_produit_prix" name="luciedesaintbundle_produit[prix]" maxlength="255"
-                   value="fzefzef" style="width: 90%;">
-        </td>
+        {#<td style="text-align: center; ">#}
+            {#<input type="text" id="luciedesaintbundle_produit_prix" name="luciedesaintbundle_produit[prix]" maxlength="255"#}
+                   {#value="fzefzef" style="width: 90%;">#}
+        {#</td>#}
          {#{{ form_widget(edit_form.prix) }}#}
          {#{{ form_errors(edit_form.prix) }}#}
-        </tbody>
-    </table>
-    <div style="width: 200px; border-radius: 45px;">
-        </td>
+        {#</tbody>#}
+    {#</table>#}
+    {#<div style="width: 200px; border-radius: 45px;">#}
+        {#</td>#}
         {#----- correspond au Action -----#}
-        {{ form_start(delete_form) }}
-        <input type="submit" value="Delete" class="btn btn-primary btn-info">
-        {{ form_end(delete_form) }}
-        <a href="{{ path('produit_index') }}" class="btn btn-primary btn-info">Retour à la liste</a>
-        </td>
+        {#{{ form_start(delete_form) }}#}
+        {#<input type="submit" value="Delete" class="btn btn-primary btn-info">#}
+        {#{{ form_end(delete_form) }}#}
+        {#<a href="{{ path('produit_index') }}" class="btn btn-primary btn-info">Retour à la liste</a>#}
+        {#</td>#}
 
-    </div>
+    {#</div>#}
 
 
 
@@ -250,7 +250,7 @@
 <div class="container">
     {{ form_start(edit_form) }}
     {{ form_start(edit_form) }}
-    <input type="submit" value="Edit" />
+    <input type="submit" value="valider" class="btn btn-primary btn-default"/>
     {{ form_end(edit_form) }}
 </div>
 
