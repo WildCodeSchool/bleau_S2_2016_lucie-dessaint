@@ -10,7 +10,7 @@
         {#------------------------------------- champs 2 -------------------------------------#}
         <thead>
             <tr>
-                <th style="width: 200px; text-align: center">ID</th>
+                {#<th style="width: 200px; text-align: center">ID</th>#}
                 <th style="text-align: center">Titre</th>
                 <th style=" text-align: center">Descriptif </th>
                 <th style="text-align: center" class="visible-lg">Action</th>
@@ -20,7 +20,7 @@
         <tbody>
         {% for produit in produits %}
             <tr>
-                <th style="text-align: center"><a href="{{ path('produit_show', { 'id': produit.id }) }}">{{ produit.id }}</a></th> {#----- correspond à l'Id -----#}
+                {#<th style="text-align: center"><a href="{{ path('produit_show', { 'id': produit.id }) }}">{{ produit.id }}</a></th> #}{#----- correspond à l'Id -----#}
                 <td style="text-align: center">{{ produit.titre }}</td> {#----- correspond au titre -----#}
                 <td style="text-align: center">{{ produit.info }}</td> {#----- correspond au descriptif -----#}
                 <td style="text-align: center"><a href="{{ path('produit_show', { 'id': produit.id }) }}"class="btn btn-primary btn-info">Aperçu</a>

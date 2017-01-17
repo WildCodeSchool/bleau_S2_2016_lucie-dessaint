@@ -13,8 +13,15 @@
 ****************************************************************************************************/
 
 /***************** 2. Navigation ****************/
-body{
-   height: 100%;
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 .english-coeur, .french-coeur{
@@ -162,8 +169,7 @@ section:hover {
 footer{
     background-color: #464343;
     width: 100%;
-    /*bottom: 0;*/
-    position: relative;
+
 }
 
 .copyright {
@@ -500,14 +506,6 @@ h1{
 ****************************************** Media queries page index  ********************************
 ****************************************************************************************************/
 
-@media screen and (max-width: 1348px) {
-
-    footer {
-        background-color: #464343;
-        /*bottom: 0px;*/
-        position: relative;
-    }
-}
 
 @media screen and (max-width: 991px) {
     .icon {
@@ -515,9 +513,6 @@ h1{
         position: relative;
     }
     footer {
-        background-color: #464343;
-        /*bottom: 0px!important;*/
-        position: relative!important;
         height: 210px!important;
     }
 }
@@ -545,8 +540,6 @@ h1{
 
     footer{
         height: 165px;
-        position: relative;
-        bottom: 0px;
     }
 
     .row{
@@ -607,25 +600,9 @@ h1{
     .marquee {
         width: 350px;
     }
-
-    .footer{
-
-        /*bottom: 0px;*/
-        position: relative;
-    }
 }
 
 @media screen and (max-width: 434px) {
-
-    .marquee {
-        width: 350px;
-    }
-
-    .footer{
-
-        /*bottom: 0px;*/
-        position: relative;
-    }
 
     .cadre-photo2 {
         width: 95%;
@@ -713,14 +690,6 @@ h2{
     #box{
 
         margin-bottom: 80px;
-    }
-
-    footer{
-        background-color: #464343;
-        /*bottom: 0px;*/
-        position: absolute;
-        margin-top: 20px!important;
-        top: 45px!important;
     }
 
     .globale-cadre5{
@@ -1207,171 +1176,6 @@ figure.snip1085.hover .reverse {
     -webkit-transition-delay: 0.3s;
     transition-delay: 0.3s;
 }
-
-
-/*.fond{*/
-    /*height: 400px;*/
-    /*width: 100%;*/
-/*}*/
-
-
-/*#conteneur3D {*/
-    /*-webkit-perspective : 600px;*/
-    /*-moz-perspective : 600px;*/
-    /*perspective : 1000px;*/
-    /*position: absolute;*/
-    /*left: 500px;*/
-    /*top:325px;*/
-/*}*/
-
-/*#conteneur3D #carte {*/
-    /*-webkit-transform-origin : 50% 50% 30px;*/
-    /*-webkit-transform : rotateY(0);*/
-    /*-webkit-transform-style : preserve-3d;*/
-    /*-webkit-transition : all 1s ease;*/
-    /*-moz-transform-origin : 50% 50% 30px;*/
-    /*-moz-transform : rotateY(0);*/
-    /*-moz-transform-style : preserve-3d;*/
-    /*-moz-transition : all 1s ease;*/
-    /*transform-origin : 50% 50% 30px;*/
-    /*transform : rotateY(0);*/
-    /*transform-style : preserve-3d;*/
-    /*transition : all 1s ease;*/
-    /*align-items:center;*/
-/*}*/
-
-
-/*#conteneur3D:hover #carte {*/
-    /*-webkit-transform : rotateY(180deg);*/
-    /*-moz-transform : rotateY(180deg);*/
-    /*transform : rotateY(180deg);*/
-    /*cursor : pointer;*/
-    /*align-items:center;*/
-/*}*/
-
-/*#carte,  .back {*/
-    /*position : absolute;*/
-    /*height : 400px;*/
-    /*width : 900px;*/
-    /*background-color : #464343;*/
-    /*-webkit-backface-visibility : hidden;*/
-    /*-moz-backface-visibility : hidden;*/
-    /*backface-visibility : visible;*/
-/*}*/
-
-/*#carte div:first-child {*/
-    /*-webkit-transform : rotateY(180deg);*/
-    /*-moz-transform : rotateY(180deg);*/
-    /*transform : rotateY(180deg);*/
-/*}*/
-
-/*!*------------------- Partie back card --------------------*!*/
-
-/*.fond{*/
-    /*height: 400px;*/
-    /*width: 100%;*/
-/*}*/
-
-/*.circle2{*/
-    /*width: 125px;*/
-    /*background-color: black;*/
-    /*border-bottom: 5px solid #715437;*/
-    /*height: 125px;*/
-    /*position: absolute;*/
-    /*border-radius: 100px;*/
-    /*left: 385px;*/
-    /*top: 10px;*/
-    /*overflow: hidden;*/
-/*}*/
-
-/*.black{*/
-    /*width: 100%;*/
-    /*height: 95px;*/
-    /*background-color: black;*/
-    /*border-bottom: 5px solid #715437;*/
-    /*bottom: 400px;*/
-    /*position: relative;*/
-/*}*/
-
-/*.text-1{*/
-    /*position: relative;*/
-    /*bottom: 380px;*/
-    /*color: #ffffff;*/
-    /*font-size: 1.2em;*/
-    /*text-align: center;*/
-/*}*/
-/*!*------------------- Partie front card --------------------*!*/
-
-/*span{*/
-    /*top: 160px;*/
-    /*position: relative;*/
-/*}*/
-
-/*.text-presentation1{*/
-    /*width: 455px;*/
-    /*float: right;*/
-    /*height: 400px;*/
-    /*font-weight: bold;*/
-    /*text-align: center;*/
-    /*font-size: 1.4em;*/
-/*}*/
-
-/*.cadre-front{*/
-    /*background-color: #cbcbcb;*/
-    /*width: 455px;*/
-    /*float: right;*/
-    /*height: 360px;*/
-/*}*/
-
-/*.Ensavoirplus{*/
-    /*float: right;*/
-    /*text-align: center;*/
-    /*position: absolute;*/
-    /*bottom: 95px;*/
-    /*width: 150px;*/
-    /*border-bottom: 2px solid #ffffff;*/
-    /*border-top: 2px solid #ffffff;*/
-    /*border-right: 2px solid #ffffff;*/
-    /*border-left: 2px solid #ffffff;*/
-    /*height:30px;*/
-/*}*/
-
-/*.contour{*/
-    /*width: 400px;*/
-    /*height: 360px;*/
-    /*border: 2px solid black;*/
-    /*float: right;*/
-    /*position: relative;*/
-    /*right: 23px;*/
-    /*bottom: 43px;*/
-/*}*/
-
-/*.circle{*/
-    /*width: 190px;*/
-    /*background-color: black;*/
-    /*border: 5px solid #715437;*/
-    /*height: 190px;*/
-    /*position: absolute;*/
-    /*border-radius: 100px;*/
-    /*left: 125px;*/
-    /*top: 85px;*/
-    /*overflow: hidden;*/
-/*}*/
-
-/*.lucie{*/
-    /*width: 100%;*/
-    /*text-align: center;*/
-    /*color: white;*/
-    /*position: relative;*/
-    /*top: 305px;*/
-    /*font-size: 30px;*/
-    /*font-family: 'Dancing Script', cursive;*/
-/*}*/
-
-/*.photo-lucie{*/
-    /*width: 200px;*/
-/*}*/
-
 /****************************************************************************************************
 ****************************************** fin Main  ******************************************
 ****************************************************************************************************/
@@ -1398,7 +1202,7 @@ figure.snip1085.hover .reverse {
 ****************************************** fin Media queries page index  ****************************
 ****************************************************************************************************/
 
-/*----- PAGE Layout  ------
+/*----- PAGE Admin  ------
 
 -------------------*/
 
