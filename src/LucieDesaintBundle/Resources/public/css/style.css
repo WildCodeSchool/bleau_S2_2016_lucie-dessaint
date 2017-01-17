@@ -81,6 +81,7 @@ section {
     cursor: pointer;
     animation: change_color 10s 10;
     border-radius: 50px;
+
 }
 
  ul {
@@ -194,11 +195,13 @@ input{
     padding:10px 20px;
     width:165px;
     transition: 0.3s width cubic-bezier(0.40, 0, 0.50, 1.30);
+    border-radius: 10px;
 }
 
-input + button{
-    margin-left:5px;
+input + button {
+    margin-left: 5px;
     box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.4);
+    border-radius: 45px;
 }
 
 button:after{
@@ -404,7 +407,7 @@ h1{
 
 .images_index{
     text-align: center;
-    padding-top:75px ;
+    padding-top: 100px;
 }
 
 /*.cadre-photo9{*/
@@ -450,7 +453,7 @@ h1{
 
 /* Defillement texte en haut*/
 .marquee {
-    width: 450px;
+    width: 490px;
     margin: 0 auto;
     overflow: hidden;
     white-space: nowrap;
@@ -458,7 +461,7 @@ h1{
     animation: marquee 35s linear infinite;
     color:black;
     position: relative;
-    top: 9px;
+    top: 55px;
     font-weight: bolder;
 }
 
@@ -853,6 +856,7 @@ figure {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 35px;
 }
 
 .rectangle{
@@ -1076,6 +1080,7 @@ figure.snip1085 {
     background: #767171;
     -webkit-perspective: 50em;
     perspective: 50em;
+    top:35px;
 }
 figure.snip1085 * {
     -webkit-box-sizing: border-box;

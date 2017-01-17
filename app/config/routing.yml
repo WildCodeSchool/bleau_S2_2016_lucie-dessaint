@@ -2,4 +2,10 @@ lucie_desaint:
     resource: "@LucieDesaintBundle/Resources/config/routing.yml"
     prefix:   /
 
+user:
+    resource: "@UserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+
 

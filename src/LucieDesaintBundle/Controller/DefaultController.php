@@ -53,8 +53,4 @@ class DefaultController extends Controller
         return $this->render('@LucieDesaint/Default/contact.html.twig');
     }
 
-    public function layoutAction()
-    {
-        return $this->render('@LucieDesaint/Default/layout.html.twig');
-    }
 }
