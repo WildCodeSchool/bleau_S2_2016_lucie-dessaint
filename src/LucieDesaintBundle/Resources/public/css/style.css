@@ -413,7 +413,7 @@ h1{
 
 .images_index{
     text-align: center;
-    padding-top: 100px;
+    padding-top:50px;
 }
 
 /*.cadre-photo9{*/
@@ -466,7 +466,6 @@ h1{
     box-sizing: border-box;
     animation: marquee 35s linear infinite;
     color:black;
-    position: relative;
     top: 55px;
     font-weight: bolder;
 }
@@ -528,7 +527,7 @@ h1{
     /* images */
     .images_index{
         text-align: center;
-        padding-top:100px ;
+        padding-top:50px ;
     }
 }
 
@@ -548,7 +547,7 @@ h1{
     }
 
     .marquee {
-        top: 30px;
+        top: 10px!important;
         position: relative;
         margin: 0 auto;
     }
@@ -634,17 +633,18 @@ h1{
     margin-right: auto;
     margin-left: auto;
     width: 800px;
-    top: 20px;
+    bottom: 10px;
     position: relative;
 }
+
 #box {
-    /* border: 1px solid rgb(200, 200, 200); */
-    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px; */
-    /* background: rgba(200, 200, 200, 0.1); */
-    /* border-radius: 4px; */
-    /* top: 50px; */
+     /*border: 1px solid rgb(200, 200, 200); */
+     /*box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px; */
+     /*background: rgba(200, 200, 200, 0.1); */
+     /*border-radius: 4px; */
+     /*top: 50px; */
     position: absolute;
-    bottom: 25%;
+    bottom: 22%;
 }
 
 h2{
@@ -688,12 +688,11 @@ h2{
 
 @media screen and (max-width: 991px){
     #box{
-
         margin-bottom: 80px;
     }
 
     .globale-cadre5{
-        margin-top: 25px!important;
+        margin-bottom: 95px!important;
     }
 }
 
@@ -832,7 +831,7 @@ figure {
     width: 400px;
     background-color: black;
     position: relative;
-    bottom: 20px;
+    bottom: 67px;
     height: 60px;
     text-align: center;
 }
@@ -997,12 +996,6 @@ figure.snip0015:hover figcaption::before {
 ************************ 2. Main ( Cette partie evolue sur chaque page) *******************
 ****************************************************************************************************/
 
-/*.footer{*/
-    /*width: 100%;*/
-    /*background-color: #ffffff;*/
-    /*height: 30px;*/
-/*}*/
-
 .circle {
     width: 190px;
     background-color: black;
@@ -1049,7 +1042,7 @@ figure.snip1085 {
     background: #767171;
     -webkit-perspective: 50em;
     perspective: 50em;
-    top:35px;
+    bottom:9px;
 }
 figure.snip1085 * {
     -webkit-box-sizing: border-box;
@@ -1195,6 +1188,16 @@ figure.snip1085.hover .reverse {
 
     .snip1085{
         width: 97% !important;
+    }
+}
+
+@media screen and (max-width: 518px) {
+
+    .snip1305{
+        width: 95% !important;
+        margin-right:auto!important;
+        margin-left: auto!important;
+        display: block!important;
     }
 }
 

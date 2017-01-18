@@ -9,7 +9,7 @@
                 <tr>
                     <th>id</th>
                     <th>Texte</th>
-                    <th>Action</th>
+                    <th>{#Action#}</th>
                 </tr>
                 </thead>
             <tbody>
@@ -20,10 +20,10 @@
                     <td>
                         <ul style="background-color: rgba(113, 102, 102, 0);">
                             <li>
-                                <a href="{{ path('actualites_show', { 'id': actualite.id }) }}" class="btn btn-primary btn-info" >show</a>
+                                <a href="{{ path('actualites_show', { 'id': actualite.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info" >show</a>
                             </li>
                             <li>
-                                <a href="{{ path('actualites_edit', { 'id': actualite.id }) }}" class="btn btn-primary btn-info" >edit</a>
+                                <a href="{{ path('actualites_edit', { 'id': actualite.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info" >edit</a>
                             </li>
                         </ul>
                     </td>

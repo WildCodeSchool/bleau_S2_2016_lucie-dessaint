@@ -23,8 +23,8 @@
                 {#<th style="text-align: center"><a href="{{ path('produit_show', { 'id': produit.id }) }}">{{ produit.id }}</a></th> #}{#----- correspond à l'Id -----#}
                 <td style="text-align: center">{{ produit.titre }}</td> {#----- correspond au titre -----#}
                 <td style="text-align: center">{{ produit.info }}</td> {#----- correspond au descriptif -----#}
-                <td style="text-align: center"><a href="{{ path('produit_show', { 'id': produit.id }) }}"class="btn btn-primary btn-info">Aperçu</a>
-                    <a href="{{ path('produit_edit', { 'id': produit.id }) }}"class="btn btn-primary btn-info">Editer</a></td>
+                <td style="text-align: center"><a href="{{ path('produit_show', { 'id': produit.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Aperçu</a>
+                    <a href="{{ path('produit_edit', { 'id': produit.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Editer</a></td>
                {# ----- correspond au Action -----#}
             </tr>
         {% endfor %}
@@ -32,8 +32,7 @@
     </table>
 </div>
                                 <div style="width: 200px; border-radius: 45px;">
-                                    <a href="{{ path('produit_new') }}"class="btn btn-primary btn-info" style="
-                                       border-radius: 45px;">Nouveau produit
+                                    <a href="{{ path('produit_new') }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Nouveau produit
                                     </a>
                                 </div>
 

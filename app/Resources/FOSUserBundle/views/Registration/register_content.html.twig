@@ -1,0 +1,92 @@
+{% trans_default_domain 'FOSUserBundle' %}
+<div class="container">
+
+    {#<div id="fos_user_registration_form"><div><label for="fos_user_registration_form_username" class="required">Nom d'utilisateur</label>#}
+            {#<input type="text" id="fos_user_registration_form_username" name="fos_user_registration_form[username]" required="required" maxlength="255" pattern=".{2,}"></div>#}
+
+        {#<div>#}
+            {#<label for="fos_user_registration_form_email" class="required">Adresse e-mail</label>#}
+            {#<input type="email" id="fos_user_registration_form_email" name="fos_user_registration_form[email]" required="required">#}
+        {#</div>#}
+
+        {#<div>#}
+            {#<label for="fos_user_registration_form_plainPassword_first" class="required">Mot de passe</label>#}
+            {#<input type="password" id="fos_user_registration_form_plainPassword_first" name="fos_user_registration_form[plainPassword][first]" required="required">#}
+        {#</div>#}
+
+        {#<div>#}
+            {#<label for="fos_user_registration_form_plainPassword_second" class="required">Vérification</label>#}
+            {#<input type="password" id="fos_user_registration_form_plainPassword_second" name="fos_user_registration_form[plainPassword][second]" required="required">#}
+        {#</div><input type="hidden" id="fos_user_registration_form__token" name="fos_user_registration_form[_token]" value="4LuMt-DubfpWL0KrfgBX3Hy9HuDm1o_HBfx1BdblPX0">#}
+    {#</div>#}
+
+    </head>
+    <body>
+    <div class="container" style="width:299px; margin-top:140px;  border: 1px solid rgb(200, 200, 200);
+     box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+     background: rgba(200, 200, 200, 0.1);
+     border-radius: 20px; ">
+        <div class="row main">
+            <div class="main-login main-center">
+                <form class="" method="post" action="#">
+
+                    <div class="form-group">
+                        <div id="fos_user_registration_form"><div><label for="fos_user_registration_form_username" class="required" style="padding: 10px 13px 7px;
+                    vertical-align: middle; margin-right: -5px; height: 33px; position: relative; top: 35px;">Nom d'utilisateur</label
+
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <i class="fa fa-user-circle" aria-hidden="true" style="font-size: 20px; top: 35px; position:relative; color: black;" ></i>
+                                <input type="text" id="fos_user_registration_form_username" name="fos_user_registration_form[username]" required="required" maxlength="255" pattern=".{2,}" placeholder="Enter your Name"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fos_user_registration_form_email" class="required" style="">Adresse e-mail</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <i class="fa fa-envelope-open" aria-hidden="true" style="font-size: 20px; top: 35px; position:relative; color: black;" ></i>
+                                <input type="email" id="fos_user_registration_form_email" name="fos_user_registration_form[email]" required="required" placeholder="Enter your e-mail">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fos_user_registration_form_plainPassword_first" class="required">Mot de passe</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <i class="fa fa-lock" aria-hidden="true" style="font-size: 20px; top: 35px; position:relative; color: black;" ></i>
+                                <input type="password" id="fos_user_registration_form_plainPassword_first" name="fos_user_registration_form[plainPassword][first]" required="required" placeholder="Enter your password">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fos_user_registration_form_plainPassword_second" class="required">Vérification</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <i class="fa fa-lock" aria-hidden="true" style="font-size: 20px; top: 35px; position:relative; color: black;" ></i>
+                                <input type="password" id="fos_user_registration_form_plainPassword_second" name="fos_user_registration_form[plainPassword][second]" required="required" placeholder="Confirm your password">
+                                <input type="hidden" id="fos_user_registration_form__token" name="fos_user_registration_form[_token]" value="4LuMt-DubfpWL0KrfgBX3Hy9HuDm1o_HBfx1BdblPX0">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <input type="submit" value="{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}" style="border-radius: 20px;" class="btn btn-primary btn-info"/>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {#<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">#}
+        {#{{ form_widget(form) }}#}
+        {#<div>#}
+            {#<input type="submit" value="{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}" style="border-radius: 20px;" class="btn btn-primary btn-info"/>#}
+        {#</div>#}
+    {#</form>#}
+</div>
+

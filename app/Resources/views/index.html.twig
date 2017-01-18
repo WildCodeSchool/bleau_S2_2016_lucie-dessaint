@@ -1,0 +1,72 @@
+<head>
+    <title>{% block title %}Lucie De Saint{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('bundles/luciedesaint/images/fav-lucie.png.ico') }}">
+
+    {% block stylesheets %}
+        <!-- Compiled and minified CSS and js and fontawsome boostrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.2.0/css/mdb.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Pacifico" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('bundles/luciedesaint/css/hover-min.css') }}" media="all">
+        <link rel="stylesheet" href="{{ asset('bundles/luciedesaint/css/animate.min.css') }}" media="all">
+        <link rel="stylesheet" href="{{ asset('bundles/luciedesaint/css/style.css') }}">
+    {% endblock %}
+</head>
+<header>
+    {% block header %}
+        <div class="container-fluid">
+
+        </div>
+
+    {% endblock %}
+</header>
+<body>
+    {% block body %}
+<style>
+    body{
+        background:#ec6a38;
+        -webkit-animation:colour 10s linear infinite;
+        -moz-animation:colour 10s linear infinite;
+    }
+    @-webkit-keyframes colour{
+        0%{
+            background:#2c7d99;
+        }
+
+        50%{
+            background:#2c7d99;
+        }
+
+        100%{
+            background:#355965;
+        }
+
+    }
+
+    @-moz-keyframes colour{
+        0%{
+            background:#2c7d99;
+        }
+
+        50%{
+            background:#2c7d99;
+        }
+
+        100%{
+            background:#355965;
+        }
+    }
+
+</style>
+    {% endblock %}
+</body>
+
+<style>
+
+</style>
