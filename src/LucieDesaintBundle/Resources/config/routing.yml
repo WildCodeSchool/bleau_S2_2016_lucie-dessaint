@@ -27,7 +27,7 @@ lucie_desaint_login:
         defaults: { _controller: FOSUserBundle:Security:login }
 
 #lucie_desaint_admin:
-#        path:     /admin
+#        path:     /admin/produi
 #        defaults: { _controller: LucieDesaintBundle:Default:layout }
 
 #----------------------------route admin
