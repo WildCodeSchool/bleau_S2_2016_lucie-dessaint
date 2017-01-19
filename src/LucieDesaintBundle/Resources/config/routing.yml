@@ -22,6 +22,10 @@ lucie_desaint_send:
         path:     /presentation
         defaults: { _controller: LucieDesaintBundle:Default:send }
 
+lucie_desaint_login:
+        path:     /login
+        defaults: { _controller: FOSUserBundle:Security:login }
+
 #lucie_desaint_admin:
 #        path:     /admin
 #        defaults: { _controller: LucieDesaintBundle:Default:layout }
@@ -52,6 +56,7 @@ lucie_desaint_actualites:
 lucie_desaint_images:
     resource: "@LucieDesaintBundle/Resources/config/routing/images.yml"
     prefix:   /images
+
 
 
 

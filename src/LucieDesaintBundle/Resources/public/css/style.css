@@ -1015,6 +1015,7 @@ figure.snip0015:hover figcaption::before {
     color: black;
     font-size: 1.2em;
     font-weight: bold;
+    font-family: 'Marck Script', cursive;
 }
 
 .triangle{
@@ -1087,7 +1088,7 @@ figure.snip1085 figcaption {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Lobster Two', cursive;
+    font-family: 'Great Vibes', cursive;
 }
 
 figure.snip1085 .reverse {
