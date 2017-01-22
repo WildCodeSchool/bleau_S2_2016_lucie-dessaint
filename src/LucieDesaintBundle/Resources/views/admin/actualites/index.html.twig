@@ -3,34 +3,25 @@
 {% block body %}
 
     <div class="container">
-        <h2>Basic Table</h2>
-        <table class="table">
-                <thead>
-                <tr>
-                    <th>id</th>
-                    <th>Texte</th>
-                    <th>{#Action#}</th>
-                </tr>
-                </thead>
-            <tbody>
-            {% for actualite in actualites %}
-                <tr>
-                    <td><a href="{{ path('actualites_show', { 'id': actualite.id }) }}">{{ actualite.id }}</a></td>
-                    <td>{{ actualite.text }}</td>
-                    <td>
-                        <ul style="background-color: rgba(113, 102, 102, 0);">
-                            <li>
-                                <a href="{{ path('actualites_show', { 'id': actualite.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info" >show</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('actualites_edit', { 'id': actualite.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info" >edit</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+        <h2 style="color: #33b5e5;
+    font-weight: bolder;
+    padding-bottom: 10px;">Actualité</h2>
+
+        <div class="container">
+            <div class="titre">
+                {% for actualite in actualites %}
+                    {#<h2 id="id">id</h2>#}
+                    {#<div class="actualité-titre"><a href="{{ path('actualites_show', { 'id': actualite.id }) }}">{{ actualite.id }}</a></div>#}
+                    <h2 id="titre">Text</h2>
+                    <div class="actualité-texte">{{ actualite.text }}</div>
+                    <div class="bouton-action">
+                        <a href="{{ path('actualites_show', { 'id': actualite.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info" >show</a>
+                        <a href="{{ path('actualites_edit', { 'id': actualite.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info" >edit</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
 
         <ul style="background-color: rgba(113, 102, 102, 0.07);">
             <li class="btn btn-primary btn-info" >
@@ -38,8 +29,6 @@
             </li>
         </ul>
     </div>
-
-
 
     {#<h1>Actualites list</h1>#}
 

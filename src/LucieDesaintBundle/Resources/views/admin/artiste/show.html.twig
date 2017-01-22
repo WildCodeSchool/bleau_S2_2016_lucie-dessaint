@@ -19,13 +19,13 @@
                 {#<td><a href="{{ path('categories_show', { 'id': category.id }) }}">{{ category.id }}</a></td>#}
                 <td>{{ artiste.id }}</td>
                 <td>{{ artiste.textepresentation }}</td>
-                <td> <img src="{{ asset('upload/artiste/') }}{#{{ artiste.textback }}#}"></td>
+                <td> <img src="{{ asset('upload/artiste/') }} {#{{ artiste.textback }}#} "></td>
             </tr>
         </tbody>
     </table>
     <ul style="background-color: rgba(235, 227, 227, 0.03);">
         <li>
-            <a href="{{ path('artiste_index') }}" style="width: 200px; border-radius: 45px;" class="btn btn-primary btn-info">Retourner</a>
+            <a href= "{{ path('artiste_index') }}" style="width: 200px; border-radius: 45px;" class="btn btn-primary btn-info">Retourner</a>
         </li>
         <li>
             <a href="{{ path('artiste_edit', { 'id': artiste.id }) }}" style="width: 200px; border-radius: 45px;" class="btn btn-primary btn-info">Edit</a>

@@ -4,10 +4,12 @@
 
     <div class="container">
         <h1 style="color: #33b5e5; font-weight: bolder;padding-bottom: 45px;">Artiste creation</h1>
-        {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
+        {#{{ form_start(edit_form) }}#}
+    <div class="">
+        <textarea id="luciedesaintbundle_artiste_textepresentation" name="luciedesaintbundle_artiste[textepresentation]" required="required" style="height:250px; overflow: scroll">{{ artiste.textepresentation }}</textarea> {#{{ form_widget(edit_form) }}#}
         <input type="submit" value="Valider" class="btn btn-primary btn-info"/>
-        {{ form_end(edit_form) }}
+        {#{{ form_end(edit_form) }}#}
+    </div>
 
         {#<label for="luciedesaintbundle_artiste_textback">image (fichier JPG)</label>#}
         {#<input type="file" id="luciedesaintbundle_artiste_textback" name="luciedesaintbundle_artiste[textback]" style="width: 250px;">#}

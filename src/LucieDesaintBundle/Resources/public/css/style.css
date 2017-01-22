@@ -593,7 +593,7 @@ h1{
     }
 
     .logo-lucie {
-        width: 350px;
+        width: 310px;
         padding-top: 45px;
     }
 
@@ -613,6 +613,18 @@ h1{
 
     .cadre-photo2 {
         width: 95%;
+    }
+}
+
+@media screen and (max-width: 357px) {
+
+    .marquee{
+        width: 320px;
+
+    }
+
+    .snip1305{
+        width: 400%!important;
     }
 }
 
@@ -651,8 +663,9 @@ h1{
      /*background: rgba(200, 200, 200, 0.1); */
      /*border-radius: 4px; */
      /*top: 50px; */
-    position: absolute;
-    bottom: 22%;
+    position: relative;
+    bottom: 55px;
+    margin-top: -400px;
 }
 
 h2{
@@ -696,7 +709,8 @@ h2{
 
 @media screen and (max-width: 991px){
     #box{
-        margin-bottom: 80px;
+        position: relative;
+        top: 20px;
     }
 
     .globale-cadre5{
@@ -706,8 +720,8 @@ h2{
 
 @media screen and (max-width: 767px){
     #box{
-        position: absolute;
-        bottom: 130px;
+        position: relative!important;
+        bottom: 10px!important;
 
     }
 }
@@ -1240,6 +1254,12 @@ figure.snip1085.hover .reverse {
     height: 85px;
 }
 
+.deconnexion{
+    width: 200px;
+    border-radius: 45px;
+    margin-left: auto;
+}
+
 /****************************************************************************************************
 ****************************************** fin Main  ******************************************
 ****************************************************************************************************/
@@ -1582,3 +1602,104 @@ h1 a {
 /****************************************************************************************************
 ****************************************** fin Media queries page index  ****************************
 ****************************************************************************************************/
+
+
+/*----- PAGE produit index ------
+
+-------------------*/
+
+/****************************************************************************************************
+************************ 2. Main ( Cette partie evolue sur chaque page) *******************
+****************************************************************************************************/
+
+#titre{
+    border: 2px solid black;
+    border-radius: 20px;
+    color: black;
+    background-color: deepskyblue;
+}
+
+.produit-titre{
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    padding: 5px;
+}
+
+.produit-descriptif{
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    height:100px;
+    overflow: scroll;
+}
+
+.btn-secondary {
+    position: relative;
+    bottom: 92px;
+    left: 45px;
+    background-color: pink;
+}
+
+.fa-sign-out{
+    color: black;
+}
+
+
+
+
+/*----- PAGE actualitées index ------
+
+-------------------*/
+
+/****************************************************************************************************
+************************ 2. Main ( Cette partie evolue sur chaque page) *******************
+****************************************************************************************************/
+
+.actualité-titre {
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    padding: 5px;
+}
+
+.actualité-texte {
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    overflow: scroll;
+    height:200px;
+}
+
+/*----- PAGE actualitées show ------
+
+-------------------*/
+
+/****************************************************************************************************
+************************ 2. Main ( Cette partie evolue sur chaque page) *******************
+****************************************************************************************************/
+
+.actualité-titre {
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    padding: 5px;
+}
+
+.actualité-texte{
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    overflow: scroll;
+    height:200px;
+}
+
+//**----- PAGE actualitées edit------*/
+/****************************************************************************************************
+************************ 2. Main ( Cette partie evolue sur chaque page) *******************
+****************************************************************************************************/
+
+}

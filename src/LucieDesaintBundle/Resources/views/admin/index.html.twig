@@ -24,7 +24,7 @@
 
 {% block header %}
     <nav class="navbar navbar-default" role="navigation">
-        <div class="container" class="visible-xs">
+        <div class="container hidden-xs">
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-brand-centered" >
                 <ul class="admin-index">
@@ -37,7 +37,12 @@
         </div><!-- /.container-fluid -->
     </nav>
 
-    <section class="hidden-lg hidden-sm" class="visible-xs visible-sm">
+    <div class="deconnexion">
+        <a href="{{ path ('fos_user_security_logout') }}" style="border-radius: 20px;" class="btn btn-secondary"><i class="fa fa-sign-out" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <section class="visible-xs">
         <div class="logo-home">
             <i class="fa fa-bars" aria-hidden="true" style="width: 40px; font-size: 40px; color: #ffffff"></i>
         </div>

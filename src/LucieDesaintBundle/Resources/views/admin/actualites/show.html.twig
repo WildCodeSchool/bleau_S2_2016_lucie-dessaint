@@ -4,39 +4,55 @@
 
     <div class="container">
         <h2>Aperçu</h2>
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Texte</th>
-            </tr>
-            </thead>
-            <tbody>
 
-            <tr>
+        <div class="container">
+            <div class="titre">
+                <h2 id="titre">Texte</h2>
+                <div class="actualité-texte">{{ actualite.text }}</div>
+                <div class="bouton-action">
+                    <a href="{{ path('actualites_edit', { 'id': actualite.id }) }}" class="btn btn-primary btn-info">Edit</a>
+                    <a href="{{ path('actualites_index') }}" class="btn btn-primary btn-info">Back to the list </a
+                    {{ form_start(delete_form) }}
+                    <input type="submit" value="Delete" class="btn btn-primary btn-info">
+                    {{ form_end(delete_form) }}
+                    <a href="{{ path('actualites_new') }}">Create a new actualite</a>
+                </div>
+            </div>
+        </div>
 
-                <td>{{ actualite.text }}</td>
-                <td>
-                    <ul style="background-color: rgba(113, 102, 102, 0);" >
-                        <li>
-                            <a href="{{ path('actualites_edit', { 'id': actualite.id }) }}" class="btn btn-primary btn-info">Edit</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('actualites_index') }}" class="btn btn-primary btn-info">Back to the list </a>
-                        </li>
-                        <li>
-                            {{ form_start(delete_form) }}
-                            <input type="submit" value="Delete" class="btn btn-primary btn-info">
-                            {{ form_end(delete_form) }}
-                        </li>
-                        <li class="btn btn-primary btn-info" >
-                            <a href="{{ path('actualites_new') }}">Create a new actualite</a>
-                        </li>
+        {#<table class="table">#}
+            {#<thead>#}
+            {#<tr>#}
+                {#<th>Texte</th>#}
+            {#</tr>#}
+            {#</thead>#}
+            {#<tbody>#}
 
-                    </ul>
-                </td>
-            </tr>
-            </tbody>
-        </table>
+            {#<tr>#}
+
+                {#<td>{{ actualite.text }}</td>#}
+                {#<td>#}
+                    {#<ul style="background-color: rgba(113, 102, 102, 0);" >#}
+                        {#<li>#}
+                            {#<a href="{{ path('actualites_edit', { 'id': actualite.id }) }}" class="btn btn-primary btn-info">Edit</a>#}
+                        {#</li>#}
+                        {#<li>#}
+                            {#<a href="{{ path('actualites_index') }}" class="btn btn-primary btn-info">Back to the list </a>#}
+                        {#</li>#}
+                        {#<li>#}
+                            {#{{ form_start(delete_form) }}#}
+                            {#<input type="submit" value="Delete" class="btn btn-primary btn-info">#}
+                            {#{{ form_end(delete_form) }}#}
+                        {#</li>#}
+                        {#<li class="btn btn-primary btn-info" >#}
+                            {#<a href="{{ path('actualites_new') }}">Create a new actualite</a>#}
+                        {#</li>#}
+
+                    {#</ul>#}
+                {#</td>#}
+            {#</tr>#}
+            {#</tbody>#}
+        {#</table>#}
 
     </div>
 
