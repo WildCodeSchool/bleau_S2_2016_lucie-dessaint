@@ -26,12 +26,12 @@
         {% block header %}
                 <div class="container-fluid">
                         <nav class="visible-lg">
-                            <a href="{{ path('lucie_desaint_homepage') }}" class="accueil hvr-underline-from-left hidden-xs">Accueil</a>
+                            <a href="{{ path('lucie_desaint_homepage') }}" class="accueil hvr-underline-from-left hidden-xs">{#{{'Home'|trans}}#}Accueil</a>
                             <div class="lien-menu hidden-xs">
-                                <a href="{{ path('lucie_desaint_art') }}" class="hvr-underline-from-left ">Art &nbsp</a>
-                                <a href="{{ path('lucie_desaint_bijoux') }}" class="hvr-underline-from-left ">Bijoux KIFA &nbsp</a>
-                                <a href="{{ path('lucie_desaint_artistes') }}" class="hvr-underline-from-left">Artiste &nbsp</a>
-                                <a href="{{ path('lucie_desaint_contact') }}" class="hvr-underline-from-left ">Contact</a>
+                                <a href="{{ path('lucie_desaint_art') }}" class="hvr-underline-from-left ">{#{{'Art'|trans}}#}Art &nbsp</a>
+                                <a href="{{ path('lucie_desaint_bijoux') }}" class="hvr-underline-from-left ">{#{{'Jewelrys KIFA'|trans}}#}Bijoux KIFA &nbsp</a>
+                                <a href="{{ path('lucie_desaint_artistes') }}" class="hvr-underline-from-left">{#{{'Artist'|trans}}#}Artiste &nbsp &nbsp</a>
+                                <a href="{{ path('lucie_desaint_contact') }}" class="hvr-underline-from-left ">{#{{'Contact'|trans}}#}Contact</a>
                             </div>
                         </nav>
 
@@ -41,11 +41,11 @@
                                 <i class="fa fa-bars" aria-hidden="true" style="width: 40px; font-size: 40px; color: #ffffff"></i>
                             </div>
                             <ul>
-                                <li><a href="{{ path('lucie_desaint_homepage') }}">Accueil</a></li>
-                                <li><a href="{{ path('lucie_desaint_art') }}">Art</a></li>
-                                <li><a href="{{ path('lucie_desaint_bijoux') }}">Bijoux KIFA</a></li>
-                                <li><a href="{{ path('lucie_desaint_artistes') }}">Artiste</a></li>
-                                <li><a href="{{ path('lucie_desaint_contact') }}">Contact</a></li>
+                                <li><a href="{{ path('lucie_desaint_homepage') }}">{#{{'home'|trans}}#} Accueil</a></li>
+                                <li><a href="{{ path('lucie_desaint_art') }}">{#{{'Art'|trans}}#}Art</a></li>
+                                <li><a href="{{ path('lucie_desaint_bijoux') }}">{#{{'Jewelrys KIFA'|trans}}#}Bijoux KIFA</a></li>
+                                <li><a href="{{ path('lucie_desaint_artistes') }}">{#{{'Artist'|trans}}#}Artiste</a></li>
+                                <li><a href="{{ path('lucie_desaint_contact') }}">{#{{'Contact'|trans}}#}Contact</a></li>
                             </ul>
                         </section>
                 </div>
@@ -82,9 +82,9 @@
                         </div>
                         <div class="col-md-4 col-xs-12 ">
                             <div class="newsletter-globale">
-                                <h5 class="abonner">S'abonner aux newsletters</h5>
+                                <h5 class="abonner">{#{{'Subscribe to newsletters'|trans}}#}S'abonner aux newsletters</h5>
                                 <input placeholder="youremail@domain.com"/>
-                                <button id="envoyer">Envoyer</button>
+                                <button id="envoyer">{#{{'Send'|trans}}#}Envoyer</button>
                             </div>
                             <h5 class="copyright"><a href="{{ path('lucie_desaint_login') }}">©</a> Copyright all rights reserved - design by
                                 <a href="http://wildcodeschool.fr" class="wild"> Wild Code School</a>

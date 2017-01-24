@@ -14,7 +14,7 @@
 
                             <hr>
 
-                            <form class="form-horizontal" action=" " method="" id="contact_form">
+                            <form class="form-horizontal" action="{{ path('lucie_desaint_envoi') }}" method="post" id="contact_form">
                                 <fieldset>
                                     <!-- Form Name -->
 
@@ -42,8 +42,8 @@
                                     <div class="form-group">
                                         <div class="col-md-12">
                                             <div class="input-group">
-                                                <span class="input-group-addon"  style="visibility: hidden"></span>
-                                                <input name="email" placeholder="Message" class="form-control" type="text">
+                                                <span class="input-group-addon" style="visibility: hidden"></span>
+                                                <input name="message" placeholder="Message" class="form-control" type="text">
                                             </div>
                                         </div>
                                     </div>
@@ -51,7 +51,7 @@
                                     <div class="form-group ">
 
                                         <div class="col-md-11">
-                                            <button type="submit" class="btn btn-md btn-danger pull-right" "{{ path('lucie_desaint_send') }}">Envoyer</button>
+                                            <button type="submit" class="btn btn-md btn-danger pull-right" {#{{ path('lucie_desaint_contact') }}#}>Envoyer</button>
                                         </div>
                                     </div>
 

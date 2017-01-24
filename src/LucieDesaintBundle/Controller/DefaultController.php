@@ -3,13 +3,16 @@
 namespace LucieDesaintBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
+
 
 class DefaultController extends Controller
 {
-    public function indexAction() {
-
+    public function indexAction(Request $request) {
         $em = $this->getDoctrine()->getManager();
         $actualites = $em->getRepository('LucieDesaintBundle:Actualites')->findAll();
+
+        $request->setlocale('fr');
 
         return $this->render('LucieDesaintBundle:Default:index.html.twig', array(
             'actualites' => $actualites,
