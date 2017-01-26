@@ -81,11 +81,14 @@
                             </div>
                         </div>
                         <div class="col-md-4 col-xs-12 ">
+                            <form action="{{ path('lucie_desaint_newsletter') }}" method='post'>
                             <div class="newsletter-globale">
                                 <h5 class="abonner">{#{{'Subscribe to newsletters'|trans}}#}S'abonner aux newsletters</h5>
-                                <input placeholder="youremail@domain.com"/>
-                                <button id="envoyer">{#{{'Send'|trans}}#}Envoyer</button>
+                                <input name="email" placeholder="youremail@domain.com"/>
+                                {#<label for="email"></label>#}
+                                <button type="submit" name="action" id="envoyer">{#{{'Send'|trans}}#}Envoyer</button>
                             </div>
+                            </form>
                             <h5 class="copyright"><a href="{{ path('lucie_desaint_login') }}">©</a> Copyright all rights reserved - design by
                                 <a href="http://wildcodeschool.fr" class="wild"> Wild Code School</a>
                             </h5>

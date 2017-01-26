@@ -26,6 +26,10 @@ lucie_desaint_login:
         path:     /login
         defaults: { _controller: FOSUserBundle:Security:login }
 
+lucie_desaint_newsletter:
+        path:     /newsletter
+        defaults: { _controller: LucieDesaintBundle:Newsletter:newsletter }
+
 #lucie_desaint_admin:
 #        path:     /admin/produi
 #        defaults: { _controller: LucieDesaintBundle:Default:layout }

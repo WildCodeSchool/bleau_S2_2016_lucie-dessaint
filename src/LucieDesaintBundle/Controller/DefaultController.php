@@ -14,6 +14,7 @@ class DefaultController extends Controller
 
         $request->setlocale('fr');
 
+
         return $this->render('LucieDesaintBundle:Default:index.html.twig', array(
             'actualites' => $actualites,
         ));
@@ -55,5 +56,11 @@ class DefaultController extends Controller
     {
         return $this->render('@LucieDesaint/Default/contact.html.twig');
     }
+
+//    public function newsletterAction()
+//    {
+//        return $this->render('@LucieDesaint/Default/newsletter.html.twig');
+//    }
+
 
 }
