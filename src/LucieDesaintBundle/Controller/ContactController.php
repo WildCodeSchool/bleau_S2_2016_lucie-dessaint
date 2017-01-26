@@ -50,7 +50,7 @@ class ContactController extends Controller
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Mail de '. $name)
                     ->setFrom('projetmooc1@gmail.com')
-                    ->setTo('usa.pascal@yahoo.fr')
+//                    ->setTo('usa.pascal@yahoo.fr')
                     ->setBody(
                         $this->renderView(
                         // app/Resources/views/Emails/registration.html.twig

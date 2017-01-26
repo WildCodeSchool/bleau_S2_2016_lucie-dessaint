@@ -6,7 +6,7 @@
             <h3 class="bienvenue">{{'Welcome to the world jewelrys'|trans}} {#Entrez dans l'univers des bijoux#}</h3>
         </div>
         <div class="globale-bijoux" class="fadeInDown">
-        {% for produit in produits %}
+        {% for produit in produits | reverse(true) %}
             <figure class="snip0015">
                 <img src="{{ asset(produit.image.src) }}" alt="{{ produit.image.alt }}"/>
                 <figcaption>

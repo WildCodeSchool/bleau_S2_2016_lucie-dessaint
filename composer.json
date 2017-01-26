@@ -22,7 +22,8 @@
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "~2.0",
         "friendsofsymfony/user-bundle": "*",
-        "swiftmailer/swiftmailer": "^5.4"
+        "swiftmailer/swiftmailer": "^5.4",
+        "snilius/twig-sort-by-field": "^0.1.5"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",
