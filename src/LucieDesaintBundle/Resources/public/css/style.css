@@ -990,6 +990,23 @@ figure.snip0015:hover figcaption::before {
     transition-delay: 0s;
 }
 
+.snip0015 *,
+.snip0015 *:before,
+.snip0015 *:after {
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.snip0015:hover img,
+.snip0015.hover img {
+    zoom: 1;
+    filter: alpha(opacity=70);
+    -webkit-opacity: 0.7;
+    opacity: 0.7;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
 
 
 /****************************************************************************************************
@@ -1697,9 +1714,12 @@ h1 a {
     height:200px;
 }
 
-//**----- PAGE actualitées edit------*/
+/**----- PAGE Error ------*/
 /****************************************************************************************************
 ************************ 2. Main ( Cette partie evolue sur chaque page) *******************
 ****************************************************************************************************/
 
-
+#text-error .oups{
+    text-align: center;
+    color: red;
+}
