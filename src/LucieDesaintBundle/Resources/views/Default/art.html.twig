@@ -1,90 +1,54 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
 
 {#{{ dump(tableaux) }}#}
 
     <div class="rectangle">
         <h3 class="bienvenue"> {{'Welcome to the world painting'|trans}} {#Entrez dans l'univers de la peinture#}</h3>
     </div>
+
     <div class="globale-produit">
+
+        <section class="image-gallery">
+            <figure tabindex="1" contenteditable="true">
+                <img src="images/img-1.jpg" alt="jump, matey" contenteditable="false" />
+                <figcaption contenteditable="false">Jump!</figcaption>
+            </figure>
+            <figure tabindex="2">
+                07.
+                ...
+                08.
+            </figure>
+            09.
+        </section>
+
+
         {% for produit in produits | reverse(true) %}
-            <figure class="snip0015">
+            <figure  tabindex="{{ produit.id }}" class="snip0015">
                 <img class="art-image" src="{{ asset(produit.image.src) }}" alt="{{ produit.image.alt }}"/>
                 <figcaption>
                     <h2 class="art-titre">{{ produit.titre }}</h2>
                     <p class="produit">{{ produit.info }}</p>
                     <p class="prix">{{ produit.prix }}</p>
-                    <a href="#"></a>
                 </figcaption>
             </figure>
+
         {% endfor %}
-
-
-        {#<figure class="snip0015">#}
-            {#<img src="{{ asset('bundles/luciedesaint/images/tableau2.png') }}" alt="sample38"/>#}
-            {#<figcaption>#}
-                {#<h2>Tableau n°1</h2>#}
-                {#<p class="produit">Jolie bague torsadée en or massif .</p>#}
-                {#<p class="prix">100 €</p>#}
-                {#<a href="#"></a>#}
-            {#</figcaption>#}
-        {#</figure>#}
-
-        {#<figure class="snip0015">#}
-            {#<img src="{{ asset('bundles/luciedesaint/images/tableau3.png') }}" alt="sample38"/>#}
-            {#<figcaption>#}
-                {#<h2>Tableau n°1</h2>#}
-                {#<p class="produit">Jolie bague torsadée en or massif .</p>#}
-                {#<p class="prix">100 €</p>#}
-                {#<a href="#"></a>#}
-            {#</figcaption>#}
-        {#</figure>#}
-
-
-        {#<figure class="snip0015">#}
-            {#<img src="{{ asset('bundles/luciedesaint/images/red-tableau.jpg') }}" alt="sample38"/>#}
-            {#<figcaption>#}
-                {#<h2>Tableau n°1</h2>#}
-                {#<p class="produit">Jolie bague torsadée en or massif .</p>#}
-                {#<p class="prix">100 €</p>#}
-                {#<a href="#"></a>#}
-            {#</figcaption>#}
-        {#</figure>#}
-
-
-</div>
-
-    {#<style>#}
-        {#footer{#}
-            {#background-color: #464343;#}
-            {#width: 100%;#}
-            {#bottom: 0;#}
-            {#position: absolute;#}
-        {#}#}
-
-        {#@media screen and (max-width: 1347px) {#}
-
-            {#footer{#}
-                {#bottom: 0;#}
-                {#position: relative;#}
-            {#}#}
-        {#}#}
-    {#</style>#}
-
-
-        {#<div class="item">#}
-            {#<figure>#}
-                {#<a href="#"><img src="{{ asset('bundles/luciedesaint/images/tableau.png') }}" class="hvr-grow"></a>#}
-            {#<figcation class="cadre_prix prix-effet">A PARTIR DE 200€</figcation>#}
-            {#<figure>#}
-                {#<a href="#"><img src="{{ asset('bundles/luciedesaint/images/tableau2.png') }}" class=" hvr-grow"></a>#}
-                {#<figcation class="cadre_prix prix-effet">A PARTIR DE 200€</figcation>#}
-            {#</figure>#}
-            {#<figure>#}
-                {#<a href="#"><img src="{{ asset('bundles/luciedesaint/images/tableau3.png') }}" class=" hvr-grow"></a>#}
-                {#<figcation class="cadre_prix prix-effet">A PARTIR DE 200€</figcation>#}
-            {#</figure>#}
-        {#</div>#}
+    </div>
 
 {% endblock  %}
+
+{% block js %}
+    {{ parent() }}
+
+    {#Appel de jquery #}
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+    {#Appel fancybox #}
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js"></script>
+
+{% endblock %}

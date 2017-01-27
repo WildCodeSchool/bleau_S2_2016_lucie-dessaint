@@ -958,14 +958,6 @@ figure.snip0015 p {
     -webkit-transition-delay: 0s;
     transition-delay: 0s;
 }
-figure.snip0015 a {
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    color: #ffffff;
-}
 figure.snip0015:hover img {
     opacity: 0.35;
 }
@@ -1006,8 +998,6 @@ figure.snip0015:hover figcaption::before {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
-
-
 
 /****************************************************************************************************
 ****************************************** fin Main  ******************************************
