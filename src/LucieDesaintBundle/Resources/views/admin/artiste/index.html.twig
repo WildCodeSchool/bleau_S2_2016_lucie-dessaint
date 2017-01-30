@@ -1,137 +1,28 @@
 {% extends '@LucieDesaint/admin/index.html.twig' %}
 
 {% block body %}
-{{ parent() }}
-    <h1 style="color: #33b5e5; font-weight:bolder; padding-bottom: 45px; ">Artiste</h1>
-<div class="container">
-    {#<table class="table table-striped table-bordered ">#}
-        {#------------------------------------- champs ID -------------------------------------#}
-        {#<thead>#}
-        {#<tr>#}
-            {#<th>#}
-                {#<a href="{{ path('artiste_show', { 'id': artiste.id }) }}">{{ artiste.id }}</a>#}
-            {#</th>#}
-        {#</tr>#}
-        {#</thead>#}
-        {#------------------------------------- champs 2 -------------------------------------#}
-        {#<tbody>#}
-        {#{% for artiste in artistes %}#}
-            {#<tr>#}
-                {#<a href="{{ path('artiste_show', { 'id': artiste.id }) }}">{{ artiste.id }}</a>#}
-            {#</tr>#}
-
-        {#{% endfor %}#}
-        {#</tbody>#}
-    {#</table>#}
-
-    <table class="table table-striped table-bordered ">
-        {#------------------------------------- champs Textepresentation -------------------------------------#}
-        <thead>
-        <tr>
-            <th style="text-align: center; font-size: 1.2em;">Texte de présentation</th>
-        </tr>
-        </thead>
-        {#------------------------------------- champs 2 -------------------------------------#}
-        <tbody>
-        {% for artiste in artistes %}
-            <tr>
-                <td style="overflow: scroll">{{ artiste.textepresentation }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-        {% for artiste in artistes %}
-            <td>
-                <ul style="background-color: rgba(113, 102, 102, 0); border: 2px solid rgba(255, 255, 255, 0);">
-                    <li>
-                        <a href="{{ path('artiste_show', { 'id': artiste.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Aperçu</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('artiste_edit', { 'id': artiste.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Éditer</a>
-                    </li>
-                </ul>
-            </td>
-        {% endfor %}
-    <li>
-        <a href="{{ path('artiste_new') }}" class="btn btn-primary btn-info">Créer un nouveau texte</a>
-    </li>
-    </table>
-
-
-
-    {#<table class="table table-striped table-bordered ">#}
-        {#------------------------------------- champs 2 -------------------------------------#}
-        {#<thead>#}
-        {#<tr>#}
-            {#<th>Id</th>#}
-            {#<th>Textepresentation</th>#}
-            {#<th>Textback</th>#}
-            {#<th>Textback2</th>#}
-            {#<th>Actions</th>#}
-        {#</tr>#}
-        {#</thead>#}
-        {#------------------------------------- champs 2 -------------------------------------#}
-        {#{% for artiste in artistes %}#}
-            {#<tr>#}
-                {#<td><a href="{{ path('artiste_show', { 'id': artiste.id }) }}">{{ artiste.id }}</a></td>#}
-                {#<td>{{ artiste.textepresentation }}</td>#}
-                {#<td>{{ artiste.textback }}</td>#}
-                {#<td>{{ artiste.textback2 }}</td>#}
-                {#<td>#}
-                    {#<ul>#}
-                        {#<li>#}
-                            {#<a href="{{ path('artiste_show', { 'id': artiste.id }) }}" class="btn btn-primary btn-info">show</a>#}
-                        {#</li>#}
-                        {#<li>#}
-                            {#<a href="{{ path('artiste_edit', { 'id': artiste.id }) }}" class="btn btn-primary btn-info">edit</a>#}
-                        {#</li>#}
-                    {#</ul>#}
-                {#</td>#}
-            {#</tr>#}
-        {#{% endfor %}#}
-    {#</table>#}
-    {#<div style= >#}
-        {#<a href="{{ path('produit_new') }}"class="btn btn-primary btn-info" style="#}
-                                       {#border-radius: 45px;">Nouveau produit#}
-        {#</a>#}
-    {#</div>#}
-
-
-    {#<table >#}
-        {#<thead>#}
-            {#<tr>#}
-                {#<th>Id</th>#}
-                {#<th>Textepresentation</th>#}
-                {#<th>Textback</th>#}
-                {#<th>Textback2</th>#}
-                {#<th>Actions</th>#}
-            {#</tr>#}
-        {#</thead>#}
-        {#<tbody>#}
-        {#{% for artiste in artistes %}#}
-            {#<tr>#}
-                {#<td><a href="{{ path('artiste_show', { 'id': artiste.id }) }}">{{ artiste.id }}</a></td>#}
-                {#<td>{{ artiste.textepresentation }}</td>#}
-                {#<td>{{ artiste.textback }}</td>#}
-                {#<td>{{ artiste.textback2 }}</td>#}
-                {#<td>#}
-                    {#<ul>#}
-                        {#<li>#}
-                            {#<a href="{{ path('artiste_show', { 'id': artiste.id }) }}">show</a>#}
-                        {#</li>#}
-                        {#<li>#}
-                            {#<a href="{{ path('artiste_edit', { 'id': artiste.id }) }}">edit</a>#}
-                        {#</li>#}
-                    {#</ul>#}
-                {#</td>#}
-            {#</tr>#}
-        {#{% endfor %}#}
-        {#</tbody>#}
-    {#</table>#}
-
-    {#<ul>#}
-        {#<li>#}
-            {#<a href="{{ path('artiste_new') }}">Create a new artiste</a>#}
-        {#</li>#}
-    {#</ul>#}
+    {% for artiste in artistes %}
+        <h1 style="color: #33b5e5; font-weight:bolder; padding-bottom: 45px; ">Artiste</h1>
+        <div class="container text-center">
+            <div class="row">
+                <h3 style="font-size: 40px">Texte de présentation</h3>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <h3>Français</h3>
+                        <p>{{ artiste.textepresentationFr }}</p>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <h3>Anglais</h3>
+                        <p>{{ artiste.textepresentationEn }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <img width="30%" src="{{ asset('') }}{{ artiste.image.src }}" class="photo-lucie">
+                </div>
+            </div>
+            <div class="row">
+                <a href="{{ path('artiste_edit', { 'id': artiste.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Éditer</a>
+            </div>
+        </div>
+    {% endfor %}
 {% endblock %}

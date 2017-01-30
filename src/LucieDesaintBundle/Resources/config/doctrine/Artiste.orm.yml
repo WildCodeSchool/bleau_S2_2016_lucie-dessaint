@@ -9,6 +9,14 @@ LucieDesaintBundle\Entity\Artiste:
             generator:
                 strategy: AUTO
     fields:
-        textepresentation:
+        textepresentation_fr:
             type: text
+        textepresentation_en:
+            type: text
+
+    manyToOne:
+        image:
+            targetEntity: Images
+            cascade: ["persist", "remove"]
+
     lifecycleCallbacks: {  }

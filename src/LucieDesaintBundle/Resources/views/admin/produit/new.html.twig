@@ -6,110 +6,64 @@
             color: black;
         }
     </style>
-    
-<div style="padding: 45px;">
-    <h1>Produit creation</h1>
-    {#------------------------------------- champs -------------------------------------#}
-    {{ form_start(form) }}
-    <div>
-        <label for="">Categorie</label>
-        {{ form_widget(form.categorie) }}
-        {{ form_errors(form.categorie) }}
+
+    <div class="container">
+        <div style="padding: 45px;">
+            <h1>Produit creation</h1>
+            {#------------------------------------- champs -------------------------------------#}
+            {{ form_start(form) }}
+            <div class="row">
+                {{ form_label(form.categorie) }}
+                {{ form_widget(form.categorie) }}
+                {{ form_errors(form.categorie) }}
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    {{ form_label(form.titreFr) }}<br>
+                    {{ form_widget(form.titreFr) }}
+                    {{ form_errors(form.titreFr) }}
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    {{ form_label(form.titreEn) }}<br>
+                    {{ form_widget(form.titreEn) }}
+                    {{ form_errors(form.titreEn) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    {{ form_label(form.infoFr) }}<br>
+                    {{ form_widget(form.infoFr) }}
+                    {{ form_errors(form.infoFr) }}
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    {{ form_label(form.infoEn) }}<br>
+                    {{ form_widget(form.infoEn) }}
+                    {{ form_errors(form.infoEn) }}
+                </div>
+            </div>
+            <div class="row">
+                <label for="">Prix</label>
+                {{ form_widget(form.prix) }}
+                {{ form_errors(form.prix) }}
+            </div>
+            <div class="row">
+                <label for="">Image</label>
+                {{ form_widget(form.image) }}
+                {{ form_errors(form.image) }}
+            </div>
+
+
+            {#------------------------------------- boutton -------------------------------------#}
+            <input type="submit" value="Create" class="btn btn-primary btn-info"/>
+
+            {{ form_end(form) }}
+
+        </div>
+
+        <ul style="background-color: rgba(113, 102, 102, 0.07);">
+            <li>
+                <a href="{{ path('produit_index') }}" class="btn btn-primary btn-info">Retourner à la liste des produits</a>
+            </li>
+        </ul>
     </div>
-    <div>
-        <label for="">Titre</label>
-        {{ form_widget(form.titre) }}
-        {{ form_errors(form.titre) }}
-    </div>
-    <div>
-        <label for="">Description</label>
-        {{ form_widget(form.info) }}
-        {{ form_errors(form.info) }}
-    </div>
-    <div>
-        <label for="">Prix</label>
-        {{ form_widget(form.prix) }}
-        {{ form_errors(form.prix) }}
-    </div>
-
-        <label for="">Image</label>
-        {{ form_widget(form.image) }}
-        {{ form_errors(form.image) }}
-
-    {#------------------------------------- boutton -------------------------------------#}
-    {#{{ form_widget(form) }}#}
-    <input type="submit" value="Create" class="btn btn-primary btn-info"/>
-
-    {{ form_end(form) }}
-
-    <ul style="background-color: rgba(113, 102, 102, 0.07);">
-        <li>
-            <a href="{{ path('produit_index') }}" class="btn btn-primary btn-info">Back to the list</a>
-        </li>
-    </ul>
-</div>
-
-
-    {#<div class="panel-body">#}
-        {#<div class="tab-content">#}
-            {#<div role="tabpanel" class="tab-pane active" id="list">#}
-                {#<table class="table table-striped table-bordered table-list">#}
-                    {#<thead>#}
-                    {#<tr>#}
-                        {#<th style="padding-right: 95px;">Image</th>#}
-                        {#<th><div>#}
-
-                            {#</div>#}
-                        {#</th>#}
-                        {#<th >Titre</th>#}
-                        {#<th>Texte descriptif</th>#}
-                    {#</tr>#}
-                    {#</thead>#}
-                    {#<tr class="new">#}
-
-                        {#<td align="center">#}
-                            {#<li>#}
-
-                            {#</li>#}
-                        {#</td>#}
-                    {#</tr>#}
-                    {#</tbody>#}
-                {#</table>#}
-            {#</div>#}
-        {#</div><!-- END id="list" -->#}
-    {#</div>#}
-
-
-    {#<div class="panel-body">#}
-        {#<div class="tab-content">#}
-            {#<div role="tabpanel" class="tab-pane active" id="list">#}
-                {#<table class="table table-striped table-bordered table-list">#}
-                    {#<thead>#}
-                    {#<tr>#}
-                        {#<th class="avatar">photo</th>#}
-                        {#<th>name</th>#}
-                        {#<th>country</th>#}
-                        {#<th>email</th>#}
-                        {#<th><em class="fa fa-cog"></em></th>#}
-                    {#</tr>#}
-                    {#</thead>#}
-                    {#<tr class="new">#}
-                        {#<td class="avatar"><img src=""></td>#}
-                        {#<td>Dia ElHak  </td>#}
-                        {#<td>Tunisia </td>#}
-                        {#<td>email@gmail.com </td>#}
-                        {#<td align="center">#}
-                            {#<a href="#" class="btn btn-primary" title="Edit"    ><i class="fa fa-pencil"	  >		</i></a>#}
-                            {#<a href="#" class="btn btn-success" title="validate"><i class="fa fa-check-square">validate</i></a>#}
-                            {#<a href="#" class="btn btn-warning" title="ban"	 ><i class="fa fa-ban"		 >		</i></a>#}
-                            {#<a href="#" class="btn btn-danger"  title="delete"  ><i class="fa fa-trash"	   >		</i></a>#}
-                        {#</td>#}
-                    {#</tr>#}
-                    {#</tbody>#}
-                {#</table>#}
-            {#</div><!-- END id="list" -->#}
-        {#</div>#}
-    {#</div>#}
-
-
 {% endblock %}

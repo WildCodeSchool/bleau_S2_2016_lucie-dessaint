@@ -7,8 +7,9 @@ namespace LucieDesaintBundle\Entity;
  */
 class Newsletter
 {
+
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -21,7 +22,7 @@ class Newsletter
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -52,4 +53,3 @@ class Newsletter
         return $this->email;
     }
 }
-

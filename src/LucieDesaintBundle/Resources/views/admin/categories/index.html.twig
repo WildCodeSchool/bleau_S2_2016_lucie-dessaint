@@ -42,41 +42,4 @@
                                        border-radius: 45px;">Nouveau produit
         </a>
     </div>
-
-
-{#<div class="container-fluid">#}
-    {#<table>#}
-        {#<thead>#}
-            {#<tr>#}
-                {#<th>Id</th>#}
-                {#<th>Src</th>#}
-                {#<th>Alt</th>#}
-                {#<th>Actions</th>#}
-            {#</tr>#}
-        {#</thead>#}
-        {#<tbody>#}
-        {#{% for category in categories %}#}
-            {#<tr>#}
-                {#<td><a href="{{ path('categories_show', { 'id': category.id }) }}">{{ category.id }}</a></td>#}
-                {#<td>#}
-                    {#<ul>#}
-                        {#<li>#}
-                            {#<a href="{{ path('categories_show', { 'id': category.id }) }}">show</a>#}
-                        {#</li>#}
-                        {#<li>#}
-                            {#<a href="{{ path('categories_edit', { 'id': category.id }) }}">edit</a>#}
-                        {#</li>#}
-                    {#</ul>#}
-                {#</td>#}
-            {#</tr>#}
-        {#{% endfor %}#}
-        {#</tbody>#}
-    {#</table>#}
-
-    {#<ul>#}
-        {#<li>#}
-            {#<a href="{{ path('categories_new') }}">Create a new category</a>#}
-        {#</li>#}
-    {#</ul>#}
-{#</div>#}
 {% endblock %}

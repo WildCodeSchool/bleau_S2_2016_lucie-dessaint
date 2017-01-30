@@ -122,7 +122,7 @@ class Images
      */
     public function getSrc()
     {
-        return $this->src;
+        return "uploads/pictures/" . $this->src;
     }
 
     /**

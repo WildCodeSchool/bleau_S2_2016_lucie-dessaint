@@ -8,12 +8,17 @@ use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
-    public function indexAction(Request $request) {
+
+    public function setLocaleAction($locale, Request $request){
+
+        // some logic to determine the $locale
+        $request->setLocale($locale);
+        return $this->redirectToRoute('lucie_desaint_homepage');
+    }
+
+    public function indexAction() {
         $em = $this->getDoctrine()->getManager();
         $actualites = $em->getRepository('LucieDesaintBundle:Actualites')->findAll();
-
-        $request->setlocale('fr');
-
 
         return $this->render('LucieDesaintBundle:Default:index.html.twig', array(
             'actualites' => $actualites,
@@ -23,7 +28,9 @@ class DefaultController extends Controller
     public function artAction() {
 
         $em = $this->getDoctrine()->getManager();
-        $categorie = $em->getRepository('LucieDesaintBundle:Categories')->findOneByLabel('tableau');
+        $categorie = $em->getRepository('LucieDesaintBundle:Categories')->findOneBy(array(
+            'label_fr' => 'tableau'
+        ));
         $produits = $em->getRepository('LucieDesaintBundle:Produit')->findByCategorie($categorie);
 
         return $this->render('@LucieDesaint/Default/art.html.twig', array(
@@ -34,7 +41,9 @@ class DefaultController extends Controller
     public function bijouxAction() {
 
         $em = $this->getDoctrine()->getManager();
-        $categorie = $em->getRepository('LucieDesaintBundle:Categories')->findOneByLabel('bijoux');
+        $categorie = $em->getRepository('LucieDesaintBundle:Categories')->findOneBy(array(
+            'label_fr' => 'bijoux'
+        ));
         $produits = $em->getRepository('LucieDesaintBundle:Produit')->findByCategorie($categorie);
 
         return $this->render('@LucieDesaint/Default/bijoux.html.twig', array(

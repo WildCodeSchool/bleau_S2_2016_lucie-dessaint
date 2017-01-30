@@ -12,12 +12,6 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
  */
 class Produit
 {
-//    public function __toString()
-//    {
-//        // TODO: Implement __toString() method.
-//        return $this->categories;
-//    }
-
 
     /**
      * @var integer
@@ -27,12 +21,22 @@ class Produit
     /**
      * @var string
      */
-    private $titre;
+    private $titre_fr;
 
     /**
      * @var string
      */
-    private $info;
+    private $info_fr;
+
+    /**
+     * @var string
+     */
+    private $titre_en;
+
+    /**
+     * @var string
+     */
+    private $info_en;
 
     /**
      * @var string
@@ -61,51 +65,99 @@ class Produit
     }
 
     /**
-     * Set titre
+     * Set titreFr
      *
-     * @param string $titre
+     * @param string $titreFr
      *
      * @return Produit
      */
-    public function setTitre($titre)
+    public function setTitreFr($titreFr)
     {
-        $this->titre = $titre;
+        $this->titre_fr = $titreFr;
 
         return $this;
     }
 
     /**
-     * Get titre
+     * Get titreFr
      *
      * @return string
      */
-    public function getTitre()
+    public function getTitreFr()
     {
-        return $this->titre;
+        return $this->titre_fr;
     }
 
     /**
-     * Set info
+     * Set infoFr
      *
-     * @param string $info
+     * @param string $infoFr
      *
      * @return Produit
      */
-    public function setInfo($info)
+    public function setInfoFr($infoFr)
     {
-        $this->info = $info;
+        $this->info_fr = $infoFr;
 
         return $this;
     }
 
     /**
-     * Get info
+     * Get infoFr
      *
      * @return string
      */
-    public function getInfo()
+    public function getInfoFr()
     {
-        return $this->info;
+        return $this->info_fr;
+    }
+
+    /**
+     * Set titreEn
+     *
+     * @param string $titreEn
+     *
+     * @return Produit
+     */
+    public function setTitreEn($titreEn)
+    {
+        $this->titre_en = $titreEn;
+
+        return $this;
+    }
+
+    /**
+     * Get titreEn
+     *
+     * @return string
+     */
+    public function getTitreEn()
+    {
+        return $this->titre_en;
+    }
+
+    /**
+     * Set infoEn
+     *
+     * @param string $infoEn
+     *
+     * @return Produit
+     */
+    public function setInfoEn($infoEn)
+    {
+        $this->info_en = $infoEn;
+
+        return $this;
+    }
+
+    /**
+     * Get infoEn
+     *
+     * @return string
+     */
+    public function getInfoEn()
+    {
+        return $this->info_en;
     }
 
     /**

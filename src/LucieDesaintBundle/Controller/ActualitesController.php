@@ -78,7 +78,7 @@ class ActualitesController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('actualites_edit', array('id' => $actualite->getId()));
+            return $this->redirectToRoute('actualites_show', array('id' => $actualite->getId()));
         }
 
         return $this->render('@LucieDesaint/admin/actualites/edit.html.twig', array(

@@ -9,10 +9,17 @@ LucieDesaintBundle\Entity\Produit:
             generator:
                 strategy: AUTO
     fields:
-        titre:
+        titre_fr:
             type: string
             length: 255
-        info:
+        info_fr:
+            type: string
+            length: 255
+            nullable: true
+        titre_en:
+            type: string
+            length: 255
+        info_en:
             type: string
             length: 255
             nullable: true

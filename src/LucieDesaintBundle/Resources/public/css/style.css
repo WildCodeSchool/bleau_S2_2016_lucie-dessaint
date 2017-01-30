@@ -40,7 +40,7 @@ a:hover {
     color: #FFFFFF;
 }
 
-.container-fluid{
+.nav_custom{
     height: 65px;
     width: 100%;
     background-color: black;
@@ -96,8 +96,9 @@ section {
     list-style-type: none;
     margin: 0;
     margin-right: 5em;
-    background-color: #716666;
+    background-color: #13dcf1;
     border: 2px solid #ffffff;
+
 }
 
 section a:link, section a:visited {
@@ -203,7 +204,7 @@ button{
     transition:0.4s all;
 }
 
-input{
+.newsletter-globale input{
     border:0;
     box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.4);
     padding:10px 20px;
@@ -424,47 +425,6 @@ h1{
     padding-top:50px;
 }
 
-/*.cadre-photo9{*/
-    /*width: 425px;*/
-    /*height: 300px;*/
-    /*background-color: red;*/
-    /*border-top: 2px solid red;*/
-    /*border-bottom: 2px solid red;*/
-    /*border-left: 2px solid red;*/
-    /*border-right: 2px solid red;*/
-/*}*/
-
-/*}*/
-/*.cadre-photo1 {*/
-    /*width: 425px;*/
-    /*height: 300px;*/
-    /*background-color: red;*/
-    /*border-top: 2px solid #beacac;*/
-    /*border-bottom: 2px solid #beacac;*/
-    /*border-left: 2px solid #beacac;*/
-    /*border-right: 2px solid #beacac;*/
-/*}*/
-
-/*.cadre-photo2 {*/
-    /*width: 425px;*/
-    /*height: 300px;*/
-    /*background-color: red;*/
-    /*border-top: 2px solid #beacac;*/
-    /*border-bottom: 2px solid #beacac;*/
-    /*border-left: 2px solid #beacac;*/
-    /*border-right: 2px solid #beacac;*/
-/*}*/
-
-/*.cadre-photo3 {*/
-    /*width: 220px;*/
-    /*height: 300px;*/
-    /*background-color: red;*/
-    /*border-top: 2px solid #beacac;*/
-    /*border-bottom: 2px solid #beacac;*/
-    /*border-left: 2px solid #beacac;*/
-    /*border-right: 2px solid #beacac;*/
-/*}*/
-
 /* Defillement texte en haut*/
 .marquee {
     width: 490px;
@@ -487,23 +447,6 @@ h1{
     0%   { text-indent: 30em }
     100% { text-indent: -105em }
 }
-
-/*.hello{*/
-    /*height: 25px;*/
-    /*background-color: red;*/
-    /*opacity: 0;*/
-    /*position: absolute;*/
-    /*bottom: 45px;*/
-    /*right: 78px;*/
-/*}*/
-
-/*.hello:hover{*/
-    /*height: 25px;*/
-    /*background-color: red;*/
-    /*opacity: 0.45;*/
-/*}*/
-
-
 
 /****************************************************************************************************
 ****************************************** fin Main  ******************************************
@@ -635,13 +578,7 @@ h1{
 ****************************************************************************************************/
 
 /*----- PAGE contact  ------
-    1. General
-       - Navigation
-       - Bandeau2
-       - footer
-    2. Main
-       - images
-    3. Média queries
+
 -------------------*/
 
 /****************************************************************************************************
@@ -725,7 +662,6 @@ h2{
 
     }
 }
-
 
 /****************************************************************************************************
 ****************************************** fin Media queries page index  ****************************
@@ -1195,7 +1131,7 @@ figure.snip1085:hover .reverse,
 figure.snip1085.hover .reverse {
     opacity: 1;
     -webkit-transform: rotateY(0);
-    transform: rotateY(0);
+    -transform: rotateY(0);
     -webkit-transition-delay: 0.3s;
     transition-delay: 0.3s;
 }

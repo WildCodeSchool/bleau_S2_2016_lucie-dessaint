@@ -7,28 +7,28 @@ lucie_desaint_art:
     defaults: { _controller: LucieDesaintBundle:Default:art }
 
 lucie_desaint_bijoux:
-        path:     /bijoux
-        defaults: { _controller: LucieDesaintBundle:Default:bijoux }
+    path:     /bijoux
+    defaults: { _controller: LucieDesaintBundle:Default:bijoux }
 
 lucie_desaint_contact:
-        path:     /contact
-        defaults: { _controller: LucieDesaintBundle:Default:contact }
+    path:     /contact
+    defaults: { _controller: LucieDesaintBundle:Default:contact }
 
 lucie_desaint_artistes:
-        path:     /artistes
-        defaults: { _controller: LucieDesaintBundle:Default:artiste }
+    path:     /artistes
+    defaults: { _controller: LucieDesaintBundle:Default:artiste }
 
 lucie_desaint_envoi:
-        path:     /envoi
-        defaults: { _controller: LucieDesaintBundle:Contact:envoi }
+    path:     /envoi
+    defaults: { _controller: LucieDesaintBundle:Contact:envoi }
 
 lucie_desaint_login:
-        path:     /login
-        defaults: { _controller: FOSUserBundle:Security:login }
+    path:     /login
+    defaults: { _controller: FOSUserBundle:Security:login }
 
 lucie_desaint_newsletter:
-        path:     /newsletter
-        defaults: { _controller: LucieDesaintBundle:Newsletter:newsletter }
+    path:     /newsletter
+    defaults: { _controller: LucieDesaintBundle:Newsletter:newsletter }
 
 #lucie_desaint_admin:
 #        path:     /admin/produi

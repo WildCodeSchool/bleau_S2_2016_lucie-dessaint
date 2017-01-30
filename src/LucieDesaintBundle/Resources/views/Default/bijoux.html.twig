@@ -1,20 +1,39 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    {% set locale = app.request.locale %}
 
         <div class="rectangle">
-            <h3 class="bienvenue">{{'Welcome to the world jewelrys'|trans}} {#Entrez dans l'univers des bijoux#}</h3>
+            <h3 class="bienvenue">{{"Entrez dans l'univers des bijoux"|trans}}</h3>
         </div>
         <div class="globale-bijoux" class="fadeInDown">
-        {% for produit in produits | reverse(true) %}
-            <figure class="snip0015">
-                <img src="{{ asset(produit.image.src) }}" alt="{{ produit.image.alt }}"/>
-                <figcaption>
-                    <h2 class="titre-produit">{{ produit.titre }}</h2>
-                    <p class="produit">{{ produit.info }}</p>
-                    <p class="prix"> {{ produit.prix }}</p>
-                </figcaption>
-            </figure>
-    {% endfor %}
-            </div>
+            {% for produit in produits | reverse(true) %}
+                <figure class="snip0015">
+                    <img src="{{ asset(produit.image.src) }}" alt="{{ produit.image.alt }}"/>
+                    <figcaption>
+                        <h2 class="titre-produit">
+                            {% if locale == 'fr' %}
+                                {{ produit.titreFr }}
+                            {% elseif locale == 'en' %}
+                                {{ produit.titreEn }}
+                            {% endif %}
+                        </h2>
+                        <p class="produit">
+                            {% if locale == 'fr' %}
+                                {{ produit.titreFr }}
+                            {% elseif locale == 'en' %}
+                                {{ produit.titreEn }}
+                            {% endif %}
+                        </p>
+                        <p class="prix">
+                            {% if locale == 'fr' %}
+                                {{ produit.titreFr }}
+                            {% elseif locale == 'en' %}
+                                {{ produit.titreEn }}
+                            {% endif %}
+                        </p>
+                    </figcaption>
+                </figure>
+            {% endfor %}
+        </div>
 {% endblock  %}

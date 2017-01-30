@@ -11,7 +11,6 @@
         <!-- Compiled and minified CSS and js and fontawsome boostrap-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.2.0/css/mdb.min.css">
         <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Pacifico" rel="stylesheet">
@@ -42,14 +41,13 @@
         </a>
     </div>
 
-    <section class="visible-xs">
+    <section class="visible-xs" style="background-color: #13dcf1">
         <div class="logo-home">
             <i class="fa fa-bars" aria-hidden="true" style="width: 40px; font-size: 40px; color: #ffffff"></i>
         </div>
-        <ul>
+        <ul class="navbar">
             <li><a href="{{ path('artiste_index') }}">Artiste</a></li>
             <li><a href="{{ path('produit_index') }}">Produits</a></li>
-            {#<li><a href="{{ path('categories_index') }}">Catégories</a></li>#}
             <li><a href="{{ path('actualites_index') }}">Actualités</a></li>
         </ul>
     </section>

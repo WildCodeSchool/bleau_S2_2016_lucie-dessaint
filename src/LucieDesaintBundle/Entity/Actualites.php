@@ -7,21 +7,27 @@ namespace LucieDesaintBundle\Entity;
  */
 class Actualites
 {
+
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
     /**
      * @var string
      */
-    private $text;
+    private $text_fr;
+
+    /**
+     * @var string
+     */
+    private $text_en;
 
 
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -29,26 +35,50 @@ class Actualites
     }
 
     /**
-     * Set text
+     * Set textFr
      *
-     * @param string $text
+     * @param string $textFr
      *
      * @return Actualites
      */
-    public function setText($text)
+    public function setTextFr($textFr)
     {
-        $this->text = $text;
+        $this->text_fr = $textFr;
 
         return $this;
     }
 
     /**
-     * Get text
+     * Get textFr
      *
      * @return string
      */
-    public function getText()
+    public function getTextFr()
     {
-        return $this->text;
+        return $this->text_fr;
+    }
+
+    /**
+     * Set textEn
+     *
+     * @param string $textEn
+     *
+     * @return Actualites
+     */
+    public function setTextEn($textEn)
+    {
+        $this->text_en = $textEn;
+
+        return $this;
+    }
+
+    /**
+     * Get textEn
+     *
+     * @return string
+     */
+    public function getTextEn()
+    {
+        return $this->text_en;
     }
 }

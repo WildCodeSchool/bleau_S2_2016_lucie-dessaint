@@ -2,103 +2,30 @@
 
 {% block body %}
 
-
-    <h1 style="color: #33b5e5; font-weight:bolder ">Produits list</h1>
-
-{#<div class="container">#}
-       {#------------------------------------- champs 2 -------------------------------------#}
-      {#<div class="row">#}
-          {#<div class="col-md-2">#}
-            {#<thead>#}
-                {#<tr>#}
-                    {#<th style="width: 200px; text-align: center">ID</th>#}
-                    {#<th style="text-align: center">Titre</th>#}
-                    {#<th style=" text-align: center">Descriptif </th>#}
-                    {#<th style="text-align: center">Action</th>#}
-                {#</tr>#}
-            {#</thead>#}
-          {#</div>#}
-      {#</div>#}
-        {#------------------------------------- champs 2 -------------------------------------#}
-       {#<div class="row">#}
-           {#<div class="col-md-2">#}
-                {#<tbody>#}
-                {#{% for produit in produits %}#}
-                    {#<tr>#}
-                        {#<th style="text-align: center"><a href="{{ path('produit_show', { 'id': produit.id }) }}">{{ produit.id }}</a></th> ----- correspond à l'Id -----#}
-                        {#<td style="text-align: center">{{ produit.titre }}</td> ----- correspond au titre -----#}
-                        {#<td style="text-align: center">{{ produit.info }}</td> ----- correspond au descriptif -----#}
-                        {#<td style="text-align: center"><a href="{{ path('produit_show', { 'id': produit.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Aperçu</a>#}
-                            {#<a href="{{ path('produit_edit', { 'id': produit.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Editer</a></td>#}
-                        {#----- correspond au Action -----#}
-                    {#</tr>#}
-                {#{% endfor %}#}
-                {#</tbody>#}
-           {#</div>#}
-       {#</div>#}
-    {#</table>#}
-{#</div>#}
-                                {#<div style="width: 200px; border-radius: 45px;">#}
-                                    {#<a href="{{ path('produit_new') }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Nouveau produit#}
-                                    {#</a>#}
-                                {#</div>#}
-
-    {#<div style="width: 200px; border-radius: 45px;">#}
-        {#<a href="{{ path ('fos_user_security_logout') }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Déconnection#}
-        {#</a>#}
-    {#</div>#}
-<div class="container">
-    <div class="titre">
-        {% for produit in produits | reverse(true) %}
-            <h2 id="titre">Titre</h2>
-        <div class="produit-titre">{{ produit.titre }}</div>
-            <h2 id="titre">Description</h2>
-        <div class="produit-descriptif">{{ produit.info }}</div>
-           <div class="bouton-action">
-            <a href="{{ path('produit_edit', { 'id': produit.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Editer</a>
-            <a href="{{ path('produit_show', { 'id': produit.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Aperçu</a>
-            <a href="{{ path('produit_new') }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Nouveau produit</a>
-        </div>
-        {% endfor %}
+    <h1 style="color: #33b5e5; font-weight:bolder ">Liste des produits</h1>
+    <div style="text-align: center">
+        <a href="{{ path('produit_new') }}" style="border-radius: 20px;" class="btn btn-success">Nouveau produit</a>
     </div>
-</div>
-
-
-
-    {#<h1>Produits list</h1>#}
-    {#<table>#}
-        {#<thead>#}
-            {#<tr>#}
-                {#<th>Id</th>#}
-                {#<th>Titre</th>#}
-                {#<th>Textedescriptif</th>#}
-                {#<th>Actions</th>#}
-            {#</tr>#}
-        {#</thead>#}
-    {#------------------------------------- champs -------------------------------------#}
-        {#<tbody>#}
-        {#{% for produit in produits %}#}
-            {#<tr>#}
-                {#<td><a href="{{ path('produit_show', { 'id': produit.id }) }}">{{ produit.id }}</a></td>#}
-                {#<td>{{ produit.titre }}</td>#}
-                {#<td>{{ produit.info }}</td>#}
-                {#<td>#}
-                    {#<ul>#}
-                        {#<li>#}
-                            {#<a href="{{ path('produit_show', { 'id': produit.id }) }}">show</a>#}
-                        {#</li>#}
-                        {#<li>#}
-                            {#<a href="{{ path('produit_edit', { 'id': produit.id }) }}">edit</a>#}
-                        {#</li>#}
-                    {#</ul>#}
-                {#</td>#}
-            {#</tr>#}
-        {#{% endfor %}#}
-        {#</tbody>#}
-    {#</table>#}
-    {#<ul>#}
-        {#<li>#}
-            {#<a href="{{ path('produit_new') }}">Create a new produit</a>#}
-        {#</li>#}
-    {#</ul>#}
+    <div class="container">
+        <div class="titre">
+            {% for produit in produits | reverse(true) %}
+                <hr>
+                <div class="row">
+                    <div class="col-xs-9">
+                        <h2 id="titre">Titre</h2>
+                        <p class="produit-titre">{{ produit.titreFr }}</p>
+                        <h2 id="titre">Description</h2>
+                        <p class="produit-descriptif">{{ produit.infoFr }}</p>
+                        <div class="bouton-action text-center">
+                            <a href="{{ path('produit_edit', { 'id': produit.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Editer</a>
+                            <a href="{{ path('produit_show', { 'id': produit.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Aperçu</a>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <img width="100%" src="{{ asset(produit.image.src) }}" alt="{{ produit.image.alt }}"/>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}

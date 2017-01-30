@@ -9,8 +9,10 @@ LucieDesaintBundle\Entity\Categories:
             generator:
                 strategy: AUTO
     fields:
-
-        label:
+        label_fr:
+            type: string
+            length: 255
+        label_en:
             type: string
             length: 255
 

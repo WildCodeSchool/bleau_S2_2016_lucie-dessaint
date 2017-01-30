@@ -9,6 +9,8 @@ LucieDesaintBundle\Entity\Actualites:
             generator:
                 strategy: AUTO
     fields:
-        text:
+        text_fr:
+            type: text
+        text_en:
             type: text
     lifecycleCallbacks: {  }

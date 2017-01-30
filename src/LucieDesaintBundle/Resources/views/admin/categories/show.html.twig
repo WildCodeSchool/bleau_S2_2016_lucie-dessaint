@@ -45,40 +45,4 @@
          }
      </style>
 
-    {#<div style="width: 200px; border-radius: 45px;">#}
-        {#<a href="{{ path('produit_new') }}"class="btn btn-primary btn-info" style="#}
-                                       {#border-radius: 45px;">Nouveau produit#}
-        {#</a>#}
-    {#</div>#}
-
-    {#<table>#}
-        {#<tbody>#}
-            {#<tr>#}
-                {#<th>Id</th>#}
-                {#<td>{{ category.id }}</td>#}
-            {#</tr>#}
-            {#<tr>#}
-                {#<th>Src</th>#}
-                {#<td>{{ category.label }}</td>#}
-            {#</tr>#}
-            {#<tr>#}
-                {#<th>Alt</th>#}
-                {#<td>{{ category.alt }}</td>#}
-            {#</tr>#}
-        {#</tbody>#}
-    {#</table>#}
-
-    {#<ul>#}
-        {#<li>#}
-            {#<a href="{{ path('categories_index') }}" class="btn btn-primary btn-info">Back to the list</a>#}
-        {#</li>#}
-        {#<li>#}
-            {#<a href="{{ path('categories_edit', { 'id': category.id }) }}" class="btn btn-primary btn-info">Edit</a>#}
-        {#</li>#}
-        {#<li>#}
-            {#{{ form_start(delete_form) }}#}
-                {#<input type="submit" value="Delete" class="btn btn-primary btn-info">#}
-            {#{{ form_end(delete_form) }}#}
-        {#</li>#}
-    {#</ul>#}
 {% endblock %}

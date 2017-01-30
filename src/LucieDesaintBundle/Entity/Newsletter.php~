@@ -3,9 +3,9 @@
 namespace LucieDesaintBundle\Entity;
 
 /**
- * Actualites
+ * Newsletter
  */
-class Actualites
+class Newsletter
 {
 
 }

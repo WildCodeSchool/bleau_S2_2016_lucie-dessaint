@@ -10,90 +10,32 @@ use Symfony\Component\Validator\Constraint as Assert;
  */
 class Artiste
 {
-    // Code code creé par Pascal
-
-    Public $file;
-
-    // fonction de methode upload
-
-    // generation d'un nom unique
-    Public function preUpload()
-    {
-        if (null !== $this->file)
-        {
-           // si le nom du fichier es different on génère un nom unique
-            $this->textback=uniqid().'.'.$this->file->guessExtension();
-        }
-    }
-
-    // Si le fichier est vide il le suuprime par sécurité
-    Public function upload()
-    {
-        if (null === $this->file)
-        {
-            return;
-        }
-
-        $this->file->move($this->getUploadRootDir(), $this->textback);
-        unset ($this->file);
-    }
-
-    Public function removeUpload()
-    {
-        if ($file= $this->getAbsolutePath())
-        {
-           unlink($file);
-        }
-    }
-
-    Protected function getUploadDir()
-    {
-    return 'upload/artiste';
-    }
-
-    Protected function getUploadRootDir()
-    {
-    return __DIR__.'/../../../web/'.$this->getUploadDir();
-    }
-
-    Public function getWebPath()
-    {
-        return null === $this->textback ? null: $this->getUploadDir().'/'. $this->textback;
-    }
-
-    Public function getAbsolutePath()
-    {
-        return null === $this->textback ? null: $this->getUploadRootDir().'/'. $this->textback;
-    }
-
-    // Code généré par symfony
-
 
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
     /**
      * @var string
      */
-    private $textepresentation;
+    private $textepresentation_fr;
 
     /**
      * @var string
      */
-    private $textback;
+    private $textepresentation_en;
 
     /**
-     * @var string
+     * @var \LucieDesaintBundle\Entity\Images
      */
-    private $textback2;
+    private $image;
 
 
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -101,74 +43,74 @@ class Artiste
     }
 
     /**
-     * Set textepresentation
+     * Set textepresentationFr
      *
-     * @param string $textepresentation
+     * @param string $textepresentationFr
      *
      * @return Artiste
      */
-    public function setTextepresentation($textepresentation)
+    public function setTextepresentationFr($textepresentationFr)
     {
-        $this->textepresentation = $textepresentation;
+        $this->textepresentation_fr = $textepresentationFr;
 
         return $this;
     }
 
     /**
-     * Get textepresentation
+     * Get textepresentationFr
      *
      * @return string
      */
-    public function getTextepresentation()
+    public function getTextepresentationFr()
     {
-        return $this->textepresentation;
+        return $this->textepresentation_fr;
     }
 
     /**
-     * Set textback
+     * Set textepresentationEn
      *
-     * @param string $textback
+     * @param string $textepresentationEn
      *
      * @return Artiste
      */
-    public function setTextback($textback)
+    public function setTextepresentationEn($textepresentationEn)
     {
-        $this->textback = $textback;
+        $this->textepresentation_en = $textepresentationEn;
 
         return $this;
     }
 
     /**
-     * Get textback
+     * Get textepresentationEn
      *
      * @return string
      */
-    public function getTextback()
+    public function getTextepresentationEn()
     {
-        return $this->textback;
+        return $this->textepresentation_en;
     }
 
     /**
-     * Set textback2
+     * Set image
      *
-     * @param string $textback2
+     * @param \LucieDesaintBundle\Entity\Images $image
      *
      * @return Artiste
      */
-    public function setTextback2($textback2)
+    public function setImage(\LucieDesaintBundle\Entity\Images $image = null)
     {
-        $this->textback2 = $textback2;
+        $this->image = $image;
 
         return $this;
     }
 
     /**
-     * Get textback2
+     * Get image
      *
-     * @return string
+     * @return \LucieDesaintBundle\Entity\Images
      */
-    public function getTextback2()
+    public function getImage()
     {
-        return $this->textback2;
+        return $this->image;
     }
 }

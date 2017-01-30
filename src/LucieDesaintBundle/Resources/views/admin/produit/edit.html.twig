@@ -4,292 +4,66 @@
 
 {% block body %}
 
-    {#<h1 style="color: #33b5e5; font-weight:bolder ">Aperçus Produits</h1>#}
 
-    {#<table class="table table-striped table-bordered ">#}
-        {#------------------------------------- champs 2 -------------------------------------#}
-        {#<thead>#}
-        {#<tr>#}
-            {#<th style="text-align: center"></th>#}
-            {#<th style="text-align: center">Image</th>#}
-            {#<th style="text-align: center">Titre</th>#}
-            {#<th style="text-align: center">Descriptif</th>#}
-            {#<th style=" text-align: center">Prix</th>#}
-            {#<th style="text-align: center">Action</th>#}
-        {#</tr>#}
-        {#</thead>#}
-        {#------------------------------------- champs 2 -------------------------------------#}
-        {#<tbody>#}
+    <h1 style="color: #33b5e5; font-weight:bolder ">Edition: {{ produit.titreFr }}</h1>
 
-        {#----- correspond à l'image -----#}
-        {#<tr>#}
-            {#<th style="text-align: center">#}
-                {#</div>#}
-
-            {#<th style="text-align: center">#}
-                {#<div><input type="file" id="luciedesaintbundle_produit_image_file"#}
-                            {#name="luciedesaintbundle_produit[image][file]" style="display: block;#}
-                            {#margin-right: auto;margin-left: auto; width: 299px;">#}
-                    {#{{ form_widget(edit_form.image) }}#}
-                    {#{{ form_errors(edit_form.image) }}#}
-                {#</div>#}
-                {#<div>#}
-                    {#<label for="luciedesaintbundle_produit_image_alt" class="required"#}
-                           {#style="padding-top: 20px; background: rgba(255, 255, 255, 0.12);">Nom de l'image </label>#}
-                    {#<input type="text" id="luciedesaintbundle_produit_image_alt" name="luciedesaintbundle_produit[image][alt]"#}
-                           {#required="required" maxlength="255" value="fezfzef" style=" width: 150px;">#}
-                {#</div>#}
-            {#</th>#}
-
-            {#----- correspond à l'titre -----#}
-            {#<td style="text-align: center">{{ produit.titre }}</td>#}
-
-            {#----- correspond au descriptif -----#}
-            {#<td style="text-align: center"> #}{#{{ form_widget(edit_form.info) }} {{ form_errors(edit_form.info) }}#}
-                {#<input type="text" id="luciedesaintbundle_produit_info" name="luciedesaintbundle_produit[info]"#}
-                       {#maxlength="255" style="width: 490px;">#}
-            {#</td>#}
-            {#----- correspond au Prix -----#}
-            {#<td style="text-align: center">#}
-
-            {#</td>#}
-            {#----- correspond au Action -----#}
-            {#<td style="text-align: center"><a href="{{ path('produit_edit', { 'id': produit.id }) }}" class="btn btn-primary btn-info">Editer</a>#}
-                {#<a href="{{ path('produit_index') }}" class="btn btn-primary btn-info">Retour à la liste</a>#}
-            {#</td>#}
-        {#</tr>#}
-        {#</tbody>#}
-    {#</table>#}
-
-    <h1 style="color: #33b5e5; font-weight:bolder ">Aperçus Produits</h1>
-
-    {#----------------------------------------------------- Section Categorie -----------------------------------------------------#}
-
-    {#<table class="table table-striped table-bordered ">#}
-        {#------------------------------------- champs 2 -------------------------------------#}
-
-        {#<div style="text-align: center;#}
-            {#font-size: 25px; font-weight: bold; padding-top: 45px;">Categorie</div>#}
-        {#------------------------------------- champs 2 -------------------------------------#}
-        {#<tbody>#}
-        {#----- correspond au Categorie-----#}
-
-        {#<td style="text-align: center; ">#}
-
-            {#<select id="luciedesaintbundle_produit_categorie" name="luciedesaintbundle_produit[categorie]" style="width: 100%;#}
-        {#padding-bottom: 20px;#}
-        {#color: black;#}
-        {#font-size: 20px;#}
-        {#font-weight: bold;">#}
-                {#<option value=""></option><option value="1" selected="selected">tableau</option><option value="2">bijoux</option>#}
-            {#</select>#}
+    <div class="container">
+        <div style="padding: 45px;">
+            <h1>Produit creation</h1>
+            {#------------------------------------- champs -------------------------------------#}
+            {{ form_start(edit_form) }}
+            <div class="row">
+                {{ form_label(edit_form.categorie) }}
+                {{ form_widget(edit_form.categorie) }}
+                {{ form_errors(edit_form.categorie) }}
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    {{ form_label(edit_form.titreFr) }}<br>
+                    {{ form_widget(edit_form.titreFr) }}
+                    {{ form_errors(edit_form.titreFr) }}
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    {{ form_label(edit_form.titreEn) }}<br>
+                    {{ form_widget(edit_form.titreEn) }}
+                    {{ form_errors(edit_form.titreEn) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    {{ form_label(edit_form.infoFr) }}<br>
+                    {{ form_widget(edit_form.infoFr) }}
+                    {{ form_errors(edit_form.infoFr) }}
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    {{ form_label(edit_form.infoEn) }}<br>
+                    {{ form_widget(edit_form.infoEn) }}
+                    {{ form_errors(edit_form.infoEn) }}
+                </div>
+            </div>
+            <div class="row">
+                <label for="">Prix</label>
+                {{ form_widget(edit_form.prix) }}
+                {{ form_errors(edit_form.prix) }}
+            </div>
+            <div class="row">
+                <label for="">Image</label>
+                {{ form_widget(edit_form.image) }}
+                {{ form_errors(edit_form.image) }}
+            </div>
 
 
-        {#</td>#}
-        {#{{ form_widget(edit_form.categorie) }}#}
-        {#{{ form_errors(edit_form.categorie) }}#}
-        {#</tbody>#}
-    {#</table>#}
+            {#------------------------------------- boutton -------------------------------------#}
+            <input type="submit" value="Create" class="btn btn-primary btn-info"/>
 
-    {#----------------------------------------------------- Section Images -----------------------------------------------------#}
+            {{ form_end(edit_form) }}
 
-    {#<table class="table table-striped table-bordered ">#}
-        {#------------------------------------- champs 2 -------------------------------------#}
+        </div>
 
-            {#<div style="text-align: center;#}
-            {#font-size: 25px; font-weight: bold; padding-top: 45px;">Image</div>#}
-        {#------------------------------------- champs 2 -------------------------------------#}
-        {#<tbody>#}
-
-        {#----- correspond à l'image -----#}
-        {#<tr>#}
-            {#<th style="text-align: center">#}
-                {#</div>#}
-
-            {#<th style="text-align: center">#}
-                {#<div><input type="file" id="luciedesaintbundle_produit_image_file"#}
-                            {#name="luciedesaintbundle_produit[image][file]" style="display: block;#}
-                            {#margin-right: auto;margin-left: auto; width: 299px;">#}
-                    {#{{ form_widget(edit_form.image) }}#}
-                {#{{ form_errors(edit_form.image) }}#}
-                {#</div>#}
-            {#</th>#}
-        {#</tr>#}
-        {#</tbody>#}
-    {#</table>#}
-    {#----------------------------------------------------- Section Titre -----------------------------------------------------#}
-
-    {#<table class="table table-striped table-bordered ">#}
-        {#------------------------------------- champs 2 -------------------------------------#}
-
-        {#<div style="text-align: center;#}
-            {#font-size: 25px; font-weight: bold; padding-top: 45px;">Titre</div>#}
-        {#------------------------------------- champs 2 -------------------------------------#}
-        {#<tbody>#}
-        {#<tr>#}
-            {#<th style="text-align: center">#}
-                {#----- correspond à l'titre -----#}
-                {#<td style="text-align: center">{{ produit.titre }}</td>#}
-            {#</th>#}
-        {#</tr>#}
-        {#</tbody>#}
-    {#</table>#}
-    {#----------------------------------------------------- Section Description -----------------------------------------------------#}
-
-    {#<table class="table table-striped table-bordered ">#}
-        {#------------------------------------- champs 2 -------------------------------------#}
-
-        {#<div style="text-align: center;#}
-            {#font-size: 25px; font-weight: bold; padding-top: 45px;">Description</div>#}
-        {#------------------------------------- champs 2 -------------------------------------#}
-        {#<tbody>#}
-        {#----- correspond au descriptif -----#}
-        {#<td style="text-align: center"> #}{#{{ form_widget(edit_form.info) }} {{ form_errors(edit_form.info) }}#}
-        {#<input type="text" id="luciedesaintbundle_produit_info" name="luciedesaintbundle_produit[info]"#}
-        {#maxlength="255" style="width: 90%;">#}
-        {#</tbody>#}
-    {#</table>#}
-    {#----------------------------------------------------- Section Prix -----------------------------------------------------#}
-
-    {#<table class="table table-striped table-bordered ">#}
-        {#------------------------------------- champs 2 -------------------------------------#}
-
-        {#<div style="text-align: center;#}
-            {#font-size: 25px; font-weight: bold; padding-top: 45px;">Prix</div>#}
-        {#------------------------------------- champs 2 -------------------------------------#}
-        {#<tbody>#}
-        {#----- correspond au Prix -----#}
-
-        {#<td style="text-align: center; ">#}
-            {#<input type="text" id="luciedesaintbundle_produit_prix" name="luciedesaintbundle_produit[prix]" maxlength="255"#}
-                   {#value="fzefzef" style="width: 90%;">#}
-        {#</td>#}
-         {#{{ form_widget(edit_form.prix) }}#}
-         {#{{ form_errors(edit_form.prix) }}#}
-        {#</tbody>#}
-    {#</table>#}
-    {#<div style="width: 200px; border-radius: 45px;">#}
-        {#</td>#}
-        {#----- correspond au Action -----#}
-        {#{{ form_start(delete_form) }}#}
-        {#<input type="submit" value="Delete" class="btn btn-primary btn-info">#}
-        {#{{ form_end(delete_form) }}#}
-        {#<a href="{{ path('produit_index') }}" class="btn btn-primary btn-info">Retour à la liste</a>#}
-        {#</td>#}
-
-    {#</div>#}
-
-
-
-    {#<div class="panel-body">#}
-        {#<div class="tab-content">#}
-            {#<div role="tabpanel" class="tab-pane active" id="list">#}
-                {#<table class="table table-striped table-bordered table-list">#}
-
-                    {#-------------------------------------Champs 1-------------------------------------#}
-
-                    {#<thead>#}
-                        {#<tr>#}
-                            {#<th style="padding-right: 95px;">Image</th>#}
-                                {#<th>#}
-                                    {#<div>#}
-                                    {#{{ form_widget(edit_form.categorie) }}#}
-                                    {#{{ form_errors(edit_form.categorie) }}#}
-                                    {#</div>#}
-                                {#</th>#}
-                                {#<th >Titre#}
-                                {#</th>#}
-                                {#<th>Texte descriptif</th>#}
-                                {#</tr>#}
-                    {#</thead>#}
-
-                    {#-------------------------------------Champs 2-------------------------------------#}
-                    {#-------------------------------------partie image-------------------------------------#}
-                                {#<tr class="new">#}
-
-                                {#<td>#}
-                                    {#<img src="">#}
-                                    {#<div>#}
-                                        {#{{ form_widget(edit_form.image) }}#}
-                                        {#{{ form_errors(edit_form.image) }}#}
-                                    {#</div>#}
-                                {#</td>#}
-                    {#-------------------------------------partie titre-------------------------------------#}
-                                {#<td>#}
-                                    {#<div style="position: relative;#}
-
-                                        {#width: 100px;">#}
-                                        {#{{ form_widget(edit_form.titre) }}#}
-                                        {#{{ form_errors(edit_form.titre) }}#}
-                                    {#</div>#}
-                                {#</td>#}
-                    {#-------------------------------------partie info -------------------------------------#}
-                                {#<td>#}
-                                    {#<div style="width: 240px; position: absolute;">#}
-                                    {#{{ form_widget(edit_form.info) }}#}
-                                    {#{{ form_errors(edit_form.info) }}#}
-                                    {#</div>#}
-                                {#</td>#}
-                    {#------------------------------------- partie form -------------------------------------#}
-                                    {#<li>#}
-                                    {#{{ form_start(delete_form) }}#}
-                                    {#<input type="submit" value="Delete"  class="btn btn-primary btn-default">#}
-                                    {#{{ form_end(delete_form) }}#}
-                                    {#</li>#}
-                               {#</td>#}
-                            {#</th>#}
-                        {#</tr>#}
-                    {#</tbody>#}
-                {#</table>#}
-            {#</div>#}
-            {#</div><!-- END id="list" -->#}
-        {#</div>#}
-    {#</div>#}
-
-    {#<h1>Produit edit</h1>#}
-<div style="padding: 45px;">
-    {{ form_start(edit_form) }}
-    {{ form_start(edit_form) }}
-    <input type="submit" value="valider" class="btn btn-primary btn-default"/>
-    {{ form_end(edit_form) }}
-</div>
-
-
-    {#{{ form_start(edit_form) }}#}
-        {#{{ form_widget(edit_form) }}#}
-        {#<input type="submit" value="Edit" />#}
-    {#{{ form_end(edit_form) }}#}
-
-    {#<ul>#}
-        {#<li>#}
-            {#<a href="{{ path('produit_index') }}">Back to the list</a>#}
-        {#</li>#}
-
-        {#<div class="container-fluid">#}
-            {#{{ form_widget(edit_form.categorie) }}#}
-            {#{{ form_errors(edit_form.categorie) }}#}
-        {#</div>#}
-        {#<div>#}
-            {#{{ form_widget(edit_form.titre) }}#}
-            {#{{ form_errors(edit_form.titre) }}#}
-        {#</div>#}
-        {#<div>#}
-            {#{{ form_widget(edit_form.info) }}#}
-            {#{{ form_errors(edit_form.info) }}#}
-        {#</div>#}
-        {#<div>#}
-            {#{{ form_widget(edit_form.prix) }}#}
-            {#{{ form_errors(edit_form.prix) }}#}
-        {#</div>#}
-        {#<div>#}
-            {#{{ form_widget(edit_form.image) }}#}
-            {#{{ form_errors(edit_form.image) }}#}
-        {#</div>#}
-
-        {#<li>#}
-            {#{{ form_start(delete_form) }}#}
-                {#<input type="submit" value="Delete">#}
-            {#{{ form_end(delete_form) }}#}
-        {#</li>#}
-    {#</ul>#}
+        <ul style="background-color: rgba(113, 102, 102, 0.07);">
+            <li>
+                <a href="{{ path('produit_index') }}" class="btn btn-primary btn-info">Retourner à la liste des produits</a>
+            </li>
+        </ul>
+    </div>
 {% endblock %}

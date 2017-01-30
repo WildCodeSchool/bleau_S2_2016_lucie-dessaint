@@ -1,11 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    {% set locale = app.request.locale %}
 
    <main role="main">
        <div class="marquee">
            {% for actualite in actualites %}
-           <span style="font-size: 20px">{{ actualite.text }}</span>
+           <span style="font-size: 20px">
+               {% if locale == 'fr' %}
+                    {{ actualite.textFr }}
+               {% elseif locale == 'en' %}
+                   {{ actualite.textEn }}
+               {% endif %}
+           </span>
            {% endfor %}
        </div>
 
@@ -14,7 +21,7 @@
              <figure class="snip1305">
                  <img src="{{ asset('bundles/luciedesaint/images/portrait-double.png') }}"/>
                  <figcaption class="hvr-grow">
-                     <h2>  Entrez dans l'univers de la peinture</h2>
+                     <h2>{{ "Entrez dans l'univers de la peinture"|trans }}</h2>
                  </figcaption>
                  <a href="{{ path('lucie_desaint_art') }}" ></a>
              </figure>
@@ -24,8 +31,7 @@
              <figure class="snip1305">
                  <img src="{{ asset('bundles/luciedesaint/images/portrait-double2.png') }}" class=" hvr-grow"/>
                  <figcaption>
-                     <h2> Entrez dans l'univers des bijoux </h2>
-
+                     <h2>{{ "Entrez dans l'univers des bijoux"|trans }}</h2>
                  </figcaption>
                  <a href="{{ path('lucie_desaint_bijoux') }}"></a>
              </figure>
@@ -34,7 +40,7 @@
          <div class="hvr-grow">
              <figure class="snip1305">
                  <img src="{{ asset('bundles/luciedesaint/images/photo-lucie.png') }}" class=" hvr-grow" style="width: 185px"/>
-                 <figcaption><h2> {% trans %} Artist {% endtrans %} </h2>
+                 <figcaption><h2> {{ "Artiste"|trans }}</h2>
 
                  </figcaption>
                  <a href="{{ path('lucie_desaint_artistes') }}"></a>

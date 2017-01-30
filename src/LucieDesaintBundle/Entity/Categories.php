@@ -10,8 +10,11 @@ class Categories
     public function __toString()
     {
         // TODO: Implement __toString() method.
-        return $this->label;
+        return $this->label_fr;
     }
+
+    // GENERATED CODE
+
     /**
      * @var integer
      */
@@ -20,7 +23,12 @@ class Categories
     /**
      * @var string
      */
-    private $label;
+    private $label_fr;
+
+    /**
+     * @var string
+     */
+    private $label_en;
 
 
     /**
@@ -34,26 +42,50 @@ class Categories
     }
 
     /**
-     * Set label
+     * Set labelFr
      *
-     * @param string $label
+     * @param string $labelFr
      *
      * @return Categories
      */
-    public function setLabel($label)
+    public function setLabelFr($labelFr)
     {
-        $this->label = $label;
+        $this->label_fr = $labelFr;
 
         return $this;
     }
 
     /**
-     * Get label
+     * Get labelFr
      *
      * @return string
      */
-    public function getLabel()
+    public function getLabelFr()
     {
-        return $this->label;
+        return $this->label_fr;
+    }
+
+    /**
+     * Set labelEn
+     *
+     * @param string $labelEn
+     *
+     * @return Categories
+     */
+    public function setLabelEn($labelEn)
+    {
+        $this->label_en = $labelEn;
+
+        return $this;
+    }
+
+    /**
+     * Get labelEn
+     *
+     * @return string
+     */
+    public function getLabelEn()
+    {
+        return $this->label_en;
     }
 }

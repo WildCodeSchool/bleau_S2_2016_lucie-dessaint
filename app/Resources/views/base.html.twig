@@ -10,8 +10,8 @@
         {% block stylesheets %}
             <!-- Compiled and minified CSS and js and fontawsome boostrap-->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.0/css/mdb.min.css">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.2.0/css/mdb.min.css">
             <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Pacifico" rel="stylesheet">
@@ -22,33 +22,32 @@
         {% endblock %}
     </head>
     <body>
-            <header>
+        <header>
         {% block header %}
-                <div class="container-fluid">
-                        <nav class="visible-lg">
-                            <a href="{{ path('lucie_desaint_homepage') }}" class="accueil hvr-underline-from-left hidden-xs">{#{{'Home'|trans}}#}Accueil</a>
-                            <div class="lien-menu hidden-xs">
-                                <a href="{{ path('lucie_desaint_art') }}" class="hvr-underline-from-left ">{#{{'Art'|trans}}#}Art &nbsp</a>
-                                <a href="{{ path('lucie_desaint_bijoux') }}" class="hvr-underline-from-left ">{#{{'Jewelrys KIFA'|trans}}#}Bijoux KIFA &nbsp</a>
-                                <a href="{{ path('lucie_desaint_artistes') }}" class="hvr-underline-from-left">{#{{'Artist'|trans}}#}Artiste &nbsp &nbsp</a>
-                                <a href="{{ path('lucie_desaint_contact') }}" class="hvr-underline-from-left ">{#{{'Contact'|trans}}#}Contact</a>
-                            </div>
-                        </nav>
-
-                        <section class="hidden-lg ">
-                            <div class="logo-home">
-                            {#<i class="fa fa-home" aria-hidden="true"></i>#}
-                                <i class="fa fa-bars" aria-hidden="true" style="width: 40px; font-size: 40px; color: #ffffff"></i>
-                            </div>
-                            <ul>
-                                <li><a href="{{ path('lucie_desaint_homepage') }}">{#{{'home'|trans}}#} Accueil</a></li>
-                                <li><a href="{{ path('lucie_desaint_art') }}">{#{{'Art'|trans}}#}Art</a></li>
-                                <li><a href="{{ path('lucie_desaint_bijoux') }}">{#{{'Jewelrys KIFA'|trans}}#}Bijoux KIFA</a></li>
-                                <li><a href="{{ path('lucie_desaint_artistes') }}">{#{{'Artist'|trans}}#}Artiste</a></li>
-                                <li><a href="{{ path('lucie_desaint_contact') }}">{#{{'Contact'|trans}}#}Contact</a></li>
-                            </ul>
-                        </section>
+            <div class="container-fluid nav_custom">
+                <nav class="visible-lg">
+                    <a href="{{ path('lucie_desaint_homepage') }}" class="accueil hvr-underline-from-left hidden-xs">{{'Accueil'|trans}}</a>
+                    <div class="lien-menu hidden-xs">
+                        <a href="{{ path('lucie_desaint_art') }}" class="hvr-underline-from-left ">{{'Art'|trans}} &nbsp</a>
+                        <a href="{{ path('lucie_desaint_bijoux') }}" class="hvr-underline-from-left ">{{'Bijoux KIFA'|trans}} &nbsp</a>
+                        <a href="{{ path('lucie_desaint_artistes') }}" class="hvr-underline-from-left">{{'Artiste'|trans}} &nbsp &nbsp</a>
+                        <a href="{{ path('lucie_desaint_contact') }}" class="hvr-underline-from-left ">{{'Contact'|trans}}</a>
+                    </div>
+                </nav>
+            </div>
+            <section class="hidden-lg ">
+                <div class="logo-home">
+                    {#<i class="fa fa-home" aria-hidden="true"></i>#}
+                    <div class="fa fa-bars" aria-hidden="true" style="width: 40px; font-size: 40px; color: #ffffff"></div>
                 </div>
+                <ul>
+                    <li><a href="{{ path('lucie_desaint_homepage') }}">{{'Accueil'|trans}}</a></li>
+                    <li><a href="{{ path('lucie_desaint_art') }}">{{'Art'|trans}}</a></li>
+                    <li><a href="{{ path('lucie_desaint_bijoux') }}">{{'Bijoux KIFA'|trans}}</a></li>
+                    <li><a href="{{ path('lucie_desaint_artistes') }}">{{'Artiste'|trans}}</a></li>
+                    <li><a href="{{ path('lucie_desaint_contact') }}">{{'Contact'|trans}}</a></li>
+                </ul>
+            </section>
                 <div class="bandeau2">
                     <div class="visible-xs">
                         <img src=" {{ asset ('bundles/luciedesaint/images/new-logo-lucie.png')}}" class="logo-lucie ">
@@ -60,8 +59,8 @@
                     </div>
                 </div>
                 <div class="language-logo">
-                    <a href="#" class="hvr-bob" style="float: right"><img src="{{ asset('bundles/luciedesaint/images/english-coeur.png') }} " class="english-coeur"></a>
-                    <a href="#" class="hvr-bob" style="float: right"><img src="{{ asset('bundles/luciedesaint/images/french-coeur.png') }}" class="french-coeur hvr-bubble-top"></a>
+                    <a href="{{ path('set_locale', { locale : 'en' }) }}" class="hvr-bob" style="float: right"><img src="{{ asset('bundles/luciedesaint/images/english-coeur.png') }} " class="english-coeur"></a>
+                    <a href="{{ path('set_locale', { locale : 'fr' }) }}" class="hvr-bob" style="float: right"><img src="{{ asset('bundles/luciedesaint/images/french-coeur.png') }}" class="french-coeur hvr-bubble-top"></a>
                 </div>
         {% endblock %}
             </header>
@@ -83,10 +82,10 @@
                         <div class="col-md-4 col-xs-12 ">
                             <form action="{{ path('lucie_desaint_newsletter') }}" method='post'>
                             <div class="newsletter-globale">
-                                <h5 class="abonner">{#{{'Subscribe to newsletters'|trans}}#}S'abonner aux newsletters</h5>
+                                <h5 class="abonner">{{"S'abonner aux newsletters"|trans}}</h5>
                                 <input name="email" placeholder="youremail@domain.com"/>
                                 {#<label for="email"></label>#}
-                                <button type="submit" name="action" id="envoyer">{#{{'Send'|trans}}#}Envoyer</button>
+                                <button type="submit" name="action" id="envoyer">{{'Envoyer'|trans}}</button>
                             </div>
                             </form>
                             <h5 class="copyright"><a href="{{ path('lucie_desaint_login') }}">©</a> Copyright all rights reserved - design by
@@ -100,6 +99,7 @@
         {% endblock %}
 
         {% block js %}
+            <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>            <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
             <script type="text/javascript" src=" {{ asset ('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')}}"></script>
         {% endblock %}
     </body>

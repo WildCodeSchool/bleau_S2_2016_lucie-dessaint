@@ -1,54 +1,36 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
-
-{#{{ dump(tableaux) }}#}
+    {% set locale = app.request.locale %}
 
     <div class="rectangle">
-        <h3 class="bienvenue"> {{'Welcome to the world painting'|trans}} {#Entrez dans l'univers de la peinture#}</h3>
+        <h3 class="bienvenue"> {{ "Entrez dans l'univers de la peinture"|trans }}</h3>
     </div>
 
     <div class="globale-produit">
-
-        <section class="image-gallery">
-            <figure tabindex="1" contenteditable="true">
-                <img src="images/img-1.jpg" alt="jump, matey" contenteditable="false" />
-                <figcaption contenteditable="false">Jump!</figcaption>
-            </figure>
-            <figure tabindex="2">
-                07.
-                ...
-                08.
-            </figure>
-            09.
-        </section>
-
 
         {% for produit in produits | reverse(true) %}
             <figure  tabindex="{{ produit.id }}" class="snip0015">
                 <img class="art-image" src="{{ asset(produit.image.src) }}" alt="{{ produit.image.alt }}"/>
                 <figcaption>
-                    <h2 class="art-titre">{{ produit.titre }}</h2>
-                    <p class="produit">{{ produit.info }}</p>
+                    <h2 class="art-titre">
+                        {% if locale == 'fr' %}
+                            {{ produit.titreFr }}
+                        {% elseif locale == 'en' %}
+                            {{ produit.titreEn }}
+                        {% endif %}
+                    </h2>
+                    <p class="produit">
+                        {% if locale == 'fr' %}
+                            {{ produit.infoFr }}
+                        {% elseif locale == 'en' %}
+                            {{ produit.infoEn }}
+                        {% endif %}
+                    </p>
                     <p class="prix">{{ produit.prix }}</p>
                 </figcaption>
             </figure>
-
         {% endfor %}
     </div>
 
 {% endblock  %}
-
-{% block js %}
-    {{ parent() }}
-
-    {#Appel de jquery #}
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
-
-    {#Appel fancybox #}
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js"></script>
-
-{% endblock %}

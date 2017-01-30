@@ -1,6 +1,12 @@
 lucie_desaint:
     resource: "@LucieDesaintBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /{_locale}
+    requirements:
+        _locale: |en|fr
+
+set_locale:
+    path: /{locale}
+    defaults: { _controller: LucieDesaintBundle:Default:setLocale }
 
 user:
     resource: "@UserBundle/Resources/config/routing.yml"
