@@ -1245,8 +1245,12 @@ figure.snip1085.hover .reverse {
 
 .deconnexion{
     width: 200px;
-    border-radius: 45px;
+    border-radius: 55px;
+    margin-right: auto;
     margin-left: auto;
+    top: 80px;
+    position: relative;
+    z-index: 105;
 }
 
 /****************************************************************************************************
