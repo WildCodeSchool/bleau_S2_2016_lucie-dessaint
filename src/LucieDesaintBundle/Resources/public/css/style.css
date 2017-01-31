@@ -63,9 +63,33 @@ a:hover {
 
 /***************** 2.1 Navigation mobile ****************/
 
-.fa-home{
-    color: black;
+.fa-home, .fa-diamond, .fa-user-circle-o, .fa-envelope-open, .fa-picture-o{
+    font-size: 30px;
+    color: rgb(90, 88, 88);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 12px;
 }
+
+.circle-menu{
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    margin: 10px;
+    background-color:white;
+}
+
+.globale-mobile{
+    background-color:rgb(90, 88, 88);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/*.fa-home{*/
+    /*color: black;*/
+/*}*/
 
 .logo-home{
     float: right;
@@ -75,7 +99,7 @@ a:hover {
     top:7px;
 }
 
-section {
+section{
     height: 78px;
     position: fixed;
     left: -15em;
@@ -456,6 +480,16 @@ h1{
 ****************************************** Media queries page index  ********************************
 ****************************************************************************************************/
 
+@media screen and (max-width: 1199px) {
+    .language-logo {
+        position: relative!important;
+        bottom: 65px!important;
+        display: flex!important;
+        justify-content: center!important;
+        visibility: visible!important;
+    }
+}
+
 
 @media screen and (max-width: 991px) {
     .icon {
@@ -525,8 +559,7 @@ h1{
     }
 
     .language-logo{
-        position: relative;
-        bottom: 95px;
+        bottom: 165px!important;
     }
 }
 
@@ -570,6 +603,19 @@ h1{
         width: 400%!important;
     }
 }
+
+@media screen and (max-width: 357px) {
+
+    .language-logo {
+        position: relative!important;
+        bottom: 235px!important;
+
+    }
+
+
+
+}
+
 
 
 

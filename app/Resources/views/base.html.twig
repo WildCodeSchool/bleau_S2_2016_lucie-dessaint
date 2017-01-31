@@ -35,19 +35,44 @@
                     </div>
                 </nav>
             </div>
-            <section class="hidden-lg ">
-                <div class="logo-home">
+            {#<section class="hidden-lg ">#}
+                {#<div class="logo-home">#}
                     {#<i class="fa fa-home" aria-hidden="true"></i>#}
-                    <div class="fa fa-bars" aria-hidden="true" style="width: 40px; font-size: 40px; color: #ffffff"></div>
+                    {#<div class="fa fa-bars" aria-hidden="true" style="width: 40px; font-size: 40px; color: #ffffff"></div>#}
+                {#</div>#}
+                {#<ul>#}
+                    {#<li><a href="{{ path('lucie_desaint_homepage') }}">{{'Accueil'|trans}}</a></li>#}
+                    {#<li><a href="{{ path('lucie_desaint_art') }}">{{'Art'|trans}}</a></li>#}
+                    {#<li><a href="{{ path('lucie_desaint_bijoux') }}">{{'Bijoux KIFA'|trans}}</a></li>#}
+                    {#<li><a href="{{ path('lucie_desaint_artistes') }}">{{'Artiste'|trans}}</a></li>#}
+                    {#<li><a href="{{ path('lucie_desaint_contact') }}">{{'Contact'|trans}}</a></li>#}
+                {#</ul>#}
+            {#</section>#}
+            <div class="globale-mobile hidden-lg">
+                <div class="circle-menu hvr-float-shadow">
+                    <a href="{{ path('lucie_desaint_homepage') }}">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </a>
                 </div>
-                <ul>
-                    <li><a href="{{ path('lucie_desaint_homepage') }}">{{'Accueil'|trans}}</a></li>
-                    <li><a href="{{ path('lucie_desaint_art') }}">{{'Art'|trans}}</a></li>
-                    <li><a href="{{ path('lucie_desaint_bijoux') }}">{{'Bijoux KIFA'|trans}}</a></li>
-                    <li><a href="{{ path('lucie_desaint_artistes') }}">{{'Artiste'|trans}}</a></li>
-                    <li><a href="{{ path('lucie_desaint_contact') }}">{{'Contact'|trans}}</a></li>
-                </ul>
-            </section>
+                <div class="circle-menu hvr-float-shadow">
+                    <a href="{{ path('lucie_desaint_art') }}">
+                        <i class="fa fa-picture-o" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="circle-menu hvr-float-shadow">
+                    <a href="{{ path('lucie_desaint_bijoux') }}">
+                        <i class="fa fa-diamond" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="circle-menu hvr-float-shadow">
+                    <a href="{{ path('lucie_desaint_artistes') }}"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                </div>
+                <div class="circle-menu hvr-float-shadow">
+                    <a href="{{ path('lucie_desaint_contact') }}">
+                        <i class="fa fa-envelope-open" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
                 <div class="bandeau2">
                     <div class="visible-xs">
                         <img src=" {{ asset ('bundles/luciedesaint/images/new-logo-lucie.png')}}" class="logo-lucie ">
