@@ -15,62 +15,53 @@ class ContactController extends Controller
 
     public function envoiAction()
     {
+        $name = $_POST['first_name'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+        $from = $this->getParameter('mailer_user');
 
-        $contact = array();
-        $contact[] = $_POST['first_name'];
-        $contact[] = $_POST['email'];
-        $contact[] = $_POST['message'];
+        $message_from = \Swift_Message::newInstance()
+            ->setSubject('Récapitulatif de votre message')
+            ->setFrom(array($from => 'Lucie Dessaint'))
+            ->setTo($email)
+            ->setBody(
+                $this->renderView(
+                    '@LucieDesaint/Default/emetteur-mail.html.twig',
+                    array('name' => $name,
+                        'mail' => $email,
+                        'text' => $message
+                    ,)
+                ),
+                'text/html'
+            )
+        ;
+        $this->get('mailer')->send($message_from);
 
-//        $form = $this->createForm(new $contact);
+//          Rendu pour l'emmeteur du message
 
+        $message2 = \Swift_Message::newInstance()
+            ->setSubject('Mail de '. $name)
+            ->setFrom(array($from => 'Lucie Dessaint'))
+            ->setTo($from)
+            ->setBody(
+                $this->renderView(
+                    '@LucieDesaint/Default/retour-mail.html.twig',
+                    array('name' => $name,
+                        'mail' => $email,
+                        'text' => $message
+                    ,)
+                ),
+                'text/html'
+            )
+        ;
 
-        //if ($contact->isSubmitted() && $contact>isValid()) {
+        $this->get('mailer')->send($message2);
 
-            $name = $contact[0];
-
-            $message = \Swift_Message::newInstance()
-                ->setSubject('Mail de '. $name)
-                ->setFrom('projetmooc1@gmail.com')
-                ->setTo($contact[1])
-                ->setBody(
-                    $this->renderView(
-                    // app/Resources/views/Emails/registration.html.twig
-                        '@LucieDesaint/Default/retour-mail.html.twig',
-                        array('name' => $name,
-                            'mail' => $contact[1],
-                            'text' => $contact[2],)
-                    ),
-                    'text/html'
-                )
-            ;
-            $this->get('mailer')->send($message);
-
-//            Rendu pour l'emmeteur du message
-
-                $message = \Swift_Message::newInstance()
-                    ->setSubject('Mail de '. $name)
-                    ->setFrom('projetmooc1@gmail.com')
-//                    ->setTo('usa.pascal@yahoo.fr')
-                    ->setBody(
-                        $this->renderView(
-                        // app/Resources/views/Emails/registration.html.twig
-                            '@LucieDesaint/Default/retour-mail.html.twig',
-                            array('name' => $name,
-                                'mail' => $contact[1],
-                                'text' => $contact[2],)
-                        ),
-                        'text/html'
-                    )
-                ;
-
-            $this->get('mailer')->send($message);
-        //}
-
-        return $this->render('@LucieDesaint/Default/emetteur-mail.html.twig', array(
-            'name' => $name,
-            'mail' => $contact[1],
-            'text' => $contact[2],
-        ));
+        $this->addFlash(
+            'notice',
+            'Votre message a bien été envoyé'
+        );
+        return $this->redirectToRoute('lucie_desaint_homepage');
     }
 
 }

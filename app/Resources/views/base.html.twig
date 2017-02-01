@@ -105,15 +105,14 @@
                             </div>
                         </div>
                         <div class="col-md-4 col-xs-12 ">
-                            <form action="{{ path('lucie_desaint_newsletter') }}" method='post'>
-                            <div class="newsletter-globale">
-                                <h5 class="abonner">{{"S'abonner aux newsletters"|trans}}</h5>
-                                <input name="email" placeholder="youremail@domain.com"/>
-                                {#<label for="email"></label>#}
-                                <button type="submit" name="action" id="envoyer">{{'Envoyer'|trans}}</button>
-                            </div>
+                            <form action="{{ path('lucie_desaint_abo_newsletter') }}" method='post'>
+                                <div class="newsletter-globale">
+                                    <h5 class="abonner">{{ "S'abonner aux newsletters"|trans }}</h5>
+                                    <input type="email" name="email" required placeholder="Renseignez votre adresse email"/>
+                                    <button type="submit" name="action" id="envoyer">{{'Envoyer'|trans}}</button>
+                                </div>
                             </form>
-                            <h5 class="copyright"><a href="{{ path('lucie_desaint_login') }}">©</a> Copyright all rights reserved - design by
+                            <h5 class="copyright"><a href="{{ path('admin_index') }}">©</a> Copyright all rights reserved - design by
                                 <a href="http://wildcodeschool.fr" class="wild"> WildCodeSchool</a>
                             </h5>
                         </div>

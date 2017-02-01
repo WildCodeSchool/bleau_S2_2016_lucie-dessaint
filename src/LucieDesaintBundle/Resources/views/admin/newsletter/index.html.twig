@@ -1,0 +1,54 @@
+{% extends '@LucieDesaint/admin/index.html.twig' %}
+
+{% block body %}
+    {% for flash_message in app.session.flashBag.get('notice') %}
+        <div class="row container text-center">
+            <div class="flash-notice center">
+                {{ flash_message }}
+            </div>
+        </div>
+    {% endfor %}
+    <h1>Liste des Newsletter</h1>
+
+    <a href="{{ path('newsletter_show_abonne') }}">Voir la liste des abonnée</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Content</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for newsletter in newsletters %}
+            <tr>
+                <td><a href="{{ path('newsletter_show', { 'id': newsletter.id }) }}">{{ newsletter.id }}</a></td>
+                <td>{{ newsletter.titre }}</td>
+                <td>{{ newsletter.content }}</td>
+                <td>{% if newsletter.status %}Yes{% else %}No{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('newsletter_show', { 'id': newsletter.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('newsletter_edit', { 'id': newsletter.id }) }}">edit</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('newsletter_send', { 'id': newsletter.id }) }}">send</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('newsletter_new') }}">Create a new newsletter</a>
+        </li>
+    </ul>
+{% endblock %}

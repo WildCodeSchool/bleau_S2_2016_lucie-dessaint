@@ -16,37 +16,45 @@
            {% endfor %}
        </div>
 
-     <div class="images_index">
-         <div class="hvr-grow" style="border-radius: 45px">
-             <figure class="snip1305">
-                 <img src="{{ asset('bundles/luciedesaint/images/portrait-double.png') }}"/>
-                 <figcaption class="hvr-grow">
-                     <h2>{{ "Entrez dans l'univers de la peinture"|trans }}</h2>
-                 </figcaption>
-                 <a href="{{ path('lucie_desaint_art') }}" ></a>
-             </figure>
-         </div>
+       {% for flash_message in app.session.flashBag.get('notice') %}
+           <div class="row container text-center">
+               <div class="flash-notice center">
+                   {{ flash_message }}
+               </div>
+           </div>
+       {% endfor %}
 
-         <div class="hvr-grow">
-             <figure class="snip1305">
-                 <img src="{{ asset('bundles/luciedesaint/images/portrait-double2.png') }}" class=" hvr-grow"/>
-                 <figcaption>
-                     <h2>{{ "Entrez dans l'univers des bijoux"|trans }}</h2>
-                 </figcaption>
-                 <a href="{{ path('lucie_desaint_bijoux') }}"></a>
-             </figure>
-         </div>
+       <div class="images_index">
+           <div class="hvr-grow" style="border-radius: 45px">
+               <figure class="snip1305">
+                   <img src="{{ asset('bundles/luciedesaint/images/portrait-double.png') }}"/>
+                   <figcaption class="hvr-grow">
+                       <h2>{{ "Entrez dans l'univers de la peinture"|trans }}</h2>
+                   </figcaption>
+                   <a href="{{ path('lucie_desaint_art') }}" ></a>
+               </figure>
+           </div>
 
-         <div class="hvr-grow">
-             <figure class="snip1305">
-                 <img src="{{ asset('bundles/luciedesaint/images/photo-lucie.png') }}" class=" hvr-grow" style="width: 185px"/>
-                 <figcaption><h2> {{ "Artiste"|trans }}</h2>
+           <div class="hvr-grow">
+               <figure class="snip1305">
+                   <img src="{{ asset('bundles/luciedesaint/images/portrait-double2.png') }}" class=" hvr-grow"/>
+                   <figcaption>
+                       <h2>{{ "Entrez dans l'univers des bijoux"|trans }}</h2>
+                   </figcaption>
+                   <a href="{{ path('lucie_desaint_bijoux') }}"></a>
+               </figure>
+           </div>
 
-                 </figcaption>
-                 <a href="{{ path('lucie_desaint_artistes') }}"></a>
-             </figure>
-         </div>
-     </div>
+           <div class="hvr-grow">
+               <figure class="snip1305">
+                   <img src="{{ asset('bundles/luciedesaint/images/photo-lucie.png') }}" class=" hvr-grow" style="width: 185px"/>
+                   <figcaption>
+                       <h2> {{ "Artiste"|trans }}</h2>
+                   </figcaption>
+                   <a href="{{ path('lucie_desaint_artistes') }}"></a>
+               </figure>
+           </div>
+       </div>
 
    </main>
 

@@ -6,34 +6,48 @@
         <div class="rectangle">
             <h3 class="bienvenue">{{"Entrez dans l'univers des bijoux"|trans}}</h3>
         </div>
-        <div class="globale-bijoux" class="fadeInDown">
+        <div class="globale-bijoux">
             {% for produit in produits | reverse(true) %}
-                <figure class="snip0015">
-                    <img src="{{ asset(produit.image.src) }}" alt="{{ produit.image.alt }}"/>
-                    <figcaption>
-                        <h2 class="titre-produit">
-                            {% if locale == 'fr' %}
-                                {{ produit.titreFr }}
-                            {% elseif locale == 'en' %}
-                                {{ produit.titreEn }}
-                            {% endif %}
-                        </h2>
-                        <p class="produit">
-                            {% if locale == 'fr' %}
-                                {{ produit.titreFr }}
-                            {% elseif locale == 'en' %}
-                                {{ produit.titreEn }}
-                            {% endif %}
-                        </p>
-                        <p class="prix">
-                            {% if locale == 'fr' %}
-                                {{ produit.titreFr }}
-                            {% elseif locale == 'en' %}
-                                {{ produit.titreEn }}
-                            {% endif %}
-                        </p>
-                    </figcaption>
-                </figure>
+                <a href="{{ asset(produit.image.src) }}" style="margin: 0 15px;">
+                    <figure class="snip0015">
+                        <img src="{{ asset(produit.image.src) }}" alt="{{ produit.image.alt }}"/>
+                        <figcaption>
+                            <h2 class="titre-produit">
+                                {% if locale == 'fr' %}
+                                    {{ produit.titreFr }}
+                                {% elseif locale == 'en' %}
+                                    {{ produit.titreEn }}
+                                {% endif %}
+                            </h2>
+                            <p class="produit">
+                                {% if locale == 'fr' %}
+                                    {{ produit.titreFr }}
+                                {% elseif locale == 'en' %}
+                                    {{ produit.titreEn }}
+                                {% endif %}
+                            </p>
+                            <p class="prix">
+                                {% if locale == 'fr' %}
+                                    {{ produit.titreFr }}
+                                {% elseif locale == 'en' %}
+                                    {{ produit.titreEn }}
+                                {% endif %}
+                            </p>
+                        </figcaption>
+                    </figure>
+                </a>
             {% endfor %}
         </div>
 {% endblock  %}
+
+{% block js %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/luciedesaint/js/FancyZoom.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/luciedesaint/js/FancyZoomHTML.js') }}" type="text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+            setupZoom();
+        });
+    </script>
+
+{% endblock %}

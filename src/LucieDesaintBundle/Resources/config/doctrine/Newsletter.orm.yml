@@ -9,7 +9,11 @@ LucieDesaintBundle\Entity\Newsletter:
             generator:
                 strategy: AUTO
     fields:
-        email:
+        titre:
             type: string
             length: 255
+        content:
+            type: text
+        status:
+            type: boolean
     lifecycleCallbacks: {  }

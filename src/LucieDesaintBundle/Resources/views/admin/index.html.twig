@@ -23,14 +23,15 @@
 
 {% block header %}
     <nav class="navbar navbar-default hidden-xs vosibility-lg" role="navigation">
-        <div class="container >
+        <div class="container">
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-brand-centered" >
                 <ul class="admin-index">
                     <a href="{{ path('artiste_index') }}" style="padding-right: 45px;">Artiste</a>
                     <a href="{{ path('produit_index') }}" style="padding-right: 45px;">Produits</a>
                     {#<a href="{{ path('categories_index') }}" style="padding-right: 45px;">Catégories</a>#}
-                    <a href="{{ path('actualites_index') }}">Actualités</a>
+                    <a href="{{ path('actualites_index') }}" style="padding-right: 45px;">Actualités</a>
+                    <a href="{{ path('newsletter_index') }}">Newsletter</a>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->

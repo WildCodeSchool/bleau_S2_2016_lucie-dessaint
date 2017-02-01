@@ -74,3 +74,30 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: UserBundle\Entity\User
+
+#CKEditor
+ivory_ck_editor:
+    default_config:    my_custom_config
+    configs:
+        my_custom_config:
+            toolbar:                   [ [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ], ['SpellChecker', 'Scayt' ], [ 'Source' ], "/", [ 'Bold','Italic','Underline','Strike', 'Blockquote','Subscript','Superscript' ], [ 'NumberedList','-','Outdent','Indent','-','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ], [ 'Link','Unlink' ], [ 'Image', 'SpecialChar','Iframe' ], '/', [ 'Font','FontSize' ], [ 'TextColor','BGColor' ], [ 'RemoveFormat' ], [ 'Maximize' ] ]
+            language: %locale%
+#            filebrowserBrowseRoute: elfinder
+#            filebrowserBrowseRouteParameters: []
+
+#Upload Image CKEditor
+fm_elfinder:
+    #assets_path: / # default is /assets, this is where css/js elfinder files are
+    instances:
+        default:
+            editor: ckeditor # other options are tinymce, tinymce4, fm_tinymce, form, simple, custom
+            include_assets: true # disable if you want to manage loading of javascript and css assets manually
+            #visible_mime_types: ['image/png', 'image/jpg', 'image/jpeg'] # only show these mime types, defaults to show all
+            connector:
+                roots:       # at least one root must be defined, defines root filemanager directories
+                    uploads:
+                        driver: LocalFileSystem
+                        path: uploads
+                        upload_allow: ['image/png', 'image/jpg', 'image/jpeg']
+                        upload_deny: ['all']
+                        upload_max_size: 2M

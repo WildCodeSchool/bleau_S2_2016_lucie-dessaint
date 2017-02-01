@@ -15,8 +15,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class AdminController extends Controller
 {
- public function indexAaction()
+ public function indexAction()
  {
-   return $this->render('@LucieDesaint/admin/produit.html.twig');
+   return $this->render('@LucieDesaint/admin/index.html.twig');
  }
 }

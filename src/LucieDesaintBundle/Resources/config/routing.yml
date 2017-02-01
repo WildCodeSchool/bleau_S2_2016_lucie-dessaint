@@ -1,3 +1,5 @@
+#Routes utilisateur
+
 lucie_desaint_homepage:
     path:     /
     defaults: { _controller: LucieDesaintBundle:Default:index }
@@ -26,40 +28,13 @@ lucie_desaint_login:
     path:     /login
     defaults: { _controller: FOSUserBundle:Security:login }
 
-lucie_desaint_newsletter:
+lucie_desaint_abo_newsletter:
     path:     /newsletter
-    defaults: { _controller: LucieDesaintBundle:Newsletter:newsletter }
-
-#lucie_desaint_admin:
-#        path:     /admin/produi
-#        defaults: { _controller: LucieDesaintBundle:Default:layout }
-
-#----------------------------route admin
-
-lucie_desaint_admin:
-    resource: "@LucieDesaintBundle/Resources/config/routing/admin.yml"
-    prefix:   /
+    defaults: { _controller: LucieDesaintBundle:AboNewsletter:new }
 
 
-lucie_desaint_artiste:
-    resource: "@LucieDesaintBundle/Resources/config/routing/artiste.yml"
-    prefix:   /artiste
 
-lucie_desaint_produit:
-    resource: "@LucieDesaintBundle/Resources/config/routing/produit.yml"
-    prefix:   /produit
 
-lucie_desaint_categories:
-    resource: "@LucieDesaintBundle/Resources/config/routing/categories.yml"
-    prefix:   /categories
-
-lucie_desaint_actualites:
-    resource: "@LucieDesaintBundle/Resources/config/routing/actualites.yml"
-    prefix:   /actualites
-
-lucie_desaint_images:
-    resource: "@LucieDesaintBundle/Resources/config/routing/images.yml"
-    prefix:   /images
 
 
 
