@@ -8,47 +8,92 @@
             </div>
         </div>
     {% endfor %}
-    <h1>Liste des Newsletter</h1>
+    <h1 style="color: #33b5e5; font-weight: bolder;padding-bottom: 45px;">Liste des Newsletter</h1>
 
-    <a href="{{ path('newsletter_show_abonne') }}">Voir la liste des abonnée</a>
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Titre</th>
-                <th>Content</th>
-                <th>Status</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
+    <table style="display: flex; justify-content: center">
         <tbody>
         {% for newsletter in newsletters %}
+        <tr style="border:2px solid black; ; height: 45px;">
+            <th style="border:2px solid black;  height: 45px; text-align: center">Id</th>
+            <td style="border:2px solid black; height: 45px; text-align: center"><a href="{{ path('newsletter_show', { 'id': newsletter.id }) }}">{{ newsletter.id }}</a></td>
+        </tr>
+        <div>
             <tr>
-                <td><a href="{{ path('newsletter_show', { 'id': newsletter.id }) }}">{{ newsletter.id }}</a></td>
-                <td>{{ newsletter.titre }}</td>
-                <td>{{ newsletter.content }}</td>
-                <td>{% if newsletter.status %}Yes{% else %}No{% endif %}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('newsletter_show', { 'id': newsletter.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('newsletter_edit', { 'id': newsletter.id }) }}">edit</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('newsletter_send', { 'id': newsletter.id }) }}">send</a>
-                        </li>
-                    </ul>
-                </td>
+                <th style="border:2px solid black; height: 45px;text-align: center">Titre</th>
+                <td style="border:2px solid black;  height: 45px; text-align: center">{{ newsletter.titre }}</td>
             </tr>
+            <tr>
+        </div>
+        <th style="border:2px solid black; height: 45px; text-align: center">Content</th>
+        <td style="border:2px solid black; width: 200px; height: 45px; text-align: center">{{ newsletter.content }}</td>
+        </tr>
+        <tr>
+            <th style="border:2px solid black;  height: 45px; text-align: center">Status</th>
+            <td style="border:2px solid black; height: 45px;text-align: center">{% if newsletter.status %}Yes{% else %}No{% endif %}</td>
+        </tr>
+            <td>
+                <ul style="background-color:white">
+                    <li>
+                        <a href="{{ path('newsletter_show', { 'id': newsletter.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Aperçus</a>
+                    </li>
+                    <li style="position: relative; left: 90px; bottom: 35px;">
+                        <a href="{{ path('newsletter_edit', { 'id': newsletter.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Editer</a>
+                    </li>
+                    <li style="position: relative; left: 165px; bottom: 69px;">
+                        <a href="{{ path('newsletter_send', { 'id': newsletter.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Envoyer</a>
+                    </li>
+                </ul>
+            </td>
         {% endfor %}
         </tbody>
+        <ul style="background-color: white">
+            <li>
+                <a href="{{ path('newsletter_new') }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Create a new newsletter</a>
+            </li>
+        </ul>
+        </div>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('newsletter_new') }}">Create a new newsletter</a>
-        </li>
-    </ul>
+    {#<a href="{{ path('newsletter_show_abonne') }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Voir la liste des abonnée</a>#}
+{#<div class="container">#}
+    {#<table>#}
+        {#<thead>#}
+            {#<tr>#}
+                {#<th style="border:2px solid black; width: 45px; height: 45px;text-align: center">Id</th>#}
+                {#<th style="border:2px solid black; width: 45px; height: 45px;text-align: center">Titre</th>#}
+                {#<th style="border:2px solid black; width: 200px; height: 45px;text-align: center">Contenu</th>#}
+                {#<th style="border:2px solid black; width: 45px; height: 45px;text-align: center">Status</th>#}
+                {#<th style="border:2px solid black; width: 45px; height: 45px;text-align: center">Actions</th>#}
+            {#</tr>#}
+        {#</thead>#}
+        {#<tbody>#}
+        {#{% for newsletter in newsletters %}#}
+            {#<tr>#}
+                {#<td style="border:2px solid black; width: 45px; height: 250px; text-align: center"><a href="{{ path('newsletter_show', { 'id': newsletter.id }) }}">{{ newsletter.id }}</a></td>#}
+                {#<td style="border:2px solid black; width: 45px; height: 45px; text-align: center">{{ newsletter.titre }}</td>#}
+                {#<td style="border:2px solid black; width: 45px; height: 45px; text-align: center">{{ newsletter.content }}</td>#}
+                {#<td style="border:2px solid black; width: 45px; height: 45px; text-align: center">{% if newsletter.status %}Yes{% else %}No{% endif %}</td>#}
+                {#<td>#}
+                    {#<ul style="background-color:white">#}
+                        {#<li>#}
+                            {#<a href="{{ path('newsletter_show', { 'id': newsletter.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">show</a>#}
+                        {#</li>#}
+                        {#<li>#}
+                            {#<a href="{{ path('newsletter_edit', { 'id': newsletter.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">edit</a>#}
+                        {#</li>#}
+                        {#<li>#}
+                            {#<a href="{{ path('newsletter_send', { 'id': newsletter.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">send</a>#}
+                        {#</li>#}
+                    {#</ul>#}
+                {#</td>#}
+            {#</tr>#}
+        {#{% endfor %}#}
+        {#</tbody>#}
+    {#</table>#}
+{#</div>#}
+    {#<ul style="background-color: white">#}
+        {#<li>#}
+            {#<a href="{{ path('newsletter_new') }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Create a new newsletter</a>#}
+        {#</li>#}
+    {#</ul>#}
 {% endblock %}

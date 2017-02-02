@@ -1,39 +1,44 @@
 {% extends '@LucieDesaint/admin/index.html.twig' %}
 
 {% block body %}
-    <h1>Newsletter</h1>
-
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ newsletter.id }}</td>
-            </tr>
-            <tr>
-                <th>Titre</th>
-                <td>{{ newsletter.titre }}</td>
-            </tr>
-            <tr>
-                <th>Content</th>
-                <td>{{ newsletter.content }}</td>
-            </tr>
-            <tr>
-                <th>Status</th>
-                <td>{% if newsletter.status %}Yes{% else %}No{% endif %}</td>
-            </tr>
-        </tbody>
+    <h1 style="color: #33b5e5;
+    font-weight: bolder;
+    padding-bottom: 10px;">Newsletter</h1>
+    <table style="display: flex; justify-content: center">
+            <tbody>
+                <tr style="border:2px solid black; width: 45px; height: 45px;">
+                    <th style="border:2px solid black; width: 45px; height: 45px;text-align: center">Id</th>
+                    <td style="border:2px solid black; width: 45px; height: 45px;text-align: center">{{ newsletter.id }}</td>
+                </tr>
+            <div>
+                <tr>
+                    <th style="border:2px solid black; width: 45px; height: 45px;text-align: center">Titre</th>
+                    <td style="border:2px solid black; width: 45px; height: 45px; text-align: center">{{ newsletter.titre }}</td>
+                </tr>
+                <tr>
+            </div>
+                <th style="border:2px solid black; width: 150px; height: 45px; text-align: center">Content</th>
+                    <td style="border:2px solid black; width: 700px; height: 45px; text-align: center">{{ newsletter.content }}</td>
+                </tr>
+                <tr>
+                    <th style="border:2px solid black; width: 45px; height: 45px; text-align: center">Status</th>
+                    <td style="border:2px solid black; width: 45px; height: 45px;text-align: center">{% if newsletter.status %}Yes{% else %}No{% endif %}</td>
+                </tr>
+            </tbody>
+        </div>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('newsletter_index') }}">Back to the list</a>
+
+    <ul style="background-color: white; display:block; margin-right: auto; margin-left:auto; padding-bottom: 45px;" >
+        <li style="background-color: white; display:flex; justify-content: center;">
+            <a href="{{ path('newsletter_index') }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Back to the list</a>
         </li>
         <li>
-            <a href="{{ path('newsletter_edit', { 'id': newsletter.id }) }}">Edit</a>
+            <a href="{{ path('newsletter_edit', { 'id': newsletter.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Edit</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input type="submit" value="Delete" style="border-radius: 20px;" class="btn btn-primary btn-info">
             {{ form_end(delete_form) }}
         </li>
     </ul>
