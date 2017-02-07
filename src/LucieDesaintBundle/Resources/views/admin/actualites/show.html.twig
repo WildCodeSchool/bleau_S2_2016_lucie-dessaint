@@ -1,0 +1,36 @@
+{% extends '@LucieDesaint/admin/index.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+        <h1 style="color: black">Aperçu</h1>
+        <div class="container">
+            <div class="row text-center">
+                <a href="{{ path('actualites_edit', { 'id': actualite.id }) }}" class="btn btn-primary btn-info">Modifier</a>
+                <a href="{{ path('actualites_index') }}" class="btn btn-primary btn-info">Retourner à la liste des actulitées</a>
+            </div>
+            <div class="titre">
+                <div class="row">
+                    <h2 id="titre">Texte</h2>
+                    <div class="col-md-6 col-xs-12">
+                        <h3>Text Français</h3>
+                        <div class="actualité-texte">{{ actualite.textFr }}</div>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <h3>Text Anglais</h3>
+                        <div class="actualité-texte">{{ actualite.textEn }}</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="bouton-action">
+
+                        {{ form_start(delete_form) }}
+                        <input type="submit" value="Delete" class="btn btn-primary btn-info">
+                        {{ form_end(delete_form) }}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

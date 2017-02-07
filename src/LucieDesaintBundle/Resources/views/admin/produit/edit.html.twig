@@ -1,0 +1,73 @@
+{% extends '@LucieDesaint/admin/index.html.twig' %}
+
+
+
+{% block body %}
+
+
+    <h1 style="color: #33b5e5; font-weight:bolder ">Edition: {{ produit.titreFr }}</h1>
+
+    <div class="container">
+        <div style="padding: 45px;">
+            <h1>Produit creation</h1>
+            {#------------------------------------- champs -------------------------------------#}
+            {{ form_start(edit_form) }}
+            <div class="row">
+                {{ form_label(edit_form.categorie) }}
+                {{ form_widget(edit_form.categorie) }}
+                {{ form_errors(edit_form.categorie) }}
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    {{ form_label(edit_form.titreFr) }}<br>
+                    {{ form_widget(edit_form.titreFr) }}
+                    {{ form_errors(edit_form.titreFr) }}
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    {{ form_label(edit_form.titreEn) }}<br>
+                    {{ form_widget(edit_form.titreEn) }}
+                    {{ form_errors(edit_form.titreEn) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    {{ form_label(edit_form.infoFr) }}<br>
+                    {{ form_widget(edit_form.infoFr) }}
+                    {{ form_errors(edit_form.infoFr) }}
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    {{ form_label(edit_form.infoEn) }}<br>
+                    {{ form_widget(edit_form.infoEn) }}
+                    {{ form_errors(edit_form.infoEn) }}
+                </div>
+            </div>
+            <div class="row">
+                <label for="">Prix</label>
+                {{ form_widget(edit_form.prix) }}
+                {{ form_errors(edit_form.prix) }}
+            </div>
+            <div class="row">
+                <label for="">Image</label>
+                {{ form_widget(edit_form.image) }}
+                {{ form_errors(edit_form.image) }}
+            </div>
+
+
+            {#------------------------------------- boutton -------------------------------------#}
+            <input type="submit" value="Create" class="btn btn-primary btn-info"/>
+
+            {{ form_widget(edit_form) }}
+            <input type="submit" value="Valider" class="btn btn-primary btn-info"/>
+            {{ form_end(edit_form) }}
+
+            {{ form_end(edit_form) }}
+
+        </div>
+
+        <ul style="background-color: rgba(113, 102, 102, 0.07);">
+            <li>
+                <a href="{{ path('produit_index') }}" class="btn btn-primary btn-info">Retourner à la liste des produits</a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Lucie De Saint{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('bundles/luciedesaint/images/fav-lucie.png.ico') }}">
+
+    {% block stylesheets %}
+        <!-- Compiled and minified CSS and js and fontawsome boostrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Pacifico" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('bundles/luciedesaint/css/hover-min.css') }}" media="all">
+        <link rel="stylesheet" href="{{ asset('bundles/luciedesaint/css/animate.min.css') }}" media="all">
+        <link rel="stylesheet" href="{{ asset('bundles/luciedesaint/css/style.css') }}">
+    {% endblock %}
+</head>
+<body>
+
+{% block header %}
+    <nav class="navbar navbar-default hidden-xs vosibility-lg" role="navigation">
+        <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-brand-centered" >
+                <ul class="admin-index">
+                    <a href="{{ path('artiste_index') }}" style="padding-right: 45px;">Artiste</a>
+                    <a href="{{ path('produit_index') }}" style="padding-right: 45px;">Produits</a>
+                    {#<a href="{{ path('categories_index') }}" style="padding-right: 45px;">Catégories</a>#}
+                    <a href="{{ path('actualites_index') }}" style="padding-right: 45px;">Actualités</a>
+                    <a href="{{ path('newsletter_index') }}">Newsletter</a>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="deconnexion">
+        <a href="{{ path ('fos_user_security_logout') }}" style="border-radius: 20px;" class="btn btn-secondary"><i class="fa fa-sign-out" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <div class="globale-mobile hidden-lg">
+        <div class="circle-menu hvr-float-shadow">
+            <a href="{{ path('artiste_index') }}">
+                <p>Artiste</p>
+            </a>
+        </div>
+        <div class="circle-menu hvr-float-shadow">
+            <a href="{{ path('produit_index') }}">
+                <p>Produit</p>
+            </a>
+        </div>
+        <div class="circle-menu hvr-float-shadow">
+            <a href="{{ path('actualites_index') }}">
+                <p>Actualité</p>
+            </a>
+        </div>
+    </div>
+
+    <style>
+        @media screen and (max-width: 1199px) {
+
+            .navbar{
+                visibility: hidden!important;
+            }
+
+            .globale-mobile{
+                position: relative!important;
+                bottom: 140px!important;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+
+            .globale-mobile{
+                margin-top: 102px;
+            }
+
+            .deconnexion{
+                top: 195px;
+                position: relative;
+
+            }
+        }
+
+        p{
+            color: black;
+            font-weight: bold;
+            top:15px;
+            position: relative;
+            text-align: center;
+        }
+
+        .globale-mobile {
+            background-color: rgba(0, 220, 255, 0.38);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .circle-menu{
+            width: 70px;
+            height: 50px;
+            border-radius: 40px;
+            margin: 10px;
+            background-color:white;
+        }
+    </style>
+
+
+
+{% endblock %}
+
+{% block body %}
+{% endblock %}
+
+</body>
+</html>

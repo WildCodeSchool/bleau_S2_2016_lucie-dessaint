@@ -1,0 +1,36 @@
+newsletter_index:
+    path:     /
+    defaults: { _controller: "LucieDesaintBundle:Newsletter:index" }
+    methods:  GET
+
+newsletter_show:
+    path:     /{id}/show
+    defaults: { _controller: "LucieDesaintBundle:Newsletter:show" }
+    methods:  GET
+
+newsletter_new:
+    path:     /new
+    defaults: { _controller: "LucieDesaintBundle:Newsletter:new" }
+    methods:  [GET, POST]
+
+newsletter_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "LucieDesaintBundle:Newsletter:edit" }
+    methods:  [GET, POST]
+
+newsletter_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "LucieDesaintBundle:Newsletter:delete" }
+    methods:  DELETE
+
+newsletter_send:
+    path: /{id}/send_news
+    defaults: { _controller: "LucieDesaintBundle:Newsletter:sendNews" }
+
+newsletter_show_abonne:
+    path: /showAbonne
+    defaults: { _controller: "LucieDesaintBundle:Newsletter:getAllAbo" }
+
+newsletter_delete_abonne:
+    path: /{id}/delete_abo
+    defaults: { _controller: "LucieDesaintBundle:Newsletter:deleteAbonne" }

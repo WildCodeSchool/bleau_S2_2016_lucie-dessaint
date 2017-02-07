@@ -1,0 +1,31 @@
+{% extends '@LucieDesaint/admin/index.html.twig' %}
+
+{% block body %}
+
+    <h1 style="color: #33b5e5; font-weight:bolder ">Liste des produits</h1>
+    <div style="text-align: center">
+        <a href="{{ path('produit_new') }}" style="border-radius: 20px;" class="btn btn-success">Nouveau produit</a>
+    </div>
+    <div class="container">
+        <div class="titre">
+            {% for produit in produits | reverse(true) %}
+                <hr>
+                <div class="row">
+                    <div class="col-xs-9">
+                        <h2 id="titre">Titre</h2>
+                        <p class="produit-titre">{{ produit.titreFr }}</p>
+                        <h2 id="titre">Description</h2>
+                        <p class="produit-descriptif">{{ produit.infoFr }}</p>
+                        <div class="bouton-action text-center">
+                            <a href="{{ path('produit_edit', { 'id': produit.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Editer</a>
+                            <a href="{{ path('produit_show', { 'id': produit.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Aperçu</a>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <img width="100%" src="{{ asset(produit.image.src) }}" alt="{{ produit.image.alt }}"/>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

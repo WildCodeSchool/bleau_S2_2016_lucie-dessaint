@@ -1,0 +1,24 @@
+#----------------------------route admin
+
+lucie_desaint_admin:
+    resource: "@LucieDesaintBundle/Resources/config/routingAdmin.yml"
+    prefix:   /admin
+
+user:
+    resource: "@UserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+#User routes
+lucie_desaint:
+    resource: "@LucieDesaintBundle/Resources/config/routing.yml"
+    prefix:   /{_locale}
+    requirements:
+        _locale: |en|fr
+
+set_locale:
+    path: /{locale}
+    defaults: { _controller: LucieDesaintBundle:Default:setLocale }
+
+#CKEditor extension
+elfinder:
+     resource: "@FMElfinderBundle/Resources/config/routing.yml"

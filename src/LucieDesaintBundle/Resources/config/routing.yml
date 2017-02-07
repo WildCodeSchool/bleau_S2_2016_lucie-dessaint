@@ -1,0 +1,42 @@
+#Routes utilisateur
+
+lucie_desaint_homepage:
+    path:     /
+    defaults: { _controller: LucieDesaintBundle:Default:index }
+
+lucie_desaint_art:
+    path:     /art
+    defaults: { _controller: LucieDesaintBundle:Default:art }
+
+lucie_desaint_bijoux:
+    path:     /bijoux
+    defaults: { _controller: LucieDesaintBundle:Default:bijoux }
+
+lucie_desaint_contact:
+    path:     /contact
+    defaults: { _controller: LucieDesaintBundle:Default:contact }
+
+lucie_desaint_artistes:
+    path:     /artistes
+    defaults: { _controller: LucieDesaintBundle:Default:artiste }
+
+lucie_desaint_envoi:
+    path:     /envoi
+    defaults: { _controller: LucieDesaintBundle:Contact:envoi }
+
+lucie_desaint_login:
+    path:     /login
+    defaults: { _controller: FOSUserBundle:Security:login }
+
+lucie_desaint_abo_newsletter:
+    path:     /newsletter
+    defaults: { _controller: LucieDesaintBundle:AboNewsletter:new }
+
+
+
+
+
+
+
+
+

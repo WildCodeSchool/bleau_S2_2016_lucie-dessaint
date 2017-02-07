@@ -1,0 +1,69 @@
+{% extends '@LucieDesaint/admin/index.html.twig' %}
+
+{% block body %}
+    <style>
+        h1{
+            color: black;
+        }
+    </style>
+
+    <div class="container">
+        <div style="padding: 45px;">
+            <h1>Produit creation</h1>
+            {#------------------------------------- champs -------------------------------------#}
+            {{ form_start(form) }}
+            <div class="row">
+                {{ form_label(form.categorie) }}
+                {{ form_widget(form.categorie) }}
+                {{ form_errors(form.categorie) }}
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    {{ form_label(form.titreFr) }}<br>
+                    {{ form_widget(form.titreFr) }}
+                    {{ form_errors(form.titreFr) }}
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    {{ form_label(form.titreEn) }}<br>
+                    {{ form_widget(form.titreEn) }}
+                    {{ form_errors(form.titreEn) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    {{ form_label(form.infoFr) }}<br>
+                    {{ form_widget(form.infoFr) }}
+                    {{ form_errors(form.infoFr) }}
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    {{ form_label(form.infoEn) }}<br>
+                    {{ form_widget(form.infoEn) }}
+                    {{ form_errors(form.infoEn) }}
+                </div>
+            </div>
+            <div class="row">
+                <label for="">Prix</label>
+                {{ form_widget(form.prix) }}
+                {{ form_errors(form.prix) }}
+            </div>
+            <div class="row">
+                <label for="">Image</label>
+                {{ form_widget(form.image) }}
+                {{ form_errors(form.image) }}
+            </div>
+
+
+            {#------------------------------------- boutton -------------------------------------#}
+            <input type="submit" value="Create" class="btn btn-primary btn-info"/>
+
+            {{ form_end(form) }}
+
+        </div>
+
+        <ul style="background-color: rgba(113, 102, 102, 0.07);">
+            <li>
+                <a href="{{ path('produit_index') }}" class="btn btn-primary btn-info">Retourner à la liste des produits</a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}

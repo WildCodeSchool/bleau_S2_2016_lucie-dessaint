@@ -1,0 +1,50 @@
+{% extends '@LucieDesaint/admin/index.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+        <h1 style="color: #33b5e5; font-weight: bolder;padding-bottom: 45px;">Artiste creation</h1>
+        {{ form_start(edit_form) }}
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+                <h3>Français</h3>
+                <div class="row">
+                    {{ form_label(edit_form.textepresentationFr) }}
+                </div>
+                <div class="row text-center">
+                    {{ form_widget(edit_form.textepresentationFr) }}
+                    {{ form_errors(edit_form.textepresentationFr) }}
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <h3>Anglais</h3>
+                <div class="row">
+                    {{ form_label(edit_form.textepresentationEn) }}
+                </div>
+                <div class="row text-center">
+                    {{ form_widget(edit_form.textepresentationEn) }}
+                    {{ form_errors(edit_form.textepresentationEn) }}
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            {{ form_label(edit_form.image) }}
+        </div>
+        <div style="width: 100%" class="row">
+            {{ form_widget(edit_form.image) }}
+            {{ form_errors(edit_form.image) }}
+        </div>
+
+        <input type="submit" value="Valider" class="btn btn-primary btn-info"/>
+
+        {{ form_end(edit_form) }}
+        <ul style="background-color: rgba(113, 102, 102, 0);">
+            <li>
+                <a href="{{ path('artiste_index') }}" class="btn btn-primary btn-info">Retour</a>
+            </li>
+        </ul>
+    </div>
+
+{% endblock %}

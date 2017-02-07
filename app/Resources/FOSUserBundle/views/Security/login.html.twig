@@ -1,0 +1,34 @@
+{% block header %}
+    {% include 'index.html.twig' %}
+{% endblock %}
+<body>
+{% block body %}
+{% block fos_user_content %}
+    <div class="container" style="width:325px; margin-top:140px">
+{% if error %}
+    <div>{{ error|trans({}, 'FOSUserBundle') }}</div>
+{% endif %}
+        <div id="login" class="animated bounce">
+            <h2>login</h2>
+            <form action="{{ path("fos_user_security_check") }}" method="post">
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+
+                <div class="input" style="background-color: white;">
+                    <label for="username">{{ 'security.login.username'|trans({}, 'FOSUserBundle') }}</label>
+                    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" style="position: relative;bottom: 7px;padding: 1px;
+                    height: 35px;color:black"/>
+                </div>
+
+                <div class="input">
+                    <label  for="password">{{ 'security.login.password'|trans({}, 'FOSUserBundle') }}</label>
+                    <input  type="password" id="password" name="_password" required="required" style="padding: 1px; position: relative; bottom: 7px; color: black"/>
+                </div>
+
+                <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}"/>
+            </form>
+        </div>
+{% endblock fos_user_content %}
+
+{% endblock %}
+</div>
+</body>

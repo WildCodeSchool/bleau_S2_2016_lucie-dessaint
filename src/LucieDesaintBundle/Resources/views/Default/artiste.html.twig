@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% set locale = app.request.locale %}
+    {% for artiste in artistes %}
+        <figure class="snip1085 #464343">
+            <figcaption>
+                <div class="triangle"></div>
+                <p class="circle">
+                    <img src="{{ asset('') }}{{ artiste.image.src }}" class="photo-lucie">
+                </p>
+                <h3 class="lucie-profile">Lucie De Saint</h3>
+            </figcaption>
+            <div class="reverse" style="overflow: scroll;">
+                <div class="icons"><a href="#"></a></div>
+                <p class="artiste-text">
+                    {% if locale == 'fr' %}
+                        {{ artiste.textepresentationFr }}
+                    {% elseif locale == 'en' %}
+                        {{ artiste.textepresentationEn }}
+                    {% endif %}
+
+                </p>
+            </div>
+        </figure>
+    {% endfor %}
+
+{% endblock  %}

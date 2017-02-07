@@ -1,0 +1,22 @@
+LucieDesaintBundle\Entity\Artiste:
+    type: entity
+    table: null
+    repositoryClass: LucieDesaintBundle\Repository\ArtisteRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        textepresentation_fr:
+            type: text
+        textepresentation_en:
+            type: text
+
+    manyToOne:
+        image:
+            targetEntity: Images
+            cascade: ["persist", "remove"]
+
+    lifecycleCallbacks: {  }

@@ -1,0 +1,24 @@
+admin_index:
+    path:     /
+    defaults: { _controller: "LucieDesaintBundle:Admin:index" }
+    methods:  GET
+
+lucie_desaint_artiste:
+    resource: "@LucieDesaintBundle/Resources/config/routing/artiste.yml"
+    prefix:   /artiste
+
+lucie_desaint_produit:
+    resource: "@LucieDesaintBundle/Resources/config/routing/produit.yml"
+    prefix:   /produit
+
+lucie_desaint_categories:
+    resource: "@LucieDesaintBundle/Resources/config/routing/categories.yml"
+    prefix:   /categories
+
+lucie_desaint_actualites:
+    resource: "@LucieDesaintBundle/Resources/config/routing/actualites.yml"
+    prefix:   /actualites
+
+lucie_desaint_newsletter:
+    resource: "@LucieDesaintBundle/Resources/config/routing/newsletter.yml"
+    prefix:   /newsletter

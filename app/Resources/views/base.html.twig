@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}Lucie De Saint{% endblock %}</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('bundles/luciedesaint/images/fav-lucie.png.ico') }}">
+
+        {% block stylesheets %}
+            <!-- Compiled and minified CSS and js and fontawsome boostrap-->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.0/css/mdb.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Pacifico" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+            <link rel="stylesheet" href="{{ asset('bundles/luciedesaint/css/hover-min.css') }}" media="all">
+            <link rel="stylesheet" href="{{ asset('bundles/luciedesaint/css/animate.min.css') }}" media="all">
+            <link rel="stylesheet" href="{{ asset('bundles/luciedesaint/css/style.css') }}">
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+        {% block header %}
+            <div class="container-fluid nav_custom">
+                <nav class="visible-lg">
+                    <a href="{{ path('lucie_desaint_homepage') }}" class="accueil hvr-underline-from-left hidden-xs">{{'Accueil'|trans}}</a>
+                    <div class="lien-menu hidden-xs">
+                        <a href="{{ path('lucie_desaint_art') }}" class="hvr-underline-from-left ">{{'Art'|trans}} &nbsp</a>
+                        <a href="{{ path('lucie_desaint_bijoux') }}" class="hvr-underline-from-left ">{{'Bijoux KIFA'|trans}} &nbsp</a>
+                        <a href="{{ path('lucie_desaint_artistes') }}" class="hvr-underline-from-left">{{'Artiste'|trans}} &nbsp &nbsp</a>
+                        <a href="{{ path('lucie_desaint_contact') }}" class="hvr-underline-from-left ">{{'Contact'|trans}}</a>
+                    </div>
+                </nav>
+            </div>
+            {#<section class="hidden-lg ">#}
+                {#<div class="logo-home">#}
+                    {#<i class="fa fa-home" aria-hidden="true"></i>#}
+                    {#<div class="fa fa-bars" aria-hidden="true" style="width: 40px; font-size: 40px; color: #ffffff"></div>#}
+                {#</div>#}
+                {#<ul>#}
+                    {#<li><a href="{{ path('lucie_desaint_homepage') }}">{{'Accueil'|trans}}</a></li>#}
+                    {#<li><a href="{{ path('lucie_desaint_art') }}">{{'Art'|trans}}</a></li>#}
+                    {#<li><a href="{{ path('lucie_desaint_bijoux') }}">{{'Bijoux KIFA'|trans}}</a></li>#}
+                    {#<li><a href="{{ path('lucie_desaint_artistes') }}">{{'Artiste'|trans}}</a></li>#}
+                    {#<li><a href="{{ path('lucie_desaint_contact') }}">{{'Contact'|trans}}</a></li>#}
+                {#</ul>#}
+            {#</section>#}
+            <div class="globale-mobile hidden-lg">
+                <div class="circle-menu hvr-float-shadow">
+                    <a href="{{ path('lucie_desaint_homepage') }}">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="circle-menu hvr-float-shadow">
+                    <a href="{{ path('lucie_desaint_art') }}">
+                        <i class="fa fa-picture-o" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="circle-menu hvr-float-shadow">
+                    <a href="{{ path('lucie_desaint_bijoux') }}">
+                        <i class="fa fa-diamond" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="circle-menu hvr-float-shadow">
+                    <a href="{{ path('lucie_desaint_artistes') }}"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                </div>
+                <div class="circle-menu hvr-float-shadow">
+                    <a href="{{ path('lucie_desaint_contact') }}">
+                        <i class="fa fa-envelope-open" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+                <div class="bandeau2">
+                    <div class="visible-xs">
+                        <img src=" {{ asset ('bundles/luciedesaint/images/new-logo-lucie.png')}}" class="logo-lucie ">
+                        <img src=" {{ asset ('bundles/luciedesaint/images/text-lucie.png')}}" class="text-lucie">
+                    </div>
+                    <div class="hidden-xs">
+                          <img src=" {{ asset ('bundles/luciedesaint/images/newLucie-Desaint.png')}}" class="logo-lucie lucie-border">
+                          <img src=" {{ asset ('bundles/luciedesaint/images/Sous-titre-lucie.png')}}" class="sous-titre">
+                    </div>
+                </div>
+                <div class="language-logo">
+                    <a href="{{ path('set_locale', { locale : 'en' }) }}" class="hvr-bob" style="float: right"><img src="{{ asset('bundles/luciedesaint/images/english-coeur.png') }} " class="english-coeur"></a>
+                    <a href="{{ path('set_locale', { locale : 'fr' }) }}" class="hvr-bob" style="float: right"><img src="{{ asset('bundles/luciedesaint/images/french-coeur.png') }}" class="french-coeur hvr-bubble-top"></a>
+                </div>
+        {% endblock %}
+            </header>
+            <main>
+        {% block body %}{% endblock %}
+            </main>
+        {% block footer %}
+
+            <footer class="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-xs-12 center" >
+                            <div class="icon">
+                                <a href="https://www.facebook.com/lucie.desaint?fref=ts" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                                <a href="https://fr.linkedin.com/in/lucie-desaint-949b6a26" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                                <a href="https://fr.pinterest.com/ldesaint/" target="_blank"><i class="fa fa-pinterest-square"  aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-12 ">
+                            <form action="{{ path('lucie_desaint_abo_newsletter') }}" method='post'>
+                                <div class="newsletter-globale">
+                                    <h5 class="abonner">{{ "S'abonner aux newsletters"|trans }}</h5>
+                                    <input type="email" name="email" required placeholder="Renseignez votre adresse email"/>
+                                    <button type="submit" name="action" id="envoyer">{{'Envoyer'|trans}}</button>
+                                </div>
+                            </form>
+                            <h5 class="copyright"><a href="{{ path('admin_index') }}">©</a> Copyright all rights reserved - design by
+                                <a href="http://wildcodeschool.fr" class="wild"> WildCodeSchool</a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        {% endblock %}
+
+        {% block js %}
+            <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>            <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+            <script type="text/javascript" src=" {{ asset ('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')}}"></script>
+        {% endblock %}
+    </body>
+</html>

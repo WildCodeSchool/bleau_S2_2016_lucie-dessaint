@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="globale-cadre5">
+        <img src="{{ asset('bundles/luciedesaint/images/cadre-contact.png') }}" class="cadre5 hidden-xs hidden-sm">
+        <div class="cadre-gris hidden-md hidden-lg"></div>
+        <div class="section1">
+            <div class="row-fluid">
+                <div class="col-md-offset-4 col-md-4" id="box">
+                    <h2>Contact</h2>
+
+                    <hr>
+
+                    <form class="form-horizontal" action="{{ path('lucie_desaint_envoi') }}" method="post" id="contact_form">
+                        <fieldset>
+                            <!-- Form Name -->
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <div class="col-md-12 ">
+                                    <div class="input-group">
+                                        <span class="input-group-addon" style="visibility: hidden"></span>
+                                        <input name="first_name" placeholder="{{ 'Nom'|trans }}" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon" style="visibility: hidden"></span>
+                                        <input name="email" placeholder="{{ 'E-mail'|trans }}" class="form-control" type="text" >
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon" style="visibility: hidden"></span>
+                                        <input name="message" placeholder="{{ 'Message'|trans }}" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group ">
+
+                                <div class="col-md-11">
+                                    <button type="submit" class="btn btn-md btn-danger pull-right">{{ 'Envoyer'|trans }}</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock  %}
+
+
+

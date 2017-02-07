@@ -1,0 +1,19 @@
+LucieDesaintBundle\Entity\Newsletter:
+    type: entity
+    table: null
+    repositoryClass: LucieDesaintBundle\Repository\NewsletterRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titre:
+            type: string
+            length: 255
+        content:
+            type: text
+        status:
+            type: boolean
+    lifecycleCallbacks: {  }

@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% set locale = app.request.locale %}
+
+    <div class="rectangle">
+        <h3 class="bienvenue"> {{ "Entrez dans l'univers de la peinture"|trans }}</h3>
+    </div>
+
+    <div class="globale-produit" data-debug="true">
+
+        {% for produit in produits | reverse(true) %}
+            <a href="{{ asset(produit.image.src) }}" style="margin: 0 15px;">
+                <figure tabindex="{{ produit.id }}" class="snip0015" data-debug="true">
+                    <img class="art-image" src="{{ asset(produit.image.src) }}" alt="{{ produit.image.alt }}"/>
+                    <figcaption>
+                        <h2 class="art-titre">
+                            {% if locale == 'fr' %}
+                                {{ produit.titreFr }}
+                            {% elseif locale == 'en' %}
+                                {{ produit.titreEn }}
+                            {% endif %}
+                        </h2>
+                        <p class="produit">
+                            {% if locale == 'fr' %}
+                                {{ produit.infoFr }}
+                            {% elseif locale == 'en' %}
+                                {{ produit.infoEn }}
+                            {% endif %}
+                        </p>
+                        <p class="prix">{{ produit.prix }}</p>
+                    </figcaption>
+                </figure>
+            </a>
+        {% endfor %}
+    </div>
+
+{% endblock  %}
+
+
+{% block js %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/luciedesaint/js/FancyZoom.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/luciedesaint/js/FancyZoomHTML.js') }}" type="text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+            setupZoom();
+        });
+    </script>
+
+{% endblock %}

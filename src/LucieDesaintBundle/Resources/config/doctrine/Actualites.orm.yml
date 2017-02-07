@@ -1,0 +1,16 @@
+LucieDesaintBundle\Entity\Actualites:
+    type: entity
+    table: null
+    repositoryClass: LucieDesaintBundle\Repository\ActualitesRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        text_fr:
+            type: text
+        text_en:
+            type: text
+    lifecycleCallbacks: {  }

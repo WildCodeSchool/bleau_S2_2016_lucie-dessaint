@@ -1,0 +1,28 @@
+{% extends '@LucieDesaint/admin/index.html.twig' %}
+
+{% block body %}
+    {% for artiste in artistes %}
+        <h1 style="color: #33b5e5; font-weight:bolder; padding-bottom: 45px; ">Artiste</h1>
+        <div class="container text-center">
+            <div class="row">
+                <h3 style="font-size: 40px">Texte de présentation</h3>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <h3>Français</h3>
+                        <p>{{ artiste.textepresentationFr }}</p>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <h3>Anglais</h3>
+                        <p>{{ artiste.textepresentationEn }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <img width="30%" src="{{ asset('') }}{{ artiste.image.src }}" class="photo-lucie">
+                </div>
+            </div>
+            <div class="row">
+                <a href="{{ path('artiste_edit', { 'id': artiste.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Éditer</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

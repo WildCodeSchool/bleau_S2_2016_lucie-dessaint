@@ -1,0 +1,1707 @@
+/*----- PAGE INDEX  ------
+    1. General
+       - Navigation
+       - Bandeau2
+       - footer
+    2. Main
+       - images
+    3. Média queries
+-------------------*/
+
+/****************************************************************************************************
+****************************************** 1. General  ******************************************
+****************************************************************************************************/
+
+/***************** 2. Navigation ****************/
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.english-coeur, .french-coeur{
+    width: 50px;
+    position: relative;
+    /* margin-right: auto; */
+    bottom: 230px;
+    margin-right: 15px;
+}
+
+a{
+    color: #FFFFFF;
+}
+
+a:hover {
+    color: #FFFFFF;
+}
+
+.nav_custom{
+    height: 65px;
+    width: 100%;
+    background-color: black;
+}
+
+.accueil{
+    top: 22px;
+    position:relative;
+    font-size: 1.3em;
+    left: 25px;
+}
+
+.lien-menu{
+    top: 22px;
+    position: relative;
+    float: right;
+    font-size: 1.3em;
+    padding-right: 130px;
+}
+
+/***************** 2.1 Navigation mobile ****************/
+
+.fa-home, .fa-diamond, .fa-user-circle-o, .fa-envelope-open, .fa-picture-o{
+    font-size: 30px;
+    color: rgb(90, 88, 88);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 12px;
+}
+
+.circle-menu{
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    margin: 10px;
+    background-color:white;
+}
+
+.globale-mobile{
+    background-color:rgb(90, 88, 88);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/*.fa-home{*/
+    /*color: black;*/
+/*}*/
+
+.logo-home{
+    float: right;
+    font-size: 45px;
+    right: 10px;
+    position: relative;
+    top:7px;
+}
+
+section{
+    height: 78px;
+    position: fixed;
+    left: -15em;
+    top: 0;
+    /*bottom: 0;*/
+    background-color: #716666;
+    border: 2px solid #ffffff;
+    box-shadow: 4px 0 5px rgba(0,0,0,0.2);
+    z-index: 1;
+    cursor: pointer;
+    animation: change_color 10s 10;
+    border-radius: 50px;
+
+}
+
+ ul {
+    width: 14em;
+    list-style-type: none;
+    margin: 0;
+    margin-right: 5em;
+    background-color: #13dcf1;
+    border: 2px solid #ffffff;
+
+}
+
+section a:link, section a:visited {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    line-height: 3em;
+    text-indent: 20px;
+    text-decoration: none;
+    color: #000000;
+    outline: 0 none;
+}
+
+section a:hover, section a:focus {
+    color: #fff;
+    background-color: #002;
+    box-shadow: inset 0 2px 2px rgba(0,0,0,0.2);
+}
+
+section:hover {
+    left: 0;
+}
+
+/******************** 3. Bandeau2 background-color:#3b3939;****************/
+
+.bandeau2 {
+    height: 175px;
+    width: 100%;
+    background-image: url("../images/bandeau2.png");
+    bottom: 20px;
+}
+
+.logo-lucie{
+    width: 500px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 25px;
+}
+
+.sous-titre{
+    width: 670px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 25px;
+}
+
+#lucie {
+    text-align: center;
+    top: 30px;
+    position:relative;
+    color:#FFFFFF;
+}
+
+#plasticienne{
+    text-align: center;
+    top: 30px;
+    position:relative;
+    color:#FFFFFF;
+}
+
+/***************** 5. footer *******************/
+
+.fa-facebook-square, .fa-pinterest-square, .fa-linkedin-square{
+    color: #FFFFFF;
+    font-size: 3em;
+    margin-top: 5%;
+    padding-left: 12px;
+}
+
+.icon {
+    text-align: center;
+    margin-top: 19px;
+}
+
+footer{
+    background-color: #464343;
+    width: 100%;
+
+}
+
+.copyright {
+    color: #ffffff;
+    text-align: center;
+}
+
+.wild{
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+
+/*newsletter*/
+
+button{
+    background-color:#ad9797;
+    border:0;
+    padding:10px 0px;
+    width:90px;
+    color:white;
+    cursor:pointer;
+    position:relative;
+    transition:0.4s all;
+}
+
+.newsletter-globale input{
+    border:0;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.4);
+    /*padding:10px 20px;*/
+    width:165px;
+    transition: 0.3s width cubic-bezier(0.40, 0, 0.50, 1.30);
+    border-radius: 10px;
+    background-color: white;
+}
+.newsletter-globale input[placeholder] {
+    color: black;
+}
+
+
+input + button {
+    margin-left: 5px;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.4);
+    border-radius: 45px;
+}
+
+button:after{
+    content:'';
+    width: 100%;
+    height: 0;
+    position:absolute;
+    top:50%;
+    left:0;
+    background: rgba(255,255,255,0.3);
+    opacity: 0;
+    transition:0.2s all;
+}
+
+button:hover:after{
+    line-height:36px;
+    top:0;
+    height: 100%;
+    opacity: 1;
+}
+
+button.iconize:hover:after{
+    opacity: 0;
+}
+
+label{
+    border:0;
+    padding:10px 13px 7px;
+    vertical-align:middle;
+    margin-right:-5px;
+    background:white;
+    height: 33px;
+    margin-bottom: 15px;
+}
+
+input:focus{
+    width:250px;
+}
+
+.green{
+    color:#B3CC57 !important;
+}
+
+.newsletter-globale{
+    text-align: Center;
+}
+
+.x1p4{
+    zoom:1.4;
+}
+
+@-moz-keyframes spin { 0% { -moz-transform: rotate(0deg); }
+    100% { -moz-transform: rotate(359deg); } }
+@-webkit-keyframes spin { 0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(359deg); } }
+@-o-keyframes spin { 0% { -o-transform: rotate(0deg); }
+    100% { -o-transform: rotate(359deg); } }
+@-ms-keyframes spin { 0% { -ms-transform: rotate(0deg); }
+    100% { -ms-transform: rotate(359deg); } }
+@keyframes spin { 0% { transform: rotate(0deg); }
+    100% { transform: rotate(359deg); } }
+.ion-loading-a { -webkit-animation-timing-function: steps(8, start); -moz-animation-timing-function: steps(8, start); animation-timing-function: steps(8, start); }
+
+
+.spin{
+    animation: spin 1s infinite linear;
+}
+
+.iconize{
+    width:40px;
+}
+
+h1{
+    width:100%;
+    text-align:center;
+    color:white;
+}
+
+#envoyer{
+    color: black;
+}
+
+.abonner{
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+/* fin newsletter*/
+
+/****************************************************************************************************
+****************************************** fin General  ******************************************
+****************************************************************************************************/
+
+/****************************************************************************************************
+************************ 2. Main ( Cette partie evolue sur chaque page) *******************
+****************************************************************************************************/
+
+/* images */
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+.snip1305 {
+    font-family: 'Raleway', Arial, sans-serif;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    /* min-width: 230px; */
+    max-width: 515px;
+    max-height: 320px;
+    width: 100%;
+    color: #000000;
+}
+.snip1305 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+.snip1305 img {
+    opacity: 1;
+    width: 100%;
+}
+.snip1305:after,
+.snip1305:before {
+    background: #464343;;
+    width: 0;
+    height: 0;
+    position: absolute;
+    content: '';
+    opacity: 0.5;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    z-index: 1;
+}
+.snip1305:after {
+    top: 0;
+    left: 0;
+}
+.snip1305:before {
+    right: 0;
+    bottom: 0;
+}
+.snip1305 figcaption {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 2;
+}
+.snip1305 h2,
+.snip1305 p {
+    margin: 0;
+    width: 100%;
+    opacity: 0;
+}
+.snip1305 h2 {
+    padding: 0 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.snip1305 p {
+    padding: 0 50px;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+.snip1305 a {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 2;
+}
+.snip1305:hover img,
+.snip1305.hover img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.snip1305:hover:after,
+.snip1305.hover:after,
+.snip1305:hover:before,
+.snip1305.hover:before {
+    width: 100%;
+    height: 100%;
+}
+.snip1305:hover figcaption h2,
+.snip1305.hover figcaption h2,
+.snip1305:hover figcaption p,
+.snip1305.hover figcaption p {
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+.snip1305:hover figcaption h2,
+.snip1305.hover figcaption h2 {
+    opacity: 1;
+}
+.snip1305:hover figcaption p,
+.snip1305.hover figcaption p {
+    opacity: 0.7;
+}
+
+.images_index{
+    text-align: center;
+    padding-top:50px;
+}
+
+/* Defillement texte en haut*/
+.marquee {
+    width: 490px;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: marquee 35s linear infinite;
+    color:black;
+    top: 55px;
+    font-weight: bolder;
+}
+
+.marquee:hover {
+    animation-play-state: paused
+}
+
+/* Make it move */
+@keyframes marquee {
+    0%   { text-indent: 30em }
+    100% { text-indent: -105em }
+}
+
+/****************************************************************************************************
+****************************************** fin Main  ******************************************
+****************************************************************************************************/
+
+/****************************************************************************************************
+****************************************** Media queries page index  ********************************
+****************************************************************************************************/
+
+@media screen and (max-width: 1199px) {
+    .language-logo {
+        position: relative!important;
+        bottom: 65px!important;
+        display: flex!important;
+        justify-content: center!important;
+        visibility: visible!important;
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    .icon {
+        bottom: 10px;
+        position: relative;
+    }
+    footer {
+        height: 210px!important;
+    }
+}
+
+@media screen and (max-width: 986px) {
+
+    .marquee {
+        top:45px;
+    }
+}
+
+@media screen and (max-width: 1091px) {
+    /* images */
+    .images_index{
+        text-align: center;
+        padding-top:50px ;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .images_index{
+        text-align: center;
+        padding-top:50px ;
+    }
+
+    footer{
+        height: 165px;
+    }
+
+    .row{
+        bottom: 35px;
+        position: relative;
+    }
+
+    .marquee {
+        top: 10px!important;
+        position: relative;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 914px) {
+    .icon{
+        top: 5px;
+    }
+}
+
+@media screen and (max-width:767px) {
+
+    .text-lucie{
+        width: 220px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 35px;
+    }
+
+    .bandeau2{
+        height: 270px;
+    }
+
+    .language-logo{
+        bottom: 165px!important;
+    }
+}
+
+@media screen and (max-width: 572px) {
+    .row{
+        bottom: 15px;
+    }
+
+    .logo-lucie {
+        width: 310px;
+        padding-top: 45px;
+    }
+
+    .marquee {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 438px) {
+
+    .marquee {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 434px) {
+
+    .cadre-photo2 {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 357px) {
+
+    .marquee{
+        width: 320px;
+
+    }
+
+    .snip1305{
+        width: 400%!important;
+    }
+}
+
+@media screen and (max-width: 357px) {
+
+    .language-logo {
+        position: relative!important;
+        bottom: 235px!important;
+
+    }
+
+
+
+}
+
+
+
+
+/****************************************************************************************************
+****************************************** fin Media queries page index  ****************************
+****************************************************************************************************/
+
+/*----- PAGE contact  ------
+
+-------------------*/
+
+/****************************************************************************************************
+************************ 2. Main ( Cette partie evolue sur chaque page) *******************
+****************************************************************************************************/
+
+.cadre5{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 800px;
+    bottom: 10px;
+    position: relative;
+}
+
+#box {
+     /*border: 1px solid rgb(200, 200, 200); */
+     /*box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px; */
+     /*background: rgba(200, 200, 200, 0.1); */
+     /*border-radius: 4px; */
+     /*top: 50px; */
+    position: relative;
+    bottom: 55px;
+    margin-top: -400px;
+}
+
+h2{
+    text-align:center;
+    color:#fff;
+}
+
+.input-group{
+    color: red;
+}
+
+.btn-danger {
+    background: #535050;
+    border: 2px solid;
+    width: 150px;
+}
+
+.danger:hover {
+    background-color: #2da8a8!important;
+}
+
+.form-control{
+    color: #ffffff;
+}
+
+.cadre-gris{
+    width: 100%;
+    height:405px;
+    background-color: #464343;
+}
+
+
+/****************************************************************************************************
+****************************************** fin Main  ******************************************
+****************************************************************************************************/
+
+/****************************************************************************************************
+****************************************** Media queries page index  ********************************
+****************************************************************************************************/
+
+
+@media screen and (max-width: 991px){
+    #box{
+        position: relative;
+        top: 20px;
+    }
+
+    .globale-cadre5{
+        margin-bottom: 95px!important;
+    }
+}
+
+@media screen and (max-width: 767px){
+    #box{
+        position: relative!important;
+        bottom: 10px!important;
+
+    }
+}
+
+/****************************************************************************************************
+****************************************** fin Media queries page index  ****************************
+****************************************************************************************************/
+
+
+/*----- PAGE Art  ------
+    1. Main
+    2. Média queries
+-------------------*/
+
+/****************************************************************************************************
+************************ 2. Main ( Cette partie evolue sur chaque page) *******************
+****************************************************************************************************/
+
+
+.globale-produit{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.art-titre{
+    color: black;
+}
+
+
+.rectangle {
+    width: 400px;
+    background-color: black;
+    position: relative;
+    bottom: 46px;
+    height: 60px;
+}
+
+.bienvenue{
+    color: white;
+    text-align: center;
+    bottom: 2px;
+    position: relative;
+    font-weight: bold;
+}
+
+.art{
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+.item{
+    align-self: center;
+}
+
+.cadre_prix{
+    right: 205px;
+    position: relative;
+    right: 205px;
+    position: relative;
+    font-weight: bold;
+    /*opacity: 0;*/
+}
+
+.cadre_prix:hover{
+    right: 205px;
+    position: relative;
+    right: 205px;
+    position: relative;
+    font-weight: bold;
+    opacity: 45;
+}
+
+.prix-effet{
+    height: 445px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.55);
+    z-index: 45;
+}
+
+figure {
+    display: inline;
+}
+
+
+/****************************************************************************************************
+****************************************** fin Main  ******************************************
+****************************************************************************************************/
+
+/****************************************************************************************************
+****************************************** Media queries page index  ********************************
+****************************************************************************************************/
+
+@media screen and (max-width: 415px) {
+
+    .rectangle{
+        width: 300px!important;
+        background-color: black!important;
+        height: 75px!important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+}
+
+/****************************************************************************************************
+****************************************** fin Media queries page index  ****************************
+****************************************************************************************************/
+
+
+/*----- PAGE bijoux  ------
+    1. Main
+    2. Média queries
+-------------------*/
+
+/****************************************************************************************************
+************************ 2. Main ( Cette partie evolue sur chaque page) *******************
+****************************************************************************************************/
+
+.globale-bijoux{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.rectangle{
+    width: 400px;
+    background-color: black;
+    position: relative;
+    bottom: 67px;
+    height: 60px;
+    text-align: center;
+}
+
+.bienvenue{
+    color: white;
+    text-align: center;
+    top: 17px;
+    position: relative;
+    font-weight: bold;
+}
+
+/*-------------- effet hover 1---------------*/
+
+.titre-produit{
+    color: black;
+}
+
+.produit{
+    top: 55px;
+    position: relative;
+    font-size: 1.5em;
+    color: black;
+}
+
+.prix{
+    top: 60px;
+    position: relative;
+    font-size: 1.5em;
+    color: black;
+}
+
+figure.snip0015 {
+    font-family: 'Raleway', Arial, sans-serif;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 300px;
+    max-width: 310px;
+    /*height: 100%;*/
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.53);
+}
+
+figure.snip0015 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+figure.snip0015 img {
+    opacity: 1;
+    width: 100%;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+figure.snip0015 figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 3em 3em;
+    width: 100%;
+    height: 100%;
+}
+figure.snip0015 figcaption::before {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    bottom: 50%;
+    left: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    content: '';
+    opacity: 0;
+    background-color: #ffffff;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+figure.snip0015 h2,
+figure.snip0015 p {
+    margin: 0 0 5px;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s,-webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+}
+figure.snip0015 h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+    text-transform: uppercase;
+    -webkit-transform: translate3d(0%, 50%, 0);
+    transform: translate3d(0%, 50%, 0);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+figure.snip0015 h2 span {
+    font-weight: 800;
+}
+figure.snip0015 p {
+    font-weight: 200  ;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+figure.snip0015:hover img {
+    opacity: 0.35;
+}
+figure.snip0015:hover figcaption h2 {
+    opacity: 1;
+    -webkit-transform: translate3d(0%, 0%, 0);
+    transform: translate3d(0%, 0%, 0);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+figure.snip0015:hover figcaption p {
+    opacity: 0.9;
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+figure.snip0015:hover figcaption::before {
+    background: rgba(255, 255, 255, 0);
+    top: 30px;
+    bottom: 30px;
+    opacity: 1;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.snip0015 *,
+.snip0015 *:before,
+.snip0015 *:after {
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.snip0015:hover img,
+.snip0015.hover img {
+    zoom: 1;
+    filter: alpha(opacity=70);
+    -webkit-opacity: 0.7;
+    opacity: 0.7;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+/****************************************************************************************************
+****************************************** fin Main  ******************************************
+****************************************************************************************************/
+
+/****************************************************************************************************
+****************************************** Media queries page index  ********************************
+****************************************************************************************************/
+
+@media screen and (max-width: 415px) {
+
+}
+
+/****************************************************************************************************
+****************************************** fin Media queries page index  ****************************
+****************************************************************************************************/
+
+
+/*----- PAGE Artiste  ------
+    1. Main
+    2. Média queries
+-------------------*/
+
+/****************************************************************************************************
+************************ 2. Main ( Cette partie evolue sur chaque page) *******************
+****************************************************************************************************/
+
+.circle {
+    width: 190px;
+    background-color: black;
+    border: 5px solid #ffffff;
+    height: 190px;
+    position: relative;
+    border-radius: 100px;
+    top: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.53);
+}
+
+.artiste-text{
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Marck Script', cursive;
+}
+
+.triangle{
+    width: 10px;
+    height: 0;
+    border-style: solid;
+    border-width: 60px 60px 0 60px;
+    border-color: #ffffff transparent transparent transparent;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figure.snip1085 {
+    display: block;
+    font-family: 'Raleway', Arial, sans-serif;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    height: 500px;
+    width: 910px;
+    overflow: hidden;
+    text-align: center;
+    background: #767171;
+    -webkit-perspective: 50em;
+    perspective: 50em;
+    bottom:9px;
+}
+figure.snip1085 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+figure.snip1085 img {
+    max-width: 100%;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+figure.snip1085 figcaption,
+figure.snip1085 .reverse {
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+}
+figure.snip1085 figcaption {
+    border: 2px solid #ffffff;
+    background: #464343;
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+    border-radius: 35px;
+}
+.lucie-profile {
+    position: relative;
+    top: 60px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid white;
+    border-radius: 23px;
+    width: 190px;
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Great Vibes', cursive;
+}
+
+figure.snip1085 .reverse {
+    background: rgba(255, 255, 255, 0.8);
+    opacity: 0.5;
+    -webkit-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+figure.snip1085 .icons {
+    top: 50%;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+figure.snip1085 .icons i {
+    display: inline-block;
+    font-size: 28px;
+    border: solid 3px #000000;
+    margin: 5px;
+    color: #000000;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    -webkit-box-sizing: padding-box;
+    box-sizing: padding-box;
+}
+figure.snip1085 a {
+    opacity: 0.55;
+}
+figure.snip1085 a:hover {
+    opacity: 0.9;
+}
+figure.snip1085.blue {
+    background: #091b27;
+}
+figure.snip1085.blue figcaption {
+    background: #2980b9;
+}
+figure.snip1085.red {
+    background: #2e0e0a;
+}
+figure.snip1085.red figcaption {
+    background: #c0392b;
+}
+figure.snip1085.yellow {
+    background: #4d2909;
+}
+figure.snip1085.yellow figcaption {
+    background: #e67e22;
+}
+figure.snip1085.green {
+    background: #061c10;
+}
+figure.snip1085.green figcaption {
+    background: #27ae60;
+}
+figure.snip1085:hover img,
+figure.snip1085.hover img {
+    opacity: 1;
+}
+figure.snip1085:hover figcaption,
+figure.snip1085.hover figcaption {
+    opacity: 0.5;
+    -webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+figure.snip1085:hover .reverse,
+figure.snip1085.hover .reverse {
+    opacity: 1;
+    -webkit-transform: rotateY(0);
+    -transform: rotateY(0);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+/****************************************************************************************************
+****************************************** fin Main  ******************************************
+****************************************************************************************************/
+
+/****************************************************************************************************
+****************************************** Media queries page index  ********************************
+****************************************************************************************************/
+@media screen and (max-width: 1348px) {
+
+    figure.snip1085 {
+        margin-bottom: 35px;
+    }
+
+}
+
+@media screen and (max-width: 967px) {
+
+    .snip1085{
+        width: 97% !important;
+    }
+}
+
+@media screen and (max-width: 518px) {
+
+    .snip1305{
+        width: 95% !important;
+        margin-right:auto!important;
+        margin-left: auto!important;
+        display: block!important;
+    }
+}
+
+/****************************************************************************************************
+****************************************** fin Media queries page index  ****************************
+****************************************************************************************************/
+
+/*----- PAGE Admin  ------
+
+-------------------*/
+
+/****************************************************************************************************
+************************ 2. Main ( Cette partie evolue sur chaque page) *******************
+****************************************************************************************************/
+
+.admin-index{
+    width: 100%;
+    margin: 0;
+    margin-right: 5em;
+    background-color: #13dcf1;
+    border: 2px solid #ffffff;
+    border-radius: 45px;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+    margin-top: 18px;
+}
+
+.navbar{
+    background-color: #13dcf1;
+    height: 85px;
+}
+
+.deconnexion{
+    width: 200px;
+    border-radius: 55px;
+    margin-right: auto;
+    margin-left: auto;
+    top: 80px;
+    position: relative;
+    z-index: 105;
+}
+
+/****************************************************************************************************
+****************************************** fin Main  ******************************************
+****************************************************************************************************/
+
+/****************************************************************************************************
+****************************************** Media queries page index  ********************************
+****************************************************************************************************/
+
+@media screen and (max-width: 415px) {
+
+}
+
+/****************************************************************************************************
+****************************************** fin Media queries page index  ****************************
+****************************************************************************************************/
+
+
+
+/*----- PAGE login  ------
+
+-------------------*/
+
+/****************************************************************************************************
+************************ 2. Main ( Cette partie evolue sur chaque page) *******************
+****************************************************************************************************/
+
+#login {
+    width: 370px;
+    height: 270px;
+    background: rgba(255,255,255,0.2);
+    margin: auto;
+    padding-top: 30px;
+    border-radius: 5px;
+    border: 1px solid rgba(255,255,255,0.4);
+    -webkit-box-shadow: 2px 3px 10px rgba(0,0,0,0.2), inset -5px -5px 15px rgba(255,255,255,0.25);
+    -moz-box-shadow: 2px 3px 10px rgba(0,0,0,0.2), inset -5px -5px 15px rgba(255,255,255,0.25);
+    box-shadow:  2px 3px 10px rgba(0,0,0,0.2), inset -5px -5px 15px rgba(255,255,255,0.25);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#login:after {
+    content:'';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 80px;
+    height: 7px;
+    margin: 25px auto 38px auto;
+    background: rgba(0,0,0,.2);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius:4px;
+}
+
+#login:before {
+    content:'';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -91%;
+    width: 54px;
+    height: 273px;
+    -webkit-box-shadow: inset 0px -5px 5px rgba(0,0,0,0.25);
+    -moz-box-shadow: inset 0px -5px 5px rgba(0,0,0,0.25);
+    box-shadow: inset 0px -5px 5px rgba(0,0,0,0.25);
+    background-color: #dfdfdf;
+    background-image: url(data:image/png;base64,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);
+    background-repeat:repeat-y;
+    z-index: 999;
+}
+h2 {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 22px;
+}
+#login form {
+    width: 285px;
+    margin: auto;
+}
+.input {
+    width: 100%;
+    height: 38px;
+    line-height: 36px;
+    padding: 0px 9px;
+    margin-bottom: 10px;
+    border-radius:5px;
+    background-color:white;
+    border: 1px solid rgba(242,242,242,0.3);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: inset 0px 0px 8px rgba(0,0,0,.2);
+    -moz-box-shadow: inset 0px 0px 8px rgba(0,0,0,.2);
+    box-shadow: inset 0px 0px 8px rgba(0,0,0,.2);
+}
+
+.input label {
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    width: 20px;
+}
+
+.input input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border:none;
+    width: 235px;
+    outline:none;
+    color: #fff;
+    font-size:12px;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #fff;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #fff;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #fff;
+}
+
+input[type="submit"]{
+    display: block;
+    width: 100%;
+    height: 38px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #91c46c;
+    border-radius:5px;
+    border:1px solid #73a84c;
+    outline:none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    box-shadow:  inset 1px 1px 0px #c8e5b3, 1px 2px 1px rgba(0,0,0,.09);
+}
+input[type="submit"]:hover {
+    box-shadow:  inset 1px 1px 2px #333;
+}
+h1 {
+    margin-top: 50px;
+    color: #fff;
+    text-align: center;
+    font-weight: 200;
+}
+
+h1 a {
+    color: #ea4c89;
+    text-decoration: none;
+}
+.animated {
+    animation-duration: 1500ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+.bounce {
+    animation-name: bounce;
+    -webkit-transform-origin: top center;
+    -ms-transform-origin: top center;
+    transform-origin: top center;
+}
+@keyframes bounce {
+    0% {
+        -webkit-transform: rotate(15deg) translateY(-250px) translateX(-50px);
+        -ms-transform: rotate(15deg) translateY(-250px) translateX(-50px);
+        transform: rotate(15deg) translateY(-250px) translateX(-50px);
+    }
+    25% {
+        -webkit-transform: rotate(-10deg) translateY(0px) translateX(10px);
+        -ms-transform: rotate(-10deg) translateY(0px) translateX(10px);
+        transform: rotate(-10deg) translateY(0px) translateX(10px);
+    }
+    50% {
+        -webkit-transform: rotate(5deg) translateY(-10px) translateX(0);
+        -ms-transform: rotate(5deg) translateY(-10px) translateX(0);
+        transform: rotate(5deg) translateY(-10px) translateX(0);
+    }
+    75% {
+        -webkit-transform: rotate(0deg) translateY(0);
+        -ms-transform: rotate(0deg) translateY(0);
+        transform: rotate(0deg) translateY(0);
+    }
+    100% {
+        -webkit-transform: rotate(0deg) translateY(0);
+        -ms-transform: rotate(0deg) translateY(0);
+        transform: rotate(0deg) translateY(0);
+    }
+}
+
+/****************************************************************************************************
+****************************************** fin Main  ******************************************
+****************************************************************************************************/
+
+/****************************************************************************************************
+****************************************** Media queries page index  ********************************
+****************************************************************************************************/
+
+
+
+@media screen and (max-width: 477px) {
+
+    #login{
+       width: 300px!important;
+    }
+}
+
+@media screen and (max-width: 412px) {
+
+    #login{
+        width: 199px!important;
+        position: relative;
+        right: 75px;
+        bottom: 45px;
+    }
+
+    .input{
+        width: 199px!important;
+    }
+
+    #username{
+        bottom: 48px!important;
+        position: relative!important;
+        width: 170px;
+    }
+
+    #password{
+        bottom: 48px!important;
+        position: relative!important;
+        width: 170px;
+    }
+
+    #_submit{
+        width: 196px;
+    }
+}
+
+@media screen and (max-width: 379px) {
+
+    #login{
+        width: 199px!important;
+        position: relative;
+        right: 5px;
+    }
+
+    .input{
+        width: 199px!important;
+    }
+
+    #username{
+        bottom: 48px!important;
+        position: relative!important;
+        width: 170px;
+    }
+
+    #password{
+        bottom: 48px!important;
+        position: relative!important;
+        width: 170px;
+    }
+
+    #_submit{
+        width: 196px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    #login{
+        width: 199px!important;
+        position: relative;
+    }
+
+    .input{
+        width: 199px!important;
+    }
+
+    #username{
+        bottom: 48px!important;
+        position: relative!important;
+        width: 170px;
+    }
+
+    #password{
+        bottom: 48px!important;
+        position: relative!important;
+        width: 170px;
+    }
+
+    #_submit{
+        width: 196px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    #login{
+        width: 199px!important;
+        position: relative;
+        right: 32px;
+    }
+
+    .input{
+        width: 199px!important;
+    }
+
+    #username{
+        bottom: 48px!important;
+        position: relative!important;
+        width: 170px;
+    }
+
+    #password{
+        bottom: 48px!important;
+        position: relative!important;
+        width: 170px;
+    }
+
+    #_submit{
+        width: 196px;
+    }
+}
+/****************************************************************************************************
+****************************************** fin Media queries page index  ****************************
+****************************************************************************************************/
+
+
+/*----- PAGE produit index ------
+
+-------------------*/
+
+/****************************************************************************************************
+************************ 2. Main ( Cette partie evolue sur chaque page) *******************
+****************************************************************************************************/
+
+#titre{
+    border: 2px solid black;
+    border-radius: 20px;
+    color: black;
+    background-color: deepskyblue;
+}
+
+.produit-titre{
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    padding: 5px;
+}
+
+.produit-descriptif{
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    height:100px;
+    overflow: scroll;
+}
+
+.btn-secondary {
+    position: relative;
+    bottom: 92px;
+    left: 45px;
+    background-color: pink;
+}
+
+.fa-sign-out{
+    color: black;
+}
+
+
+
+
+/*----- PAGE actualitées index ------
+
+-------------------*/
+
+/****************************************************************************************************
+************************ 2. Main ( Cette partie evolue sur chaque page) *******************
+****************************************************************************************************/
+
+.actualité-titre {
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    padding: 5px;
+}
+
+.actualité-texte {
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    overflow: scroll;
+    height:200px;
+}
+
+/*----- PAGE actualitées show ------
+
+-------------------*/
+
+/****************************************************************************************************
+************************ 2. Main ( Cette partie evolue sur chaque page) *******************
+****************************************************************************************************/
+
+.actualité-titre {
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    padding: 5px;
+}
+
+.actualité-texte{
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    overflow: scroll;
+    height:200px;
+}
+
+/**----- PAGE Error ------*/
+/****************************************************************************************************
+************************ 2. Main ( Cette partie evolue sur chaque page) *******************
+****************************************************************************************************/
+
+#text-error .oups{
+    text-align: center;
+    color: red;
+}

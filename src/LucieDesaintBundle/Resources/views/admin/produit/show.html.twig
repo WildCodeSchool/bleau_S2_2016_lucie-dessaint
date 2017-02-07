@@ -1,0 +1,40 @@
+{% extends '@LucieDesaint/admin/index.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-xs-5">
+                <h1 style="color: #33b5e5; font-weight:bolder ">Aperçus {{ produit.titreFr }}</h1>
+                <div class="bouton-action row" style="width: 205px; display: block; margin-left: auto; margin-right: auto;">
+                    <a href="{{ path('produit_edit', { 'id': produit.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Editer</a>
+                    <a href="{{ path('produit_new') }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Nouveau produit</a>
+                    {{ form_start(delete_form) }}
+                    <input type="submit" value="Supprimer" class="btn btn-primary btn-info">
+                    {{ form_end(delete_form) }}
+                </div>
+            </div>
+            <div class="col-xs-7">
+                <img width="20%" src="{{ asset(produit.image.src) }}" alt="{{ produit.image.alt }}"/>
+            </div>
+        </div>
+        <div class="titre">
+            <div class="row">
+                <h1 style="color: black;">Contenu Français</h1>
+                <h2 id="titre">Titre</h2>
+                <div class="produit-titre">{{ produit.titreFr }}</div>
+                <h2 id="titre">Description</h2>
+                <div class="produit-descriptif">{{ produit.infoFr }}</div>
+            </div>
+        </div>
+        <div class="titre">
+            <div class="row">
+                <h1 style="color: black;">Contenu Anglais</h1>
+                <h2 id="titre">Titre</h2>
+                <div class="produit-titre">{{ produit.titreEn }}</div>
+                <h2 id="titre">Description</h2>
+                <div class="produit-descriptif">{{ produit.infoEn }}</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

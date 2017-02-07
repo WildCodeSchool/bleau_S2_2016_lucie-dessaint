@@ -1,0 +1,38 @@
+LucieDesaintBundle\Entity\Produit:
+    type: entity
+    table: null
+    repositoryClass: LucieDesaintBundle\Repository\ProduitRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titre_fr:
+            type: string
+            length: 255
+        info_fr:
+            type: string
+            length: 255
+            nullable: true
+        titre_en:
+            type: string
+            length: 255
+        info_en:
+            type: string
+            length: 255
+            nullable: true
+        prix:
+            type: string
+            length: 255
+            nullable: true
+
+    manyToOne:
+        categorie:
+            targetEntity: Categories
+        image:
+            targetEntity: Images
+            cascade: ["persist", "remove"]
+
+    lifecycleCallbacks: {  }
