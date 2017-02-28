@@ -32,7 +32,7 @@ LucieDesaintBundle\Entity\Produit:
         categorie:
             targetEntity: Categories
         image:
-            targetEntity: Images
-            cascade: ["persist", "remove"]
+            targetEntity: LucieDesaintBundle\Entity\Images
+            cascade: ["persist"]
 
     lifecycleCallbacks: {  }

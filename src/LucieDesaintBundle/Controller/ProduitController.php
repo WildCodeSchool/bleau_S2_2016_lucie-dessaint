@@ -40,7 +40,7 @@ class ProduitController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($produit);
-            $em->flush($produit);
+            $em->flush();
 
             return $this->redirectToRoute('produit_show', array('id' => $produit->getId()));
         }
@@ -57,11 +57,8 @@ class ProduitController extends Controller
      */
     public function showAction(Produit $produit)
     {
-        $deleteForm = $this->createDeleteForm($produit);
-
         return $this->render('@LucieDesaint/admin/produit/show.html.twig', array(
             'produit' => $produit,
-            'delete_form' => $deleteForm->createView(),
         ));
     }
 
@@ -71,7 +68,6 @@ class ProduitController extends Controller
      */
     public function editAction(Request $request, Produit $produit)
     {
-        $deleteForm = $this->createDeleteForm($produit);
         $editForm = $this->createForm('LucieDesaintBundle\Form\ProduitType', $produit);
         $editForm->handleRequest($request);
 
@@ -84,41 +80,49 @@ class ProduitController extends Controller
         return $this->render('@LucieDesaint/admin/produit/edit.html.twig', array(
             'produit' => $produit,
             'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
         ));
     }
 
-    /**
-     * Deletes a produit entity.
-     *
-     */
-    public function deleteAction(Request $request, Produit $produit)
-    {
-        $form = $this->createDeleteForm($produit);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($produit);
-            $em->flush($produit);
-        }
-
+    public function deleteAction(Produit $produit){
+        $em = $this->getDoctrine()->getManager();
+        $img = $em->getRepository('LucieDesaintBundle:Images')->findOneById($produit->getImage()->getId());
+        $em->remove($produit);
+        $em->remove($img);
+        $em->flush();
         return $this->redirectToRoute('produit_index');
     }
 
-    /**
-     * Creates a form to delete a produit entity.
-     *
-     * @param Produit $produit The produit entity
-     *
-     * @return \Symfony\Component\Form\Form The form
-     */
-    private function createDeleteForm(Produit $produit)
-    {
-        return $this->createFormBuilder()
-            ->setAction($this->generateUrl('produit_delete', array('id' => $produit->getId())))
-            ->setMethod('DELETE')
-            ->getForm()
-        ;
-    }
+//    /**
+//     * Deletes a produit entity.
+//     *
+//     */
+//    public function deleteAction(Request $request, Produit $produit)
+//    {
+//        $form = $this->createDeleteForm($produit);
+//        $form->handleRequest($request);
+//
+//        if ($form->isSubmitted() && $form->isValid()) {
+//            $em = $this->getDoctrine()->getManager();
+//            $em->remove($produit);
+//            $em->flush();
+//        }
+//
+//        return $this->redirectToRoute('produit_index');
+//    }
+//
+//    /**
+//     * Creates a form to delete a produit entity.
+//     *
+//     * @param Produit $produit The produit entity
+//     *
+//     * @return \Symfony\Component\Form\Form The form
+//     */
+//    private function createDeleteForm(Produit $produit)
+//    {
+//        return $this->createFormBuilder()
+//            ->setAction($this->generateUrl('produit_delete', array('id' => $produit->getId())))
+//            ->setMethod('DELETE')
+//            ->getForm()
+//        ;
+//    }
 }

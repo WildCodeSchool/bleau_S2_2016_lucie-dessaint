@@ -62,8 +62,6 @@ class Images
         return __DIR__.'/../../../web/'.$this->getUploadDir();
     }
 
-    // /var/www/html/lucie/bleau_S2_2016_lucie-dessaint/src/LucieDesaintBundle/Entity
-
     public function getWebPath()
     {
         return null === $this->src ? null : $this->getUploadDir().'/'.$this->src;

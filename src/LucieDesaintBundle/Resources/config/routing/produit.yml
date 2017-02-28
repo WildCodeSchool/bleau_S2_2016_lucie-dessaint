@@ -21,4 +21,4 @@ produit_edit:
 produit_delete:
     path:     /{id}/delete
     defaults: { _controller: "LucieDesaintBundle:Produit:delete" }
-    methods:  DELETE
+    methods:  [GET, POST]

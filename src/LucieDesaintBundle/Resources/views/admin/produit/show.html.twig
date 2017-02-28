@@ -9,9 +9,7 @@
                 <div class="bouton-action row" style="width: 205px; display: block; margin-left: auto; margin-right: auto;">
                     <a href="{{ path('produit_edit', { 'id': produit.id }) }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Editer</a>
                     <a href="{{ path('produit_new') }}" style="border-radius: 20px;" class="btn btn-primary btn-info">Nouveau produit</a>
-                    {{ form_start(delete_form) }}
-                    <input type="submit" value="Supprimer" class="btn btn-primary btn-info">
-                    {{ form_end(delete_form) }}
+                    <a href="{{ path('produit_delete', { 'id': produit.id }) }}" class="btn btn-primary btn-info">Supprimer</a>
                 </div>
             </div>
             <div class="col-xs-7">
