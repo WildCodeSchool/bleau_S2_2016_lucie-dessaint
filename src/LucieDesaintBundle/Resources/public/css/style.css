@@ -1032,7 +1032,7 @@ figure.snip0015:hover figcaption::before {
     color: black;
     font-size: 1.2em;
     font-weight: bold;
-    font-family: 'Marck Script', cursive;
+    width: 100%;
 }
 
 .triangle{
@@ -1115,6 +1115,8 @@ figure.snip1085 .reverse {
     transform: rotateY(-90deg);
     -webkit-transition-delay: 0s;
     transition-delay: 0s;
+    display: flex;
+    align-items: center;
 }
 figure.snip1085 .icons {
     top: 50%;
