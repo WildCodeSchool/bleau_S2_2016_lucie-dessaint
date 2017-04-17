@@ -19,9 +19,13 @@ class DefaultController extends Controller
     public function indexAction() {
         $em = $this->getDoctrine()->getManager();
         $actualites = $em->getRepository('LucieDesaintBundle:Actualites')->findAll();
+        $imagesTableaux = $em->getRepository('LucieDesaintBundle:Produit')->getCateg('Tableaux');
+        $imagesBijoux = $em->getRepository('LucieDesaintBundle:Produit')->getCateg('Bijoux');
 
         return $this->render('LucieDesaintBundle:Default:index.html.twig', array(
             'actualites' => $actualites,
+            'imagesTableaux' => $imagesTableaux,
+            'imagesBijoux' => $imagesBijoux
         ));
     }
 
