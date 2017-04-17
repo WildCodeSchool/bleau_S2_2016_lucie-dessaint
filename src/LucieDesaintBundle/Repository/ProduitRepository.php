@@ -10,4 +10,14 @@ namespace LucieDesaintBundle\Repository;
  */
 class ProduitRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function getCateg($categ){
+        return $qb = $this->createQueryBuilder('p')
+            ->select('i.src AS image')
+            ->join('p.categorie', 'c')
+            ->where('c.label_fr = :categ')
+            ->join('p.image', 'i')
+            ->setParameter('categ', $categ)
+            ->getQuery()
+            ->getResult();
+    }
 }

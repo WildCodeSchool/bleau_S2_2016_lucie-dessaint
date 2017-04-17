@@ -24,10 +24,16 @@
            </div>
        {% endfor %}
 
+        {% set oneImgT = imagesTableaux|slice(random(imagesTableaux|length)-1, 1) %}
+        {% set twoImgT = imagesTableaux|slice(random(imagesTableaux|length)-1, 1) %}
+
        <div class="images_index">
            <div class="hvr-grow" style="border-radius: 45px">
                <figure class="snip1305">
-                   <img src="{{ asset('bundles/luciedesaint/images/portrait-double.png') }}"/>
+                   {% if oneImgT is not empty and twoImgT is not empty %}
+                       <img width="220" src="{{ asset('uploads/pictures/' ~ oneImgT[0]['image']) }}"/>
+                       <img width="220" src="{{ asset('uploads/pictures/' ~ twoImgT[0]['image']) }}" class=" hvr-grow"/>
+                   {% endif %}
                    <figcaption class="hvr-grow">
                        <h2>{{ "Entrez dans l'univers de la peinture"|trans }}</h2>
                    </figcaption>
@@ -35,9 +41,16 @@
                </figure>
            </div>
 
+           {% set oneImgB = imagesBijoux|slice(random(imagesBijoux|length)-1, 1) %}
+           {% set twoImgB = imagesBijoux|slice(random(imagesBijoux|length)-1, 1) %}
+
            <div class="hvr-grow">
                <figure class="snip1305">
-                   <img src="{{ asset('bundles/luciedesaint/images/portrait-double2.png') }}" class=" hvr-grow"/>
+                   {% if oneImgB is not empty and twoImgB is not empty %}
+                       <img width="220" src="{{ asset('uploads/pictures/' ~ oneImgB[0]['image']) }}"/>
+                       <img width="220" src="{{ asset('uploads/pictures/' ~ twoImgB[0]['image']) }}" class=" hvr-grow"/>
+                   {% endif %}
+
                    <figcaption>
                        <h2>{{ "Entrez dans l'univers des bijoux"|trans }}</h2>
                    </figcaption>
@@ -59,4 +72,3 @@
    </main>
 
 {% endblock  %}
-
