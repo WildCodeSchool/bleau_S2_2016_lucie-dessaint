@@ -101,3 +101,10 @@ fm_elfinder:
                         upload_allow: ['image/png', 'image/jpg', 'image/jpeg']
                         upload_deny: ['all']
                         upload_max_size: 2M
+
+sonata_seo:
+    page:
+        metas:
+            name:
+                description: Artiste plasticienne, créatrice de bijoux, professeur d'art
+                keywords: artiste, plasticienne, créatrice, bijoux, professeur, art
